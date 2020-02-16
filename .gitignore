@@ -19,3 +19,12 @@ src/test/data/sandbox/
 
 # MacOS custom attributes files created by Finder
 .DS_Store
+
+# vscode
+.classpath
+.settings
+.project
+.vscode
+
+# Eclipse
+bin
