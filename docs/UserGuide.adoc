@@ -23,16 +23,17 @@ AddressBook Level 3 (AB3) is for those who *prefer to use a desktop app for mana
 
 == About
 This user guide will help to ensure that you have all the information you need to utilise *Sharkie* to its fullest extent. *Sharkie* is a feature-filled expense tracker and all the information you need regarding his usage is available below. +
-+
+
 If you need help starting up Sharkie, you can head on to the QuickStart guide below to set it up. +
-+
+
 If you need help regarding what commands *Sharkie* has, our Features section below will guide you through *Sharkie’s* abilities. +
-+
-+
+
+
 Note the following symbols and formatting used in this document: +
-+
+
 [`add`]	A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application. +
 [IMPORTANT] This symbol indicates important information.
+
 
 == Quick Start
 
@@ -56,12 +57,9 @@ e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 
 [[Features]]
 == Features
-<<<<<<< HEAD
-===Expenditure and income
+=== Expenditure and income
 *Sharkie* notes down what you have spent on for the month, and also notes down your income for the month to help you properly track your money flow!
 
-=======
->>>>>>> e8f9973161fa82dc787a2d1b58ecfb25c0526075
 === Contacts
 *Sharkie* notes down and remembers contacts that you have entered in an address book, for easy reference later on!
 
@@ -77,12 +75,7 @@ _{explain how the user can enable/disable data encryption}_
 // end::dataencryption[]
 
 == Commands
-<<<<<<< HEAD
 *Sharkie* uses a simple syntax to function that will be explained here. *Sharkie* is filled with many different commands that can get complicated, so we have segregated it into two parts:
-=======
-*Sharkie* uses a simple syntax to function that will be explained here. *Sharkie* is filled with many different commands
-that can get complicated, so we have segregated it into two parts:
->>>>>>> e8f9973161fa82dc787a2d1b58ecfb25c0526075
 `people` commands and `wallet` commands.
 
 ====
@@ -103,15 +96,6 @@ that can get complicated, so we have segregated it into two parts:
 Format: `help`
 
 ==== Exiting the program : `exit`
-<<<<<<< HEAD
-=======
-
-Exits the program. +
-Format: `exit`
-
-=== People Commands
-==== Adding a person: `add` [to edit]
->>>>>>> e8f9973161fa82dc787a2d1b58ecfb25c0526075
 
 Exits the program. +
 Format: `exit`
@@ -126,7 +110,6 @@ Format: `people add n/<name> p/<phone number> e/<email address>`
 
 Examples:
 
-<<<<<<< HEAD
 * `people add n/Joel p/91234567 e/joel@u.nus.edu`
 Adds a person named Joel into your contact, along with his phone number and e-mail address +
 Expected Outcome:
@@ -153,9 +136,6 @@ Expected Outcome:
     Reminded Daniel to return $10.00!
 
 ==== Sending reminder to all friend: `remindall` [coming in v2.0]
-=======
-==== Locating persons by name: `find` [to edit]
->>>>>>> e8f9973161fa82dc787a2d1b58ecfb25c0526075
 
 Sends reminders through email to all the friends that have not yet paid up.
  +
@@ -187,63 +167,8 @@ Examples:
 Records that you owe the 4th person $5.00 on 10/10/2020. +
 Expected Outcome:
 
-<<<<<<< HEAD
     Increased debt to Grace by $5.00!
 
-
-==== Recording the money you lend: `lend` [coming in v2.0]
-
-Records the amount of money that you lend to a person. This will increase that person's debt. +
-Format: `people lend <index> $/<amount> [d/<date:dd/mm/yyyy>]`
-
-****
-* Records the amount of money specified in `<price>` you owe to the person at the specified `<index>`.
-* The index refers to the index number shown in the displayed person list.
-* The index *must be a positive integer* 1, 2, 3, ...
-* Price *must be positive*.
-=======
-
-==== Recording the money you owe: `owe` [coming in v2.0]
-
-Records the amount of money that you owe a person. +
-Format: `people owe <index> $/<amount> [d/<date:dd/mm/yyyy>]`
-
-****
-* Records the amount of money specified in `<amount>` you owe to the person at the specified `<index>`.
-* The index refers to the index number shown in the displayed person list.
-* The index *must be a positive integer* 1, 2, 3, ...
-* Amount *must be positive*.
->>>>>>> e8f9973161fa82dc787a2d1b58ecfb25c0526075
-****
-
-Examples:
-
-<<<<<<< HEAD
-* `people lend 5 $/5.00 d/10/10/2020`
-Records that you lend the 5th person $5.00 on 10/10/2020. +
-Expected Outcome:
-
-    Increased Syin Yi's debt by $5.00!
-
-==== Finding a person: `find`
-
-Find a person in your contact list by his or her name. +
-Format: `people find <keyword>`
-
-Examples:
-
-* `people find Grace`
-Returns a list of people with the name, Grace. +
-Expected Outcome:
-
-    Here is a list of your contacts with name Grace: + 1. Grace Lim + 2. Grace Pan + … 
-
-=======
-* `people owe 4 $/5.00 d/10/10/2020`
-Records that you owe the 4th person $5.00 on 10/10/2020. +
-Expected Outcome:
-
-    Increased debt to Grace by $5.00!
 
 ==== Recording the money you lend: `lend` [coming in v2.0]
 
@@ -265,7 +190,19 @@ Expected Outcome:
 
     Increased Syin Yi's debt by $5.00!
 
->>>>>>> e8f9973161fa82dc787a2d1b58ecfb25c0526075
+==== Finding a person: `find`
+
+Find a person in your contact list by his or her name. +
+Format: `people find <keyword>`
+
+Examples:
+
+* `people find Grace`
+Returns a list of people with the name, Grace. +
+Expected Outcome:
+
+    Here is a list of your contacts with name Grace: + 1. Grace Lim + 2. Grace Pan + …
+
 ==== Editing a person : `edit`
 
 Edits an existing person in the address book. +
