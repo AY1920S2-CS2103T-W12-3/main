@@ -147,7 +147,8 @@ Examples:
 Sends a reminder to all the people who owe you money. +
 Expected Outcome:
 
-    Reminded Daniel to return $10.00! + Reminded Joel to return $30.75!
+    Reminded Daniel to return $10.00!
+    Reminded Joel to return $30.75!
 
 ==== Recording the money you owe: `owe` [coming in v2.0]
 
@@ -201,7 +202,10 @@ Examples:
 Returns a list of people with the name, Grace. +
 Expected Outcome:
 
-    Here is a list of your contacts with name Grace: + 1. Grace Lim + 2. Grace Pan + …
+    Here is a list of your contacts with name Grace:
+    1. Grace Lim
+    2. Grace Pan
+    …
 
 ==== Editing a person : `edit`
 
