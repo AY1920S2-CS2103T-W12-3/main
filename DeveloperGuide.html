@@ -41,7 +41,12 @@
 </li>
 <li><a href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></li>
 <li><a href="#glossary">Appendix E: Glossary</a></li>
-<li><a href="#product-survey">Appendix F: Product Survey</a></li>
+<li><a href="#product-survey">Appendix F: Product Survey</a>
+<ul class="sectlevel2">
+<li><a href="#money-lover">F.1. Money Lover</a></li>
+<li><a href="#spendee">F.2. Spendee</a></li>
+</ul>
+</li>
 <li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
@@ -1637,37 +1642,247 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="sect1">
 <h2 id="product-survey"><a class="link" href="#product-survey">Appendix F: Product Survey</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>Product Name</strong></p>
-</div>
-<div class="paragraph">
-<p>Author: &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Pros:</p>
-</div>
+<div class="sect2">
+<h3 id="money-lover"><a class="link" href="#money-lover">F.1. Money Lover</a></h3>
+<h4 id="pros-good-features" class="discrete">Pros / Good Features</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>&#8230;&#8203;</p>
+<p><strong>Wallet</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Multiple wallets to further organise spending/income</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>&#8230;&#8203;</p>
+<p><strong>Transaction</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Attach images to transactions</p>
+</li>
+<li>
+<p>Add location data to transactions</p>
+</li>
+<li>
+<p>Add recurring transactions (monthly, weekly, etc)</p>
+</li>
+<li>
+<p>Option to exclude certain expenses/incomes from statistics</p>
+</li>
+<li>
+<p>Search for transactions by amount, date, description, category, location</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Debt</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set reminders to self on when to pay back debts</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Budget</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set custom date range for budget</p>
+</li>
+<li>
+<p>Set budget for specific categories (e.g. food, clothes)</p>
+</li>
+<li>
+<p>Calculate recommended daily spending</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Statistics</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>View statistics for custom date ranges</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>NFR</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cross-platform (syncs between devices)</p>
+</li>
+<li>
+<p>Appealing, clean UI</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h4 id="cons-bad-features" class="discrete">Cons / Bad Features</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Transaction</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Unable to create custom tags/categories for transactions</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Debt</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Unable to tag debts to a specific contact (no underlying address book)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>NFR</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Requires network</p>
+</li>
+<li>
+<p>GUI-reliant (slow input)</p>
+</li>
+<li>
+<p>Certain features locked behind paywall, advertisements</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Cons:</p>
+<p>Author: Joel<br>
+Link to Product: <a href="https://web.moneylover.me" class="bare">https://web.moneylover.me</a></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="spendee"><a class="link" href="#spendee">F.2. Spendee</a></h3>
+<h4 id="pros-good-features-2" class="discrete">Pros / Good Features</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>&#8230;&#8203;</p>
-</li>
+<p><strong>Wallet</strong></p>
+<div class="ulist">
+<ul>
 <li>
-<p>&#8230;&#8203;</p>
+<p>Can import .csv files to add data more quickly</p>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p><strong>Transaction</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Attach images to transactions</p>
+</li>
+<li>
+<p>Create custom tags for transactions</p>
+</li>
+<li>
+<p>Add recurring transactions (monthly, weekly, etc)</p>
+</li>
+<li>
+<p>Search for transactions by amount, date, description, category</p>
+</li>
+<li>
+<p>Can also filter by multiple categories at once</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Budget</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Calculate recommended daily spending</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Statistics</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>View statistics for custom date ranges</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>NFR</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cross-platform (syncs between devices)</p>
+</li>
+<li>
+<p>Appealing, clean UI</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h4 id="cons-bad-features-2" class="discrete">Cons / Bad Features</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Debt</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Unable to tag debts to a specific contact (no underlying address book)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>NFR</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Requires network</p>
+</li>
+<li>
+<p>GUI-reliant (slow input)</p>
+</li>
+<li>
+<p>Certain features locked behind paywall, advertisements</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Author: Joel<br>
+Link to Product: <a href="https://app.spendee.com" class="bare">https://app.spendee.com</a></p>
+</div>
 </div>
 </div>
 </div>
@@ -1780,4 +1995,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-24 09:22:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-24 19:00:23 UTC</div></div></div></body></html>
