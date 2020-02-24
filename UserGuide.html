@@ -3,74 +3,79 @@
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Sharkie - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code>
+== Introduction</p>
+</div>
+<div class="paragraph">
+<p>Sharkie is an all-in-one desktop application for <strong>personal finance tracking</strong>. It manages your <strong>incomes and expenses</strong>, organises your <strong>contacts</strong> and keeps track of <strong>debts</strong> your friends owe you so that your loans always come with a money-back guarantee!</p>
+</div>
+<div class="paragraph">
+<p>Sharkie boasts a sleek, trendy Graphical User Interface (GUI) while being at its core a <strong>Command Line Application</strong> - this means that the faster you type, the faster you can get those pesky finances out of your head and into Sharkie&#8217;s management system.</p>
+</div>
+<div class="paragraph">
+<p>Have we reeled you in? Dive into <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get on board with Sharkie. Enjoy!</p>
 </div>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#introduction">1. Introduction</a></li>
-<li><a href="#about">2. About</a></li>
-<li><a href="#quick-start">3. Quick Start</a></li>
-<li><a href="#Features">4. Features</a>
+<li><a href="#about">1. About</a></li>
+<li><a href="#quick-start">2. Quick Start</a></li>
+<li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#expenditure-and-income-code-coming-in-v2-0-code">4.1. Expenditure and income <code>[coming in v2.0]</code></a></li>
-<li><a href="#contacts">4.2. Contacts</a></li>
-<li><a href="#saving-the-data">4.3. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">4.4. Encrypting data files <code>[coming in v2.0]</code></a></li>
-<li><a href="#debts-code-coming-in-v2-0-code">4.5. Debts <code>[coming in v2.0]</code></a></li>
+<li><a href="#expenditure-and-income-code-coming-in-v2-0-code">3.1. Expenditure and income <code>[coming in v2.0]</code></a></li>
+<li><a href="#contacts">3.2. Contacts</a></li>
+<li><a href="#saving-the-data">3.3. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.4. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#debts-code-coming-in-v2-0-code">3.5. Debts <code>[coming in v2.0]</code></a></li>
+<li><a href="#expenditure-summary-code-coming-in-v2-0-code">3.6. Expenditure Summary <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
-<li><a href="#Commands">5. Commands</a>
+<li><a href="#Commands">4. Commands</a>
 <ul class="sectlevel2">
-<li><a href="#global-commands">5.1. Global Commands</a>
+<li><a href="#global-commands">4.1. Global Commands</a>
 <ul class="sectlevel3">
-<li><a href="#viewing-help-code-help-code">5.1.1. Viewing help : <code>help</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">5.1.2. Exiting the program : <code>exit</code></a></li>
+<li><a href="#viewing-help-code-help-code">4.1.1. Viewing help : <code>help</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">4.1.2. Exiting the program : <code>exit</code></a></li>
 </ul>
 </li>
-<li><a href="#wallet-commands">5.2. Wallet Commands</a>
+<li><a href="#wallet-commands">4.2. Wallet Commands</a>
 <ul class="sectlevel3">
-<li><a href="#tagging-an-expense-code-tag-code">5.2.1. Tagging an expense: <code>tag</code></a></li>
-<li><a href="#editing-an-income-or-expense-code-edit-code">5.2.2. Editing an income or expense: <code>edit</code></a></li>
-<li><a href="#finding-an-income-or-expense-code-find-code">5.2.3. Finding an income or expense: <code>find</code></a></li>
-<li><a href="#deleting-an-income-or-expense-code-delete-code">5.2.4. Deleting an income or expense: <code>delete</code></a></li>
+<li><a href="#adding-an-expense-code-expense-code">4.2.1. Adding an expense: <code>expense</code></a></li>
+<li><a href="#adding-an-income-code-income-code">4.2.2. Adding an income: <code>income</code></a></li>
+<li><a href="#tagging-an-expense-code-tag-code">4.2.3. Tagging an expense: <code>tag</code></a></li>
+<li><a href="#editing-an-income-or-expense-code-edit-code">4.2.4. Editing an income or expense: <code>edit</code></a></li>
+<li><a href="#finding-an-income-or-expense-code-find-code">4.2.5. Finding an income or expense: <code>find</code></a></li>
+<li><a href="#deleting-an-income-or-expense-code-delete-code">4.2.6. Deleting an income or expense: <code>delete</code></a></li>
 </ul>
 </li>
-<li><a href="#people-commands">5.3. People Commands</a>
+<li><a href="#people-commands">4.3. People Commands</a>
 <ul class="sectlevel3">
-<li><a href="#adding-a-person-code-add-code">5.3.1. Adding a person: <code>add</code></a></li>
-<li><a href="#sending-reminder-to-a-friend-code-remind-code-code-coming-in-v2-0-code">5.3.2. Sending reminder to a friend: <code>remind</code> <code>[coming in v2.0]</code></a></li>
-<li><a href="#sending-reminder-to-all-friend-code-remindall-code-code-coming-in-v2-0-code">5.3.3. Sending reminder to all friend: <code>remindall</code> <code>[coming in v2.0]</code></a></li>
-<li><a href="#recording-the-money-you-owe-code-owe-code-code-coming-in-v2-0-code">5.3.4. Recording the money you owe: <code>owe</code> <code>[coming in v2.0]</code></a></li>
-<li><a href="#recording-the-money-you-lend-code-lend-code-code-coming-in-v2-0-code">5.3.5. Recording the money you lend: <code>lend</code> <code>[coming in v2.0]</code></a></li>
-<li><a href="#finding-a-person-code-find-code">5.3.6. Finding a person: <code>find</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">5.3.7. Editing a person : <code>edit</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">5.3.8. Deleting a person : <code>delete</code></a></li>
+<li><a href="#adding-a-person-code-add-code">4.3.1. Adding a person: <code>add</code></a></li>
+<li><a href="#sending-reminder-to-a-friend-code-remind-code-code-coming-in-v2-0-code">4.3.2. Sending reminder to a friend: <code>remind</code> <code>[coming in v2.0]</code></a></li>
+<li><a href="#sending-reminder-to-all-friend-code-remindall-code-code-coming-in-v2-0-code">4.3.3. Sending reminder to all friend: <code>remindall</code> <code>[coming in v2.0]</code></a></li>
+<li><a href="#recording-the-money-you-owe-code-owe-code-code-coming-in-v2-0-code">4.3.4. Recording the money you owe: <code>owe</code> <code>[coming in v2.0]</code></a></li>
+<li><a href="#recording-the-money-you-lend-code-lend-code-code-coming-in-v2-0-code">4.3.5. Recording the money you lend: <code>lend</code> <code>[coming in v2.0]</code></a></li>
+<li><a href="#finding-a-person-code-find-code">4.3.6. Finding a person: <code>find</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">4.3.7. Editing a person : <code>edit</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">4.3.8. Deleting a person : <code>delete</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#faq">6. FAQ</a></li>
-<li><a href="#command-summary">7. Command Summary</a>
+<li><a href="#faq">5. FAQ</a></li>
+<li><a href="#command-summary">6. Command Summary</a>
 <ul class="sectlevel2">
-<li><a href="#global-commands-2">7.1. Global Commands</a></li>
-<li><a href="#people-commands-2">7.2. People Commands</a></li>
+<li><a href="#global-commands-2">6.1. Global Commands</a></li>
+<li><a href="#wallet-commands-2">6.2. Wallet Commands</a></li>
+<li><a href="#people-commands-2">6.3. People Commands</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect1">
-<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>AddressBook Level 3 (AB3) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB3 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 3, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="about"><a class="link" href="#about">2. About</a></h2>
+<h2 id="about"><a class="link" href="#about">1. About</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This user guide will help to ensure that you have all the information you need to utilise <strong>Sharkie</strong> to its fullest extent. <strong>Sharkie</strong> is a feature-filled expense tracker and all the information you need regarding his usage is available below.<br></p>
@@ -115,7 +120,7 @@ This symbol indicates tips.
 </div>
 </div>
 <div class="sect1">
-<h2 id="quick-start"><a class="link" href="#quick-start">3. Quick Start</a></h2>
+<h2 id="quick-start"><a class="link" href="#quick-start">2. Quick Start</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -160,52 +165,61 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </li>
 <li>
-<p>Refer to <a href="#Commands">Section 5, &#8220;Commands&#8221;</a> for details of each command.</p>
+<p>Refer to <a href="#Commands">Section 4, &#8220;Commands&#8221;</a> for details of each command.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Features"><a class="link" href="#Features">4. Features</a></h2>
+<h2 id="Features"><a class="link" href="#Features">3. Features</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="expenditure-and-income-code-coming-in-v2-0-code"><a class="link" href="#expenditure-and-income-code-coming-in-v2-0-code">4.1. Expenditure and income <code>[coming in v2.0]</code></a></h3>
+<h3 id="expenditure-and-income-code-coming-in-v2-0-code"><a class="link" href="#expenditure-and-income-code-coming-in-v2-0-code">3.1. Expenditure and income <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> notes down what you have spent on for the month, and also notes down your income for the month to help you properly track your money flow!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="contacts"><a class="link" href="#contacts">4.2. Contacts</a></h3>
+<h3 id="contacts"><a class="link" href="#contacts">3.2. Contacts</a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> notes down and remembers contacts that you have entered in an address book, for easy reference later on!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.3. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.3. Saving the data</a></h3>
 <div class="paragraph">
-<p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
+<p>All data is saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">4.4. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.4. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="debts-code-coming-in-v2-0-code"><a class="link" href="#debts-code-coming-in-v2-0-code">4.5. Debts <code>[coming in v2.0]</code></a></h3>
+<h3 id="debts-code-coming-in-v2-0-code"><a class="link" href="#debts-code-coming-in-v2-0-code">3.5. Debts <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> allows you to take note of the debts you owe your friends and the debts your friend owes you.<br>
 <strong>Sharkie</strong> then allow you to automatically remind your friends through email to return you the money they owe you!<br>
 <strong>Sharkie</strong> also allows you to set reminders for yourself to return your friend what you owe them!</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="expenditure-summary-code-coming-in-v2-0-code"><a class="link" href="#expenditure-summary-code-coming-in-v2-0-code">3.6. Expenditure Summary <code>[coming in v2.0]</code></a></h3>
+<div class="paragraph">
+<p><strong>Sharkie</strong> displays a customisable overview of your monthly spendings and income so that you know where all your money has gone to!<br></p>
+</div>
+<div class="paragraph">
+<p>You can view statistics such as the proportion of your spending on different items and your monthly balance.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Commands"><a class="link" href="#Commands">5. Commands</a></h2>
+<h2 id="Commands"><a class="link" href="#Commands">4. Commands</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Sharkie</strong> uses a simple syntax to function that will be explained here. <strong>Sharkie</strong> is filled with many different commands that can get complicated, so we have segregated it into two parts:
@@ -240,16 +254,16 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="global-commands"><a class="link" href="#global-commands">5.1. Global Commands</a></h3>
+<h3 id="global-commands"><a class="link" href="#global-commands">4.1. Global Commands</a></h3>
 <div class="sect3">
-<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">5.1.1. Viewing help : <code>help</code></a></h4>
+<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">4.1.1. Viewing help : <code>help</code></a></h4>
 <div class="paragraph">
 <p>Views the user guide of Sharkie.<br>
 Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">5.1.2. Exiting the program : <code>exit</code></a></h4>
+<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.1.2. Exiting the program : <code>exit</code></a></h4>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
@@ -257,9 +271,97 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="wallet-commands"><a class="link" href="#wallet-commands">5.2. Wallet Commands</a></h3>
+<h3 id="wallet-commands"><a class="link" href="#wallet-commands">4.2. Wallet Commands</a></h3>
 <div class="sect3">
-<h4 id="tagging-an-expense-code-tag-code"><a class="link" href="#tagging-an-expense-code-tag-code">5.2.1. Tagging an expense: <code>tag</code></a></h4>
+<h4 id="adding-an-expense-code-expense-code"><a class="link" href="#adding-an-expense-code-expense-code">4.2.1. Adding an expense: <code>expense</code></a></h4>
+<div class="paragraph">
+<p>Adds an expense to the wallet.<br>
+Format: <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Creates a new expense wiith the given arguments.</p>
+</li>
+<li>
+<p>The description <strong>cannot be empty</strong>.</p>
+</li>
+<li>
+<p>The amount <strong>must be a valid number</strong>.</p>
+</li>
+<li>
+<p>If no date is given, it will default to today&#8217;s date.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code>
+Adds an expense named Chicken Rice, costing $3.50, on 10/10/2020, tagged as food.<br>
+Expected Outcome:</p>
+<div class="literalblock">
+<div class="content">
+<pre>You spent $3.50 on Chicken Rice (food) on 10/10/2020 :)</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adding-an-income-code-income-code"><a class="link" href="#adding-an-income-code-income-code">4.2.2. Adding an income: <code>income</code></a></h4>
+<div class="paragraph">
+<p>Addns an income to the wallet.<br>
+Format: <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Creates a new income with the given arguments.</p>
+</li>
+<li>
+<p>The description <strong>cannot be empty</strong>.</p>
+</li>
+<li>
+<p>The amount <strong>must be a valid number</strong>.</p>
+</li>
+<li>
+<p>If no date is given, it will default to today&#8217;s date.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code>
+Adds an income named P6 Tuition, for a sum of $3000, on 10/10/2020, tagged as job.<br>
+Expected Outcome:</p>
+<div class="literalblock">
+<div class="content">
+<pre>You earned $3000 from P6 Tuition (job) on 10/10/2020 :D</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="tagging-an-expense-code-tag-code"><a class="link" href="#tagging-an-expense-code-tag-code">4.2.3. Tagging an expense: <code>tag</code></a></h4>
 <div class="paragraph">
 <p>Tag an expense with respective tag.<br>
 Format: <code>wallet tag &lt;index&gt; t/&lt;tag&gt;</code></p>
@@ -305,7 +407,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-an-income-or-expense-code-edit-code"><a class="link" href="#editing-an-income-or-expense-code-edit-code">5.2.2. Editing an income or expense: <code>edit</code></a></h4>
+<h4 id="editing-an-income-or-expense-code-edit-code"><a class="link" href="#editing-an-income-or-expense-code-edit-code">4.2.4. Editing an income or expense: <code>edit</code></a></h4>
 <div class="paragraph">
 <p>Edits the details of an income or expense in your wallet.<br>
 Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></p>
@@ -349,7 +451,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-an-income-or-expense-code-find-code"><a class="link" href="#finding-an-income-or-expense-code-find-code">5.2.3. Finding an income or expense: <code>find</code></a></h4>
+<h4 id="finding-an-income-or-expense-code-find-code"><a class="link" href="#finding-an-income-or-expense-code-find-code">4.2.5. Finding an income or expense: <code>find</code></a></h4>
 <div class="paragraph">
 <p>Find an income or expense in your wallet by the keyword inputted.<br>
 Format: <code>wallet find &lt;keyword&gt;</code></p>
@@ -393,7 +495,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-an-income-or-expense-code-delete-code"><a class="link" href="#deleting-an-income-or-expense-code-delete-code">5.2.4. Deleting an income or expense: <code>delete</code></a></h4>
+<h4 id="deleting-an-income-or-expense-code-delete-code"><a class="link" href="#deleting-an-income-or-expense-code-delete-code">4.2.6. Deleting an income or expense: <code>delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes an income or an expense from your wallet.<br>
 Format: <code>wallet delete &lt;index&gt;</code></p>
@@ -435,9 +537,9 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="people-commands"><a class="link" href="#people-commands">5.3. People Commands</a></h3>
+<h3 id="people-commands"><a class="link" href="#people-commands">4.3. People Commands</a></h3>
 <div class="sect3">
-<h4 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">5.3.1. Adding a person: <code>add</code></a></h4>
+<h4 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">4.3.1. Adding a person: <code>add</code></a></h4>
 <div class="paragraph">
 <p>Adds a person to the address book<br>
 Format: <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
@@ -461,7 +563,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sending-reminder-to-a-friend-code-remind-code-code-coming-in-v2-0-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code-code-coming-in-v2-0-code">5.3.2. Sending reminder to a friend: <code>remind</code> <code>[coming in v2.0]</code></a></h4>
+<h4 id="sending-reminder-to-a-friend-code-remind-code-code-coming-in-v2-0-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code-code-coming-in-v2-0-code">4.3.2. Sending reminder to a friend: <code>remind</code> <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Sends a reminder through email to a friend to return their debts to you.<br>
 Format: <code>people remind &lt;index&gt;</code></p>
@@ -502,7 +604,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sending-reminder-to-all-friend-code-remindall-code-code-coming-in-v2-0-code"><a class="link" href="#sending-reminder-to-all-friend-code-remindall-code-code-coming-in-v2-0-code">5.3.3. Sending reminder to all friend: <code>remindall</code> <code>[coming in v2.0]</code></a></h4>
+<h4 id="sending-reminder-to-all-friend-code-remindall-code-code-coming-in-v2-0-code"><a class="link" href="#sending-reminder-to-all-friend-code-remindall-code-code-coming-in-v2-0-code">4.3.3. Sending reminder to all friend: <code>remindall</code> <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Sends reminders through email to all the friends that have not yet paid up.<br>
 Format: <code>people remindall</code></p>
@@ -527,7 +629,7 @@ Reminded Joel to return $30.75!</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-you-owe-code-owe-code-code-coming-in-v2-0-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code-code-coming-in-v2-0-code">5.3.4. Recording the money you owe: <code>owe</code> <code>[coming in v2.0]</code></a></h4>
+<h4 id="recording-the-money-you-owe-code-owe-code-code-coming-in-v2-0-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code-code-coming-in-v2-0-code">4.3.4. Recording the money you owe: <code>owe</code> <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Records the amount of money that you owe a person.<br>
 Format: <code>people owe &lt;index&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
@@ -571,7 +673,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-you-lend-code-lend-code-code-coming-in-v2-0-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code-code-coming-in-v2-0-code">5.3.5. Recording the money you lend: <code>lend</code> <code>[coming in v2.0]</code></a></h4>
+<h4 id="recording-the-money-you-lend-code-lend-code-code-coming-in-v2-0-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code-code-coming-in-v2-0-code">4.3.5. Recording the money you lend: <code>lend</code> <code>[coming in v2.0]</code></a></h4>
 <div class="paragraph">
 <p>Records the amount of money that you lend to a person. This will increase that person&#8217;s debt.<br>
 Format: <code>people lend &lt;index&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
@@ -615,7 +717,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">5.3.6. Finding a person: <code>find</code></a></h4>
+<h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">4.3.6. Finding a person: <code>find</code></a></h4>
 <div class="paragraph">
 <p>Finds a person in your contact list by his or her name.<br>
 Format: <code>people find &lt;keyword&gt;</code></p>
@@ -642,7 +744,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">5.3.7. Editing a person : <code>edit</code></a></h4>
+<h4 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">4.3.7. Editing a person : <code>edit</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
 Format: <code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email&gt;]</code></p>
@@ -683,7 +785,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">5.3.8. Deleting a person : <code>delete</code></a></h4>
+<h4 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">4.3.8. Deleting a person : <code>delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes the specified person from the address book.<br>
 Format: <code>people delete &lt;index&gt;</code></p>
@@ -738,7 +840,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
+<h2 id="faq"><a class="link" href="#faq">5. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
@@ -747,10 +849,10 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
+<h2 id="command-summary"><a class="link" href="#command-summary">6. Command Summary</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="global-commands-2"><a class="link" href="#global-commands-2">7.1. Global Commands</a></h3>
+<h3 id="global-commands-2"><a class="link" href="#global-commands-2">6.1. Global Commands</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -763,7 +865,38 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="people-commands-2"><a class="link" href="#people-commands-2">7.2. People Commands</a></h3>
+<h3 id="wallet-commands-2"><a class="link" href="#wallet-commands-2">6.2. Wallet Commands</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Expense</strong> <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code><br>
+e.g. <code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code></p>
+</li>
+<li>
+<p><strong>Income</strong> <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code><br>
+e.g. <code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code></p>
+</li>
+<li>
+<p><strong>Tag</strong> <code>wallet tag &lt;index&gt; t/&lt;tag&gt;</code><br>
+e.g. <code>tag 1 t/food</code></p>
+</li>
+<li>
+<p><strong>Edit</strong> <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code><br>
+e.g. <code>wallet edit 1 n/Duck rice $/4.00</code></p>
+</li>
+<li>
+<p><strong>Find</strong> <code>wallet find &lt;keyword&gt;</code><br>
+e.g. <code>wallet find rice</code></p>
+</li>
+<li>
+<p><strong>Delete</strong> <code>wallet delete &lt;index&gt;</code><br>
+e.g. <code>wallet delete 1</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="people-commands-2"><a class="link" href="#people-commands-2">6.3. People Commands</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -801,4 +934,4 @@ e.g. <code>people edit 1 e/johndoe@example.com</code><br></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-24 02:53:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-02-24 09:22:35 UTC</div></div></div></body></html>
