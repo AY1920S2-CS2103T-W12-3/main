@@ -20,11 +20,46 @@
 <div class="ulist">
 <ul>
 <li>
+<p><strong>Major enhancements</strong>: added <strong>owe command</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to keep track of what they owe to other people in the addressbook.</p>
+</li>
+<li>
+<p>Justification: This is one of the main feature of Sharkie.</p>
+</li>
+<li>
+<p>Highlights: The implementation was quite challenging as it required an in-depth analysis of design alternatives. For instance, how to store the Transactions,
+since a Transaction has association to Description, Amount, Date and Tag, and Date itself have different formats to consider. I have implemented the logic, model,
+storage and ui for this command.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
 <p>Documentation:</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Updated my part of my User Guide: (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/43">#43</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/95">#95</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/87">#87</a></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -119,6 +154,63 @@ Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
 <pre>Increased debt to Grace by $5.00! You now owe Grace $10.00.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="recording-the-money-you-return-code-return-code"><a class="link" href="#recording-the-money-you-return-code-return-code">Recording the money you return: <code>return</code></a></h4>
+<div class="paragraph">
+<p>Records that a debt that you owe a person has been returned.<br>
+Format: <code>people return &lt;person&#8217;s index&gt; [i/&lt;debt&#8217;s index&gt;]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Records that the debt at the specified &lt;debt&#8217;s index&gt; has been returned to the person specified at &lt;person&#8217;s index&gt;.</p>
+</li>
+<li>
+<p>The person&#8217;s index refers to the index number shown in the displayed person list.</p>
+</li>
+<li>
+<p>The debt&#8217;s index refers to the index number shown in the 'Debts' table of the person specified.</p>
+</li>
+<li>
+<p>Both indexes <strong>must be positive integers</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The debt&#8217;s index is optional.
+Sharkie will record all debts as returned if the debt&#8217;s index is not specified.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people return 4 i/1</code>
+Records that you return the 4th person the 1st debt.<br>
+Expected Outcome:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Reduced debt to Grace by $5.00. You now owe Grace $5.00.</pre>
 </div>
 </div>
 </li>
@@ -312,4 +404,4 @@ Expected Outcome:</p>
 </ol>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-12 06:01:55 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-12 06:23:20 UTC</div></div></div></body></html>
