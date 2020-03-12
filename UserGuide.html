@@ -48,9 +48,10 @@
 <li><a href="#sending-reminder-to-all-friend-code-remindall-code">5.3.3. Sending reminder to all friend: <code>remindall</code></a></li>
 <li><a href="#recording-the-money-you-owe-code-owe-code">5.3.4. Recording the money you owe: <code>owe</code></a></li>
 <li><a href="#recording-the-money-you-lend-code-lend-code">5.3.5. Recording the money you lend: <code>lend</code></a></li>
-<li><a href="#finding-a-person-code-find-code">5.3.6. Finding a person: <code>find</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">5.3.7. Editing a person : <code>edit</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">5.3.8. Deleting a person : <code>delete</code></a></li>
+<li><a href="#recording-the-money-your-friend-paid-back-code-received-code">5.3.6. Recording the money your friend paid back: <code>received</code></a></li>
+<li><a href="#finding-a-person-code-find-code">5.3.7. Finding a person: <code>find</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">5.3.8. Editing a person : <code>edit</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">5.3.9. Deleting a person : <code>delete</code></a></li>
 </ul>
 </li>
 </ul>
@@ -607,7 +608,7 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="sending-reminder-to-a-friend-code-remind-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code">5.3.2. Sending reminder to a friend: <code>remind</code></a></h4>
 <div class="paragraph">
-<p>Sends a reminder through email to a friend to return their debts to you.<br>
+<p>Reminds a friend, through a email to return the loans to you.<br>
 Format: <code>people remind &lt;index&gt;</code></p>
 </div>
 <div class="sidebarblock">
@@ -615,7 +616,7 @@ Format: <code>people remind &lt;index&gt;</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Reminds the person at the specified <code>&lt;index&gt;</code> return their debts to you.</p>
+<p>Reminds the person at the specified <code>&lt;index&gt;</code> return the loans to you.</p>
 </li>
 <li>
 <p>The index refers to the index number shown in the displayed person list.</p>
@@ -703,7 +704,7 @@ Sharkie has sent copies of the reminders to your email!</pre>
 <h4 id="recording-the-money-you-owe-code-owe-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code">5.3.4. Recording the money you owe: <code>owe</code></a></h4>
 <div class="paragraph">
 <p>Records the amount of money that you owe a person.<br>
-Format: <code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; d/&lt;date:dd/mm/yyyy&gt;</code></p>
+Format: <code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -746,8 +747,8 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="recording-the-money-you-lend-code-lend-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code">5.3.5. Recording the money you lend: <code>lend</code></a></h4>
 <div class="paragraph">
-<p>Records the amount of money that you lend to a person. This will increase that person&#8217;s debt.<br>
-Format: <code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; d/&lt;date:dd/mm/yyyy&gt;</code></p>
+<p>Records the amount of money that you lend to a person. This will increase that person&#8217;s loan.<br>
+Format: <code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -788,7 +789,61 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">5.3.6. Finding a person: <code>find</code></a></h4>
+<h4 id="recording-the-money-your-friend-paid-back-code-received-code"><a class="link" href="#recording-the-money-your-friend-paid-back-code-received-code">5.3.6. Recording the money your friend paid back: <code>received</code></a></h4>
+<div class="paragraph">
+<p>Records that you have received the money from your friend, who you lent to.<br>
+Format: <code>people paid &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The &lt;person&#8217;s index&gt; refers to the index number shown before a displayed person.</p>
+</li>
+<li>
+<p>The &lt;loan&#8217;s index&gt; refers to the index number shown before a loan under the specified person.</p>
+</li>
+<li>
+<p>Both indexes <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The loan&#8217;s index is optional.
+All loans will be marked as <code>received</code> for the indicated person if the loan&#8217;s index is not specified.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people paid 2 i/1</code>
+Records that you have received the money for the first loan from the second person in the address book.<br>
+Expected Outcome:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Removed loan to Joel by $10.00. Joel now owes you $2.00.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">5.3.7. Finding a person: <code>find</code></a></h4>
 <div class="paragraph">
 <p>Finds a person in your contact list by his or her name.<br>
 Format: <code>people find &lt;keyword&gt;</code></p>
@@ -815,7 +870,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">5.3.7. Editing a person : <code>edit</code></a></h4>
+<h4 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">5.3.8. Editing a person : <code>edit</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
 Format: <code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email&gt;]</code></p>
@@ -856,7 +911,7 @@ Expected Outcome:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">5.3.8. Deleting a person : <code>delete</code></a></h4>
+<h4 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">5.3.9. Deleting a person : <code>delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes the specified person from the address book.<br>
 Format: <code>people delete &lt;index&gt;</code></p>
@@ -986,12 +1041,16 @@ e.g. <code>people remind 1</code></p>
 <p><strong>Remind all</strong> : <code>people remindall</code></p>
 </li>
 <li>
-<p><strong>Owe</strong> : <code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; d/&lt;date:dd/mm/yyyy&gt;</code><br>
+<p><strong>Owe</strong> : <code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code><br>
 e.g. <code>people owe 4 n/lunch $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p><strong>Lend</strong> : <code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; d/&lt;date:dd/mm/yyyy&gt;</code><br>
+<p><strong>Lend</strong> : <code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code><br>
 e.g. <code>people lend 5 n/dinner $/5.00 d/10/10/2020</code></p>
+</li>
+<li>
+<p><strong>Received</strong> : <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code><br>
+e.g. <code>people paid 1 2</code></p>
 </li>
 <li>
 <p><strong>Find</strong> : <code>people find &lt;keyword&gt;</code><br>
@@ -1009,4 +1068,4 @@ e.g. <code>people edit 1 e/johndoe@example.com</code><br></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-11 03:57:18 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-12 06:01:55 UTC</div></div></div></body></html>
