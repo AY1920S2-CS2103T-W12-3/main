@@ -50,7 +50,7 @@ public class PeopleFindCommandTest {
         // null -> returns false
         assertFalse(findFirstCommand.equals(null));
 
-        // different person -> returns false
+        // different commands -> returns false
         assertFalse(findFirstCommand.equals(findSecondCommand));
     }
 

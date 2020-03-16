@@ -7,8 +7,8 @@ import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
 import static seedu.address.logic.commands.CommandTestUtil.showPersonAtIndex;
 import static seedu.address.testutil.TypicalDebts.MILKTEA;
 import static seedu.address.testutil.TypicalDebts.TEXTBOOK;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
 import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
 
 import java.util.List;
@@ -31,10 +31,10 @@ public class PeopleOweCommandTest {
     @Test
     public void execute_unfilteredList_success() {
         List<Person> lastShownList = model.getFilteredPersonList();
-        Person personUserOwe = lastShownList.get(INDEX_FIRST_PERSON.getZeroBased());
+        Person personUserOwe = lastShownList.get(INDEX_FIRST.getZeroBased());
         Person addedDebtPerson = new PersonBuilder(personUserOwe).withDebts(TEXTBOOK).build();
 
-        PeopleOweCommand peopleOweCommand = new PeopleOweCommand(INDEX_FIRST_PERSON, TEXTBOOK);
+        PeopleOweCommand peopleOweCommand = new PeopleOweCommand(INDEX_FIRST, TEXTBOOK);
 
         String expectedMessage = String.format(PeopleOweCommand.MESSAGE_OWE_SUCCESS,
                 addedDebtPerson.getName(), TEXTBOOK.getAmount(), addedDebtPerson.getDebts().getTotal());
@@ -48,12 +48,12 @@ public class PeopleOweCommandTest {
     @Test
     public void execute_filteredList_success() {
 
-        showPersonAtIndex(model, INDEX_FIRST_PERSON);
+        showPersonAtIndex(model, INDEX_FIRST);
 
-        Person personUserOwe = model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());
+        Person personUserOwe = model.getFilteredPersonList().get(INDEX_FIRST.getZeroBased());
         Person addedDebtPerson = new PersonBuilder(personUserOwe).withDebts(TEXTBOOK).build();
 
-        PeopleOweCommand peopleOweCommand = new PeopleOweCommand(INDEX_FIRST_PERSON, TEXTBOOK);
+        PeopleOweCommand peopleOweCommand = new PeopleOweCommand(INDEX_FIRST, TEXTBOOK);
 
         String expectedMessage = String.format(PeopleOweCommand.MESSAGE_OWE_SUCCESS,
                 addedDebtPerson.getName(), TEXTBOOK.getAmount(), addedDebtPerson.getDebts().getTotal());
@@ -77,8 +77,8 @@ public class PeopleOweCommandTest {
      */
     @Test
     public void execute_invalidPersonIndexFilteredList_failure() {
-        showPersonAtIndex(model, INDEX_FIRST_PERSON);
-        Index outOfBoundIndex = INDEX_SECOND_PERSON;
+        showPersonAtIndex(model, INDEX_FIRST);
+        Index outOfBoundIndex = INDEX_SECOND;
         // ensures that outOfBoundIndex is still in bounds of address book list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getAddressBook().getPersonList().size());
 
@@ -90,10 +90,10 @@ public class PeopleOweCommandTest {
     @Test
     public void equals() {
 
-        final PeopleOweCommand standardCommand = new PeopleOweCommand(INDEX_FIRST_PERSON, TEXTBOOK);
+        final PeopleOweCommand standardCommand = new PeopleOweCommand(INDEX_FIRST, TEXTBOOK);
 
         // same values -> returns true
-        PeopleOweCommand commandWithSameValues = new PeopleOweCommand(INDEX_FIRST_PERSON, TEXTBOOK);
+        PeopleOweCommand commandWithSameValues = new PeopleOweCommand(INDEX_FIRST, TEXTBOOK);
         assertTrue(standardCommand.equals(commandWithSameValues));
 
         // same object -> returns true
@@ -106,10 +106,10 @@ public class PeopleOweCommandTest {
         assertFalse(standardCommand.equals(new PeopleClearCommand()));
 
         // different index -> returns false
-        assertFalse(standardCommand.equals(new PeopleOweCommand(INDEX_SECOND_PERSON, TEXTBOOK)));
+        assertFalse(standardCommand.equals(new PeopleOweCommand(INDEX_SECOND, TEXTBOOK)));
 
         // different descriptor -> returns false
-        assertFalse(standardCommand.equals(new PeopleOweCommand(INDEX_FIRST_PERSON, MILKTEA)));
+        assertFalse(standardCommand.equals(new PeopleOweCommand(INDEX_FIRST, MILKTEA)));
     }
 
 }

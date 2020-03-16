@@ -7,10 +7,12 @@ import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
 import static seedu.address.logic.parser.CliPrefix.PEOPLE_COMMAND_TYPE;
 import static seedu.address.logic.parser.CliPrefix.WALLET_COMMAND_TYPE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TRANSACTION_INDEX;
+import static seedu.address.model.FilterType.FILTER_BY_DEBT;
+import static seedu.address.model.FilterType.FILTER_BY_LOAN;
 import static seedu.address.testutil.Assert.assertThrows;
 import static seedu.address.testutil.TypicalDebts.TEXTBOOK;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
 import static seedu.address.testutil.TypicalLoans.DINNER;
 import static seedu.address.testutil.TypicalWallet.ALLOWANCE;
 import static seedu.address.testutil.TypicalWallet.DUCK_RICE;
@@ -28,6 +30,7 @@ import seedu.address.logic.commands.people.PeopleClearCommand;
 import seedu.address.logic.commands.people.PeopleDeleteCommand;
 import seedu.address.logic.commands.people.PeopleEditCommand;
 import seedu.address.logic.commands.people.PeopleEditCommand.EditPersonDescriptor;
+import seedu.address.logic.commands.people.PeopleFilterCommand;
 import seedu.address.logic.commands.people.PeopleFindCommand;
 import seedu.address.logic.commands.people.PeopleLendCommand;
 import seedu.address.logic.commands.people.PeopleListCommand;
@@ -40,6 +43,7 @@ import seedu.address.logic.commands.wallet.WalletDeleteCommand;
 import seedu.address.logic.commands.wallet.WalletExpenseCommand;
 import seedu.address.logic.commands.wallet.WalletIncomeCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.person.FilterPredicate;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.Person;
 import seedu.address.testutil.EditPersonDescriptorBuilder;
@@ -69,8 +73,8 @@ public class SharkieParserTest {
     @Test
     public void parsePeopleCommand_delete() throws Exception {
         PeopleDeleteCommand command = (PeopleDeleteCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleDeleteCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased());
-        assertEquals(new PeopleDeleteCommand(INDEX_FIRST_PERSON), command);
+                + PeopleDeleteCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased());
+        assertEquals(new PeopleDeleteCommand(INDEX_FIRST), command);
     }
 
     @Test
@@ -78,9 +82,9 @@ public class SharkieParserTest {
         Person person = new PersonBuilder().build();
         EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder(person).build();
         PeopleEditCommand command = (PeopleEditCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleEditCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased() + " "
+                + PeopleEditCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased() + " "
                 + PersonUtil.getEditPersonDescriptorDetails(descriptor));
-        assertEquals(new PeopleEditCommand(INDEX_FIRST_PERSON, descriptor), command);
+        assertEquals(new PeopleEditCommand(INDEX_FIRST, descriptor), command);
     }
 
     @Test
@@ -115,40 +119,50 @@ public class SharkieParserTest {
     @Test
     public void parsePeopleCommand_owe() throws Exception {
         PeopleOweCommand command = (PeopleOweCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleOweCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased() + " "
+                + PeopleOweCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased() + " "
                 + PersonUtil.getDebtDescription(TEXTBOOK));
-        assertEquals(new PeopleOweCommand(INDEX_FIRST_PERSON, TEXTBOOK), command);
+        assertEquals(new PeopleOweCommand(INDEX_FIRST, TEXTBOOK), command);
+    }
+
+    @Test
+    public void parsePeopleCommand_filter() throws Exception {
+        PeopleFilterCommand filterDebtCommand = (PeopleFilterCommand) parser.parseCommand(
+                PEOPLE_COMMAND_TYPE + " " + PeopleFilterCommand.COMMAND_WORD + " debt");
+        assertEquals(new PeopleFilterCommand(new FilterPredicate(FILTER_BY_DEBT)), filterDebtCommand);
+        PeopleFilterCommand filterLoanCommand = (PeopleFilterCommand) parser.parseCommand(
+                PEOPLE_COMMAND_TYPE + " " + PeopleFilterCommand.COMMAND_WORD + " loan");
+        assertEquals(new PeopleFilterCommand(new FilterPredicate(FILTER_BY_LOAN)), filterLoanCommand);
     }
 
     @Test
     public void parsePeopleCommand_returned() throws Exception {
         PeopleReturnedCommand command = (PeopleReturnedCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleReturnedCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased() + " "
-                + CliSyntax.PREFIX_TRANSACTION_INDEX + INDEX_FIRST_PERSON.getOneBased());
-        assertEquals(new PeopleReturnedCommand(INDEX_FIRST_PERSON, INDEX_FIRST_PERSON), command);
+                + PeopleReturnedCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased() + " "
+                + CliSyntax.PREFIX_TRANSACTION_INDEX + INDEX_FIRST.getOneBased());
+        assertEquals(new PeopleReturnedCommand(INDEX_FIRST, INDEX_FIRST), command);
     }
 
     @Test
     public void parsePeopleCommand_lend() throws Exception {
         PeopleLendCommand command = (PeopleLendCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleLendCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased() + " "
+                + PeopleLendCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased() + " "
                 + PersonUtil.getLoanDescription(DINNER));
-        assertEquals(new PeopleLendCommand(INDEX_FIRST_PERSON, DINNER), command);
+        assertEquals(new PeopleLendCommand(INDEX_FIRST, DINNER), command);
     }
 
     @Test
     public void parsePeopleCommand_received() throws Exception {
         PeopleReceivedCommand command = (PeopleReceivedCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleReceivedCommand.COMMAND_WORD + " " + INDEX_SECOND_PERSON.getOneBased() + " "
-                + PREFIX_TRANSACTION_INDEX + INDEX_FIRST_PERSON.getOneBased());
-        assertEquals(new PeopleReceivedCommand(INDEX_SECOND_PERSON, INDEX_FIRST_PERSON), command);
+                + PeopleReceivedCommand.COMMAND_WORD + " " + INDEX_SECOND.getOneBased() + " "
+                + PREFIX_TRANSACTION_INDEX + INDEX_FIRST.getOneBased());
+        assertEquals(new PeopleReceivedCommand(INDEX_SECOND, INDEX_FIRST), command);
     }
 
     @Test
     public void parsePeopleCommand_remind() throws Exception {
         PeopleRemindCommand command = (PeopleRemindCommand) parser.parseCommand(PEOPLE_COMMAND_TYPE + " "
-                + PeopleRemindCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased());
-        assertEquals(new PeopleRemindCommand(INDEX_FIRST_PERSON), command);
+                + PeopleRemindCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased());
+        assertEquals(new PeopleRemindCommand(INDEX_FIRST), command);
     }
 
     @Test
@@ -176,8 +190,8 @@ public class SharkieParserTest {
     @Test
     public void parseWalletCommand_delete() throws Exception {
         WalletDeleteCommand command = (WalletDeleteCommand) parser.parseCommand(WALLET_COMMAND_TYPE + " "
-                + WalletDeleteCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased());
-        assertEquals(new WalletDeleteCommand(INDEX_FIRST_PERSON), command);
+                + WalletDeleteCommand.COMMAND_WORD + " " + INDEX_FIRST.getOneBased());
+        assertEquals(new WalletDeleteCommand(INDEX_FIRST), command);
     }
 
     @Test

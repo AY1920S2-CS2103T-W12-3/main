@@ -5,8 +5,8 @@ import static seedu.address.logic.commands.CommandTestUtil.INVALID_TRANSACTION_I
 import static seedu.address.logic.commands.CommandTestUtil.RECEIVED_DESC_AMY;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
 
 import org.junit.jupiter.api.Test;
 
@@ -52,7 +52,7 @@ public class PeopleReceivedCommandParserTest {
 
     @Test
     public void parse_noLoanIndexSpecified_success() {
-        Index targetPersonIndex = INDEX_SECOND_PERSON;
+        Index targetPersonIndex = INDEX_SECOND;
         String userInput = String.valueOf(targetPersonIndex.getOneBased());
         PeopleReceivedCommand expectedCommand = new PeopleReceivedCommand(targetPersonIndex, null);
         assertParseSuccess(parser, userInput, expectedCommand);
@@ -60,8 +60,8 @@ public class PeopleReceivedCommandParserTest {
 
     @Test
     public void parse_allFieldsSpecified_success() {
-        Index targetPersonIndex = INDEX_SECOND_PERSON;
-        Index targetLoanIndex = INDEX_FIRST_PERSON;
+        Index targetPersonIndex = INDEX_SECOND;
+        Index targetLoanIndex = INDEX_FIRST;
         String userInput = targetPersonIndex.getOneBased() + " " + RECEIVED_DESC_AMY;
 
         PeopleReceivedCommand expectedCommand = new PeopleReceivedCommand(targetPersonIndex, targetLoanIndex);

@@ -440,7 +440,7 @@ Expected Outcome:
 ==== Recording the money your friend paid back: `received`
 
 Records that you have received the money from your friend, who you lent to. +
-Format: `people paid <person's index> [i/<loan's index>]`
+Format: `people received <person's index> [i/<loan's index>]`
 
 ****
 * The <person's index> refers to the index number shown before a displayed person.
@@ -461,6 +461,39 @@ Expected Outcome:
     Removed loan to Joel by $10.00. Joel now owes you $2.00.
 
 // end::paid[]
+
+//tag::filter[]
+==== Filtering people you owe/lend: `filter`
+
+Filters out people in your contact list whom you owed or lent money to. +
+Format: `people filter <options>`
+
+****
+* There are only 2 <options>, `debt` and `loan`.
+****
+
+Examples:
+
+* `people filter debt`
+Returns a list of people whom you owed money to. +
+Expected Outcome:
+
+    3 persons listed!
+    1. Alex Yeoh
+    2. Bernice Yu
+    3. Charlotte Oliveiro
+
+* `people filter loan`
+Returns a list of people whom you lent money to. +
+Expected Outcome:
+
+    4 persons listed!
+    1. Alex Yeoh
+    2. Bernice Yu
+    3. Charlotte Oliveiro
+    4. David Li
+
+//end::filter[]
 
 //tag::peoplefind[]
 ==== Finding a person: `find`

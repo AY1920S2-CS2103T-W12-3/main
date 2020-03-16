@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
 import static seedu.address.logic.commands.CommandTestUtil.showTransactionAtIndex;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
 import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalWallet.getTypicalWallet;
 
@@ -26,8 +26,8 @@ public class WalletDeleteCommandTest {
     public void execute_validIndexUnfilteredList_success() {
 
         Transaction transactionToDelete =
-                model.getFilteredTransactionList().get(INDEX_FIRST_PERSON.getZeroBased());
-        WalletDeleteCommand walletDeleteCommand = new WalletDeleteCommand(INDEX_FIRST_PERSON);
+                model.getFilteredTransactionList().get(INDEX_FIRST.getZeroBased());
+        WalletDeleteCommand walletDeleteCommand = new WalletDeleteCommand(INDEX_FIRST);
 
         String expectedMessage = String.format(WalletDeleteCommand.MESSAGE_DELETE_TRANSACTION_SUCCESS,
                 transactionToDelete);
@@ -48,11 +48,11 @@ public class WalletDeleteCommandTest {
 
     @Test
     public void execute_validIndexFilteredList_success() {
-        showTransactionAtIndex(model, INDEX_FIRST_PERSON);
+        showTransactionAtIndex(model, INDEX_FIRST);
 
         Transaction transactionToDelete =
-                model.getFilteredTransactionList().get(INDEX_FIRST_PERSON.getZeroBased());
-        WalletDeleteCommand walletDeleteCommand = new WalletDeleteCommand(INDEX_FIRST_PERSON);
+                model.getFilteredTransactionList().get(INDEX_FIRST.getZeroBased());
+        WalletDeleteCommand walletDeleteCommand = new WalletDeleteCommand(INDEX_FIRST);
 
         String expectedMessage = String.format(WalletDeleteCommand.MESSAGE_DELETE_TRANSACTION_SUCCESS,
                 transactionToDelete);
@@ -66,9 +66,9 @@ public class WalletDeleteCommandTest {
 
     @Test
     public void execute_invalidIndexFilteredList_throwsCommandException() {
-        showTransactionAtIndex(model, INDEX_FIRST_PERSON);
+        showTransactionAtIndex(model, INDEX_FIRST);
 
-        Index outOfBoundIndex = INDEX_SECOND_PERSON;
+        Index outOfBoundIndex = INDEX_SECOND;
         // ensures that outOfBoundIndex is still in bounds of address book list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getWallet().getTransactionList().size());
 
@@ -79,14 +79,14 @@ public class WalletDeleteCommandTest {
 
     @Test
     public void equals() {
-        WalletDeleteCommand deleteFirstCommand = new WalletDeleteCommand(INDEX_FIRST_PERSON);
-        WalletDeleteCommand deleteSecondCommand = new WalletDeleteCommand(INDEX_SECOND_PERSON);
+        WalletDeleteCommand deleteFirstCommand = new WalletDeleteCommand(INDEX_FIRST);
+        WalletDeleteCommand deleteSecondCommand = new WalletDeleteCommand(INDEX_SECOND);
 
         // same object -> returns true
         assertTrue(deleteFirstCommand.equals(deleteFirstCommand));
 
         // same values -> returns true
-        WalletDeleteCommand deleteFirstCommandCopy = new WalletDeleteCommand(INDEX_FIRST_PERSON);
+        WalletDeleteCommand deleteFirstCommandCopy = new WalletDeleteCommand(INDEX_FIRST);
         assertTrue(deleteFirstCommand.equals(deleteFirstCommandCopy));
 
         // different types -> returns false

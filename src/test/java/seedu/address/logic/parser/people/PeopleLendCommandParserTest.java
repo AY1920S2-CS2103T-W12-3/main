@@ -16,8 +16,8 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_AMOUNT;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -114,7 +114,7 @@ public class PeopleLendCommandParserTest {
 
     @Test
     public void parse_allFieldsSpecified_success() {
-        Index targetIndex = INDEX_SECOND_PERSON;
+        Index targetIndex = INDEX_SECOND;
         String userInput = targetIndex.getOneBased() + LEND_DESC_AMY;
 
         Loan loan = new Loan(new Description(VALID_DESC_AMY),
@@ -128,7 +128,7 @@ public class PeopleLendCommandParserTest {
 
     @Test
     public void parse_dateNotSpecified_success() {
-        Index targetIndex = INDEX_FIRST_PERSON;
+        Index targetIndex = INDEX_FIRST;
         String userInput = targetIndex.getOneBased() + LEND_DESC_BOB;
 
         Loan loan = new Loan(new Description(VALID_DESC_BOB),

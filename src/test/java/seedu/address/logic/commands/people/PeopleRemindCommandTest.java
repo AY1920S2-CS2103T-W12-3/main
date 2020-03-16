@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_THIRD_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
+import static seedu.address.testutil.TypicalIndexes.INDEX_THIRD;
 import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalUser.getTypicalUserData;
 
@@ -35,7 +35,7 @@ public class PeopleRemindCommandTest {
     @Test
     public void execute_emptyUserData_failure() {
 
-        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_SECOND_PERSON);
+        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_SECOND);
 
         assertCommandFailure(peopleRemindCommand, model, Messages.MESSAGE_EMPTY_USER_DATA);
     }
@@ -45,9 +45,9 @@ public class PeopleRemindCommandTest {
         model.setUserData(getTypicalUserData());
         List<Person> lastShownList = model.getFilteredPersonList();
 
-        Person personUserReminds = lastShownList.get(INDEX_SECOND_PERSON.getZeroBased());
+        Person personUserReminds = lastShownList.get(INDEX_SECOND.getZeroBased());
 
-        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_SECOND_PERSON);
+        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_SECOND);
 
         String expectedMessage = String.format(PeopleRemindCommand.MESSAGE_REMIND_SUCCESS,
                 personUserReminds.getName(), personUserReminds.getLoans().getTotal());
@@ -58,9 +58,9 @@ public class PeopleRemindCommandTest {
     @Test
     public void execute_filteredList_success() {
         model.setUserData(getTypicalUserData());
-        Person personUserReminds = model.getFilteredPersonList().get(INDEX_SECOND_PERSON.getZeroBased());
+        Person personUserReminds = model.getFilteredPersonList().get(INDEX_SECOND.getZeroBased());
 
-        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_SECOND_PERSON);
+        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_SECOND);
 
         String expectedMessage = String.format(PeopleRemindCommand.MESSAGE_REMIND_SUCCESS,
                 personUserReminds.getName(), personUserReminds.getLoans().getTotal());
@@ -71,9 +71,9 @@ public class PeopleRemindCommandTest {
     @Test
     public void execute_personWithZeroDebt_failure() {
         List<Person> lastShownList = model.getFilteredPersonList();
-        Person personUserReminds = lastShownList.get(INDEX_FIRST_PERSON.getZeroBased());
+        Person personUserReminds = lastShownList.get(INDEX_FIRST.getZeroBased());
 
-        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_FIRST_PERSON);
+        PeopleRemindCommand peopleRemindCommand = new PeopleRemindCommand(INDEX_FIRST);
 
         String expectedMessage = String.format("%1$s does not owe you money :(",
                 personUserReminds.getName());
@@ -84,10 +84,10 @@ public class PeopleRemindCommandTest {
     @Test
     public void equals() {
 
-        final PeopleRemindCommand standardCommand = new PeopleRemindCommand(INDEX_SECOND_PERSON);
+        final PeopleRemindCommand standardCommand = new PeopleRemindCommand(INDEX_SECOND);
 
         // same values -> returns true
-        PeopleRemindCommand commandWithSameValues = new PeopleRemindCommand(INDEX_SECOND_PERSON);
+        PeopleRemindCommand commandWithSameValues = new PeopleRemindCommand(INDEX_SECOND);
         assertTrue(standardCommand.equals(commandWithSameValues));
 
         // same object -> returns true
@@ -100,7 +100,7 @@ public class PeopleRemindCommandTest {
         assertFalse(standardCommand.equals(new PeopleClearCommand()));
 
         // different index -> returns false
-        assertFalse(standardCommand.equals(new PeopleRemindCommand(INDEX_THIRD_PERSON)));
+        assertFalse(standardCommand.equals(new PeopleRemindCommand(INDEX_THIRD)));
     }
 
 }

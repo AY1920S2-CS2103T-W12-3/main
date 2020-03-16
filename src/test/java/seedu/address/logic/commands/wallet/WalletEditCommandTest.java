@@ -1,8 +1,8 @@
 package seedu.address.logic.commands.wallet;
 
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_PERSON;
+import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST;
+import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND;
 import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
 import static seedu.address.testutil.TypicalWallet.getTypicalWallet;
 
@@ -30,7 +30,7 @@ public class WalletEditCommandTest {
         Income editedTransaction = new TransactionBuilder().buildIncome(); //returns 1 income obj
         EditTransactionDescriptor descriptor = new EditTransactionDescriptorBuilder(editedTransaction).build();
         //stores edited income obj
-        WalletEditCommand walletEditCommand = new WalletEditCommand(INDEX_FIRST_PERSON, descriptor); //edit with
+        WalletEditCommand walletEditCommand = new WalletEditCommand(INDEX_FIRST, descriptor); //edit with
         // command -> copy from descrip.
 
         String expectedMessage = String.format(walletEditCommand.MESSAGE_EDIT_TRANSACTION_SUCCESS, editedTransaction);
@@ -46,7 +46,7 @@ public class WalletEditCommandTest {
     public void execute_expenseAllFieldsSpecifiedUnfilteredList_success() {
         Expense editedTransaction = new TransactionBuilder().buildExpense();
         EditTransactionDescriptor descriptor = new EditTransactionDescriptorBuilder(editedTransaction).build();
-        WalletEditCommand walletEditCommand = new WalletEditCommand(INDEX_SECOND_PERSON, descriptor);
+        WalletEditCommand walletEditCommand = new WalletEditCommand(INDEX_SECOND, descriptor);
 
         String expectedMessage = String.format(walletEditCommand.MESSAGE_EDIT_TRANSACTION_SUCCESS, editedTransaction);
 
