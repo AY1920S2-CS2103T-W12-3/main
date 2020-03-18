@@ -909,7 +909,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="paragraph">
 <p>(For all use cases below, the <strong>System</strong> is the <code>Wallet</code> and the <strong>Actor</strong> is the <code>User</code>, unless specified otherwise)</p>
 </div>
-<h4 id="use-case-recording-an-expense" class="discrete">Use case: Recording an expense</h4>
+<h4 id="use-case-uc1-recording-an-expense" class="discrete">Use case: UC1 - Recording an expense</h4>
 <div class="paragraph">
 <p><a href="#MSS"><strong>MSS</strong></a></p>
 </div>
@@ -919,7 +919,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>User keys in an expense.</p>
 </li>
 <li>
-<p><a href="#wallet">Wallet</a> adds the expense.</p>
+<p><a href="#wallet">Wallet</a> adds the expense and displays the expense in the list of expenses.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -952,7 +952,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </li>
 </ul>
 </div>
-<h4 id="use-case-recording-an-income" class="discrete">Use case: Recording an income</h4>
+<h4 id="use-case-uc2-recording-an-income" class="discrete">Use case: UC2 - Recording an income</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -962,7 +962,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>User keys in an income.</p>
 </li>
 <li>
-<p>Wallet adds the income.</p>
+<p>Wallet adds the income and displays the income in the list of incomes.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -995,7 +995,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </li>
 </ul>
 </div>
-<h4 id="use-case-setting-budget" class="discrete">Use case: Setting budget</h4>
+<h4 id="use-case-uc3-setting-budget" class="discrete">Use case: UC3 - Setting budget</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -1005,7 +1005,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>User keys in a budget.</p>
 </li>
 <li>
-<p>Wallet sets the amount keyed in as the budget of the month.</p>
+<p>Wallet sets the amount keyed in as the budget of the month indicated.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1018,7 +1018,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The amount keyed in is invalid.</p>
+<p>1a. The amount or date keyed in is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -1027,7 +1027,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <li>
 <p>1a2. User re-enters the budget.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the amount keyed in is correct.</p>
+<p>Steps 1a1-1a2 are repeated until the amount and date keyed in is correct.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -1051,17 +1051,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </li>
 </ul>
 </div>
-<h4 id="use-case-deleting-an-income-expense" class="discrete">Use case: Deleting an income/expense</h4>
+<h4 id="use-case-uc4-deleting-a-a-href-transaction-strong-transaction-strong-a" class="discrete">Use case: UC4 - Deleting a <a href="#transaction"><strong>transaction</strong></a></h4>
+<div class="paragraph">
+<p><strong>Preconditions:</strong> The transaction that the user wants to delete exists.</p>
+</div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to delete a specific income/expense in the wallet.</p>
+<p>User requests to delete a specific transaction in the wallet.</p>
 </li>
 <li>
-<p>Wallet deletes the income/expense.</p>
+<p>Wallet deletes the transaction and shows the success message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1094,17 +1097,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </li>
 </ul>
 </div>
-<h4 id="use-case-editing-an-income-expense" class="discrete">Use case: Editing an income/expense</h4>
+<h4 id="use-case-uc5-editing-a-transaction" class="discrete">Use case: UC5 - Editing a transaction</h4>
+<div class="paragraph">
+<p><strong>Preconditions:</strong> The transaction that the user wants to edit exists.</p>
+</div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to edit a specific income/expense in the wallet.</p>
+<p>User requests to edit a specific transaction in the wallet.</p>
 </li>
 <li>
-<p>Wallet edits the income/expense.</p>
+<p>Wallet edits the transaction and shows the edited transaction.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1124,7 +1130,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>1a1. Wallet shows an error message.</p>
 </li>
 <li>
-<p>1a2. User re-enters the index.</p>
+<p>1a2. User re-enters the command.</p>
 <div class="paragraph">
 <p>Steps 1a1-1a2 are repeated until the index keyed in is valid.</p>
 </div>
@@ -1140,16 +1146,16 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The new income/expense keyed in is invalid.</p>
+<p>1b. The user did not indicate the field to edit.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. Wallet shows an error message.</p>
+<p>1b1. Wallet shows an error message.</p>
 </li>
 <li>
-<p>1a2. User re-enters the new income/expense.</p>
+<p>1b2. User re-enters the edit command.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the new income/expense keyed in is valid.</p>
+<p>Steps 1a1-1a2 are repeated until the edit command keyed in is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -1160,7 +1166,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </li>
 </ul>
 </div>
-<h4 id="use-case-finding-an-income-expense" class="discrete">Use case: Finding an income/expense</h4>
+<h4 id="use-case-uc6-finding-a-transaction" class="discrete">Use case: UC6 - Finding a transaction</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -1170,7 +1176,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>User keys in a keyword.</p>
 </li>
 <li>
-<p>Wallet lists out the incomes or expenses containing the keyword.</p>
+<p>Wallet lists out the transactions that contain the keyword.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -1189,6 +1195,23 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </li>
 </ul>
+</div>
+<h4 id="use-case-uc7-listing-all-transactions" class="discrete">Use case: UC7 - Listing all transactions</h4>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User enters the list command.</p>
+</li>
+<li>
+<p>Wallet lists out all the transactions.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
@@ -1668,6 +1691,10 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <dd>
 <p>A contact detail that is not meant to be shared with others</p>
 </dd>
+<dt class="hdlist1"><a id="transaction"></a> Transaction</dt>
+<dd>
+<p>Income and expense</p>
+</dd>
 <dt class="hdlist1"><a id="wallet"></a> Wallet</dt>
 <dd>
 <p>Sharkie&#8217;s wallet, that holds information pertaining to the user&#8217;s expenditure and income</p>
@@ -2032,4 +2059,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-15 14:26:12 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-18 10:00:27 UTC</div></div></div></body></html>
