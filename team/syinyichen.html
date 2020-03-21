@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Chen Syin Yi - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">Sharkie</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">Sharkie</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Chen Syin Yi - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="../index.html">Sharkie</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">Sharkie</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Chen Syin Yi - Project Portfolio</h1></div><div id="content"><div class="sect1">
 <h2 id="project-sharkie"><a class="link" href="#project-sharkie">PROJECT: Sharkie</a></h2>
 <div class="sectionbody">
 <hr>
@@ -10,7 +10,8 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Sharkie</strong> is a desktop expense tracker application. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p><strong>Sharkie</strong> is a desktop expense tracker application. The user interacts with it using a CLI,
+and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
 </div>
 </div>
 </div>
@@ -24,44 +25,60 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Added People&#8217;s command, <code>lend</code></p>
+<p>Added <code><strong>lend</strong></code> <strong>command</strong> (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#87</a>)</p>
 <div class="ulist">
 <ul>
 <li>
 <p>What it does: Allows the user to record the amount of money lent to other people in the address book.</p>
 </li>
+<li>
+<p>Justification: This is one of the key features of Sharkie, which records the flow of money between the user and
+the people in the address book.</p>
+</li>
 </ul>
 </div>
 </li>
 <li>
-<p>Added People&#8217;s command, <code>received</code></p>
+<p>Added <code><strong>received</strong></code> <strong>command</strong> (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#98</a>)</p>
 <div class="ulist">
 <ul>
 <li>
 <p>What it does: Allows the user to record that a person, which the user lent has returned the amount of money.</p>
 </li>
+<li>
+<p>Justification: This is an essential update, which allows the user to remove the loans recorded by the
+<code>lend</code> command.</p>
+</li>
 </ul>
 </div>
 </li>
 <li>
-<p>Added user data storage</p>
+<p>Added <strong>user data storage</strong> (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#95</a>)</p>
 <div class="ulist">
 <ul>
 <li>
 <p>What it does: Stores user data, such as name, phone and e-mail address.</p>
 </li>
 <li>
-<p>Justification: This is an essential feature, as the user details are required during the use of <code>remind</code> and <code>remindall</code> commands.</p>
+<p>Justification: The storage of user data is important, as the user details are required to use the <code>remind</code>
+and <code>remindall</code> commands.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Added People&#8217;s command, <code>remind</code> and <code>remindall</code></p>
+<p>Added <code><strong>remind</strong></code> and <code><strong>remindall</strong></code> <strong>command</strong> (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#95</a>)</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: Allows the user to record that a person, which the user lent has returned the amount of money.</p>
+<p>What it does: Allows the user to send reminders to the people, who has yet return the amount of money they lent via email.</p>
+</li>
+<li>
+<p>Justification: This is one of the main features of Sharkie, which allows the interaction between the user and
+the people in the address book.</p>
+</li>
+<li>
+<p>Credits: <em>javax.mail</em> is used in the implementation of this feature.</p>
 </li>
 </ul>
 </div>
@@ -78,7 +95,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Finalized and tagged <code>v1.1</code>. (Pull request <a href="https://github.com">#80</a>, <a href="https://github.com">#82</a>, <a href="https://github.com">#83</a>)</p>
+<p>Finalized and tagged <code>v1.1</code> and <code>v1.2</code>.</p>
 </li>
 </ul>
 </div>
@@ -88,16 +105,15 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Updated the product&#8217;s website heading: (Pull request <a href="https://github.com">#44</a>)</p>
+<p>Updated the product website&#8217;s heading and navigation bar: (Pull request
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#44</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#81</a>)</p>
 </li>
 <li>
-<p>Edited the product&#8217;s website navigation bar: (Pull request <a href="https://github.com">#81</a>)</p>
+<p>Edited various parts of the User Guide: (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#49</a>)</p>
 </li>
 <li>
-<p>Edited various parts of the User Guide: (Pull request <a href="https://github.com">#49</a>)</p>
-</li>
-<li>
-<p>Updated the Use Cases Appendix in the Developer Guide: (Pull request <a href="https://github.com">#51</a>)</p>
+<p>Included the use cases into the Developer Guide:
+(Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#51</a>)</p>
 </li>
 </ul>
 </div>
@@ -107,7 +123,9 @@
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#92</a>, <a href="https://github.com">#100</a></p>
+<p>PRs reviewed (with non-trivial review comments): (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#92</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#100</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#104</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pulls">#115</a>)</p>
 </li>
 </ul>
 </div>
@@ -179,7 +197,7 @@ This symbol indicates tips.
 </div>
 </div>
 <div class="sect2">
-<h3 id="expenditure-and-income-code-coming-in-v2-0-code"><a class="link" href="#expenditure-and-income-code-coming-in-v2-0-code">Expenditure and income <code>[coming in v2.0]</code></a></h3>
+<h3 id="expenditure-and-income"><a class="link" href="#expenditure-and-income">Expenditure and income</a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> notes down what you have spent on for the month, and also notes down your income for the month to help you properly track your money flow!</p>
 </div>
@@ -210,7 +228,7 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="sending-reminder-to-a-friend-code-remind-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code">Sending reminder to a friend: <code>remind</code></a></h4>
 <div class="paragraph">
-<p>Reminds a friend, through a email to return the loans to you.<br>
+<p>Reminds a friend, through an email to return the loans to you.<br>
 Format: <code>people remind &lt;index&gt;</code></p>
 </div>
 <div class="sidebarblock">
@@ -345,6 +363,78 @@ Expected Outcome:</p>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="Design-Model"><a class="link" href="#Design-Model">Model component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="700">
+</div>
+<div class="title">Figure 1. Structure of the Model Component</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>The <em>Model</em> package consists of two main packages: <em>Person</em> and <em>Transaction</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The diagram below shows how the <em>Person</em> package is implemented:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="500">
+</div>
+<div class="title">Figure 2. In-depth Structure of Person in the Model Component</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The diagram below shows how the <em>Transaction</em> package is implemented:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="500">
+</div>
+<div class="title">Figure 3. In-depth Structure of Transaction in the Model Component</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Model</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
+</li>
+<li>
+<p>stores the Address Book data.</p>
+</li>
+<li>
+<p>stores the Wallet data.</p>
+</li>
+<li>
+<p>stores the User data.</p>
+</li>
+<li>
+<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> and an unmodifiable <code>ObservableList&lt;Transaction&gt;</code> that can be
+'observed' e.g. the UI can be bound to these lists so that the UI automatically updates when the data in the
+respective lists change.</p>
+</li>
+<li>
+<p>does not depend on any of the other three components.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -362,7 +452,7 @@ Expected Outcome:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User keys in an expense.</p>
+<p>User requests to add an expense into the wallet.</p>
 </li>
 <li>
 <p><a href="#wallet">Wallet</a> adds the expense and displays the expense in the list of expenses.</p>
@@ -375,10 +465,10 @@ Expected Outcome:</p>
 <div class="paragraph">
 <p><a href="#extensions"><strong>Extensions</strong></a></p>
 </div>
-<div class="ulist none">
+<div id="wallet-invalid-amount" class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The expense keyed in is invalid.</p>
+<p>1a. The amount keyed in by the user is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -387,7 +477,7 @@ Expected Outcome:</p>
 <li>
 <p>1a2. User re-enters the expense.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the expense keyed in is correct.</p>
+<p>Steps 1a1-1a2 are repeated until the amount keyed in by the user is correct.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -405,7 +495,7 @@ Expected Outcome:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User keys in an income.</p>
+<p>User requests to add an income into the wallet.</p>
 </li>
 <li>
 <p>Wallet adds the income and displays the income in the list of incomes.</p>
@@ -421,22 +511,13 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The income keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Wallet shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the income.</p>
+<p>1a. The amount keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the income keyed in is correct.</p>
+<p><a href="#wallet-invalid-amount">Steps 1a1-1a2</a> of <span class="underline">recording an expense (UC1)</span> are repeated
+until the amount keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
 </div>
 </li>
 </ul>
@@ -448,7 +529,7 @@ Expected Outcome:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User keys in a budget.</p>
+<p>User requests to set a budget.</p>
 </li>
 <li>
 <p>Wallet sets the amount keyed in as the budget of the month indicated.</p>
@@ -464,30 +545,21 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The amount or date keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Wallet shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the budget.</p>
+<p>1a. The amount keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the amount and date keyed in is correct.</p>
+<p><a href="#wallet-invalid-amount">Steps 1a1-1a2</a> of <span class="underline">recording an expense (UC1)</span> are repeated
+until the amount keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
 </li>
-</ul>
-</div>
-</li>
 <li>
-<p>1b. The amount keyed in has no date attached to it.</p>
+<p>1b. The amount keyed in by the user has no date attached to it.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b1. Wallet automatically assigns the budget entered as the default budget.</p>
+<p>1b1. Wallet automatically assigns the budget entered as the default budget of each month.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -499,7 +571,7 @@ Expected Outcome:</p>
 </div>
 <h4 id="use-case-uc4-deleting-a-a-href-transaction-strong-transaction-strong-a" class="discrete">Use case: UC4 - Deleting a <a href="#transaction"><strong>transaction</strong></a></h4>
 <div class="paragraph">
-<p><strong>Preconditions:</strong> The transaction that the user wants to delete exists.</p>
+<p><strong>Preconditions:</strong> The transaction that the user wants to delete exists in the wallet.</p>
 </div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
@@ -510,7 +582,7 @@ Expected Outcome:</p>
 <p>User requests to delete a specific transaction in the wallet.</p>
 </li>
 <li>
-<p>Wallet deletes the transaction and shows the success message.</p>
+<p>Wallet deletes the transaction and displays the list of remaining transactions.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -520,10 +592,10 @@ Expected Outcome:</p>
 <div class="paragraph">
 <p><strong>Extensions</strong></p>
 </div>
-<div class="ulist none">
+<div id="wallet-invalid-index" class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
+<p>1a. The transaction&#8217;s index keyed in by the user is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -545,7 +617,7 @@ Expected Outcome:</p>
 </div>
 <h4 id="use-case-uc5-editing-a-transaction" class="discrete">Use case: UC5 - Editing a transaction</h4>
 <div class="paragraph">
-<p><strong>Preconditions:</strong> The transaction that the user wants to edit exists.</p>
+<p><strong>Preconditions:</strong> The transaction that the user wants to edit exists in the wallet.</p>
 </div>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
@@ -556,7 +628,7 @@ Expected Outcome:</p>
 <p>User requests to edit a specific transaction in the wallet.</p>
 </li>
 <li>
-<p>Wallet edits the transaction and shows the edited transaction.</p>
+<p>Wallet edits the transaction and shows the list with the edited transaction.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -569,22 +641,13 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Wallet shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the command.</p>
+<p>1a. The transaction&#8217;s index keyed in by the is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the index keyed in is valid.</p>
+<p><a href="#wallet-invalid-index">Steps 1a1-1a2</a> of <span class="underline">deleting an transaction (UC4)</span> are repeated
+until the index keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
 </div>
 </li>
 </ul>
@@ -601,7 +664,7 @@ Expected Outcome:</p>
 <li>
 <p>1b2. User re-enters the edit command.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the edit command keyed in is valid.</p>
+<p>Steps 1b1-1b2 are repeated until the edit command keyed in is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -635,9 +698,16 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The keyword entered does not exist in the wallet.</p>
+<p>1a. The keyword entered by the user does not exist in the wallet.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. Wallet shows an empty list.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -663,9 +733,9 @@ Expected Outcome:</p>
 <div class="sect2">
 <h3 id="people-tab"><a class="link" href="#people-tab">People Tab</a></h3>
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>User</code>, unless specified otherwise)</p>
+<p>(For all use cases below, the <strong>System</strong> is the <code>Address Book</code> and the <strong>Actor</strong> is the <code>User</code>, unless specified otherwise)</p>
 </div>
-<h4 id="use-case-adding-a-person" class="discrete">Use case: Adding a person</h4>
+<h4 id="use-case-uc8-adding-a-person" class="discrete">Use case: UC8 - Adding a person</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -675,7 +745,7 @@ Expected Outcome:</p>
 <p>User requests to add a person into the <a href="#address-book">address book</a>.</p>
 </li>
 <li>
-<p>Address book adds the person into the list.</p>
+<p>Address book adds the person and displays the person in the list of people.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -685,10 +755,10 @@ Expected Outcome:</p>
 <div class="paragraph">
 <p><strong>Extensions</strong></p>
 </div>
-<div class="ulist none">
+<div id="people-invalid-detail" class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The person’s details keyed in is invalid.</p>
+<p>1a. The person’s details keyed in by the user is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -708,7 +778,7 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-<h4 id="use-case-sending-reminder-to-a-friend" class="discrete">Use case: Sending reminder to a friend</h4>
+<h4 id="use-case-uc9-sending-reminder-to-a-friend" class="discrete">Use case: UC9 - Sending reminder to a friend</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -728,10 +798,10 @@ Expected Outcome:</p>
 <div class="paragraph">
 <p><strong>Extensions</strong></p>
 </div>
-<div class="ulist none">
+<div id="people-invalid-index" class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
+<p>1a. The person&#8217;s index keyed in by the user is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -754,47 +824,17 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The friend does not owe the user money.</p>
+<p>1b. Address book shows that the friend does not owe the user money.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
 </li>
 </ul>
 </div>
-<h4 id="use-case-sending-reminders-to-all-friends" class="discrete">Use case: Sending reminders to all friends</h4>
+<h4 id="use-case-uc10-recording-the-money-the-user-owes" class="discrete">Use case: UC10 - Recording the money the user owes</h4>
 <div class="paragraph">
-<p><strong>MSS</strong></p>
+<p><strong>Preconditions:</strong> The friend, who user owes exists in the address book.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>User requests to send reminders to all friends.</p>
-</li>
-<li>
-<p>Address book lists out all the friends who owe the user money.</p>
-</li>
-<li>
-<p>Address book sends reminders to all the friends on the list obtained in step 2.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Extensions</strong></p>
-</div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>2a. The list is empty.</p>
-<div class="paragraph">
-<p>Use case ends.</p>
-</div>
-</li>
-</ul>
-</div>
-<h4 id="use-case-recording-the-money-the-user-owes" class="discrete">Use case: Recording the money the user owes</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -817,16 +857,30 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
+<p>1a. The person&#8217;s index keyed in by the user is invalid.</p>
+<div class="paragraph">
+<p><a href="#people-invalid-index">Steps 1a1-1a2</a> of <span class="underline">sending reminder to a friend (UC9)</span> are repeated
+until index keyed in by the user is valid.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="people-invalid-amount" class="ulist none">
+<ul class="none">
+<li>
+<p>1b. The amount keyed in by the user is invalid.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. Address book shows an error message.</p>
+<p>1b1. Address book shows an error message.</p>
 </li>
 <li>
-<p>1a2. User re-enters the index.</p>
+<p>1b2. User re-enters the amount.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the index keyed in is valid.</p>
+<p>Steps 1b1-1b2 are repeated until the amount keyed in is correct.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -837,30 +891,10 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a. The amount keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Address book shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the amount.</p>
+<h4 id="use-case-uc11-recording-the-money-the-user-lends" class="discrete">Use case: UC11 - Recording the money the user lends</h4>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the amount keyed in is correct.</p>
+<p><strong>Preconditions:</strong> The friend, who user lends exists in the address book.</p>
 </div>
-<div class="paragraph">
-<p>Use case resumes at step 2.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<h4 id="use-case-recording-the-money-the-user-lends" class="discrete">Use case: Recording the money the user lends</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -883,16 +917,10 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Address book shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the index.</p>
+<p>1a. The person&#8217;s index keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the index keyed in is valid.</p>
+<p><a href="#people-invalid-index">Steps 1a1-1a2</a> of <span class="underline">sending reminder to a friend (UC9)</span> are repeated
+until the index keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -900,22 +928,13 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The amount keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Address book shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the amount.</p>
+<p>1b. The amount keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the amount keyed in is correct.</p>
+<p><a href="#people-invalid-amount">Steps 1b1-1b2</a> of <span class="underline">recording the money the user owes (UC10)</span> are repeated
+until the amount keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -923,10 +942,10 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
+<h4 id="use-case-uc12-deleting-a-person" class="discrete">Use case: UC12 - Deleting a person</h4>
+<div class="paragraph">
+<p><strong>Preconditions:</strong> The person, who user wants to delete exists in the address book.</p>
 </div>
-<h4 id="use-case-deleting-a-person" class="discrete">Use case: Deleting a person</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -936,7 +955,7 @@ Expected Outcome:</p>
 <p>User requests to delete a specific person in the address book.</p>
 </li>
 <li>
-<p>Address book deletes the person.</p>
+<p>Address book deletes the person and shows the list of the remaining people.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -949,16 +968,10 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Address book shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the index.</p>
+<p>1a. The person&#8217;s index keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the index keyed in is valid.</p>
+<p><a href="#people-invalid-index">Steps 1a1-1a2</a> of <span class="underline">sending reminder to a friend (UC9)</span> are repeated
+until the index keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -966,10 +979,10 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
+<h4 id="use-case-uc13-editing-a-person" class="discrete">Use case: UC13 - Editing a person</h4>
+<div class="paragraph">
+<p><strong>Preconditions:</strong> The person, who user wants to edit exists in the address book.</p>
 </div>
-<h4 id="use-case-editing-a-person" class="discrete">Use case: Editing a person</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -979,7 +992,7 @@ Expected Outcome:</p>
 <p>User requests to edit a specific person in the address book.</p>
 </li>
 <li>
-<p>Address book edits the person.</p>
+<p>Address book updates the indicated person&#8217;s detail and show the list of people with the edited person.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -992,16 +1005,10 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The index keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Address book shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the index.</p>
+<p>1a. The person&#8217;s index keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the index keyed in is valid.</p>
+<p><a href="#people-invalid-index">Steps 1a1-1a2</a> of <span class="underline">sending reminder to a friend (UC9)</span> are repeated
+until the index keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -1009,22 +1016,13 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. The new person’s details keyed in is invalid.</p>
-<div class="ulist none">
-<ul class="none">
-<li>
-<p>1a1. Address book shows an error message.</p>
-</li>
-<li>
-<p>1a2. User re-enters the details.</p>
+<p>1b. The person&#8217;s new details keyed in by the user is invalid.</p>
 <div class="paragraph">
-<p>Steps 1a1-1a2 are repeated until the details keyed in is valid.</p>
+<p><a href="#people-invalid-detail">Steps 1a1-1a2</a> of <span class="underline">adding a person (UC8)</span> are repeated
+until the details keyed in by the user is valid.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
@@ -1032,10 +1030,7 @@ Expected Outcome:</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
-<h4 id="use-case-finding-a-person" class="discrete">Use case: Finding a person</h4>
+<h4 id="use-case-uc14-finding-a-person" class="discrete">Use case: UC14 - Finding a person</h4>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
@@ -1058,15 +1053,19 @@ Expected Outcome:</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. None of the names in the address book contains the keyword.</p>
+<p>1a. The keyword entered by the user does not exist in the address book.</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. Address book shows an empty list.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1079,4 +1078,4 @@ Expected Outcome:</p>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-21 02:20:55 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-21 14:02:01 UTC</div></div></div></body></html>
