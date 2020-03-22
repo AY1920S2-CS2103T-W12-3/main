@@ -481,7 +481,7 @@ use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> 
 </div>
 <div class="paragraph">
 <p>This command can be accessed from <code>Logic#execute()</code>. It edits the <code>transactions</code>(s), which include both <code>income</code>(s) and
-<code>expense</code>(s) of the indicated <code>transaction</code> (the <code>transaction</code> with the specified index in the Address Book).</p>
+<code>expense</code>(s) of the indicated <code>transaction</code> (the <code>transaction</code> with the specified index in the Wallet).</p>
 </div>
 <div class="paragraph">
 <p>The following activity diagram illustrates what happens when the user executes a <code>wallet edit</code> command:</p>
@@ -547,32 +547,32 @@ the lifeline reaches the end of diagram.
 <div class="sect3">
 <h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-deletion-of-code-loan-code-from-the-indicated-person-2"><a class="link" href="#aspect-deletion-of-code-loan-code-from-the-indicated-person-2">Aspect: Deletion of <code>Loan</code> from the indicated person.</a></h5>
+<h5 id="aspect-choosing-which-code-transaction-code-to-edit-from-the-list-of-transactions"><a class="link" href="#aspect-choosing-which-code-transaction-code-to-edit-from-the-list-of-transactions">Aspect: Choosing which <code>transaction</code> to edit from the list of transactions.</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Creates a new <code>Person</code> with the modified list of <code>Loans</code> and
-use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> with the new <code>Person</code> created.</p>
+<p><strong>Alternative 1 (current choice):</strong> Get the index from the list displayed, and not original index displayed by
+<code>wallet list command</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Preserve the immutable property of <code>Person</code>.</p>
+<p>Pros: Easy to see which <code>transaction</code> is to be edited.</p>
 </li>
 <li>
-<p>Cons: Have to copy over all the attribute values, such as <code>Name</code>, <code>Phone</code> and more.</p>
+<p>Cons: Have to keep updating the filtered list.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Modify the list of <code>Loans</code> in the indicated <code>Person</code> directly.</p>
+<p><strong>Alternative 2:</strong> Always edit based on original list, shown by <code>wallet list command</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Easier and can save time from copying the information from one <code>Person</code> to another.</p>
+<p>Pros: Index is always consistent.</p>
 </li>
 <li>
-<p>Cons: <code>Person</code> loses the immutable property.</p>
+<p>Cons: Harder to remember which index represents which transaction.</p>
 </li>
 </ul>
 </div>
@@ -2211,4 +2211,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 03:37:46 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 04:33:08 UTC</div></div></div></body></html>

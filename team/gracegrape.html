@@ -10,7 +10,8 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Sharkie</strong> is a desktop expense tracker application. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p><strong>Sharkie</strong> is a desktop expense tracker application.
+The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
 </div>
 </div>
 </div>
@@ -28,13 +29,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to list out all transactions, which includes expenses and income. I also created the UI to allow the list to be seen.</p>
+<p>What it does: allows the user to list out all transactions, which includes expenses and income.
+I also created the UI to allow the list to be seen.</p>
 </li>
 <li>
 <p>Justification: This feature improves the product significantly because it allows the user to view all their transactions in their wallet.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to the UI, including the need to add a tab view to view the Wallet and Address Book separately.</p>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future.
+It required an in-depth analysis of design alternatives.
+The implementation too was challenging as it required changes to the UI, including the need to add a tab view to view the Wallet and Address Book separately.</p>
 </li>
 <li>
 <p>Credits: SceneBuilder</p>
@@ -53,7 +57,8 @@
 <p>Justification: This feature improves the product significantly because it allows the user to edit the information they already keyed in, in case of any mistakes made or updates needed for the expenses and income.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives.</p>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future.
+It required an in-depth analysis of design alternatives.</p>
 </li>
 <li>
 <p>Credits: Address Book (Level 3)</p>
@@ -72,7 +77,8 @@
 <p>Justification: This feature improves the product significantly because it allows the user to delete the information they already keyed in, in case of any mistakes made.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives.</p>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future.
+It required an in-depth analysis of design alternatives.</p>
 </li>
 <li>
 <p>Credits: Address Book (Level 3)</p>
@@ -91,7 +97,8 @@
 <p>Justification: This feature improves the product significantly because it allows the user to find the information they already keyed in, according to the description of the transactions.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives.</p>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future.
+It required an in-depth analysis of design alternatives.</p>
 </li>
 <li>
 <p>Credits: Address Book (Level 3)</p>
@@ -117,7 +124,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
+<p>Set deliverable and deadlines for the group.</p>
 </li>
 </ul>
 </div>
@@ -127,7 +134,12 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>[To be updated]</strong> (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
+<p><strong>[To be updated]</strong> (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/52">#52</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/54">#54</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/61">#61</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/66">#66</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/102">#102</a>, ,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/110">110</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/115">#115</a>, ,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/117">#117</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/121">#121</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/122">#122</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/127">#127</a>)</p>
 </li>
 <li>
 <p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
@@ -711,6 +723,114 @@ Expected Outcome:</p>
 <div class="paragraph">
 <p><em>{More to be added}</em></p>
 </div>
+<div class="sect2">
+<h3 id="wallet-edit-command"><a class="link" href="#wallet-edit-command">Wallet Edit Command</a></h3>
+<div class="paragraph">
+<p>The <code>edit</code> command is implemented in the class, <code>WalletEditCommand</code>.</p>
+</div>
+<div class="paragraph">
+<p>This command can be accessed from <code>Logic#execute()</code>. It edits the <code>transactions</code>(s), which include both <code>income</code>(s) and
+<code>expense</code>(s) of the indicated <code>transaction</code> (the <code>transaction</code> with the specified index in the Wallet).</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates what happens when the user executes a <code>wallet edit</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/WalletEditActivityDiagram.png" alt="WalletEditActivityDiagram" width="600">
+</div>
+<div class="title">Figure 1. Activity diagram of the execution of <code>wallet edit</code> command</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-of-code-wallet-edit-code-command"><a class="link" href="#implementation-of-code-wallet-edit-code-command">Implementation of <code>wallet edit</code> command</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>WalletEditCommandParser</code> is executed first to create an <code>EditTransactorDescriptor</code> to hold the values to be edited.</p>
+</li>
+<li>
+<p><code>WalletEditCommandParser</code> then passes the <code>editTransactorDescriptor</code> to create a <code>WalletEditCommand</code>.</p>
+</li>
+<li>
+<p>In <code>WalletEditCommand</code> class, the list of <code>transactions</code> is obtained from the <code>Model</code> via
+<code>Model#getFilteredTransactionsList()</code> and the indicated transaction is extracted from the list, as either a form of
+income or expense.</p>
+</li>
+<li>
+<p>The <code>transaction</code> selected is extracted and modified based on the command entered by the user, which are stored in
+<code>editTransactorDescriptor</code></p>
+</li>
+<li>
+<p>A new <code>transaction</code> modified from the <code>transaction</code> selected is created with <code>createEditedTransaction</code> method in
+<code>WalletEditCOmmand</code></p>
+</li>
+<li>
+<p>This new <code>transaction</code> replace the initial <code>transaction</code> at the indicated index via <code>Model#setTransaction()</code> and
+the <code>filteredTransactions</code> in the <code>Model</code> is updated.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes what happens during the execution of a <code>wallet edit</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/WalletEditSequenceDiagram.png" alt="WalletEditSequenceDiagram">
+</div>
+<div class="title">Figure 2. Sequence diagram of the <code>wallet edit</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>WalletEditCommand</code>, <code>WalletEditCommandParser</code> and <code>EditTransactorDescriptor</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-choosing-which-code-transaction-code-to-edit-from-the-list-of-transactions"><a class="link" href="#aspect-choosing-which-code-transaction-code-to-edit-from-the-list-of-transactions">Aspect: Choosing which <code>transaction</code> to edit from the list of transactions.</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Get the index from the list displayed, and not original index displayed by
+<code>wallet list command</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to see which <code>transaction</code> is to be edited.</p>
+</li>
+<li>
+<p>Cons: Have to keep updating the filtered list.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Always edit based on original list, shown by <code>wallet list command</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Index is always consistent.</p>
+</li>
+<li>
+<p>Cons: Harder to remember which index represents which transaction.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -721,4 +841,4 @@ Expected Outcome:</p>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 03:37:46 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 04:33:08 UTC</div></div></div></body></html>
