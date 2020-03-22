@@ -22,12 +22,13 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#received-command">3.1. Received Command</a></li>
-<li><a href="#wallet-edit-command">3.2. Wallet Edit Command</a></li>
-<li><a href="#proposed-undo-redo-feature">3.3. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.5. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
+<li><a href="#owe-command">3.1. Owe Command</a></li>
+<li><a href="#received-command">3.2. Received Command</a></li>
+<li><a href="#wallet-edit-command">3.3. Wallet Edit Command</a></li>
+<li><a href="#proposed-undo-redo-feature">3.4. [Proposed] Undo/Redo feature</a></li>
+<li><a href="#proposed-data-encryption">3.5. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.6. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.7. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -79,7 +80,7 @@
 <div class="title">Figure 1. Architecture Diagram</div>
 </div>
 <div class="paragraph">
-<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of the App. Given below is a quick overview of each component.</p>
+<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of Sharkie. Given below is a quick overview of each component.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -155,7 +156,7 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/LogicClassDiagram.png" alt="LogicClassDiagram">
+<img src="images/LogicClassDiagram.png" alt="LogicClassDiagram" width="1000">
 </div>
 <div class="title">Figure 2. Class Diagram of the Logic Component</div>
 </div>
@@ -165,7 +166,7 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ArchitectureSequenceDiagram.png" alt="ArchitectureSequenceDiagram">
+<img src="images/ArchitectureSequenceDiagram.png" alt="ArchitectureSequenceDiagram" width="600">
 </div>
 <div class="title">Figure 3. Component interactions for <code>people delete 1</code> command</div>
 </div>
@@ -376,7 +377,126 @@ respective lists change.</p>
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="received-command"><a class="link" href="#received-command">3.1. Received Command</a></h3>
+<h3 id="owe-command"><a class="link" href="#owe-command">3.1. Owe Command</a></h3>
+<div class="paragraph">
+<p>The <code>owe</code> command is implemented in the class <code>PeopleOweCommand</code>.</p>
+</div>
+<div class="paragraph">
+<p>This command can be accessed from  <code>Logic#execute()</code>. It records a <code>debt</code> of an indicated <code>Amount</code> to the
+<code>Person</code> specified by the index.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates what happens when the user enters an <code>owe</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/OweActivityDiagram.png" alt="OweActivityDiagram" width="500">
+</div>
+<div class="title">Figure 11. Activity diagram of the recording a debt</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-of-code-owe-code-command"><a class="link" href="#implementation-of-code-owe-code-command">3.1.1. Implementation of <code>owe</code> command</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When entering the debt command, the user will specify the <code>Person</code> using the index of the <code>Person</code> in the list shown in the GUI.</p>
+</li>
+<li>
+<p>The user should also specify the debt <code>Description</code>, <code>Amount</code> and optionally, the <code>Date</code>.</p>
+</li>
+<li>
+<p>The <code>PeopleOweCommandParser</code> will create a <code>Debt</code> object based on the details provided, and return the resulting <code>PeopleOweCommand</code>.</p>
+</li>
+<li>
+<p>When the <code>LogicManager</code> is executing the <code>PeopleOweCommand</code>, it will extract the indicated person from the list of
+<code>Persons</code> obtained from the <code>Model</code> via <code>Model#getFilteredPersonList()</code></p>
+</li>
+<li>
+<p>A new <code>Person</code> with the added <code>Debt</code> is created.</p>
+</li>
+<li>
+<p>This new <code>Person</code> replace the initial <code>Person</code> at the indicated index via <code>Model#setPerson()</code> for immutability.</p>
+</li>
+<li>
+<p>The <code>filteredPersons</code> in the <code>Model</code> is then updated.</p>
+</li>
+<li>
+<p><code>CommandResult</code> is returned.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes what happens during the execution of a <code>owe</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/OweSequenceDiagram.png" alt="OweSequenceDiagram">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/GetPeopleOweCommandSequenceDiagram.png" alt="GetPeopleOweCommandSequenceDiagram" width="500">
+</div>
+<div class="title">Figure 12. Sequence diagram of the <code>owe</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>PeopleOweCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-keeping-track-of-code-debt-code-of-a-code-person-code"><a class="link" href="#aspect-keeping-track-of-code-debt-code-of-a-code-person-code">Aspect: Keeping track of <code>Debt</code> of a <code>Person</code>.</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Each <code>Person</code> has a list of <code>Debt</code> objects, each <code>Debt</code> object
+has <code>Description</code>, <code>Amount</code> and <code>Date</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Able to record more information about a <code>Debt</code>.</p>
+</li>
+<li>
+<p>Cons: <code>Sharkie</code> only allows the return of a <code>Debt</code> all at once, i.e., the user cannot return a <code>Debt</code> partially.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Each <code>Person</code> has one <code>Debt</code> object.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier to store the <code>Debt</code> object, only have to keep track of the total debt <code>Amount</code> and the <code>Date</code> of the
+debt. The user can return any <code>Amount</code> to the <code>Person</code>, and <code>Sharkie</code> will just deduct the total <code>Amount</code> of debt
+accordingly.</p>
+</li>
+<li>
+<p>Cons: Storing the <code>Date</code> is problematic, as it questions whether the <code>Date</code> of the first borrowing or latest borrowing
+should be stored. Furthermore, there is no breakdown of <code>Debt</code> details if the user wants to recall why he owed a <code>Person</code>
+money.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="received-command"><a class="link" href="#received-command">3.2. Received Command</a></h3>
 <div class="paragraph">
 <p>The <code>received</code> command is implemented in the class, <code>PeopleReceivedCommand</code>.</p>
 </div>
@@ -391,10 +511,10 @@ respective lists change.</p>
 <div class="content">
 <img src="images/ReceivedActivityDiagram.png" alt="ReceivedActivityDiagram" width="600">
 </div>
-<div class="title">Figure 11. Activity diagram of the execution of <code>received</code> command</div>
+<div class="title">Figure 13. Activity diagram of the execution of <code>received</code> command</div>
 </div>
 <div class="sect3">
-<h4 id="implementation-of-code-received-code-command"><a class="link" href="#implementation-of-code-received-code-command">3.1.1. Implementation of <code>received</code> command</a></h4>
+<h4 id="implementation-of-code-received-code-command"><a class="link" href="#implementation-of-code-received-code-command">3.2.1. Implementation of <code>received</code> command</a></h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -420,7 +540,7 @@ in the <code>Model</code> is updated.</p>
 <div class="content">
 <img src="images/ReceivedSequenceDiagram.png" alt="ReceivedSequenceDiagram">
 </div>
-<div class="title">Figure 12. Sequence diagram of the <code>received</code> command</div>
+<div class="title">Figure 14. Sequence diagram of the <code>received</code> command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -437,7 +557,7 @@ the lifeline reaches the end of diagram.
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-deletion-of-code-loan-code-from-the-indicated-person"><a class="link" href="#aspect-deletion-of-code-loan-code-from-the-indicated-person">Aspect: Deletion of <code>Loan</code> from the indicated person.</a></h5>
 <div class="ulist">
@@ -475,7 +595,7 @@ use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> 
 </div>
 </div>
 <div class="sect2">
-<h3 id="wallet-edit-command"><a class="link" href="#wallet-edit-command">3.2. Wallet Edit Command</a></h3>
+<h3 id="wallet-edit-command"><a class="link" href="#wallet-edit-command">3.3. Wallet Edit Command</a></h3>
 <div class="paragraph">
 <p>The <code>edit</code> command is implemented in the class, <code>WalletEditCommand</code>.</p>
 </div>
@@ -490,10 +610,10 @@ use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> 
 <div class="content">
 <img src="images/WalletEditActivityDiagram.png" alt="WalletEditActivityDiagram" width="600">
 </div>
-<div class="title">Figure 13. Activity diagram of the execution of <code>wallet edit</code> command</div>
+<div class="title">Figure 15. Activity diagram of the execution of <code>wallet edit</code> command</div>
 </div>
 <div class="sect3">
-<h4 id="implementation-of-code-wallet-edit-code-command"><a class="link" href="#implementation-of-code-wallet-edit-code-command">3.2.1. Implementation of <code>wallet edit</code> command</a></h4>
+<h4 id="implementation-of-code-wallet-edit-code-command"><a class="link" href="#implementation-of-code-wallet-edit-code-command">3.3.1. Implementation of <code>wallet edit</code> command</a></h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -528,7 +648,7 @@ the <code>filteredTransactions</code> in the <code>Model</code> is updated.</p>
 <div class="content">
 <img src="images/WalletEditSequenceDiagram.png" alt="WalletEditSequenceDiagram">
 </div>
-<div class="title">Figure 14. Sequence diagram of the <code>wallet edit</code> command</div>
+<div class="title">Figure 16. Sequence diagram of the <code>wallet edit</code> command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -545,7 +665,7 @@ the lifeline reaches the end of diagram.
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-choosing-which-code-transaction-code-to-edit-from-the-list-of-transactions"><a class="link" href="#aspect-choosing-which-code-transaction-code-to-edit-from-the-list-of-transactions">Aspect: Choosing which <code>transaction</code> to edit from the list of transactions.</a></h5>
 <div class="ulist">
@@ -583,9 +703,9 @@ the lifeline reaches the end of diagram.
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.3. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.4. [Proposed] Undo/Redo feature</a></h3>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.3.1. Proposed Implementation</a></h4>
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.4.1. Proposed Implementation</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
 It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
@@ -727,7 +847,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.4.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
@@ -797,20 +917,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.5. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.6. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.7, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -841,7 +961,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.7. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2211,4 +2331,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 05:48:15 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 08:49:54 UTC</div></div></div></body></html>
