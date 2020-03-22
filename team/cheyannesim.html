@@ -500,6 +500,125 @@ The following class plays an important role at the architecture level:</p>
 <p>The sections below give more details of each component.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="owe-command"><a class="link" href="#owe-command">Owe Command</a></h3>
+<div class="paragraph">
+<p>The <code>owe</code> command is implemented in the class <code>PeopleOweCommand</code>.</p>
+</div>
+<div class="paragraph">
+<p>This command can be accessed from  <code>Logic#execute()</code>. It records a <code>debt</code> of an indicated <code>Amount</code> to the
+<code>Person</code> specified by the index.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates what happens when the user enters an <code>owe</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/OweActivityDiagram.png" alt="OweActivityDiagram" width="500">
+</div>
+<div class="title">Figure 4. Activity diagram of the recording a debt</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-of-code-owe-code-command"><a class="link" href="#implementation-of-code-owe-code-command">Implementation of <code>owe</code> command</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When entering the debt command, the user will specify the <code>Person</code> using the index of the <code>Person</code> in the list shown in the GUI.</p>
+</li>
+<li>
+<p>The user should also specify the debt <code>Description</code>, <code>Amount</code> and optionally, the <code>Date</code>.</p>
+</li>
+<li>
+<p>The <code>PeopleOweCommandParser</code> will create a <code>Debt</code> object based on the details provided, and return the resulting <code>PeopleOweCommand</code>.</p>
+</li>
+<li>
+<p>When the <code>LogicManager</code> is executing the <code>PeopleOweCommand</code>, it will extract the indicated person from the list of
+<code>Persons</code> obtained from the <code>Model</code> via <code>Model#getFilteredPersonList()</code></p>
+</li>
+<li>
+<p>A new <code>Person</code> with the added <code>Debt</code> is created.</p>
+</li>
+<li>
+<p>This new <code>Person</code> replace the initial <code>Person</code> at the indicated index via <code>Model#setPerson()</code> for immutability.</p>
+</li>
+<li>
+<p>The <code>filteredPersons</code> in the <code>Model</code> is then updated.</p>
+</li>
+<li>
+<p><code>CommandResult</code> is returned.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes what happens during the execution of a <code>owe</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/OweSequenceDiagram.png" alt="OweSequenceDiagram">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/GetPeopleOweCommandSequenceDiagram.png" alt="GetPeopleOweCommandSequenceDiagram" width="500">
+</div>
+<div class="title">Figure 5. Sequence diagram of the <code>owe</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>PeopleOweCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-keeping-track-of-code-debt-code-of-a-code-person-code"><a class="link" href="#aspect-keeping-track-of-code-debt-code-of-a-code-person-code">Aspect: Keeping track of <code>Debt</code> of a <code>Person</code>.</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Each <code>Person</code> has a list of <code>Debt</code> objects, each <code>Debt</code> object
+has <code>Description</code>, <code>Amount</code> and <code>Date</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Able to record more information about a <code>Debt</code>.</p>
+</li>
+<li>
+<p>Cons: <code>Sharkie</code> only allows the return of a <code>Debt</code> all at once, i.e., the user cannot return a <code>Debt</code> partially.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Each <code>Person</code> has one <code>Debt</code> object.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier to store the <code>Debt</code> object, only have to keep track of the total debt <code>Amount</code> and the <code>Date</code> of the
+debt. The user can return any <code>Amount</code> to the <code>Person</code>, and <code>Sharkie</code> will just deduct the total <code>Amount</code> of debt
+accordingly.</p>
+</li>
+<li>
+<p>Cons: Storing the <code>Date</code> is problematic, as it questions whether the <code>Date</code> of the first borrowing or latest borrowing
+should be stored. Furthermore, there is no breakdown of <code>Debt</code> details if the user wants to recall why he owed a <code>Person</code>
+money.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -534,4 +653,4 @@ The following class plays an important role at the architecture level:</p>
 </ol>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 08:49:54 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 08:58:20 UTC</div></div></div></body></html>
