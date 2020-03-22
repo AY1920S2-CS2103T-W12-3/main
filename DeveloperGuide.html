@@ -23,10 +23,11 @@
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#received-command">3.1. Received Command</a></li>
-<li><a href="#proposed-undo-redo-feature">3.2. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.3. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.4. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.5. Configuration</a></li>
+<li><a href="#wallet-edit-command">3.2. Wallet Edit Command</a></li>
+<li><a href="#proposed-undo-redo-feature">3.3. [Proposed] Undo/Redo feature</a></li>
+<li><a href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.5. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -181,10 +182,8 @@ The following class plays an important role at the architecture level:</p>
 <div class="title">Figure 4. Structure of the UI Component</div>
 </div>
 <div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a></p>
-</div>
-<div class="paragraph">
-<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a>
+The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
@@ -218,7 +217,7 @@ The following class plays an important role at the architecture level:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>Logic</code> uses the <code>AddressBookParser</code> class to parse the user command.</p>
+<p><code>Logic</code> uses the <code>SharkieParser</code> class to parse the user command.</p>
 </li>
 <li>
 <p>This results in a <code>Command</code> object which is executed by the <code>LogicManager</code>.</p>
@@ -235,7 +234,7 @@ The following class plays an important role at the architecture level:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("delete 1")</code> API call.</p>
+<p>Given below is the Sequence Diagram for interactions within the <code>Logic</code> component for the <code>execute("people delete 1")</code> API call.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -250,7 +249,7 @@ The following class plays an important role at the architecture level:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The lifeline for <code>DeleteCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+The lifeline for <code>WalletDeleteCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
 </td>
 </tr>
 </table>
@@ -476,9 +475,117 @@ use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> 
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.2. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="wallet-edit-command"><a class="link" href="#wallet-edit-command">3.2. Wallet Edit Command</a></h3>
+<div class="paragraph">
+<p>The <code>edit</code> command is implemented in the class, <code>WalletEditCommand</code>.</p>
+</div>
+<div class="paragraph">
+<p>This command can be accessed from <code>Logic#execute()</code>. It edits the <code>transactions</code>(s), which include both <code>income</code>(s) and
+<code>expense</code>(s) of the indicated <code>transaction</code> (the <code>transaction</code> with the specified index in the Address Book).</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates what happens when the user executes a <code>wallet edit</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/WalletEditActivityDiagram.png" alt="WalletEditActivityDiagram" width="600">
+</div>
+<div class="title">Figure 13. Activity diagram of the execution of <code>wallet edit</code> command</div>
+</div>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.2.1. Proposed Implementation</a></h4>
+<h4 id="implementation-of-code-wallet-edit-code-command"><a class="link" href="#implementation-of-code-wallet-edit-code-command">3.2.1. Implementation of <code>wallet edit</code> command</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>WalletEditCommandParser</code> is executed first to create an <code>EditTransactorDescriptor</code> to hold the values to be edited.</p>
+</li>
+<li>
+<p><code>WalletEditCommandParser</code> then passes the <code>editTransactorDescriptor</code> to create a <code>WalletEditCommand</code>.</p>
+</li>
+<li>
+<p>In <code>WalletEditCommand</code> class, the list of <code>transactions</code> is obtained from the <code>Model</code> via
+<code>Model#getFilteredTransactionsList()</code> and the indicated transaction is extracted from the list, as either a form of
+income or expense.</p>
+</li>
+<li>
+<p>The <code>transaction</code> selected is extracted and modified based on the command entered by the user, which are stored in
+<code>editTransactorDescriptor</code></p>
+</li>
+<li>
+<p>A new <code>transaction</code> modified from the <code>transaction</code> selected is created with <code>createEditedTransaction</code> method in
+<code>WalletEditCOmmand</code></p>
+</li>
+<li>
+<p>This new <code>transaction</code> replace the initial <code>transaction</code> at the indicated index via <code>Model#setTransaction()</code> and
+the <code>filteredTransactions</code> in the <code>Model</code> is updated.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes what happens during the execution of a <code>wallet edit</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/WalletEditSequenceDiagram.png" alt="WalletEditSequenceDiagram">
+</div>
+<div class="title">Figure 14. Sequence diagram of the <code>wallet edit</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>WalletEditCommand</code>, <code>WalletEditCommandParser</code> and <code>EditTransactorDescriptor</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-deletion-of-code-loan-code-from-the-indicated-person-2"><a class="link" href="#aspect-deletion-of-code-loan-code-from-the-indicated-person-2">Aspect: Deletion of <code>Loan</code> from the indicated person.</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Creates a new <code>Person</code> with the modified list of <code>Loans</code> and
+use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> with the new <code>Person</code> created.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Preserve the immutable property of <code>Person</code>.</p>
+</li>
+<li>
+<p>Cons: Have to copy over all the attribute values, such as <code>Name</code>, <code>Phone</code> and more.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Modify the list of <code>Loans</code> in the indicated <code>Person</code> directly.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier and can save time from copying the information from one <code>Person</code> to another.</p>
+</li>
+<li>
+<p>Cons: <code>Person</code> loses the immutable property.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.3. [Proposed] Undo/Redo feature</a></h3>
+<div class="sect3">
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.3.1. Proposed Implementation</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
 It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
@@ -620,7 +727,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
@@ -690,20 +797,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.3. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.4. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.5, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -734,7 +841,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.5. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2104,4 +2211,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-21 14:32:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-22 03:37:46 UTC</div></div></div></body></html>
