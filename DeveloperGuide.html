@@ -26,10 +26,11 @@
 <li><a href="#received-command">3.2. Received Command</a></li>
 <li><a href="#transactions">3.3. Transactions</a></li>
 <li><a href="#wallet-edit-command">3.4. Wallet Edit Command</a></li>
-<li><a href="#proposed-undo-redo-feature">3.5. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.7. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
+<li><a href="#wallet-budget-command">3.5. Wallet Budget Command</a></li>
+<li><a href="#proposed-undo-redo-feature">3.6. [Proposed] Undo/Redo feature</a></li>
+<li><a href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -811,9 +812,98 @@ the lifeline reaches the end of diagram.
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.5. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="wallet-budget-command"><a class="link" href="#wallet-budget-command">3.5. Wallet Budget Command</a></h3>
+<div class="paragraph">
+<p>The <code>budget</code> command is implemented in the class, <code>WalletBudgetCommand</code>.</p>
+</div>
+<div class="paragraph">
+<p>This command can be accessed from <code>Logic#execute()</code>. It adds a budget using the parameters as specified by the user.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates what happens when a user executes the <code>wallet budget</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/WalletBudgetActivityDiagram.png" alt="WalletBudgetActivityDiagram" width="600">
+</div>
+<div class="title">Figure 20. Activity diagram of the execution of <code>wallet budget</code> command</div>
+</div>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.5.1. Proposed Implementation</a></h4>
+<h4 id="implementation-of-code-wallet-budget-code-command"><a class="link" href="#implementation-of-code-wallet-budget-code-command">3.5.1. Implementation of <code>wallet budget</code> command</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In <code>WalletBudgetCommand</code> class, the <code>Budget</code> produced by <code>WalletBudgetCommandParser</code> is examined to determine if it is a default budget, or if it is a normal budget.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the <code>Budget</code> is a default budget, the <code>BudgetList</code> is updated in the <code>Model</code> via <code>Model#setDefaultBudget()</code>. This sets the default budget as the one given.</p>
+</li>
+<li>
+<p>If the <code>Budget</code> is not a default budget, the <code>BudgetList</code> is updated in the <code>Model</code> via <code>Model#setBudget()</code>. This adds the budget given to a list of budgets with their <code>Month</code> and <code>Year</code> specified.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>The list of <code>Budget</code> in the <code>Wallet</code> is modified based the arguments input by the user.</p>
+</li>
+<li>
+<p>If a <code>Budget</code> with the same arguments given already exists, it will be overwritten by the one given.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes what happens during the execution of a <code>wallet budget</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/WalletBudgetSequenceDiagram.png" alt="WalletBudgetSequenceDiagram">
+</div>
+<div class="title">Figure 21. Sequence diagram of the <code>wallet budget</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-selection-of-code-budget-code-to-set-default-or-specific-month-year"><a class="link" href="#aspect-selection-of-code-budget-code-to-set-default-or-specific-month-year">Aspect: Selection of <code>Budget</code> to set: default or specific month / year</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> If the month and year of the budget is specified, the specific <code>Budget</code> will be set. Otherwise, the default <code>Budget</code> will be set.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to differentiate during command processing whether we want a default <code>Budget</code> or a specific one.</p>
+</li>
+<li>
+<p>Cons: All <code>Budget</code> except default <code>Budget</code> all contain a redundant <code>isDefault</code> boolean</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Allow the user to specify if they want a default <code>Budget</code> set, or a specific <code>Budget</code> instead.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Clearer way to distinguish between default <code>Budget</code> and specific <code>Budget</code></p>
+</li>
+<li>
+<p>Cons: Requires more prefixes / suffixes to be added to <code>Parser</code> in order to parse extra arguments.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.6. [Proposed] Undo/Redo feature</a></h3>
+<div class="sect3">
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.6.1. Proposed Implementation</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
 It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
@@ -955,7 +1045,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.2. Design Considerations</a></h4>
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.6.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
@@ -1025,20 +1115,20 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1069,7 +1159,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2439,4 +2529,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-23 06:16:07 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-23 06:47:28 UTC</div></div></div></body></html>
