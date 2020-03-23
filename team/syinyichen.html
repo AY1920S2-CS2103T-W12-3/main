@@ -174,7 +174,7 @@ the people in the address book.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>command</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>command</code></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application.</p></td>
@@ -197,11 +197,22 @@ This symbol indicates tips.
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="features"><a class="link" href="#features">Features</a></h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="expenditure-and-income"><a class="link" href="#expenditure-and-income">Expenditure and income</a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> notes down what you have spent on for the month, and also notes down your income for the month to help you properly track your money flow!</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="commands"><a class="link" href="#commands">Commands</a></h2>
+<div class="sectionbody">
 <div class="sect3">
 <h4 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">Adding a person: <code>add</code></a></h4>
 <div class="paragraph">
@@ -257,7 +268,7 @@ Format: <code>people remind &lt;index&gt;</code></p>
 </td>
 <td class="content">
 To use this command, you must include your details in Sharkie.<br>
-You can enter or edit your details at <code>Edit</code> &gt; <code>Edit user&#8217;s data</code>.
+You can enter or edit your details at <a href="#editing-user-data"><code>Edit</code> &gt; <code>Edit user&#8217;s data</code></a>.
 </td>
 </tr>
 </table>
@@ -295,7 +306,7 @@ Format: <code>people remindall</code></p>
 </td>
 <td class="content">
 To use this command, you must include your details in Sharkie.<br>
-You can enter or edit your details at <code>Edit</code> &gt; <code>Edit user&#8217;s data</code>.
+You can enter or edit your details at <a href="#editing-user-data"><code>Edit</code> &gt; <code>Edit user&#8217;s data</code></a>.
 </td>
 </tr>
 </table>
@@ -350,6 +361,20 @@ Expected Outcome:</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">FAQ</a></h2>
+<div class="sectionbody">
+<div id="editing-user-data" class="paragraph">
+<p><strong>Q</strong>: How to edit user&#8217;s data?<br>
+<strong>A</strong>: Click <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="500">
+</div>
+<div class="title">Figure 1. Editing user data in Sharkie</div>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
@@ -364,13 +389,18 @@ Expected Outcome:</p>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="design"><a class="link" href="#design">Design</a></h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="Design-Model"><a class="link" href="#Design-Model">Model component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="700">
+<img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="800">
 </div>
-<div class="title">Figure 1. Structure of the Model Component</div>
+<div class="title">Figure 2. Structure of the Model Component</div>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -388,7 +418,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="500">
 </div>
-<div class="title">Figure 2. In-depth Structure of Person in the Model Component</div>
+<div class="title">Figure 3. In-depth Structure of Person in the Model Component</div>
 </div>
 <div class="ulist">
 <ul>
@@ -399,9 +429,9 @@ Expected Outcome:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="500">
+<img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
 </div>
-<div class="title">Figure 3. In-depth Structure of Transaction in the Model Component</div>
+<div class="title">Figure 4. In-depth Structure of Transaction in the Model Component</div>
 </div>
 </div>
 </div>
@@ -436,26 +466,31 @@ respective lists change.</p>
 </ul>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="implementation"><a class="link" href="#implementation">Implementation</a></h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="received-command"><a class="link" href="#received-command">Received Command</a></h3>
+<h3 id="people-received-command"><a class="link" href="#people-received-command">People Received Command</a></h3>
 <div class="paragraph">
-<p>The <code>received</code> command is implemented in the class, <code>PeopleReceivedCommand</code>.</p>
+<p>The <code>people received</code> command is implemented in the class, <code>PeopleReceivedCommand</code>.</p>
 </div>
 <div class="paragraph">
 <p>This command can be accessed from <code>Logic#execute()</code>. It deletes the <code>Loan</code>(s) of the indicated <code>Person</code>
 (the <code>Person</code> with the specified index in the Address Book).</p>
 </div>
 <div class="paragraph">
-<p>The following activity diagram illustrates what happens when the user executes a <code>received</code> command:</p>
+<p>The following activity diagram illustrates what happens when the user executes a <code>people received</code> command:</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/ReceivedActivityDiagram.png" alt="ReceivedActivityDiagram" width="600">
 </div>
-<div class="title">Figure 4. Activity diagram of the execution of <code>received</code> command</div>
+<div class="title">Figure 5. Activity diagram of recording the amount of money received</div>
 </div>
 <div class="sect3">
-<h4 id="implementation-of-code-received-code-command"><a class="link" href="#implementation-of-code-received-code-command">Implementation of <code>received</code> command</a></h4>
+<h4 id="implementation-of-code-people-received-code-command"><a class="link" href="#implementation-of-code-people-received-code-command">Implementation of <code>people received</code> command</a></h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -475,13 +510,18 @@ in the <code>Model</code> is updated.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>The following sequence diagram summarizes what happens during the execution of a <code>received</code> command:</p>
+<p>The following sequence diagram summarizes what happens during the execution of a <code>people received</code> command:</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/ReceivedSequenceDiagram.png" alt="ReceivedSequenceDiagram">
 </div>
-<div class="title">Figure 5. Sequence diagram of the <code>received</code> command</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/GetPeopleReceivedCommandSequenceDiagram.png" alt="GetPeopleReceivedCommandSequenceDiagram" width="600">
+</div>
+<div class="title">Figure 6. Sequence diagram of the <code>people received</code> command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1178,4 +1218,4 @@ until the details keyed in by the user is valid.</p>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-23 06:47:28 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-23 13:13:22 UTC</div></div></div></body></html>
