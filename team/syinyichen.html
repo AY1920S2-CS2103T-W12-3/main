@@ -168,21 +168,30 @@ the people in the address book.</p>
 <div class="paragraph">
 <p>Note the following symbols and formatting used in this document:<br></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col>
+<col>
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>command</code></span></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="exampleblock">
-<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This symbol indicates information.
+</td>
+</tr>
+</table>
+</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -194,8 +203,6 @@ This symbol indicates tips.
 </td>
 </tr>
 </table>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -259,6 +266,19 @@ Format: <code>people remind &lt;index&gt;</code></p>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>Loan</code> represents the amount of money you lend your friends.<br>
+<em>Still confused? Find out more about <code>debts</code> and <code>loans</code> at <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -366,13 +386,40 @@ Expected Outcome:</p>
 <div class="sectionbody">
 <div id="editing-user-data" class="paragraph">
 <p><strong>Q</strong>: How to edit user&#8217;s data?<br>
-<strong>A</strong>: Click <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
+<strong>A</strong>: Click on <kbd>Edit</kbd>, then <kbd>Edit user&#8217;s data</kbd> on your menu bar.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="500">
+<img src="../images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
 </div>
 <div class="title">Figure 1. Editing user data in Sharkie</div>
+</div>
+<div id="debt-and-loan" class="paragraph">
+<p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
+<strong>A</strong>: <code>Debts</code> is the amount of money you owe your friends and <code>loans</code> is the amount of money you lend your friends.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1 | Supper | $5.00 | 3 FEB 2020</code> under the <code>Debts</code> section, shown in the figure below represents what you owe Syin Yi.</p>
+</li>
+<li>
+<p><code>1 | Breakfast | $3.00 | 8 AUG 2018</code> under the <code>Loans</code> section, shown in the figure below represents what you lent to Syin Yi.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
+</div>
+<div class="title">Figure 2. Differences between <code>debts</code> and <code>loans</code></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -400,7 +447,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="800">
 </div>
-<div class="title">Figure 2. Structure of the Model Component</div>
+<div class="title">Figure 3. Structure of the Model Component</div>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -418,7 +465,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="500">
 </div>
-<div class="title">Figure 3. In-depth Structure of Person in the Model Component</div>
+<div class="title">Figure 4. In-depth Structure of Person in the Model Component</div>
 </div>
 <div class="ulist">
 <ul>
@@ -431,7 +478,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
 </div>
-<div class="title">Figure 4. In-depth Structure of Transaction in the Model Component</div>
+<div class="title">Figure 5. In-depth Structure of Transaction in the Model Component</div>
 </div>
 </div>
 </div>
@@ -487,7 +534,7 @@ respective lists change.</p>
 <div class="content">
 <img src="../images/ReceivedActivityDiagram.png" alt="ReceivedActivityDiagram" width="600">
 </div>
-<div class="title">Figure 5. Activity diagram of recording the amount of money received</div>
+<div class="title">Figure 6. Activity diagram of recording the amount of money received</div>
 </div>
 <div class="sect3">
 <h4 id="implementation-of-code-people-received-code-command"><a class="link" href="#implementation-of-code-people-received-code-command">Implementation of <code>people received</code> command</a></h4>
@@ -521,7 +568,7 @@ in the <code>Model</code> is updated.</p>
 <div class="content">
 <img src="../images/GetPeopleReceivedCommandSequenceDiagram.png" alt="GetPeopleReceivedCommandSequenceDiagram" width="600">
 </div>
-<div class="title">Figure 6. Sequence diagram of the <code>people received</code> command</div>
+<div class="title">Figure 7. Sequence diagram of the <code>people received</code> command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1218,4 +1265,4 @@ until the details keyed in by the user is valid.</p>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-25 03:49:24 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-26 06:08:53 UTC</div></div></div></body></html>
