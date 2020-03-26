@@ -24,6 +24,10 @@
 <div class="ulist">
 <ul>
 <li>
+<p>Added People&#8217;s command, <code>owe</code></p>
+<div class="ulist">
+<ul>
+<li>
 <p>What it does: allows the user to keep track of what they owe to other people in the addressbook.</p>
 </li>
 <li>
@@ -33,6 +37,31 @@
 <p>Highlights: The implementation was quite challenging as it required an in-depth analysis of design alternatives. For instance, how to store the Transactions,
 since a Transaction has association to Description, Amount, Date and Tag, and Date itself have different formats to consider. I have implemented the logic, model,
 storage and ui for this command.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Added People&#8217;s command, <code>returned</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to record that he/she has already returned the debt(s).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Modified People&#8217;s command, <code>find</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to find people based on their name, phone, email or tags.
+I have also added the the tags "Debt" and "Loan" to people whom the user owes and lends, so that the user
+can filter the people whom they lend or owe using the command <code>people find t/debt loan</code>.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -56,7 +85,9 @@ storage and ui for this command.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/95">#95</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/87">#87</a></p>
+<p>PRs reviewed (with non-trivial review comments): (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/95">#95</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/87">#87</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/98">#98</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/102">#102</a>)</p>
 </li>
 </ul>
 </div>
@@ -694,4 +725,4 @@ money.</p>
 </ol>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-26 06:08:53 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-26 06:55:00 UTC</div></div></div></body></html>
