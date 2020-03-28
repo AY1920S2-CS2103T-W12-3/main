@@ -46,7 +46,7 @@
 <li><a href="#recording-the-money-you-owe-code-owe-code">5.3.2. Recording the money you owe: <code>owe</code></a></li>
 <li><a href="#recording-the-money-you-return-code-returned-code">5.3.3. Recording the money you return: <code>returned</code></a></li>
 <li><a href="#recording-the-money-you-lend-code-lend-code">5.3.4. Recording the money you lend: <code>lend</code></a></li>
-<li><a href="#recording-the-money-your-friend-paid-back-code-received-code">5.3.5. Recording the money your friend paid back: <code>received</code></a></li>
+<li><a href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></li>
 <li><a href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></li>
 <li><a href="#sending-reminder-to-all-friend-code-remindall-code">5.3.7. Sending reminder to all friend: <code>remindall</code></a></li>
 <li><a href="#listing-all-contacts-code-list-code">5.3.8. Listing all contacts: <code>list</code></a></li>
@@ -72,7 +72,11 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Sharkie</strong> is an all-in-one desktop application for <strong>personal finance tracking</strong>. It manages your <strong>incomes and expenses</strong>, organises your <strong>contacts</strong> and keeps track of <strong>debts</strong> your friends owe you, so that your loans always come with a money-back guarantee!</p>
+<p>Welcome to <strong>Sharkie</strong>!</p>
+</div>
+<div class="paragraph">
+<p><strong>Sharkie</strong> is an all-in-one desktop application for <strong>personal finance tracking</strong> designed for university students who would like to monitor their spending.
+It manages your <strong>incomes and expenses</strong>, organises your <strong>contacts</strong> and keeps track of <strong>debts</strong> your friends owe you, so that your loans always come with a money-back guarantee!</p>
 </div>
 <div class="paragraph">
 <p><strong>Sharkie</strong> boasts a sleek, trendy Graphical User Interface (GUI) while being at its core a <strong>Command Line Application</strong> - this means that the faster you type, the faster you can get those pesky finances out of your head and into Sharkie&#8217;s management system.</p>
@@ -98,14 +102,23 @@
 <p>Note the following symbols and formatting used in this document:<br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Symbols used in this User Guide.</caption>
 <colgroup>
 <col>
 <col>
 </colgroup>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Symbol</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>command</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>Enter</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This symbol indicates the enter button on the keyboard.</p></td>
 </tr>
 </tbody>
 </table>
@@ -153,9 +166,19 @@ This symbol indicates tips.
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
 <div class="imageblock">
 <div class="content">
+<img src="images/EnterUserData.png" alt="EnterUserData" width="820">
+</div>
+<div class="title">Figure 1. Opening Sharkie for the first time</div>
+</div>
+</li>
+<li>
+<p>If you are logging in for the first time, key in your Name, Phone and your Email, and press <kbd>Enter</kbd> or click on the <code>Submit</code> button.
+Your screen should look like <em>Figure 2</em> this after doing so.</p>
+<div class="imageblock">
+<div class="content">
 <img src="images/Ui.png" alt="Ui" width="820">
 </div>
-<div class="title">Figure 1. GUI of Sharkie</div>
+<div class="title">Figure 2. GUI of Sharkie</div>
 </div>
 </li>
 <li>
@@ -173,10 +196,10 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>people delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list.</p>
 </li>
 <li>
-<p><strong><code>wallet find</code></strong><code>rice</code> : returns a list of expenses or income with keyword rice.</p>
+<p><strong><code>wallet find</code></strong><code>n/rice</code> : returns a list of expenses or income with keyword rice.</p>
 </li>
 <li>
-<p><strong><code>sharkie exit</code></strong> : exits the app.</p>
+<p><strong><code>exit</code></strong> : exits the app.</p>
 </li>
 </ul>
 </div>
@@ -214,7 +237,7 @@ There is no need to save manually.</p>
 <h3 id="debts-and-loans"><a class="link" href="#debts-and-loans">4.4. Debts and loans</a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> allows you to take note of the debts you owe your friends and the loans you lent your friends.<br>
-<strong>Sharkie</strong> then allow you to automatically remind your friends through email to return you the money they owe you!<br></p>
+<strong>Sharkie</strong> then allows you to remind your friends through email to return you the money they owe you!<br></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -329,7 +352,8 @@ Adds an expense named Chicken Rice, costing $3.50, on 10/10/2020, tagged as food
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>You spent $3.50 on Chicken Rice (food) on 10/10/2020 :)</pre>
+<pre>New expense added: Chicken Rice Description: Chicken Rice Amount: $3.50 Date: 2010-10-10 Tag: [Food]
+Your expenditure for OCTOBER 2010 is: $3.50/$0.00</pre>
 </div>
 </div>
 </li>
@@ -373,7 +397,7 @@ Adds an income named P6 Tuition, for a sum of $3000, on 10/10/2020, tagged as jo
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>You earned $3000 from P6 Tuition (job) on 10/10/2020 :D</pre>
+<pre>New income added: P6 Tuition Description: P6 Tuition Amount: $3000.00 Date: 2010-10-10 Tag: [Job]</pre>
 </div>
 </div>
 </li>
@@ -409,8 +433,8 @@ Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
 <pre>Listed all transactions:
-1. Chicken Rice (food)
-2. Duck Rice
+1. [Food] Chicken Rice $4.00
+2. [Food] Duck Rice $5.00
 …</pre>
 </div>
 </div>
@@ -455,7 +479,7 @@ Returns the respective expense with the changes made.<br>
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Edited Item: Duck Rice Date: 10/10/2010 Amount: $4.00</pre>
+<pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
 </div>
 </div>
 </li>
@@ -500,9 +524,9 @@ Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
 <pre>3 transactions listed!:
-1. Duck Rice Date: 10/10/2010 Amount: $4.00
-2. Chicken Rice Date: 10/11/2010 Amount: $2.50
-3. Bean Noodles Date: 10/12/2010 Amount: $3.80
+1. [Food] Duck Rice $4.00
+2. [Food] Chicken Rice $2.50
+3. [Food] Bean Noodles $3.80
 ...​</pre>
 </div>
 </div>
@@ -544,7 +568,7 @@ Removes the expenses relative to the index.<br>
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Removed Chicken Rice from your wallet</pre>
+<pre>Deleted Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
 </div>
 </div>
 </li>
@@ -590,7 +614,7 @@ Format: <code>wallet budget $/amount [m/&lt;month&gt;] [y/&lt;year&gt;]</code></
 Expected outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Budget has been set at $1000!</pre>
+<pre>Default budget has been set at $1000.</pre>
 </div>
 </div>
 </li>
@@ -661,7 +685,7 @@ Records that you owe the 4th person $5.00 on 10/10/2020.<br>
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Increased debt to Grace by $5.00! You now owe Grace $10.00.</pre>
+<pre>Increased debt to Grace by $5.00. You now owe Grace $10.00.</pre>
 </div>
 </div>
 </li>
@@ -811,10 +835,10 @@ The amount of money recorded will be added under your friend&#8217;s <code>Loans
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-your-friend-paid-back-code-received-code"><a class="link" href="#recording-the-money-your-friend-paid-back-code-received-code">5.3.5. Recording the money your friend paid back: <code>received</code></a></h4>
+<h4 id="recording-the-money-you-received-code-received-code"><a class="link" href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></h4>
 <div class="paragraph">
 <p>Records that you have received the money from your friend, who you lent to.<br>
-Format: <code>people paid &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></p>
+Format: <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -865,7 +889,7 @@ All loans will be marked as <code>received</code> for the indicated person if th
 <div class="ulist">
 <ul>
 <li>
-<p><code>people paid 2 i/1</code>
+<p><code>people received 2 i/1</code>
 Records that you have received the money for the first loan from the second person in the address book.<br>
 Expected Outcome:</p>
 <div class="literalblock">
@@ -1015,8 +1039,28 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">5.3.9. Finding a person: <code>find</code></a></h4>
 <div class="paragraph">
-<p>Finds a person in your contact list by his or her name.<br>
-Format: <code>people find &lt;keyword&gt;</code></p>
+<p>Finds a person in your contact list by the keywords given.<br>
+Format: <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Finds the people with the stated &lt;keyword&gt;.</p>
+</li>
+<li>
+<p>The keyword need not be in full. For example <code>people find jo</code> will also display the person with the keyword <code>Joel</code> as well.</p>
+</li>
+<li>
+<p>The keyword can be either of type name (n/), phone (p/), email (e/) or tag (t/).</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -1024,12 +1068,12 @@ Format: <code>people find &lt;keyword&gt;</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>people find Grace</code>
+<p><code>people find n/Grace</code>
 Returns a list of people with the name, Grace.<br>
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Here is a list of your contacts with name Grace:
+<pre>2 persons listed!:
 1. Grace Lim
 2. Grace Pan
 …</pre>
@@ -1150,7 +1194,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
 </div>
-<div class="title">Figure 2. Editing user data in Sharkie</div>
+<div class="title">Figure 3. Editing user data in Sharkie</div>
 </div>
 <div id="debt-and-loan" class="paragraph">
 <p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
@@ -1175,7 +1219,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
 </div>
-<div class="title">Figure 3. Differences between <code>debts</code> and <code>loans</code></div>
+<div class="title">Figure 4. Differences between <code>debts</code> and <code>loans</code></div>
 </div>
 </div>
 </div>
@@ -1222,8 +1266,10 @@ e.g. <code>tag 1 t/food</code></p>
 e.g. <code>wallet edit 1 n/Duck rice $/4.00</code></p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>wallet find &lt;keyword&gt;</code><br>
-e.g. <code>wallet find rice</code></p>
+<p><strong>Find</strong> : <code>wallet find n/&lt;keyword&gt;</code> or <code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code>
+or <code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code>
+or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
+e.g. <code>wallet find n/rice</code></p>
 </li>
 <li>
 <p><strong>Delete</strong> : <code>wallet delete &lt;index&gt;</code><br>
@@ -1271,8 +1317,11 @@ e.g. <code>people paid 1 2</code></p>
 <p><strong>List</strong> : <code>people list</code></p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>people find &lt;keyword&gt;</code><br>
-e.g. <code>people find Grace</code></p>
+<p><strong>Find</strong> : <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code><br>
+e.g. <code>people find n/Grace</code></p>
 </li>
 <li>
 <p><strong>Delete</strong> : <code>people delete &lt;index&gt;</code><br>
@@ -1286,4 +1335,4 @@ e.g. <code>people edit 1 e/johndoe@example.com</code><br></p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-28 08:40:05 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-28 12:24:39 UTC</div></div></div></body></html>
