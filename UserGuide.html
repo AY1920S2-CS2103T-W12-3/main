@@ -53,6 +53,7 @@
 <li><a href="#finding-a-person-code-find-code">5.3.9. Finding a person: <code>find</code></a></li>
 <li><a href="#editing-a-person-code-edit-code">5.3.10. Editing a person : <code>edit</code></a></li>
 <li><a href="#deleting-a-person-code-delete-code">5.3.11. Deleting a person : <code>delete</code></a></li>
+<li><a href="#clearing-all-contacts-code-clear-code">5.3.12. Clearing all contacts : <code>clear</code></a></li>
 </ul>
 </li>
 </ul>
@@ -432,10 +433,7 @@ Returns the list of transactions.<br>
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Listed all transactions:
-1. [Food] Chicken Rice $4.00
-2. [Food] Duck Rice $5.00
-…</pre>
+<pre>Listed all transactions.</pre>
 </div>
 </div>
 </li>
@@ -501,6 +499,9 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <ul>
 <li>
 <p>Finds the expenses and income with the stated &lt;keyword&gt;.</p>
+</li>
+<li>
+<p>The keyword is case-insensitive.</p>
 </li>
 <li>
 <p>The keyword need not be in full. For example <code>wallet find ri</code> will also display expenses or income with the keyword <code>rice</code> as well.</p>
@@ -1026,10 +1027,7 @@ Returns the list of everyone in the contact book.<br>
 Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Listed all persons.
-1. Alex Yeoh
-2. Bernice Yu
-…</pre>
+<pre>Listed all persons.</pre>
 </div>
 </div>
 </li>
@@ -1053,10 +1051,17 @@ or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></p
 <p>Finds the people with the stated &lt;keyword&gt;.</p>
 </li>
 <li>
+<p>The keywords are case-insensitive</p>
+</li>
+<li>
 <p>The keyword need not be in full. For example <code>people find jo</code> will also display the person with the keyword <code>Joel</code> as well.</p>
 </li>
 <li>
 <p>The keyword can be either of type name (n/), phone (p/), email (e/) or tag (t/).</p>
+</li>
+<li>
+<p><code>Debt</code> and <code>Loan</code> (case-insensitive) are the only tags allowed to be used in <code>people find</code> command.
+<code>people find t/debt loan</code> would return a list of people with unsettled debt(s) or loan(s).</p>
 </li>
 </ul>
 </div>
@@ -1170,6 +1175,30 @@ Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
 <pre>Deleted Person: Betsy Phone: 91234567 Email: something@email.com You owe: $0.00 You lent: $0.00 Tags:</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="clearing-all-contacts-code-clear-code"><a class="link" href="#clearing-all-contacts-code-clear-code">5.3.12. Clearing all contacts : <code>clear</code></a></h4>
+<div class="paragraph">
+<p>Clears all the contacts from the address book.<br>
+Format: <code>people clear</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people clear</code>
+Returns an empty address book.<br>
+Expected Outcome:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Address book has been cleared!</pre>
 </div>
 </div>
 </li>
@@ -1291,13 +1320,6 @@ e.g. <code>wallet budget $/1000 m/04 y/2020</code></p>
 e.g. <code>people add n/Joel p/91234567 e/joel@u.nus.edu</code></p>
 </li>
 <li>
-<p><strong>Remind</strong> : <code>people remind &lt;index&gt;</code><br>
-e.g. <code>people remind 1</code></p>
-</li>
-<li>
-<p><strong>Remind all</strong> : <code>people remindall</code></p>
-</li>
-<li>
 <p><strong>Owe</strong> : <code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code><br>
 e.g. <code>people owe 4 n/lunch $/5.00 d/10/10/2020</code></p>
 </li>
@@ -1311,7 +1333,14 @@ e.g. <code>people lend 5 n/dinner $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
 <p><strong>Received</strong> : <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code><br>
-e.g. <code>people paid 1 2</code></p>
+e.g. <code>people received 1 2</code></p>
+</li>
+<li>
+<p><strong>Remind</strong> : <code>people remind &lt;index&gt;</code><br>
+e.g. <code>people remind 1</code></p>
+</li>
+<li>
+<p><strong>Remind all</strong> : <code>people remindall</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>people list</code></p>
@@ -1324,15 +1353,18 @@ or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code><br
 e.g. <code>people find n/Grace</code></p>
 </li>
 <li>
+<p><strong>Edit</strong> : <code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code><br>
+e.g. <code>people edit 1 e/johndoe@example.com</code><br></p>
+</li>
+<li>
 <p><strong>Delete</strong> : <code>people delete &lt;index&gt;</code><br>
 e.g. <code>people delete 3</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code><br>
-e.g. <code>people edit 1 e/johndoe@example.com</code><br></p>
+<p><strong>Clear</strong> : <code>people clear</code></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-29 05:53:03 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-30 05:51:38 UTC</div></div></div></body></html>
