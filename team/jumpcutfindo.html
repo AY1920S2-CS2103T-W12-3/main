@@ -20,7 +20,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: Adapted Sharkie from AB-3 such that <strong>it can take in more prefixes as commands</strong></p>
+<p><strong>Major enhancement</strong>: Adapted Sharkie from AB-3 such that <strong>it can take in more prefixes as commands</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -36,7 +36,30 @@
 </div>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>] <em>{give links to collated code files}</em></p>
+<p><strong>Major enhancement</strong>: Added <code>wallet budget</code> command so that the user <strong>can add a budget for their finances</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to add a budget for their finances.</p>
+</li>
+<li>
+<p>Justification: This feature was implemented to help the user keep track of their finances and prevent them from overspending.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: Upgraded the user interface to make Sharkie more visually appealing and display relevant information.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to easily see information related to their transactions and their address book.</p>
+</li>
+<li>
+<p>Justification: This feature was implemented to allow people to easily see their data entered and statistics.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -53,17 +76,11 @@
 </div>
 </li>
 <li>
-<p>Enhancements to existing features:</p>
-</li>
-<li>
-<p>Documentation:</p>
-</li>
-<li>
 <p>Community:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/41">#41</a></p>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/40">#40</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/41">#41</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/71">#71</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/92">#92</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/95">#95</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/100">#100</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/101">#101</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/110">#110</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/118">#118</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/128">#128</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/154">#154</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/161">#161</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/178">#178</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/183">#183</a></p>
 </li>
 </ul>
 </div>
@@ -83,9 +100,6 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -101,6 +115,115 @@
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="global-commands"><a class="link" href="#global-commands">Global Commands</a></h3>
+<div class="sect3">
+<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">Viewing help : <code>help</code></a></h4>
+<div class="paragraph">
+<p>Views the user guide of <strong>Sharkie</strong>, which is the document you are currently reading.<br>
+Format: <code>help</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">Exiting the program : <code>exit</code></a></h4>
+<div class="paragraph">
+<p>Exits the program.<br>
+Format: <code>exit</code>
+==== Setting a budget: <code>budget</code>
+Sets a budget for you.<br>
+Format: <code>wallet budget $/amount [m/&lt;month&gt;] [y/&lt;year&gt;]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If no month or year is specified, the default budget is set as the amount provided.</p>
+</li>
+<li>
+<p>Overwrites the current budget value stored at that month, if it was previously added.</p>
+</li>
+<li>
+<p>The value of the budget must be a positive integer.</p>
+</li>
+<li>
+<p>The value of the month must be a positive integer between 1 - 12.</p>
+</li>
+<li>
+<p>The value of the year must be a positive integer.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet budget $/1000</code> Sets a budget of $1000.<br>
+Expected outcome:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Default budget has been set at $1000.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">FAQ</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous Address Book folder.</p>
+</div>
+<div id="editing-user-data" class="paragraph">
+<p><strong>Q</strong>: How to edit user&#8217;s data?<br>
+<strong>A</strong>: Click on <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
+</div>
+<div class="title">Figure 1. Editing user data in Sharkie</div>
+</div>
+<div id="debt-and-loan" class="paragraph">
+<p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
+<strong>A</strong>: <code>Debts</code> is the amount of money you owe your friends and <code>loans</code> is the amount of money you lend your friends.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1 | Supper | $5.00 | 3 FEB 2020</code> under the <code>Debts</code> section, shown in the figure below represents what you owe Syin Yi.</p>
+</li>
+<li>
+<p><code>1 | Breakfast | $3.00 | 8 AUG 2018</code> under the <code>Loans</code> section, shown in the figure below represents what you lent to Syin Yi.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
+</div>
+<div class="title">Figure 2. Differences between <code>debts</code> and <code>loans</code></div>
+</div>
+</div>
+</div>
+<div id="valid-amount" class="paragraph">
+<p><strong>Q</strong>: Is there a maximum amount of money that Sharkie can handle?<br>
+<strong>A</strong>: Yes. Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -116,6 +239,163 @@
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="Design-Model"><a class="link" href="#Design-Model">Model component</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="800">
+</div>
+<div class="title">Figure 3. Structure of the Model Component</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>The <em>Model</em> package consists of two main packages: <em>Person</em> and <em>Transaction</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The diagram below shows how the <em>Person</em> package is implemented:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="500">
+</div>
+<div class="title">Figure 4. In-depth Structure of Person in the Model Component</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The diagram below shows how the <em>Transaction</em> package is implemented:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
+</div>
+<div class="title">Figure 5. In-depth Structure of Transaction in the Model Component</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Model</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
+</li>
+<li>
+<p>stores the Address Book data.</p>
+</li>
+<li>
+<p>stores the Wallet data.</p>
+</li>
+<li>
+<p>stores the User data.</p>
+</li>
+<li>
+<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> and an unmodifiable <code>ObservableList&lt;Transaction&gt;</code> that can be
+'observed' e.g. the UI can be bound to these lists so that the UI automatically updates when the data in the
+respective lists change.</p>
+</li>
+<li>
+<p>does not depend on any of the other three components.
+=== Wallet Budget Command
+The <code>budget</code> command is implemented in the class, <code>WalletBudgetCommand</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This command can be accessed from <code>Logic#execute()</code>. It adds a budget using the parameters as specified by the user.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates what happens when a user executes the <code>wallet budget</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/WalletBudgetActivityDiagram.png" alt="WalletBudgetActivityDiagram" width="600">
+</div>
+<div class="title">Figure 6. Activity diagram of the execution of <code>wallet budget</code> command</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-of-code-wallet-budget-code-command"><a class="link" href="#implementation-of-code-wallet-budget-code-command">Implementation of <code>wallet budget</code> command</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In <code>WalletBudgetCommand</code> class, the <code>Budget</code> produced by <code>WalletBudgetCommandParser</code> is examined to determine if it is a default budget, or if it is a normal budget.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the <code>Budget</code> is a default budget, the <code>BudgetList</code> is updated in the <code>Model</code> via <code>Model#setDefaultBudget()</code>. This sets the default budget as the one given.</p>
+</li>
+<li>
+<p>If the <code>Budget</code> is not a default budget, the <code>BudgetList</code> is updated in the <code>Model</code> via <code>Model#setBudget()</code>. This adds the budget given to a list of budgets with their <code>Month</code> and <code>Year</code> specified.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>The list of <code>Budget</code> in the <code>Wallet</code> is modified based the arguments input by the user.</p>
+</li>
+<li>
+<p>If a <code>Budget</code> with the same arguments given already exists, it will be overwritten by the one given.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes what happens during the execution of a <code>wallet budget</code> command:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/WalletBudgetSequenceDiagram.png" alt="WalletBudgetSequenceDiagram">
+</div>
+<div class="title">Figure 7. Sequence diagram of the <code>wallet budget</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-selection-of-code-budget-code-to-set-default-or-specific-month-year"><a class="link" href="#aspect-selection-of-code-budget-code-to-set-default-or-specific-month-year">Aspect: Selection of <code>Budget</code> to set: default or specific month / year</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> If the month and year of the budget is specified, the specific <code>Budget</code> will be set. Otherwise, the default <code>Budget</code> will be set.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to differentiate during command processing whether we want a default <code>Budget</code> or a specific one.</p>
+</li>
+<li>
+<p>Cons: All <code>Budget</code> except default <code>Budget</code> all contain a redundant <code>isDefault</code> boolean</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Allow the user to specify if they want a default <code>Budget</code> set, or a specific <code>Budget</code> instead.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Clearer way to distinguish between default <code>Budget</code> and specific <code>Budget</code></p>
+</li>
+<li>
+<p>Cons: Requires more prefixes / suffixes to be added to <code>Parser</code> in order to parse extra arguments.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 <hr>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-30 10:10:28 UTC</div></div></div></body></html>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-31 11:02:27 UTC</div></div></div></body></html>
