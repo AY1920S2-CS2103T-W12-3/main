@@ -302,15 +302,69 @@ You can view statistics such as the proportion of your spending on different ite
 <div class="sect3">
 <h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">5.1.1. Viewing help : <code>help</code></a></h4>
 <div class="paragraph">
-<p>Views the user guide of <strong>Sharkie</strong>, which is the document you are currently reading.<br>
-Format: <code>help</code></p>
+<p>If you need help regarding the many features of Sharkie and how to operate it, you can use the global <code>help</code> command to get a link to this user guide.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>help</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You start Sharkie and are unsure of what commands are available or how to use it.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Typing <code>help</code> will give you a link to our user guide.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>A window will pop up, providing you with a clickable link that directs you to this user guide.</pre>
+</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">5.1.2. Exiting the program : <code>exit</code></a></h4>
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
+<p>If you&#8217;re done with using Sharkie and wish to exit the application safely, you can use the global <code>exit</code> command to help you save your data and exit the program.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>exit</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You&#8217;ve just finished using Sharkie, and wish to close the program and save your data.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Typing <code>exit</code> will save your data and quit Sharkie.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Sharkie will save your data to a locally stored file (that can be edited using a text editor), and will help you quit the application safely.</pre>
+</div>
 </div>
 </div>
 </div>
@@ -1261,110 +1315,182 @@ Expected Outcome:</p>
 <div class="sect1">
 <h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>If you wish to have a quick reference to the commands available in <strong>Sharkie</strong>, you can refer to the list below.</p>
+</div>
 <div class="sect2">
 <h3 id="global-commands-2"><a class="link" href="#global-commands-2">7.1. Global Commands</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>Exit</strong> : <code>exit</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The following are the global commands that are available in <strong>Sharkie</strong> for you to use! You do not need to use any prefixes to use these commands.</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Global commands available in <strong>Sharkie</strong>.</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Command</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Format</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Expected outcome</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>help</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opens up a window with a link to the User Guide.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>exit</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saves your data and safely exits</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="wallet-commands-2"><a class="link" href="#wallet-commands-2">7.2. Wallet Commands</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Expense</strong> : <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code><br>
-e.g. <code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code></p>
-</li>
-<li>
-<p><strong>Income</strong> : <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code><br>
-e.g. <code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code></p>
-</li>
-<li>
-<p><strong>Tag</strong> : <code>wallet tag &lt;index&gt; t/&lt;tag&gt;</code><br>
-e.g. <code>tag 1 t/food</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code><br>
-e.g. <code>wallet edit 1 n/Duck rice $/4.00</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>wallet find n/&lt;keyword&gt;</code> or <code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code>
-or <code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code>
-or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
-e.g. <code>wallet find n/rice</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>wallet delete &lt;index&gt;</code><br>
-e.g. <code>wallet delete 1</code></p>
-</li>
-<li>
-<p><strong>Budget</strong> : <code>wallet budget $/&lt;amount&gt; m/&lt;month&gt; y/&lt;year&gt;</code><br>
-e.g. <code>wallet budget $/1000 m/04 y/2020</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The following commands are wallet-related commands that are available in <strong>Sharkie</strong> for you to use! You will need to use the prefix <code>wallet</code> to use the commands.</p>
 </div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Wallet commands available in <strong>Sharkie</strong>.</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Command</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Format</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Expected outcome</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>budget</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet budget $/&lt;amount&gt; [m/&lt;month&gt;] [y/&lt;year&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets a budget for you for the month selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet delete &lt;index&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Helps you remove the transaction selected at that index from the wallet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits your transaction in the wallet at the index selected with your given arguments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expense</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates an expense and adds it to your wallet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet find n/&lt;keyword&gt;</code></mark><br>
+or <mark><code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></mark><br>
+or <mark><code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></mark><br>
+or <mark><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></mark><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds your transaction(s) within your wallet using the arguments you have provided.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>income</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates an income and adds it to your wallet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet list</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all your transactions that have been recorded by <strong>Sharkie</strong> in the wallet.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="people-commands-2"><a class="link" href="#people-commands-2">7.3. People Commands</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Add</strong> : <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code><br>
-e.g. <code>people add n/Joel p/91234567 e/joel@u.nus.edu</code></p>
-</li>
-<li>
-<p><strong>Owe</strong> : <code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code><br>
-e.g. <code>people owe 4 n/lunch $/5.00 d/10/10/2020</code></p>
-</li>
-<li>
-<p><strong>Returned</strong>: <code>people returned &lt;person&#8217;s index&gt; [i/&lt;debt&#8217;s index&gt;]</code><br>
-e.g. <code>people returned 4 i/1</code></p>
-</li>
-<li>
-<p><strong>Lend</strong> : <code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code><br>
-e.g. <code>people lend 5 n/dinner $/5.00 d/10/10/2020</code></p>
-</li>
-<li>
-<p><strong>Received</strong> : <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code><br>
-e.g. <code>people received 1 2</code></p>
-</li>
-<li>
-<p><strong>Remind</strong> : <code>people remind &lt;index&gt;</code><br>
-e.g. <code>people remind 1</code></p>
-</li>
-<li>
-<p><strong>Remind all</strong> : <code>people remindall</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>people list</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code><br>
-e.g. <code>people find n/Grace</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code><br>
-e.g. <code>people edit 1 e/johndoe@example.com</code><br></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>people delete &lt;index&gt;</code><br>
-e.g. <code>people delete 3</code></p>
-</li>
-<li>
-<p><strong>Clear</strong> : <code>people clear</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The following commands are people-related commands that are available in <strong>Sharkie</strong> for you to use! You will need to use the prefix <code>people</code> to use the commands.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. People commands available in <strong>Sharkie</strong>.</caption>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Command</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Format</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Expected outcome</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Helps you add a contact to your address book, with the particulars that you have entered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people clear</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all your contacts in your address book.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people delete &lt;index&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes your contact at the index you have selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits your contact in the address book at the index selected with the given arguments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark><br>
+or <mark><code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark><br>
+or <mark><code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark><br>
+or <mark><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds your contact(s) within your address book using the arguments you have provided.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lend</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Records a loan to your contact at the index selected in your address book.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people list</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all your contacts that have been recorded by <strong>Sharkie</strong> in the address book.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>owe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Records a debt to your contact at the index selected in your address book.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>received</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes the loan at the index selected for your contact selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>remind</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people remind &lt;index&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends an email to the contact at the index you have selected, reminding them of any withstanding debts that have to be paid back to you.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>remindall</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people remindall</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends an email to all your contacts with any withstanding debts, reminding them to pay you back.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>returned</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people returned &lt;person&#8217;s index&gt; [i/&lt;debt&#8217;s index&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes the debt at the index selected for your contact selected.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-01 01:11:03 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-01 14:21:25 UTC</div></div></div></body></html>
