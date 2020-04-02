@@ -293,14 +293,41 @@ Expected outcome:</p>
 <h3 id="Design-Model"><a class="link" href="#Design-Model">Model component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="800">
+<img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="750">
 </div>
 <div class="title">Figure 3. Structure of the Model Component</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The following is an in-depth view of how <code>ModelManager</code> is implemented:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelManagerClassDiagram.png" alt="ModelManagerClassDiagram" width="800">
+</div>
+<div class="title">Figure 4. In-depth structure of the Model Manager</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>ModelManager</code> class diagram is drawn separately as it is too complicated to include all the details in the
+Model component diagram.
+</td>
+</tr>
+</table>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>The <em>Model</em> package consists of two main packages: <em>Person</em> and <em>Transaction</em>.</p>
+<p>The <em>Model</em> package consists of four main packages: <em>Person</em>, <a href="#transaction"><em>Transaction</em></a>,
+<em>Reminder</em> and <em>Tag</em>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -311,9 +338,9 @@ Expected outcome:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="500">
+<img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="1200">
 </div>
-<div class="title">Figure 4. In-depth Structure of Person in the Model Component</div>
+<div class="title">Figure 5. In-depth structure of Person package in the Model Component</div>
 </div>
 <div class="ulist">
 <ul>
@@ -326,7 +353,33 @@ Expected outcome:</p>
 <div class="content">
 <img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
 </div>
-<div class="title">Figure 5. In-depth Structure of Transaction in the Model Component</div>
+<div class="title">Figure 6. In-depth structure of Transaction package in the Model Component</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelTransactionClassDiagram.png" alt="ModelTransactionClassDiagram" width="400">
+</div>
+<div class="title">Figure 7. Transaction class diagram</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Reminder</em> package only consist of a class, <code>Reminder</code>:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="200">
+</div>
+<div class="title">Figure 8. Reminder class diagram</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Tag</em> package only consist of a class, <code>Tag</code> and it does not depends on other components in the Model.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -342,10 +395,10 @@ Expected outcome:</p>
 <p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
 </li>
 <li>
-<p>stores the Address Book data.</p>
+<p>stores the <a href="#address-book">Address Book</a> data.</p>
 </li>
 <li>
-<p>stores the Wallet data.</p>
+<p>stores the <a href="#wallet">Wallet</a> data.</p>
 </li>
 <li>
 <p>stores the User data.</p>
@@ -372,7 +425,7 @@ The <code>budget</code> command is implemented in the class, <code>WalletBudgetC
 <div class="content">
 <img src="../images/WalletBudgetActivityDiagram.png" alt="WalletBudgetActivityDiagram" width="600">
 </div>
-<div class="title">Figure 6. Activity diagram of the execution of <code>wallet budget</code> command</div>
+<div class="title">Figure 9. Activity diagram of the execution of <code>wallet budget</code> command</div>
 </div>
 <div class="sect3">
 <h4 id="implementation-of-code-wallet-budget-code-command"><a class="link" href="#implementation-of-code-wallet-budget-code-command">Implementation of <code>wallet budget</code> command</a></h4>
@@ -406,7 +459,7 @@ The <code>budget</code> command is implemented in the class, <code>WalletBudgetC
 <div class="content">
 <img src="../images/WalletBudgetSequenceDiagram.png" alt="WalletBudgetSequenceDiagram">
 </div>
-<div class="title">Figure 7. Sequence diagram of the <code>wallet budget</code> command</div>
+<div class="title">Figure 10. Sequence diagram of the <code>wallet budget</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -448,4 +501,4 @@ The <code>budget</code> command is implemented in the class, <code>WalletBudgetC
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 13:27:26 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 16:18:31 UTC</div></div></div></body></html>
