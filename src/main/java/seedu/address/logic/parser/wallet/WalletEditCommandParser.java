@@ -1,7 +1,7 @@
 package seedu.address.logic.parser.wallet;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.address.commons.core.Messages.MESSAGE_INVALID_TRANSACTION_DISPLAYED_INDEX;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_AMOUNT;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_DATE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
@@ -36,8 +36,7 @@ public class WalletEditCommandParser implements Parser<WalletEditCommand> {
         try {
             index = ParserUtil.parseIndex(argMultimap.getPreamble());
         } catch (ParseException pe) {
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, WalletEditCommand.MESSAGE_USAGE),
-                    pe);
+            throw new ParseException(MESSAGE_INVALID_TRANSACTION_DISPLAYED_INDEX);
         }
 
         EditTransactionDescriptor editTransactionDescriptor = new EditTransactionDescriptor();

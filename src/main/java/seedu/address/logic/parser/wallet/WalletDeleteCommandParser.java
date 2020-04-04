@@ -1,6 +1,6 @@
 package seedu.address.logic.parser.wallet;
 
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.address.commons.core.Messages.MESSAGE_INVALID_TRANSACTION_DISPLAYED_INDEX;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.wallet.WalletDeleteCommand;
@@ -24,8 +24,7 @@ public class WalletDeleteCommandParser implements Parser<WalletDeleteCommand> {
             Index index = ParserUtil.parseIndex(args);
             return new WalletDeleteCommand(index);
         } catch (ParseException pe) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, WalletDeleteCommand.MESSAGE_USAGE), pe);
+            throw new ParseException(MESSAGE_INVALID_TRANSACTION_DISPLAYED_INDEX);
         }
     }
 

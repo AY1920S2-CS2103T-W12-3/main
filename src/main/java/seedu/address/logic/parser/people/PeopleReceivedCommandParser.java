@@ -1,7 +1,8 @@
 package seedu.address.logic.parser.people;
 
 import static java.util.Objects.requireNonNull;
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.address.commons.core.Messages.MESSAGE_INVALID_LOAN_DISPLAYED_INDEX;
+import static seedu.address.commons.core.Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TRANSACTION_INDEX;
 
 import seedu.address.commons.core.index.Index;
@@ -34,15 +35,18 @@ public class PeopleReceivedCommandParser implements Parser<PeopleReceivedCommand
 
         try {
             personIndex = ParserUtil.parseIndex(argMultimap.getPreamble());
+        } catch (ParseException e) {
+            throw new ParseException(MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
+        }
 
-            if (argMultimap.getValue(PREFIX_TRANSACTION_INDEX).isPresent()) {
+        if (argMultimap.getValue(PREFIX_TRANSACTION_INDEX).isPresent()) {
+            try {
                 loanIndex = ParserUtil.parseIndex(argMultimap.getValue(PREFIX_TRANSACTION_INDEX).get());
-            } else {
-                loanIndex = null;
+            } catch (ParseException pe) {
+                throw new ParseException(MESSAGE_INVALID_LOAN_DISPLAYED_INDEX);
             }
-        } catch (ParseException pe) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, PeopleReceivedCommand.MESSAGE_USAGE), pe);
+        } else {
+            loanIndex = null;
         }
 
         return new PeopleReceivedCommand(personIndex, loanIndex);

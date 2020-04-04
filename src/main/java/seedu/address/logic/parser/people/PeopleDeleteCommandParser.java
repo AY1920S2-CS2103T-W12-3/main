@@ -1,6 +1,6 @@
 package seedu.address.logic.parser.people;
 
-import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static seedu.address.commons.core.Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.people.PeopleDeleteCommand;
@@ -24,8 +24,7 @@ public class PeopleDeleteCommandParser implements Parser<PeopleDeleteCommand> {
             Index index = ParserUtil.parseIndex(args);
             return new PeopleDeleteCommand(index);
         } catch (ParseException pe) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, PeopleDeleteCommand.MESSAGE_USAGE), pe);
+            throw new ParseException(MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
         }
     }
 
