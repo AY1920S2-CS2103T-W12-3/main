@@ -675,47 +675,98 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="setting-a-budget-code-budget-code"><a class="link" href="#setting-a-budget-code-budget-code">5.2.7. Setting a budget: <code>budget</code></a></h4>
 <div class="paragraph">
-<p>Sets a budget for you.<br>
-Format: <code>wallet budget $/amount [m/&lt;month&gt;] [y/&lt;year&gt;]</code></p>
+<p>Suppose you want to set a budget for a certain month, or a budget in general for all months. The command that you would enter in this case is our <code>wallet budget</code> command.<br></p>
 </div>
-<div class="sidebarblock">
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet budget $/amount [m/&lt;month&gt;] [y/&lt;year&gt;]</code></p>
+</div>
+<div class="exampleblock">
 <div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are restrictions of <code>wallet budget</code> command, which you will need to take note of:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
 <p>If no month or year is specified, the default budget is set as the amount provided.</p>
 </li>
 <li>
-<p>Overwrites the current budget value stored at that month, if it was previously added.</p>
+<p>Your entry will overwrite any pre-existing budgets. This means that if you have previously set a budget for a specific month and year, and if you have indicated that month and year again, it will overwrite the budget that has been set.</p>
 </li>
 <li>
-<p>The value of the budget must be a positive integer.</p>
+<p>If the budget value is set to 0, <strong>Sharkie</strong> will consider it as if you have not set a budget for that month.</p>
 </li>
 <li>
-<p>The value of the month must be a positive integer between 1 - 12.</p>
+<p>The value of the budget you have set must be a non-negative integer.</p>
 </li>
 <li>
-<p>The value of the year must be a positive integer.</p>
+<p>The value of the month you have set must be a positive integer between 1 - 12.</p>
+</li>
+<li>
+<p>The value of the year you have set must be a non-negative integer.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Example #1</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>wallet budget $/1000</code> Sets a budget of $1000.<br>
-Expected outcome:</p>
-<div class="literalblock">
-<div class="content">
-<pre>Default budget has been set at $1000.</pre>
-</div>
+<p>Suppose you want to add a default budget of $1000 for all months.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet budget $/1000</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to set a default budget of $1000.</p>
+</li>
+</ul>
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #1</strong>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Default budget has been set at $1000.00.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Example #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to add a budget of $999 for March 2020.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet budget $/999 m/03 y/2020</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to set a budget of $999 for March 2020.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #2</strong>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Budget has been set at $999.00 for MARCH 2020.</pre>
+</div>
 </div>
 </div>
 </div>
@@ -1922,4 +1973,4 @@ or <mark><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</co
 </table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 16:08:03 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 16:09:00 UTC</div></div></div></body></html>
