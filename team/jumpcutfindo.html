@@ -233,6 +233,62 @@ Expected outcome:</p>
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
 <strong>A</strong>: Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous Address Book folder.</p>
 </div>
+<div id="personIndexFAQ" class="paragraph">
+<p><strong>Q</strong>: What is a <code>person&#8217;s index</code>?<br>
+<strong>A</strong>: A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1</code> is the <code>person&#8217;s index</code> of Alex Yeoh, whereas</p>
+</li>
+<li>
+<p><code>2</code> is the <code>person&#8217;s index</code> of Bernice Yu.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/personIndexFAQ.png" alt="personIndexFAQ" width="900">
+</div>
+<div class="title">Figure 1. What is a <code>person&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+<div id="loanDebtIndexFAQ" class="paragraph">
+<p><strong>Q</strong>: What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?<br>
+<strong>A</strong>: A <code>debt&#8217;s index</code> is the index number shown in a person&#8217;s displayed debts list, whereas a <code>loan&#8217;s index</code> is the
+index number shown in a person&#8217;s displayed loans list. A <code>debt&#8217;s index</code> indicates a specific debt of a person and a
+<code>loan&#8217;s index</code> indicated a specific loan of a person.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>debt&#8217;s index</code> of the debt, <code>Dinner | $12.00 | 1 APR 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+<li>
+<p>The <code>loan&#8217;s index</code> of the loan, <code>Movie | $10.00 | 2 FEB 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/loanDebtIndexFAQ.png" alt="loanDebtIndexFAQ" width="900">
+</div>
+<div class="title">Figure 2. What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
 <div id="editing-user-data" class="paragraph">
 <p><strong>Q</strong>: How to edit user&#8217;s data?<br>
 <strong>A</strong>: Click on <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
@@ -241,7 +297,7 @@ Expected outcome:</p>
 <div class="content">
 <img src="../images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
 </div>
-<div class="title">Figure 1. Editing user data in Sharkie</div>
+<div class="title">Figure 3. Editing user data in Sharkie</div>
 </div>
 <div id="debt-and-loan" class="paragraph">
 <p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
@@ -266,13 +322,70 @@ Expected outcome:</p>
 <div class="content">
 <img src="../images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
 </div>
-<div class="title">Figure 2. Differences between <code>debts</code> and <code>loans</code></div>
+<div class="title">Figure 4. Differences between <code>debts</code> and <code>loans</code></div>
 </div>
 </div>
 </div>
 <div id="valid-amount" class="paragraph">
 <p><strong>Q</strong>: Is there a maximum amount of money that Sharkie can handle?<br>
 <strong>A</strong>: Yes. Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).</p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br>
+<strong>A</strong>: As the <code>people remind</code> and <code>people remindall</code> commands rely on the connection to the internet and e-mail server,
+time is needed for the application to send a reminder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: Why do I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br>
+<strong>A</strong>: You may need to check your junk mail folder, as your e-mail account may categorize <strong>Sharkie</strong>'s e-mails as spam.
+If you wish to receive frequent notifications from <strong>Sharkie</strong>, please remove <strong>Sharkie</strong> from your junk mail list.</p>
+</div>
+<div id="remind-connection-error" class="paragraph">
+<p><strong>Q</strong>: How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br>
+<strong>A</strong>: You may try the suggestions below to resolve your connection issues:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If you receive an error message as the following:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Error occured while sending email:
+Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+Please make sure that you are connected to the internet.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Please make sure that you are connected to the internet.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you receive an error message as the following:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Error occured while sending email:
+Could not convert socket to TLS
+Please make sure that you are connected to the internet.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Please make sure that your firewall or antivirus programme allows <strong>Sharkie</strong> to connect to SMTP port 587.
+Please add an exclusion to SMTP port 587 in your firewall or antivirus programme, if you have not do so.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -295,20 +408,13 @@ Expected outcome:</p>
 <div class="content">
 <img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="750">
 </div>
-<div class="title">Figure 3. Structure of the Model Component</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The following is an in-depth view of how <code>ModelManager</code> is implemented:</p>
-</li>
-</ul>
+<div class="title">Figure 5. Structure of the Model Component</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/ModelManagerClassDiagram.png" alt="ModelManagerClassDiagram" width="800">
 </div>
-<div class="title">Figure 4. In-depth structure of the Model Manager</div>
+<div class="title">Figure 6. In-depth structure of the Model Manager</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -323,66 +429,6 @@ Model component diagram.
 </tr>
 </table>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>The <em>Model</em> package consists of four main packages: <em>Person</em>, <a href="#transaction"><em>Transaction</em></a>,
-<em>Reminder</em> and <em>Tag</em>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The diagram below shows how the <em>Person</em> package is implemented:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="1200">
-</div>
-<div class="title">Figure 5. In-depth structure of Person package in the Model Component</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The diagram below shows how the <em>Transaction</em> package is implemented:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
-</div>
-<div class="title">Figure 6. In-depth structure of Transaction package in the Model Component</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ModelTransactionClassDiagram.png" alt="ModelTransactionClassDiagram" width="400">
-</div>
-<div class="title">Figure 7. Transaction class diagram</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <em>Reminder</em> package only consist of a class, <code>Reminder</code>:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="200">
-</div>
-<div class="title">Figure 8. Reminder class diagram</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <em>Tag</em> package only consist of a class, <code>Tag</code> and it does not depends on other components in the Model.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="{repoURL}/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
 </div>
@@ -395,25 +441,166 @@ Model component diagram.
 <p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
 </li>
 <li>
-<p>stores the <a href="#address-book">Address Book</a> data.</p>
+<p>stores the <a href="#wallet">Wallet</a> data.</p>
 </li>
 <li>
-<p>stores the <a href="#wallet">Wallet</a> data.</p>
+<p>stores the <a href="#address-book">Address Book</a> data.</p>
 </li>
 <li>
 <p>stores the User data.</p>
 </li>
 <li>
-<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> and an unmodifiable <code>ObservableList&lt;Transaction&gt;</code> that can be
+<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> and an unmodifiable <code>ObservableList&lt;<a href="#transaction">Transaction&gt;</code></a> that can be
 'observed' e.g. the UI can be bound to these lists so that the UI automatically updates when the data in the
 respective lists change.</p>
 </li>
 <li>
-<p>does not depend on any of the other three components.
-=== Wallet Budget Command
-The <code>budget</code> command is implemented in the class, <code>WalletBudgetCommand</code>.</p>
+<p>does not depend on any of the other three components.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The <code>Wallet</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>consists of a <code>BudgetList</code>.</p>
+</li>
+<li>
+<p>consists of a <code>TransactionList</code>, which contains <code>Income</code>(s) and a <code>TransactionList</code> which contains <code>Expense</code>(s).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>AddressBook</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>consists of a <code>UniquePersonList</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>UserData</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>consists of a <code>User</code>.</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>The <em>Model</em> package consists of four main packages: <em>Person</em>, <em>Transaction</em>,
+<em>Reminder</em> and <em>Tag</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="900">
+</div>
+<div class="title">Figure 7. In-depth structure of Person package in the Model Component</div>
+</div>
+<div class="paragraph">
+<p>The diagram above shows how the <em>Person</em> package is implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>PeoplePredicate</code>: <code>PeopleNamePredicate</code>, <code>PeoplePhonePredicate</code>, <code>PeopleTagPredicate</code>, <code>PeopleEmailPredicate</code>
+are implemented for the execution of <code>people find</code> command.</p>
+</li>
+<li>
+<p>A <code>User</code> consists of a <code>Name</code>, a <code>Phone</code> and an <code>Email</code>.</p>
+</li>
+<li>
+<p>A <code>Person</code> consists of a <code>Name</code>, a <code>Phone</code>, an <code>Email</code>, a <code>TransactionList</code> of <code>Debt</code>(s),
+a <code>TransactionList</code> of <code>Loan</code>(s) and a set of <code>Tag</code>(s).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
+</div>
+<div class="title">Figure 8. In-depth structure of Transaction package in the Model Component</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelTransactionClassDiagram.png" alt="ModelTransactionClassDiagram" width="400">
+</div>
+<div class="title">Figure 9. Transaction class diagram</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The association between <code>Transaction</code> and <code>Amount</code> is not shown in <em>Figure 10</em> to keep the diagram less messy.
+However, the association is shown in <em>Figure 11</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The diagram above shows how the <em>Transaction</em> package is implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>WalletPredicate</code>: <code>DateContainsKeywordsPredicate</code>, <code>DescriptionContainsKeywordsPredicate</code>, <code>TagContainsKeywordsPredicate</code>, <code>AmountContainsKeywordsPredicate</code>
+are implemented for the execution of <code>wallet find</code> command.</p>
+</li>
+<li>
+<p>The abstract class <code>Transaction</code> is extended by <code>Income</code>, <code>Expense</code>, <code>Debt</code> and <code>Loan</code>. A <code>Transaction</code> consists of
+a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <code>Tag</code>.</p>
+</li>
+<li>
+<p>A <code>Budget</code> consists of a <code>Year</code>, a <code>Month</code> and an <code>Amount</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="400">
+</div>
+<div class="title">Figure 10. Reminder class diagram</div>
+</div>
+<div class="paragraph">
+<p>The <em>Reminder</em> package is implemented for <strong>Sharkie</strong>'s reminder feature.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>Reminder</code> consists of a <code>User</code> (sender) and a <code>Person</code> (receiver).</p>
+</li>
+<li>
+<p>The <code>ConfirmationEmail</code> consists of a <code>Name</code> (user&#8217;s name) and an <code>Email</code> (user&#8217;s email).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>ConfirmationEmail</code> is implemented to confirm the user&#8217;s email address during user&#8217;s first login to <strong>Sharkie</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <em>Tag</em> package only consist of a class, <code>Tag</code> and it does not depends on other components in the Model.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wallet-budget-command"><a class="link" href="#wallet-budget-command">Wallet Budget Command</a></h3>
+<div class="paragraph">
+<p>The <code>budget</code> command is implemented in the class, <code>WalletBudgetCommand</code>.</p>
 </div>
 <div class="paragraph">
 <p>This command can be accessed from <code>Logic#execute()</code>. It adds a budget using the parameters as specified by the user.</p>
@@ -425,7 +612,7 @@ The <code>budget</code> command is implemented in the class, <code>WalletBudgetC
 <div class="content">
 <img src="../images/WalletBudgetActivityDiagram.png" alt="WalletBudgetActivityDiagram" width="600">
 </div>
-<div class="title">Figure 9. Activity diagram of the execution of <code>wallet budget</code> command</div>
+<div class="title">Figure 11. Activity diagram of the execution of <code>wallet budget</code> command</div>
 </div>
 <div class="sect3">
 <h4 id="implementation-of-code-wallet-budget-code-command"><a class="link" href="#implementation-of-code-wallet-budget-code-command">Implementation of <code>wallet budget</code> command</a></h4>
@@ -459,7 +646,7 @@ The <code>budget</code> command is implemented in the class, <code>WalletBudgetC
 <div class="content">
 <img src="../images/WalletBudgetSequenceDiagram.png" alt="WalletBudgetSequenceDiagram">
 </div>
-<div class="title">Figure 10. Sequence diagram of the <code>wallet budget</code> command</div>
+<div class="title">Figure 12. Sequence diagram of the <code>wallet budget</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -501,4 +688,4 @@ The <code>budget</code> command is implemented in the class, <code>WalletBudgetC
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 10:29:14 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 16:08:03 UTC</div></div></div></body></html>

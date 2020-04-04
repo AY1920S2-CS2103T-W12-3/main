@@ -31,8 +31,8 @@
 </li>
 <li><a href="#wallet-commands">5.2. Wallet Commands</a>
 <ul class="sectlevel3">
-<li><a href="#adding-an-expense-code-expense-code">5.2.1. Adding an expense: <code>expense</code></a></li>
-<li><a href="#adding-an-income-code-income-code">5.2.2. Adding an income: <code>income</code></a></li>
+<li><a href="#add-expense-command">5.2.1. Adding an expense: <code>expense</code></a></li>
+<li><a href="#add-income-command">5.2.2. Adding an income: <code>income</code></a></li>
 <li><a href="#listing-all-transactions-code-list-code">5.2.3. Listing all transactions: <code>list</code></a></li>
 <li><a href="#editing-an-income-or-expense-code-edit-code">5.2.4. Editing an income or expense: <code>edit</code></a></li>
 <li><a href="#finding-an-income-or-expense-code-find-code">5.2.5. Finding an income or expense: <code>find</code></a></li>
@@ -48,9 +48,9 @@
 <li><a href="#recording-the-money-you-lend-code-lend-code">5.3.4. Recording the money you lend: <code>lend</code></a></li>
 <li><a href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></li>
 <li><a href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></li>
-<li><a href="#sending-reminder-to-all-friend-code-remindall-code">5.3.7. Sending reminder to all friend: <code>remindall</code></a></li>
-<li><a href="#listing-all-contacts-code-list-code">5.3.8. Listing all contacts: <code>list</code></a></li>
-<li><a href="#finding-a-person-code-find-code">5.3.9. Finding a person: <code>find</code></a></li>
+<li><a href="#sending-reminder-to-all-friends-code-remindall-code">5.3.7. Sending reminder to all friends: <code>remindall</code></a></li>
+<li><a href="#finding-a-person-code-find-code">5.3.8. Finding a person: <code>find</code></a></li>
+<li><a href="#listing-all-contacts-code-list-code">5.3.9. Listing all contacts: <code>list</code></a></li>
 <li><a href="#editing-a-person-code-edit-code">5.3.10. Editing a person : <code>edit</code></a></li>
 <li><a href="#deleting-a-person-code-delete-code">5.3.11. Deleting a person : <code>delete</code></a></li>
 <li><a href="#clearing-all-contacts-code-clear-code">5.3.12. Clearing all contacts : <code>clear</code></a></li>
@@ -94,36 +94,49 @@ It manages your <strong>incomes and expenses</strong>, organises your <strong>co
 <p>This user guide will help to ensure that you have all the information you need to utilise <strong>Sharkie</strong> to its fullest extent. <strong>Sharkie</strong> is a feature-filled expense tracker and all the information you need regarding his usage is available below.<br></p>
 </div>
 <div class="paragraph">
-<p>If you need help starting up Sharkie, you can head on to the QuickStart guide below to set it up.<br></p>
+<p>If you need help starting up Sharkie, you can head on to the <a href="#quick-start">Quick Start guide</a> below to set it up.<br></p>
 </div>
 <div class="paragraph">
-<p>If you need help regarding what commands <strong>Sharkie</strong> has, our Features section below will guide you through <strong>Sharkie’s</strong> abilities.<br></p>
+<p>If you want to find out more about the features provided by <strong>Sharkie</strong>, you can visit the <a href="#Features">Features section</a> below.</p>
+</div>
+<div class="paragraph">
+<p>If you need help regarding what commands <strong>Sharkie</strong> has, our <a href="#Commands">Commands section</a> below will guide you through <strong>Sharkie’s</strong> commands.<br></p>
 </div>
 <div class="paragraph">
 <p>Note the following symbols and formatting used in this document:<br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Symbols used in this User Guide.</caption>
+<caption class="title">Table 1. Symbols and formats used in this User Guide.</caption>
 <colgroup>
 <col>
 <col>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Symbol</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>Symbol/<br>
+Format</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Meaning</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>command</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application.</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="gray"><code>command</code></span></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><span class="gray">A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application.</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>Enter</kbd></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This symbol indicates the enter button on the keyboard.</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><kbd>Enter</kbd></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><span class="gray">This symbol indicates the enter button on the keyboard.</span></p></td>
 </tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
+<tr>
+<td class="tableblock halign-left valign-middle"><div><div class="exampleblock">
+<div class="content">
+
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p><span class="gray">This yellow box indicates the restrictions of each command.</span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" colspan="2"><div><div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
@@ -134,8 +147,24 @@ This symbol indicates information.
 </td>
 </tr>
 </table>
-</div>
-<div class="admonitionblock tip">
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" colspan="2"><div><div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This symbol indicates warnings.
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle" colspan="2"><div><div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
@@ -146,7 +175,10 @@ This symbol indicates tips.
 </td>
 </tr>
 </table>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -218,7 +250,25 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="sect2">
 <h3 id="expenditure-and-income"><a class="link" href="#expenditure-and-income">4.1. Expenditure and income</a></h3>
 <div class="paragraph">
-<p><strong>Sharkie</strong> notes down what you have spent on for the month, and also notes down your income for the month to help you properly track your money flow!</p>
+<p>If you are a university student, who starts to manage your own money, but struggles to track your expenses or meet
+your saving goals, <strong>Sharkie</strong> would be a good application for you to start with.</p>
+</div>
+<div class="paragraph">
+<p><strong>Sharkie</strong> allows you to records what you have spent on for the month, and also notes down your income for the month
+to help you properly track your money flow!</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may visit <a href="#add-expense-command">5.2.1 Adding an expense</a> or <a href="#add-income-command">5.2.2 Adding an income</a>
+to find out more on how to record expenses or incomes in <strong>Sharkie</strong>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -363,7 +413,7 @@ Sharkie will save your data to a locally stored file (that can be edited using a
 <div class="sect2">
 <h3 id="wallet-commands"><a class="link" href="#wallet-commands">5.2. Wallet Commands</a></h3>
 <div class="sect3">
-<h4 id="adding-an-expense-code-expense-code"><a class="link" href="#adding-an-expense-code-expense-code">5.2.1. Adding an expense: <code>expense</code></a></h4>
+<h4 id="add-expense-command"><a class="link" href="#add-expense-command">5.2.1. Adding an expense: <code>expense</code></a></h4>
 <div class="paragraph">
 <p>Adds an expense to the wallet.<br>
 Format: <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
@@ -408,7 +458,7 @@ Your expenditure for OCTOBER 2010 is: $3.50/$0.00</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="adding-an-income-code-income-code"><a class="link" href="#adding-an-income-code-income-code">5.2.2. Adding an income: <code>income</code></a></h4>
+<h4 id="add-income-command"><a class="link" href="#add-income-command">5.2.2. Adding an income: <code>income</code></a></h4>
 <div class="paragraph">
 <p>Adds an income to the wallet.<br>
 Format: <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
@@ -674,21 +724,76 @@ Expected outcome:</p>
 <div class="sect3">
 <h4 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">5.3.1. Adding a person: <code>add</code></a></h4>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
+<p>Suppose you want to add a new person to the address book, the command you would enter is our <code>people add</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Format</strong>: <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>people add</code> command, which you would need to take note of:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>people add n/Joel p/91234567 e/joel@u.nus.edu</code>
-Adds a person named Joel into your contact, along with his phone number and e-mail address<br>
-Expected Outcome:</p>
+<p>The <code>&lt;name&gt;</code> you entered should only contain alphanumeric characters and spaces.</p>
+</li>
+<li>
+<p>The <code>&lt;phone number&gt;</code> you entered should only contain numbers and it should be at least 3 digits long.</p>
+</li>
+<li>
+<p>The <code>&lt;email address&gt;</code> you entered should be in the format of <em>local-part@domain</em>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The local-part should only contain alphanumeric characters and these special characters, excluding the parentheses
+(!#$%&amp;'*+/=?`{|}~^.-).</p>
+</li>
+<li>
+<p>The domain name must be at least 2 characters long, start and end with alphanumeric characters.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to add your new friend, Joel, along with his phone number (91234567) and email (joel@example.com)
+into the address book.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people add n/Joel p/91234567 e/joel@example.com</code>.</p>
+</li>
+<li>
+<p>This adds a person named Joel into your contact, along with his phone number and e-mail address</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your new friend, Joel will be added into your address book:</p>
 <div class="literalblock">
 <div class="content">
-<pre>New person added: Joel Phone: 91234567 Email: joel@u.nus.edu</pre>
+<pre>New person added: Joel Phone: 91234567 Email: joel@example.com You owe: $0.00 You lent: $0.00</pre>
 </div>
 </div>
 </li>
@@ -884,21 +989,24 @@ The amount of money recorded will be added under your friend&#8217;s <code>Loans
 <div class="sect3">
 <h4 id="recording-the-money-you-received-code-received-code"><a class="link" href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></h4>
 <div class="paragraph">
-<p>Records that you have received the money from your friend, who you lent to.<br>
-Format: <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></p>
+<p>Suppose you want to record that you have received the money for a certain loan (or for all loans) from your friend,
+the command you would enter is our <code>people received</code> command.</p>
 </div>
-<div class="sidebarblock">
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></p>
+</div>
+<div class="exampleblock">
 <div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following is the restrictions of <code>people received</code> command, which you would need to take note of:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>The &lt;person&#8217;s index&gt; refers to the index number shown before a displayed person.</p>
-</li>
-<li>
-<p>The &lt;loan&#8217;s index&gt; refers to the index number shown before a loan under the specified person.</p>
-</li>
-<li>
-<p>Both indexes <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>The <code>&lt;person&#8217;s index&gt;</code> and <code>&lt;loan&#8217;s index&gt;</code> you entered should be positive integers, e.g. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 </ul>
 </div>
@@ -911,8 +1019,16 @@ Format: <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s i
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the address book, who you received from.<br>
+<em>Still confused? Find out more about <code>person&#8217;s index</code> at <a href="#personIndexFAQ">What is a <code class="blue">person&#8217;s index</code></a>.</em><br>
+<br>
+The <code>&lt;loan&#8217;s index&gt;</code> above refers to the index number shown in the displayed loans list in <strong>Sharkie</strong>. It indicates a
+specific loan under the person, which you received from.<br>
+<em>Still confused? Find out more about <code>loan&#8217;s index</code> at <a href="#loanDebtIndexFAQ">What is a <code class="blue">loan&#8217;s index</code></a>.</em><br>
+<br>
 <code>Loan</code> represents the amount of money you lend your friends.<br>
-<em>Still confused? Find out more about <code>debts</code> and <code>loans</code> at <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
+<em>Still confused? Find out more about <code>debts</code> and <code>loans</code> at <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
 </td>
 </tr>
 </table>
@@ -924,21 +1040,40 @@ Format: <code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s i
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The loan&#8217;s index is optional.
-All loans will be marked as <code>received</code> for the indicated person if the loan&#8217;s index is not specified.
+The <code>&lt;loan&#8217;s index&gt;</code> is optional.
+All loans will be marked as <code>received</code> for the indicated person if the <code>&lt;loan&#8217;s index&gt;</code> is not specified.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>people received 2 i/1</code>
-Records that you have received the money for the first loan from the second person in the address book.<br>
-Expected Outcome:</p>
+<p>Suppose you want to record that you have received the money from Joel, who is the second person in the address book,
+for the first loan in his loans list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people received 2 i/1</code>.</p>
+</li>
+<li>
+<p>This records that you have received the money for the first loan of Joel, the second person in the address book.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The first loan of Joel will be removed from his loans list and the unsettled loans of Joel will be shown.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Removed loan to Joel by $10.00. Joel now owes you $2.00.</pre>
@@ -951,25 +1086,43 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="sending-reminder-to-a-friend-code-remind-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></h4>
 <div class="paragraph">
-<p>Reminds a friend, through an email to return the loans to you.<br>
-Format: <code>people remind &lt;index&gt;</code></p>
+<p>Suppose you want to remind a friend to return the unsettled loans to you through an email,
+the command you would enter is our <code>people remind</code> command.</p>
 </div>
-<div class="sidebarblock">
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people remind &lt;person&#8217;s index&gt;</code></p>
+</div>
+<div class="exampleblock">
 <div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following is the restrictions of <code>people remind</code> command, which you would need to take note of:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Reminds the person at the specified <code>&lt;index&gt;</code> return the loans to you.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the displayed person list.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You would need to connect to the Internet and include your details in <strong>Sharkie</strong> before using this command.
+You can enter or edit your details at <a href="#editing-user-data"><code class="blue">Edit</code> &gt; <code class="blue">Edit user&#8217;s data</code></a>.<br>
+<br>
+Before you enter the <code>people remind</code> command, please make sure that your friend&#8217;s email address is correct.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -978,6 +1131,10 @@ Format: <code>people remind &lt;index&gt;</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the address book, who you want to remind.<br>
+<em>Still confused? Find out more about <code>person&#8217;s index</code> at <a href="#personIndexFAQ">what is a <code class="blue">person&#8217;s index</code></a>.</em><br>
+<br>
 <code>Loan</code> represents the amount of money you lend your friends.<br>
 <em>Still confused? Find out more about <code>debts</code> and <code>loans</code> at <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
 </td>
@@ -991,21 +1148,39 @@ Format: <code>people remind &lt;index&gt;</code></p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-To use this command, you must include your details in Sharkie.<br>
-You can enter or edit your details at <a href="#editing-user-data"><code>Edit</code> &gt; <code>Edit user&#8217;s data</code></a>.
+If you receive connection error messages during the execution of <code>people remind</code> command,
+please visit <a href="#remind-connection-error">how to resolve connection issues</a>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>people remind 1</code>
-Sends a reminder to the 1st person in your contact list.<br>
-Expected Outcome:</p>
+<p>Suppose you want to remind Daniel, who is the first person in your address book to return you your money.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people remind 1</code>.</p>
+</li>
+<li>
+<p>This requests <strong>Sharkie</strong> to send an email to Daniel, the first person in your address book.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Daniel will receive a reminder from <strong>Sharkie</strong> via the email. You will also receive a copy of the email sent to Daniel:</p>
 <div class="literalblock">
 <div class="content">
 <pre>Reminded Daniel to return $10.00!
@@ -1017,10 +1192,44 @@ Sharkie has sent a copy of the reminder to your email!</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sending-reminder-to-all-friend-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friend-code-remindall-code">5.3.7. Sending reminder to all friend: <code>remindall</code></a></h4>
+<h4 id="sending-reminder-to-all-friends-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friends-code-remindall-code">5.3.7. Sending reminder to all friends: <code>remindall</code></a></h4>
 <div class="paragraph">
-<p>Sends reminders through email to all the friends that have not yet paid up.<br>
-Format: <code>people remindall</code></p>
+<p>Suppose you want to remind all your friends in your address book, who has yet paid up, to return you your money,
+the command you would enter is our <code>people remindall</code> command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people remindall</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You would need to connect to the Internet and include your details in <strong>Sharkie</strong> before using this command.
+You can enter or edit your details at <a href="#editing-user-data"><code class="blue">Edit</code> &gt; <code class="blue">Edit user&#8217;s data</code></a>.<br>
+<br>
+Before you enter the <code>people remindall</code> command, please make sure that your friends' email addresses are correct.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only your friends, who have unsettled loan(s) will be reminded. Your friends, who has zero loan will
+not receive a reminder.<br>
+<br>
+<code>Loans</code> represent the amount of money you lend your friends.<br>
+<em>Still confused? Find out more about <code>debts</code> and <code>loans</code> at <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1029,26 +1238,45 @@ Format: <code>people remindall</code></p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-To use this command, you must include your details in Sharkie.<br>
-You can enter or edit your details at <a href="#editing-user-data"><code>Edit</code> &gt; <code>Edit user&#8217;s data</code></a>.
+If you receive connection error messages during the execution of <code>people remindall</code> command,
+please visit <a href="#remind-connection-error">how to resolve connection issues</a>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>people remindall</code>
-Sends a reminder to all the people who owe you money.<br>
-Expected Outcome:</p>
+<p>Suppose you want to remind all your friends in your address book, who has yet paid up.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people remindall</code>.</p>
+</li>
+<li>
+<p>This requests <strong>Sharkie</strong> to send an email to everyone in your address book, who has yet paid up.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All your friends who has yet paid up will receive a reminder from <strong>Sharkie</strong> via the email.
+You will also receive a copy of each of the emails sent to your friends:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Reminded Daniel to return $10.00!
+<pre>Reminded Cheyanne to return $20.00!
+Reminded Daniel to return $10.00!
 Reminded Joel to return $30.75!
-...
 Sharkie has sent copies of the reminders to your email!</pre>
 </div>
 </div>
@@ -1057,7 +1285,136 @@ Sharkie has sent copies of the reminders to your email!</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-contacts-code-list-code"><a class="link" href="#listing-all-contacts-code-list-code">5.3.8. Listing all contacts: <code>list</code></a></h4>
+<h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">5.3.8. Finding a person: <code>find</code></a></h4>
+<div class="paragraph">
+<p>Suppose you want to find a person in your contact list by a specific keyword,
+the command you would enter is our <code>people find</code> command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>people find</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You would not have to consider the case of the <code>&lt;keyword&gt;</code>, as it is case-insensitive.</p>
+</li>
+<li>
+<p>The <code>&lt;keyword&gt;</code> you want to enter need not to be in full. For example, <code>people find n/jo</code> will display the
+persons whose name contains with the keyword <code>jo</code>, such as <code>Joel</code>.</p>
+</li>
+<li>
+<p>The <code>&lt;keyword&gt;</code> you entered should be either of the type name (<code>n/</code>), phone (<code>p/</code>), email (<code>p/</code>) or tag (<code>t/</code>).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You may use the tag prefix <code>t/</code> to find people with debts or loans in your address book.
+Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only tags, which you are allowed to use in <code>people find</code> command.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>Loans</code> represent the amount of money you lend your friends and <code>debts</code> represent the amount of money you owe
+your friends.<br>
+<em>Still confused? Find out more about <code>debts</code> and <code>loans</code> at <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example #1</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to find your friends, who are called Grace.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people find n/Grace</code>.</p>
+</li>
+<li>
+<p>This requests <strong>Sharkie</strong> to list out the people with the name, Grace.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #1</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All your friends with the name, Grace will be listed out:</p>
+<div class="literalblock">
+<div class="content">
+<pre>2 persons listed!</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to find your friends with unsettled debt(s) or loan(s).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people find t/debt loan</code>.</p>
+</li>
+<li>
+<p>This requests <strong>Sharkie</strong> to list out the people with unsettled debt(s) or loan(s).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All your friends with unsettled debt(s) or loan(s) will be listed out:</p>
+<div class="literalblock">
+<div class="content">
+<pre>2 persons listed!</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-contacts-code-list-code"><a class="link" href="#listing-all-contacts-code-list-code">5.3.9. Listing all contacts: <code>list</code></a></h4>
 <div class="paragraph">
 <p>Lists everyone in the contact book.<br>
 Format: <code>people list</code></p>
@@ -1074,60 +1431,6 @@ Expected Outcome:</p>
 <div class="literalblock">
 <div class="content">
 <pre>Listed all persons.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="finding-a-person-code-find-code"><a class="link" href="#finding-a-person-code-find-code">5.3.9. Finding a person: <code>find</code></a></h4>
-<div class="paragraph">
-<p>Finds a person in your contact list by the keywords given.<br>
-Format: <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Finds the people with the stated &lt;keyword&gt;.</p>
-</li>
-<li>
-<p>The keywords are case-insensitive</p>
-</li>
-<li>
-<p>The keyword need not be in full. For example <code>people find jo</code> will also display the person with the keyword <code>Joel</code> as well.</p>
-</li>
-<li>
-<p>The keyword can be either of type name (n/), phone (p/), email (e/) or tag (t/).</p>
-</li>
-<li>
-<p><code>Debt</code> and <code>Loan</code> (case-insensitive) are the only tags allowed to be used in <code>people find</code> command.
-<code>people find t/debt loan</code> would return a list of people with unsettled debt(s) or loan(s).</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people find n/Grace</code>
-Returns a list of people with the name, Grace.<br>
-Expected Outcome:</p>
-<div class="literalblock">
-<div class="content">
-<pre>2 persons listed!:
-1. Grace Lim
-2. Grace Pan
-…</pre>
 </div>
 </div>
 </li>
@@ -1230,18 +1533,39 @@ Expected Outcome:</p>
 <div class="sect3">
 <h4 id="clearing-all-contacts-code-clear-code"><a class="link" href="#clearing-all-contacts-code-clear-code">5.3.12. Clearing all contacts : <code>clear</code></a></h4>
 <div class="paragraph">
-<p>Clears all the contacts from the address book.<br>
-Format: <code>people clear</code></p>
+<p>Suppose you want to clear all the contacts in your address book,
+the command you would enter is our <code>people clear</code> command.</p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Format</strong>: <code>people clear</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>people clear</code>
-Returns an empty address book.<br>
-Expected Outcome:</p>
+<p>Suppose you want to clear all your contacts.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people clear</code>.</p>
+</li>
+<li>
+<p>This requests <strong>Sharkie</strong> to deletes all the contacts in your address book.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sharkie</strong> will delete all the contacts and return an empty address book.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Address book has been cleared!</pre>
@@ -1261,6 +1585,62 @@ Expected Outcome:</p>
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
 <strong>A</strong>: Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous Address Book folder.</p>
 </div>
+<div id="personIndexFAQ" class="paragraph">
+<p><strong>Q</strong>: What is a <code>person&#8217;s index</code>?<br>
+<strong>A</strong>: A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1</code> is the <code>person&#8217;s index</code> of Alex Yeoh, whereas</p>
+</li>
+<li>
+<p><code>2</code> is the <code>person&#8217;s index</code> of Bernice Yu.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/personIndexFAQ.png" alt="personIndexFAQ" width="900">
+</div>
+<div class="title">Figure 3. What is a <code>person&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+<div id="loanDebtIndexFAQ" class="paragraph">
+<p><strong>Q</strong>: What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?<br>
+<strong>A</strong>: A <code>debt&#8217;s index</code> is the index number shown in a person&#8217;s displayed debts list, whereas a <code>loan&#8217;s index</code> is the
+index number shown in a person&#8217;s displayed loans list. A <code>debt&#8217;s index</code> indicates a specific debt of a person and a
+<code>loan&#8217;s index</code> indicated a specific loan of a person.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>debt&#8217;s index</code> of the debt, <code>Dinner | $12.00 | 1 APR 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+<li>
+<p>The <code>loan&#8217;s index</code> of the loan, <code>Movie | $10.00 | 2 FEB 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/loanDebtIndexFAQ.png" alt="loanDebtIndexFAQ" width="900">
+</div>
+<div class="title">Figure 4. What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
 <div id="editing-user-data" class="paragraph">
 <p><strong>Q</strong>: How to edit user&#8217;s data?<br>
 <strong>A</strong>: Click on <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
@@ -1269,7 +1649,7 @@ Expected Outcome:</p>
 <div class="content">
 <img src="images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
 </div>
-<div class="title">Figure 3. Editing user data in Sharkie</div>
+<div class="title">Figure 5. Editing user data in Sharkie</div>
 </div>
 <div id="debt-and-loan" class="paragraph">
 <p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
@@ -1294,13 +1674,70 @@ Expected Outcome:</p>
 <div class="content">
 <img src="images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
 </div>
-<div class="title">Figure 4. Differences between <code>debts</code> and <code>loans</code></div>
+<div class="title">Figure 6. Differences between <code>debts</code> and <code>loans</code></div>
 </div>
 </div>
 </div>
 <div id="valid-amount" class="paragraph">
 <p><strong>Q</strong>: Is there a maximum amount of money that Sharkie can handle?<br>
 <strong>A</strong>: Yes. Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).</p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br>
+<strong>A</strong>: As the <code>people remind</code> and <code>people remindall</code> commands rely on the connection to the internet and e-mail server,
+time is needed for the application to send a reminder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q</strong>: Why do I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br>
+<strong>A</strong>: You may need to check your junk mail folder, as your e-mail account may categorize <strong>Sharkie</strong>'s e-mails as spam.
+If you wish to receive frequent notifications from <strong>Sharkie</strong>, please remove <strong>Sharkie</strong> from your junk mail list.</p>
+</div>
+<div id="remind-connection-error" class="paragraph">
+<p><strong>Q</strong>: How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br>
+<strong>A</strong>: You may try the suggestions below to resolve your connection issues:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If you receive an error message as the following:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Error occured while sending email:
+Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+Please make sure that you are connected to the internet.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Please make sure that you are connected to the internet.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you receive an error message as the following:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Error occured while sending email:
+Could not convert socket to TLS
+Please make sure that you are connected to the internet.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Please make sure that your firewall or antivirus programme allows <strong>Sharkie</strong> to connect to SMTP port 587.
+Please add an exclusion to SMTP port 587 in your firewall or antivirus programme, if you have not do so.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1485,4 +1922,4 @@ or <mark><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</co
 </table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 10:29:14 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 16:08:03 UTC</div></div></div></body></html>

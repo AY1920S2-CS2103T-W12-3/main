@@ -352,13 +352,6 @@ The lifeline for <code>PeopleDeleteCommandParser</code> should end at the destro
 </div>
 <div class="title">Figure 7. Structure of the Model Component</div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The following is an in-depth view of how <code>ModelManager</code> is implemented:</p>
-</li>
-</ul>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/ModelManagerClassDiagram.png" alt="ModelManagerClassDiagram" width="800">
@@ -378,29 +371,96 @@ Model component diagram.
 </tr>
 </table>
 </div>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p>The <em>Model</em> package consists of four main packages: <em>Person</em>, <a href="#transaction"><em>Transaction</em></a>,
-<em>Reminder</em> and <em>Tag</em>.</p>
+<p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Model</code>,</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The diagram below shows how the <em>Person</em> package is implemented:</p>
+<p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
+</li>
+<li>
+<p>stores the <a href="#wallet">Wallet</a> data.</p>
+</li>
+<li>
+<p>stores the <a href="#address-book">Address Book</a> data.</p>
+</li>
+<li>
+<p>stores the User data.</p>
+</li>
+<li>
+<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> and an unmodifiable <code>ObservableList&lt;<a href="#transaction">Transaction&gt;</code></a> that can be
+'observed' e.g. the UI can be bound to these lists so that the UI automatically updates when the data in the
+respective lists change.</p>
+</li>
+<li>
+<p>does not depend on any of the other three components.</p>
 </li>
 </ul>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="1200">
-</div>
-<div class="title">Figure 9. In-depth structure of Person package in the Model Component</div>
+<div class="paragraph">
+<p>The <code>Wallet</code>,</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The diagram below shows how the <em>Transaction</em> package is implemented:</p>
+<p>consists of a <code>BudgetList</code>.</p>
+</li>
+<li>
+<p>consists of a <code>TransactionList</code>, which contains <code>Income</code>(s) and a <code>TransactionList</code> which contains <code>Expense</code>(s).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>AddressBook</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>consists of a <code>UniquePersonList</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>UserData</code>,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>consists of a <code>User</code>.</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>The <em>Model</em> package consists of four main packages: <em>Person</em>, <em>Transaction</em>,
+<em>Reminder</em> and <em>Tag</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="900">
+</div>
+<div class="title">Figure 9. In-depth structure of Person package in the Model Component</div>
+</div>
+<div class="paragraph">
+<p>The diagram above shows how the <em>Person</em> package is implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>PeoplePredicate</code>: <code>PeopleNamePredicate</code>, <code>PeoplePhonePredicate</code>, <code>PeopleTagPredicate</code>, <code>PeopleEmailPredicate</code>
+are implemented for the execution of <code>people find</code> command.</p>
+</li>
+<li>
+<p>A <code>User</code> consists of a <code>Name</code>, a <code>Phone</code> and an <code>Email</code>.</p>
+</li>
+<li>
+<p>A <code>Person</code> consists of a <code>Name</code>, a <code>Phone</code>, an <code>Email</code>, a <code>TransactionList</code> of <code>Debt</code>(s),
+a <code>TransactionList</code> of <code>Loan</code>(s) and a set of <code>Tag</code>(s).</p>
 </li>
 </ul>
 </div>
@@ -416,57 +476,67 @@ Model component diagram.
 </div>
 <div class="title">Figure 11. Transaction class diagram</div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The association between <code>Transaction</code> and <code>Amount</code> is not shown in <em>Figure 10</em> to keep the diagram less messy.
+However, the association is shown in <em>Figure 11</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The diagram above shows how the <em>Transaction</em> package is implemented:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>The <em>Reminder</em> package only consist of a class, <code>Reminder</code>:</p>
+<p><code>WalletPredicate</code>: <code>DateContainsKeywordsPredicate</code>, <code>DescriptionContainsKeywordsPredicate</code>, <code>TagContainsKeywordsPredicate</code>, <code>AmountContainsKeywordsPredicate</code>
+are implemented for the execution of <code>wallet find</code> command.</p>
+</li>
+<li>
+<p>The abstract class <code>Transaction</code> is extended by <code>Income</code>, <code>Expense</code>, <code>Debt</code> and <code>Loan</code>. A <code>Transaction</code> consists of
+a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <code>Tag</code>.</p>
+</li>
+<li>
+<p>A <code>Budget</code> consists of a <code>Year</code>, a <code>Month</code> and an <code>Amount</code>.</p>
 </li>
 </ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="200">
+<img src="images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="400">
 </div>
 <div class="title">Figure 12. Reminder class diagram</div>
 </div>
+<div class="paragraph">
+<p>The <em>Reminder</em> package is implemented for <strong>Sharkie</strong>'s reminder feature.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
+<p>The <code>Reminder</code> consists of a <code>User</code> (sender) and a <code>Person</code> (receiver).</p>
+</li>
+<li>
+<p>The <code>ConfirmationEmail</code> consists of a <code>Name</code> (user&#8217;s name) and an <code>Email</code> (user&#8217;s email).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>ConfirmationEmail</code> is implemented to confirm the user&#8217;s email address during user&#8217;s first login to <strong>Sharkie</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>The <em>Tag</em> package only consist of a class, <code>Tag</code> and it does not depends on other components in the Model.</p>
-</li>
-</ul>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/model/Model.java"><code>Model.java</code></a></p>
-</div>
-<div class="paragraph">
-<p>The <code>Model</code>,</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
-</li>
-<li>
-<p>stores the <a href="#address-book">Address Book</a> data.</p>
-</li>
-<li>
-<p>stores the <a href="#wallet">Wallet</a> data.</p>
-</li>
-<li>
-<p>stores the User data.</p>
-</li>
-<li>
-<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> and an unmodifiable <code>ObservableList&lt;Transaction&gt;</code> that can be
-'observed' e.g. the UI can be bound to these lists so that the UI automatically updates when the data in the
-respective lists change.</p>
-</li>
-<li>
-<p>does not depend on any of the other three components.</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
@@ -650,7 +720,7 @@ money.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ReceivedActivityDiagram.png" alt="ReceivedActivityDiagram" width="600">
+<img src="images/ReceivedActivityDiagram.png" alt="ReceivedActivityDiagram" width="800">
 </div>
 <div class="title">Figure 16. Activity diagram of recording the amount of money received</div>
 </div>
@@ -2426,7 +2496,7 @@ Expected: The most recent window size and location is retained.</p>
 Expected: All windows of the application is closed</p>
 </li>
 <li>
-<p>Enter <code>exit</code> command in the command box and press <kbd>Enter</kbd>.
+<p>Enter <code>exit</code> command in the command box and press <kbd>Enter</kbd>.<br>
 Expected: Same as previous.</p>
 </li>
 </ol>
@@ -2599,7 +2669,9 @@ Expected: Similar to previous</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: Connected to the Internet. The person who you want to remind exists in the person list. The person has at least one loan in the loan list.</p>
+<p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
+The person who you want to remind exists in the person list. The person has at least one loan in the loan list.
+The email of the person to be reminded is a valid email.</p>
 </li>
 <li>
 <p>Test case: <code>people remind 1</code><br>
@@ -2637,7 +2709,8 @@ Expected: Similar to previous</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: Connected to the Internet. At least one person in the person list has at least a loan.</p>
+<p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
+At least one person in the list has at least one loan. The email(s) of the people to be reminded are valid email(s).</p>
 </li>
 <li>
 <p>Test case: <code>people remindall</code><br>
@@ -2704,4 +2777,4 @@ Expected: Similar to previous.</p>
 <p><em>{ to be added }</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 10:29:14 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 16:08:03 UTC</div></div></div></body></html>
