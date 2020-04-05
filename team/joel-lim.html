@@ -87,6 +87,11 @@
 <div class="paragraph">
 <p>Welcome to <strong>Sharkie</strong>!</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Ui.png" alt="Ui" width="820">
+</div>
+</div>
 <div class="paragraph">
 <p><strong>Sharkie</strong> is an all-in-one desktop application for <strong>personal finance tracking</strong> designed for university students who would like to monitor their spending.
 It manages your <strong>incomes and expenses</strong>, organises your <strong>contacts</strong> and keeps track of <strong>debts</strong> your friends owe you, so that your loans always come with a money-back guarantee!</p>
@@ -106,38 +111,64 @@ It manages your <strong>incomes and expenses</strong>, organises your <strong>co
 <div class="sect3">
 <h4 id="adding-an-expense-code-expense-code"><a class="link" href="#adding-an-expense-code-expense-code">Adding an expense: <code>expense</code></a></h4>
 <div class="paragraph">
-<p>Adds an expense to the wallet.<br>
-Format: <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+<p>If you have paid for an expense and wish to record it down in Sharkie, you may enter the <code>wallet expense</code> command to do so.</p>
 </div>
-<div class="sidebarblock">
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="exampleblock">
 <div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of the <code>wallet expense</code> command, which you would need to take note of:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Creates a new expense wiith the given arguments.</p>
+<p>The <code>&lt;description&gt;</code> should not be blank.</p>
 </li>
 <li>
-<p>The description <strong>cannot be empty</strong>.</p>
+<p>The <code>&lt;amount&gt;</code> should be non-negative and have only up to two decimal places.</p>
 </li>
 <li>
-<p>The amount <strong>must be a valid number</strong> (see <a href="#valid-amount">[valid-amount]</a>).</p>
+<p>If no <code>&lt;date&gt;</code> is specified, your expense will default to today&#8217;s date.</p>
 </li>
 <li>
-<p>If no date is given, it will default to today&#8217;s date.</p>
+<p>If no <code>&lt;tag&gt;</code> is specified, your expense will be given a default tag <code>Misc</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code>
-Adds an expense named Chicken Rice, costing $3.50, on 10/10/2020, tagged as food.<br>
-Expected Outcome:</p>
+<p>Suppose you purchased Chicken Rice for $3.50 on 10th October, 2010. You wish to record it as a food item.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code>.</p>
+</li>
+<li>
+<p>This records down an expense with the specified details.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new expense will be added into your Wallet, automatically updating your Wallet&#8217;s statistics.</p>
 <div class="literalblock">
 <div class="content">
 <pre>New expense added: Chicken Rice Description: Chicken Rice Amount: $3.50 Date: 2010-10-10 Tag: [Food]
@@ -151,38 +182,64 @@ Your expenditure for OCTOBER 2010 is: $3.50/$0.00</pre>
 <div class="sect3">
 <h4 id="adding-an-income-code-income-code"><a class="link" href="#adding-an-income-code-income-code">Adding an income: <code>income</code></a></h4>
 <div class="paragraph">
-<p>Adds an income to the wallet.<br>
-Format: <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+<p>If you have earned an income and wish to record it down in Sharkie, you may enter the <code>wallet income</code> command to do so.</p>
 </div>
-<div class="sidebarblock">
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="exampleblock">
 <div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of the <code>wallet income</code> command, which you would need to take note of:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Creates a new income with the given arguments.</p>
+<p>The <code>&lt;description&gt;</code> should not be blank.</p>
 </li>
 <li>
-<p>The description <strong>cannot be empty</strong>.</p>
+<p>The <code>&lt;amount&gt;</code> should be non-negative and have only up to two decimal places.</p>
 </li>
 <li>
-<p>The amount <strong>must be a valid number</strong>.</p>
+<p>If no <code>&lt;date&gt;</code> is specified, your expense will default to today&#8217;s date.</p>
 </li>
 <li>
-<p>If no date is given, it will default to today&#8217;s date.</p>
+<p>If no <code>&lt;tag&gt;</code> is specified, your expense will be given a default tag <code>Misc</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code>
-Adds an income named P6 Tuition, for a sum of $3000, on 10/10/2020, tagged as job.<br>
-Expected Outcome:</p>
+<p>Suppose you teach P6 Tuition and have just received your paycheck for $3000 on 10th October, 2010. You wish to record it as a job item.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code>.</p>
+</li>
+<li>
+<p>This records down an income with the specified details.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new income will be added into your Wallet, automatically updating your Wallet&#8217;s statistics.</p>
 <div class="literalblock">
 <div class="content">
 <pre>New income added: P6 Tuition Description: P6 Tuition Amount: $3000.00 Date: 2010-10-10 Tag: [Job]</pre>
@@ -196,7 +253,20 @@ Expected Outcome:</p>
 <h3 id="expenditure-summary"><a class="link" href="#expenditure-summary">Expenditure Summary</a></h3>
 <div class="paragraph">
 <p><strong>Sharkie</strong> displays a customisable overview of your monthly spending and income so that you know where all your money has gone to!<br>
-You can view statistics such as the proportion of your spending on different items and your monthly balance.</p>
+You can view statistics such as the proportion of your spending on different items and how close you are to reaching your self-imposed budget.<br>
+All statistics are automatically updated and located in the Wallet tab.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to budget your monthly spending with Sharkie.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -616,4 +686,4 @@ the lifeline reaches the end of diagram.
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 13:49:27 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 15:21:16 UTC</div></div></div></body></html>
