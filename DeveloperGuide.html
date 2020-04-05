@@ -2455,7 +2455,13 @@ Link to Product: <a href="https://app.spendee.com" class="bare">https://app.spen
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-These instructions only provide a starting point for testers to work on; testers are expected to do more <em>exploratory</em> testing.
+These instructions only provide a starting point for testers to work on; testers are expected to do more <em>exploratory</em> testing.<br>
+<br>
+For commands that require <code>&lt;index&gt;</code> input, if an index of <code>0</code> is provided, an error message will be returned indicating
+that the command is invalid as it was stated in the <a href="UserGuide.html">User Guide</a> that index should be positive. If the index
+provided is larger than the number of people or transactions on the list, the error returned will state that the index provided
+is invalid because there person or transaction does not exist in the list. Thus, different error messages will be
+returned even though both errors pertains to the wrong index provided.
 </td>
 </tr>
 </table>
@@ -2475,7 +2481,8 @@ These instructions only provide a starting point for testers to work on; testers
 </li>
 <li>
 <p>Double-click the jar file<br>
-Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.</p>
+   Expected: Shows the GUI with a set of sample transactions (in the Wallet tab) and sample contacts (in the People tab).
+The window size may not be optimum.</p>
 </li>
 </ol>
 </div>
@@ -2544,11 +2551,140 @@ Expected: Same as previous.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
+<p>Recording the money you owe a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you owe exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 1 n/Breakfast $/5.00</code><br>
+Expected: A debt named <em>Breakfast</em> with <em>$5.00</em> is added into the debt list of the first person.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 1 n/Breakfast $/5.00 d/02/02/2020</code><br>
+Expected: A loan named <em>Breakfast</em> with <em>$5.00</em>, recorded under the date <em>02/02/2020</em> is added into the debt
+list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 0 n/Breakfast $/5.00</code><br>
+Expected: The loan is not recorded. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people owe</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people owe</code>,</p>
+</li>
+<li>
+<p><code>people owe 1</code>,</p>
+</li>
+<li>
+<p><code>people owe 1 n/Laksa</code>,</p>
+</li>
+<li>
+<p><code>people owe 1 $/5.00</code>,</p>
+</li>
+<li>
+<p><code>people owe n/Laksa $/5.00</code>,</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is a non-integer),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is greater 92233720368547758.07),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x has more than 2 decimal places) or</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is not a number).<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording the money you returned to a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you returned to exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people returned 1 i/1</code><br>
+Expected: The first debt of the first person is deleted from the debt list.
+Remaining amount of debt, which have yet settled by the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people returned 0 i/1</code><br>
+Expected: No debt is deleted. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people returned</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people returned</code>,</p>
+</li>
+<li>
+<p><code>people returned 1</code>,</p>
+</li>
+<li>
+<p><code>people returned i/1</code>,</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is a non-integer value),</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is larger than the debt list size),</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is a negative number or zero) or</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is a non-integer value)<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Recording the money you lend to a person</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: The person who you lend to exist in the person list.</p>
+<p>Prerequisites: The person whom you lend to exists in the person list.</p>
 </li>
 <li>
 <p>Test case: <code>people lend 1 n/Dinner $/12.00</code><br>
@@ -2564,7 +2700,7 @@ list of the first person. Total amount of money, which you lent to the first per
 Expected: The loan is not recorded. Error details shown in the result display.</p>
 </li>
 <li>
-<p>Other incorrect lend commands to try:</p>
+<p>Other invalid <code>people lend</code> commands to try:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2619,7 +2755,7 @@ Expected: Similar to previous</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: The person who you received from exist in the person list.</p>
+<p>Prerequisites: The person whom you received from exists in the person list.</p>
 </li>
 <li>
 <p>Test case: <code>people received 1 i/1</code><br>
@@ -2631,7 +2767,7 @@ Remaining amount of loan, which have yet settled by the first person is shown in
 Expected: No loan is deleted. Error details shown in the result display.</p>
 </li>
 <li>
-<p>Other incorrect lend commands to try:</p>
+<p>Other invalid <code>people received</code> commands to try:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2693,7 +2829,7 @@ Expected: A reminder is sent to the first person&#8217;s email. A carbon copy (C
 Expected: No reminder is sent. Error details shown in the result display.</p>
 </li>
 <li>
-<p>Other incorrect lend commands to try:</p>
+<p>Other invalid <code>people remind</code> commands to try:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2734,7 +2870,235 @@ Expected: A reminder is sent everyone, who has unsettled loan. A carbon copy (CC
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.3.3. Deleting a person</a></h4>
+<h4 id="managing-contacts"><a class="link" href="#managing-contacts">G.3.3. Managing contacts</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adding a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>people add n/John Doe p/91234567 e/John@example.com</code><br>
+Expected: A person named <em>John Doe</em> with phone number <em>91234567</em> and email <em>John@example.com</em> is added to the contact.</p>
+</li>
+<li>
+<p>Test case: <code>people add n/John Doe p/91234567</code><br>
+Expected: No person is added. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people add</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people add</code>,</p>
+</li>
+<li>
+<p><code>people add n/Invalid! p/99999999 e/John@example.com</code>,</p>
+</li>
+<li>
+<p><code>people add n/John Doe p/123 e/John@example.com</code>,</p>
+</li>
+<li>
+<p><code>people add n/John Doe p/123 e/invalid</code>,</p>
+</li>
+<li>
+<p><code>people add n/John Doe e/John@example.com</code>,</p>
+</li>
+<li>
+<p><code>people add p/91234567 e/John@example.com</code>,</p>
+</li>
+<li>
+<p><code>people add n/John Doe</code>,</p>
+</li>
+<li>
+<p><code>people add p/91234567</code> or</p>
+</li>
+<li>
+<p><code>people add e/John@example.com</code><br>
+Expected: Similar to previous.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing the details of a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you want to edit exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people edit 1 n/John Doe p/91234567 e/John@example.com</code><br>
+Expected: The first person name, phone number and email will be changed to <em>John Doe</em>, <em>91234567</em> and
+<em>John@example.com</em> respectively.</p>
+</li>
+<li>
+<p>Test case: <code>people edit 0 n/John Doe p/91234567 e/John@example.com</code><br>
+Expected: No person is edited. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other valid <code>people edit</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people edit 1 n/Bob p/88888888</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 n/Cate e/cate@example.com</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 p/66666666 e/cate@example.com</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 n/Alice</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 p/99999999</code> or</p>
+</li>
+<li>
+<p><code>people edit 1 e/email@example.com</code>,<br>
+Expected: Similar to (b).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Other invalid <code>people edit</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people edit</code>,</p>
+</li>
+<li>
+<p><code>people edit 1</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 n/Invalid!</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 p/123</code>,</p>
+</li>
+<li>
+<p><code>people edit 1 e/invalid</code>,</p>
+</li>
+<li>
+<p><code>people edit x n/Something</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people edit x n/Somthing</code> (where x is a negative number) or</p>
+</li>
+<li>
+<p><code>people edit x n/Something</code> (where x is a non-integer value)<br>
+Expected: Similar to (c).</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you want to find exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people find n/Alex Bernice</code><br>
+Expected: People who are have <em>Alex</em> or <em>Bernice</em> in their name (case insensitve) will be listed.</p>
+</li>
+<li>
+<p>Test case: <code>people find t/debt</code>
+Expected: People whom you owe money to will be listed.
+..Test case: <code>people find t/loan</code>
+Expected: People whom you lend money to will be listed.</p>
+</li>
+<li>
+<p>Test case: <code>people find n/Alex p/91234567</code><br>
+Expected: No person found. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other valid <code>people find</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people find p/93210283</code>,</p>
+</li>
+<li>
+<p><code>people find p/9321 9927</code>,</p>
+</li>
+<li>
+<p><code>people find e/@example</code>,</p>
+</li>
+<li>
+<p><code>people find e/irfan@example.com</code>,</p>
+</li>
+<li>
+<p><code>people find p/phone</code> or</p>
+</li>
+<li>
+<p><code>people find t/debt loan</code><br>
+Expected: Similar to (b).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>people find p/phone</code> is a valid command even though <em>phone</em> is not a valid phone number. However, no person will
+be listed since no one has <em>phone</em> as their phone number.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Other invalid <code>people find</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people find d/invalidTag</code><br>
+Expected: Similar to (d).</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Listing everyone</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>people list</code><br>
+Expected: Everyone in the contacts will be listed.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2753,7 +3117,7 @@ Expected: First contact is deleted from the list. Details of the deleted contact
 Expected: No person is deleted. Error details shown in the result display.</p>
 </li>
 <li>
-<p>Other incorrect delete commands to try:</p>
+<p>Other invalid <code>people delete</code> commands to try:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2777,6 +3141,34 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting everyone</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>people clear</code><br>
+Expected: The list of people will be empty.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you have deleted everyone in the addressbook, and would like to retrieve some sample data to test <strong>Sharkie</strong>,
+simply delete <strong>data/addressbook.json</strong>.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -2788,4 +3180,4 @@ Expected: Similar to previous.</p>
 <p><em>{ to be added }</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 12:43:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 13:49:27 UTC</div></div></div></body></html>
