@@ -146,8 +146,19 @@
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Expected Outcome</strong>:<br>
-A window will pop up, providing you with a clickable link that directs you to this user guide.</p>
+<p><strong>Expected Outcome</strong>:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A window will pop up, providing you with a clickable link that directs you to this user guide.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Opened help window.</pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -176,8 +187,14 @@ A window will pop up, providing you with a clickable link that directs you to th
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Expected Outcome</strong>:<br>
-Sharkie will save your data to a locally stored file (that can be edited using a text editor), and will help you quit the application safely.</p>
+<p><strong>Expected Outcome</strong>:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sharkie will save your data to a locally stored file (that can be edited using a text editor), and will help you quit the application safely.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -597,24 +614,31 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="400">
+<img src="../images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="250">
 </div>
 <div class="title">Figure 8. Reminder class diagram</div>
 </div>
 <div class="paragraph">
-<p>The <em>Reminder</em> package is implemented for <strong>Sharkie</strong>'s reminder feature.</p>
+<p>The <em>Reminder</em> package is implemented for <strong>Sharkie</strong>'s reminder feature. The diagram above shows how the <em>Reminder</em> package is implemented:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>Reminder</code> consists of a <code>User</code> (sender) and a <code>Person</code> (receiver).</p>
-</li>
-<li>
-<p>The <code>ConfirmationEmail</code> consists of a <code>Name</code> (user&#8217;s name) and an <code>Email</code> (user&#8217;s email).</p>
+<p>The <code>Reminder</code> consists of a <code>User</code> (the sender) and a <code>Person</code> (the receiver).</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>ConfirmationEmail</code> is implemented to confirm the user&#8217;s email address during user&#8217;s first login to <strong>Sharkie</strong>.</p>
+<p>A <code>Reminder</code> object is created whenever the <code>people remind</code> or <code>people remindall</code> command is executed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The <code>ConfirmationEmail</code> consists of a <code>User</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>ConfirmationEmail</code> is implemented to validate the user&#8217;s email address during user&#8217;s first login to <strong>Sharkie</strong>.</p>
 </li>
 </ul>
 </div>
@@ -718,4 +742,4 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 09:36:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 12:43:35 UTC</div></div></div></body></html>
