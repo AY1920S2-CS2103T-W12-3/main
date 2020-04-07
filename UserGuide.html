@@ -41,7 +41,30 @@
 <li><a href="#budget-command">5.2.8. Setting a budget: <code>budget</code></a></li>
 </ul>
 </li>
-<li><a href="#people-commands">5.3. People Commands</a></li>
+<li><a href="#people-commands">5.3. People Commands</a>
+<ul class="sectlevel3">
+<li><a href="#add-person">5.3.1. Adding a person: <code>add</code></a></li>
+<li><a href="#recording-the-money-you-owe-code-owe-code">5.3.2. Recording the money you owe: <code>owe</code></a></li>
+<li><a href="#recording-the-money-you-return-code-returned-code">5.3.3. Recording the money you return: <code>returned</code></a></li>
+<li><a href="#recording-the-money-you-lend-code-lend-code">5.3.4. Recording the money you lend: <code>lend</code></a></li>
+<li><a href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></li>
+<li><a href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></li>
+<li><a href="#sending-reminder-to-all-friends-code-remindall-code">5.3.7. Sending reminder to all friends: <code>remindall</code></a></li>
+<li><a href="#find-person">5.3.8. Finding a person: <code>find</code></a></li>
+<li><a href="#list-people">5.3.9. Listing all contacts: <code>list</code></a></li>
+<li><a href="#edit-person">5.3.10. Editing a person : <code>edit</code></a></li>
+<li><a href="#delete-person">5.3.11. Deleting a person : <code>delete</code></a></li>
+<li><a href="#peopleclear">5.3.12. Clearing all contacts : <code>clear</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#command-summary">7. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#global-commands-2">7.1. Global Commands</a></li>
+<li><a href="#wallet-commands-2">7.2. Wallet Commands</a></li>
+<li><a href="#people-commands-2">7.3. People Commands</a></li>
 </ul>
 </li>
 </ul>
@@ -1168,18 +1191,11 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="sect2">
 <h3 id="people-commands"><a class="link" href="#people-commands">5.3. People Commands</a></h3>
 <div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-People commands are commands which pertain to the social features of Sharkie. These commands help you to save your contacts and record down interpersonal transactions.</p>
+<p>People commands are commands which pertain to the social features of Sharkie. These commands help you to save your contacts and record down interpersonal transactions.
+This section introduces twelve commands that have effect on the <code>people</code> tab.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>This section introduces twelve commands that have effect on the <code>people</code> tab.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</p>
-</div>
-<div id="add-person" class="paragraph">
-<p>==== Adding a person: <code>add</code></p>
-</div>
+<div class="sect3">
+<h4 id="add-person"><a class="link" href="#add-person">5.3.1. Adding a person: <code>add</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to add a new person to the address book, the command you would enter is our <code>people add</code> command.<br></p>
 </div>
@@ -1256,9 +1272,9 @@ into the address book.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>==== Recording the money you owe: <code>owe</code></p>
 </div>
+<div class="sect3">
+<h4 id="recording-the-money-you-owe-code-owe-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code">5.3.2. Recording the money you owe: <code>owe</code></a></h4>
 <div class="paragraph">
 <p>If you owe a person money and you want to record the debt, the command you would enter is the 'people owe' command.<br></p>
 </div>
@@ -1351,9 +1367,9 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>==== Recording the money you return: <code>returned</code></p>
 </div>
+<div class="sect3">
+<h4 id="recording-the-money-you-return-code-returned-code"><a class="link" href="#recording-the-money-you-return-code-returned-code">5.3.3. Recording the money you return: <code>returned</code></a></h4>
 <div class="paragraph">
 <p>When you have returned a person a debt, and you want to remove the debt record, the command that you would enter is
 the <code>people returned</code> command.<br></p>
@@ -1447,9 +1463,9 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>==== Recording the money you lend: <code>lend</code></p>
 </div>
+<div class="sect3">
+<h4 id="recording-the-money-you-lend-code-lend-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code">5.3.4. Recording the money you lend: <code>lend</code></a></h4>
 <div class="paragraph">
 <p>If you lend a person money and you want to record the loan, the command you would enter is the 'people lend' command.<br></p>
 </div>
@@ -1541,9 +1557,9 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>==== Recording the money you received: <code>received</code></p>
 </div>
+<div class="sect3">
+<h4 id="recording-the-money-you-received-code-received-code"><a class="link" href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to record that you have received the money for a certain loan (or for all loans) from your friend,
 the command you would enter is our <code>people received</code> command.</p>
@@ -1638,9 +1654,9 @@ for the first loan in his loans list.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>==== Sending reminder to a friend: <code>remind</code></p>
 </div>
+<div class="sect3">
+<h4 id="sending-reminder-to-a-friend-code-remind-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to remind a friend to return the unsettled loans to you through an email,
 the command you would enter is our <code>people remind</code> command.</p>
@@ -1746,9 +1762,9 @@ Sharkie has sent a carbon copy (CC) of the reminder to your email!</pre>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>==== Sending reminder to all friends: <code>remindall</code></p>
 </div>
+<div class="sect3">
+<h4 id="sending-reminder-to-all-friends-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friends-code-remindall-code">5.3.7. Sending reminder to all friends: <code>remindall</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to remind all your friends in your address book, who has yet paid up, to return you your money,
 the command you would enter is our <code>people remindall</code> command.</p>
@@ -1839,9 +1855,9 @@ Sharkie has sent carbon copies (CC) of the reminders to your email!</pre>
 </li>
 </ul>
 </div>
-<div id="find-person" class="paragraph">
-<p>==== Finding a person: <code>find</code></p>
 </div>
+<div class="sect3">
+<h4 id="find-person"><a class="link" href="#find-person">5.3.8. Finding a person: <code>find</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to find a person in your contact list by a specific keyword,
 the command you would enter is our <code>people find</code> command.</p>
@@ -1968,9 +1984,9 @@ Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only t
 </li>
 </ul>
 </div>
-<div id="list-people" class="paragraph">
-<p>==== Listing all contacts: <code>list</code></p>
 </div>
+<div class="sect3">
+<h4 id="list-people"><a class="link" href="#list-people">5.3.9. Listing all contacts: <code>list</code></a></h4>
 <div class="paragraph">
 <p>Suppose that you have just executed the <a href="#find-person"><code>people find</code></a> command. And now, you would like to see the
 entire list of people in your address book. Then, the command that you would enter is the <code>people list</code> command.<br></p>
@@ -2013,9 +2029,9 @@ entire list of people in your address book. Then, the command that you would ent
 </li>
 </ul>
 </div>
-<div id="edit-person" class="paragraph">
-<p>==== Editing a person : <code>edit</code></p>
 </div>
+<div class="sect3">
+<h4 id="edit-person"><a class="link" href="#edit-person">5.3.10. Editing a person : <code>edit</code></a></h4>
 <div class="paragraph">
 <p>In instances when a person has changed his contact details, and you want to update them, the command that you would enter
 is the <code>people edit</code> command.<br></p>
@@ -2103,9 +2119,9 @@ Existing values will be updated to the new values that you have inputted.
 </li>
 </ul>
 </div>
-<div id="delete-person" class="paragraph">
-<p>==== Deleting a person : <code>delete</code></p>
 </div>
+<div class="sect3">
+<h4 id="delete-person"><a class="link" href="#delete-person">5.3.11. Deleting a person : <code>delete</code></a></h4>
 <div class="paragraph">
 <p>If you have no reason to keep a person in your address book anymore and would like to delete his contact details, the
 command that you would enter is the <code>people delete</code> command.</p>
@@ -2192,9 +2208,9 @@ command will delete Betsy from the address book.</p>
 </li>
 </ul>
 </div>
-<div id="peopleclear" class="paragraph">
-<p>==== Clearing all contacts : <code>clear</code></p>
 </div>
+<div class="sect3">
+<h4 id="peopleclear"><a class="link" href="#peopleclear">5.3.12. Clearing all contacts : <code>clear</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to clear all the contacts in your address book,
 the command you would enter is our <code>people clear</code> command.</p>
@@ -2237,9 +2253,13 @@ the command you would enter is our <code>people clear</code> command.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>== FAQ</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
 <strong>A</strong>: Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous Address Book folder.</p>
@@ -2374,13 +2394,18 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 </div>
 </div>
 </div>
-<div class="paragraph">
-<p>== Command Summary
-If you wish to have a quick reference to the commands available in <strong>Sharkie</strong>, you can refer to the list below.</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>=== Global Commands
-The following are the global commands that are available in <strong>Sharkie</strong> for you to use! You do not need to use any prefixes to use these commands.</p>
+<p>If you wish to have a quick reference to the commands available in <strong>Sharkie</strong>, you can refer to the list below.</p>
+</div>
+<div class="sect2">
+<h3 id="global-commands-2"><a class="link" href="#global-commands-2">7.1. Global Commands</a></h3>
+<div class="paragraph">
+<p>The following are the global commands that are available in <strong>Sharkie</strong> for you to use! You do not need to use any prefixes to use these commands.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 2. Global commands available in <strong>Sharkie</strong>.</caption>
@@ -2407,9 +2432,11 @@ The following are the global commands that are available in <strong>Sharkie</str
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="wallet-commands-2"><a class="link" href="#wallet-commands-2">7.2. Wallet Commands</a></h3>
 <div class="paragraph">
-<p>=== Wallet Commands
-The following commands are wallet-related commands that are available in <strong>Sharkie</strong> for you to use! You will need to use the prefix <code>wallet</code> to use the commands.</p>
+<p>The following commands are wallet-related commands that are available in <strong>Sharkie</strong> for you to use! You will need to use the prefix <code>wallet</code> to use the commands.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 3. Wallet commands available in <strong>Sharkie</strong>.</caption>
@@ -2464,9 +2491,11 @@ or <mark><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</c
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="people-commands-2"><a class="link" href="#people-commands-2">7.3. People Commands</a></h3>
 <div class="paragraph">
-<p>=== People Commands
-The following commands are people-related commands that are available in <strong>Sharkie</strong> for you to use! You will need to use the prefix <code>people</code> to use the commands.</p>
+<p>The following commands are people-related commands that are available in <strong>Sharkie</strong> for you to use! You will need to use the prefix <code>people</code> to use the commands.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 4. People commands available in <strong>Sharkie</strong>.</caption>
@@ -2548,6 +2577,4 @@ or <mark><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</co
 </table>
 </div>
 </div>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:03:32 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:17:31 UTC</div></div></div></body></html>
