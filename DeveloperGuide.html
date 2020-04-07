@@ -2542,7 +2542,260 @@ Expected: Same as previous.</p>
 </div>
 <div class="sect2">
 <h3 id="manual-testing-on-wallet-tab"><a class="link" href="#manual-testing-on-wallet-tab">G.2. Manual Testing on Wallet Tab</a></h3>
-
+<div class="sect3">
+<h4 id="listing-all-transactions"><a class="link" href="#listing-all-transactions">G.2.1. Listing all transactions</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Listing all the transactions in the wallet.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The transactions list must not be empty/</p>
+</li>
+<li>
+<p>Test case: <code>wallet list</code><br>
+Expected: All transactions in wallet listed out.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-a-transaction"><a class="link" href="#editing-a-transaction">G.2.2. Editing a transaction</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing a specific transaction.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The transaction to be edited exist in the wallet.
+At least 1 field to be edited must be inputted.
+The new details provided to edit the transaction with must be different from the corresponding details in the old transaction.</p>
+</li>
+<li>
+<p>Test case: <code>wallet edit 1 n/Chicken Rice</code><br>
+Expected: The first transaction is now updated with new description <em>Chicken Rice</em>. A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>wallet edit 1 n/Dinner $/12.00 d/02/02/2020 t/food</code><br>
+   Expected: The first transaction is now updated with new description <em>Dinner</em> with amount <em>$12.00</em>, recorded under the date <em>02/02/2020</em> with tag <em>Food</em>.
+A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>wallet edit 0 n/Chicken Rice</code><br>
+Expected: The transaction is not edited. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other incorrect edit commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet edit</code>,</p>
+</li>
+<li>
+<p><code>wallet edit 1</code>,</p>
+</li>
+<li>
+<p><code>wallet edit 1 n/</code>,</p>
+</li>
+<li>
+<p><code>wallet edit 1 $/</code>,</p>
+</li>
+<li>
+<p><code>wallet edit 1 d/</code>,</p>
+</li>
+<li>
+<p><code>wallet edit 1 t/</code>,</p>
+</li>
+<li>
+<p><code>wallet edit 1 d/yyyy/mm/dd</code>, (where the order of day month and year is not correct)</p>
+</li>
+<li>
+<p><code>wallet edit 1 d/x</code>, (where x is not a date)</p>
+</li>
+<li>
+<p><code>wallet edit x n/Dinner $/12.00 d/02/01/2020</code> (where x is larger than the transaction list size),</p>
+</li>
+<li>
+<p><code>wallet edit x $/12.00</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>wallet edit x $/12.00</code> (where x is a non-integer),</p>
+</li>
+<li>
+<p><code>wallet edit 1 n/Dinner $/x</code> (where x is greater 92233720368547758.07),</p>
+</li>
+<li>
+<p><code>wallet edit 1 n/Dinner $/x</code> (where x has more than 2 decimal places) or</p>
+</li>
+<li>
+<p><code>wallet edit 1 n/Dinner $/x</code> (where x is not a number).<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-transactions"><a class="link" href="#finding-transactions">G.2.3. Finding transactions</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding transactions containing the &lt;keyword&gt; provided.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The transaction list must not be empty. The keyword can only be either of type [n/&lt;description&gt;], [d/&lt;date&gt;], [$/&lt;amount&gt;], or [t/&lt;tag&gt;].
+At least 1 keyword to search with must be inputted.</p>
+</li>
+<li>
+<p>Test case: <code>wallet find n/chicken duck</code><br>
+Expected: All transactions with description containing either <em>chicken</em> or <em>duck</em> are displayed. A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>wallet find $/3 12</code><br>
+   Expected: All transactions with amount in the range of <em>$3.00 to $3.99</em> or <em>$12.00 to $12.999</em> are displayed.
+A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>wallet find d/20/12/2020 30/12/2020</code><br>
+   Expected: All transactions with date falling on <em>20/12/2020</em> or <em>30/12/2020</em> are displayed.
+A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>wallet find t/food shopping</code><br>
+   Expected: All transactions with tag containing either <em>food</em> or <em>shopping</em> are displayed.
+A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>wallet find n/Chicken d/20/12/2020</code><br>
+Expected: Find command do not run. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other incorrect find commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet find</code>,</p>
+</li>
+<li>
+<p><code>wallet find n/</code>,</p>
+</li>
+<li>
+<p><code>wallet find $/</code>,</p>
+</li>
+<li>
+<p><code>wallet find d/</code>,</p>
+</li>
+<li>
+<p><code>wallet find t/</code>,</p>
+</li>
+<li>
+<p><code>wallet find n/Dinner $/12.00 d/02/01/2020 t/food</code></p>
+</li>
+<li>
+<p><code>wallet find $/x</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>wallet find $/x</code> (where x is a non-integer),</p>
+</li>
+<li>
+<p><code>wallet find $/x</code> (where x is greater 92233720368547758.07),</p>
+</li>
+<li>
+<p><code>wallet find d/x</code> (where x is not a date),</p>
+</li>
+<li>
+<p><code>wallet find d/yyyy/mm/dd</code> (where date is in the wrong format)<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-a-transaction"><a class="link" href="#deleting-a-transaction">G.2.4. Deleting a transaction</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting a transaction.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The transaction which you want to delete exists in the transactions list.</p>
+</li>
+<li>
+<p>Test case: <code>wallet delete 1</code><br>
+Expected: First transaction is deleted from the list. Details of the deleted contact shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people delete 0</code><br>
+Expected: No transaction is deleted. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other incorrect delete commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet delete</code>,</p>
+</li>
+<li>
+<p><code>wallet delete x</code> (where x is not a number),</p>
+</li>
+<li>
+<p><code>wallet delete x</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>wallet delete x</code> (where x is a negative number) or</p>
+</li>
+<li>
+<p><code>wallet delete x</code> (where x is a non-integer value)<br>
+Expected: Similar to previous.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="clearing-all-transactions"><a class="link" href="#clearing-all-transactions">G.2.5. Clearing all transactions</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clear all the data in the wallet, including  income, expense and budget.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: There must be transactions or budget data in the wallet.</p>
+</li>
+<li>
+<p>Test case: <code>wallet clear</code><br>
+Expected: All transactions and budget data in wallet is deleted.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="manual-testing-on-people-tab"><a class="link" href="#manual-testing-on-people-tab">G.3. Manual Testing on People Tab</a></h3>
@@ -3180,4 +3433,4 @@ simply delete <strong>data/addressbook.json</strong>.
 <p><em>{ to be added }</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-05 15:21:16 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 04:53:04 UTC</div></div></div></body></html>
