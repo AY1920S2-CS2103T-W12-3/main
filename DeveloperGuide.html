@@ -888,7 +888,7 @@ use <code>Model#setPerson()</code> to replace the indicated <code>Person</code> 
 <p>When entering the expense command, the user will specify the <code>Description</code>, <code>Amount</code> and optionally, the <code>Date</code> and <code>Tag</code>.</p>
 </li>
 <li>
-<p>The <code>WalletExpenseCommandParser</code> will create an <code>Expense</code> object based on the details provided, and return the resulting <code>WalletExpenseCommand</code>.</p>
+<p>The <code>WalletExpenseCommandParser</code> will create an <code>Expense</code> object based on the details provided, and return the resulting <code>WalletExpenseCommand</code> that has a reference to the <code>Expense</code> created.</p>
 </li>
 <li>
 <p>The <code>LogicManager</code> then executes the command and adds the previously created <code>Expense</code> object to the Wallet model.</p>
@@ -924,7 +924,7 @@ the lifeline reaches the end of diagram.
 <div class="sect3">
 <h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">4.3.2. Design Considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-storing-the-amount-of-a-transaction"><a class="link" href="#aspect-storing-the-amount-of-a-transaction">Aspect: Storing the Amount of a Transaction.</a></h5>
+<h5 id="aspect-representing-the-amount-of-a-transaction"><a class="link" href="#aspect-representing-the-amount-of-a-transaction">Aspect: Representing the Amount of a Transaction.</a></h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3615,4 +3615,4 @@ simply delete <strong>data/addressbook.json</strong>.
 <p><em>{ to be added }</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:17:31 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:25:59 UTC</div></div></div></body></html>
