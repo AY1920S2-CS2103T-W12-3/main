@@ -160,12 +160,12 @@ can filter the people whom they lend or owe using the commands <code>people find
 <div class="sect2">
 <h3 id="contact-management"><a class="link" href="#contact-management">Contact Management</a></h3>
 <div class="paragraph">
-<p>If you would like to keep the contact details of a person so that you can use the <a href="#debts-and-loans-feature">debts and loans feature</a>,
+<p>If you would like to keep the contact details of a person so that you can use the <a href="#debts-and-loans-feature">debts and loans features</a>,
 <strong>Sharkie</strong> can help you do so!</p>
 </div>
 <div class="paragraph">
 <p><strong>Sharkie</strong> notes down and remembers contacts that you have entered in an address book, for easy reference later on!
-Should the contact details change, you can also edit them or delete them. If you need to find a particular person&#8217;s contact details,
+Should their contact details change, you can also edit them or delete them. If you need to find a particular person&#8217;s contact details,
 <strong>Sharkie</strong> will look through all your contacts and quickly help you find the contact that you are looking for!</p>
 </div>
 <div class="admonitionblock note">
@@ -175,8 +175,8 @@ Should the contact details change, you can also edit them or delete them. If you
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You may visit <a href="#add-person">5.3.1 Adding a person</a>, <a href="#list-people">5.3.8 Listing all contacts</a>,
-<a href="#find-person">5.3.9 Finding a person</a>, <a href="#edit-person">5.3.10 Editing a person</a>, <a href="#delete-person">5.3.11 Deleting a person</a>, <a href="#peopleclear">5.4.12 Clearing all contacts</a>
+You may visit <a href="#add-person">Section 5.3.1, “Adding a person”</a>, <a href="#list-people">Section 5.3.11, “Listing all contacts”</a>,
+<a href="#find-person">Section 5.3.10, “Finding a person”</a>, <a href="#edit-person">Section 5.3.2, “Editing a person”</a>, <a href="#delete-person">Section 5.3.3, “Deleting a person”</a>, <a href="#peopleclear">Section 5.3.12, “Clearing all contacts”</a>
 for more details on how you can manage your contacts with <strong>Sharkie</strong>.
 </td>
 </tr>
@@ -189,8 +189,11 @@ for more details on how you can manage your contacts with <strong>Sharkie</stron
 <h2 id="commands"><a class="link" href="#commands">Commands</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Sharkie</strong> uses a simple syntax to function that will be explained here. <strong>Sharkie</strong> is filled with many different commands that can get complicated, so we have segregated them into two parts:
-<code>people</code> commands and <code>wallet</code> commands.</p>
+<p><strong>Sharkie</strong> is filled with a variety of commands that can help you in your financial tracking journey.<br></p>
+</div>
+<div class="paragraph">
+<p>For ease of reference, we have segregated them into three parts:
+general commands, people commands and wallet commands.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -203,14 +206,14 @@ for more details on how you can manage your contacts with <strong>Sharkie</stron
 <p>Words in angle brackets are the parameters to be supplied by the user e.g. in <code>add n/&lt;name&gt;</code>, <code>&lt;name&gt;</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
 </li>
 <li>
-<p>Items in square brackets are optional e.g <code>$/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code> can be used as <code>$/5 d/21/02/2020</code> or as <code>$/5</code>.</p>
+<p>Items in square brackets are optional e.g. <code>$/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code> can be used as <code>$/5 d/21/02/2020</code> or as <code>$/5</code>.</p>
 </li>
 <li>
-<p><code>people</code> commands are used when you want to do things related to the “People” tab, for instance:
+<p>People commands are used when you want to do things related to the people tab, e.g.
 <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
 </li>
 <li>
-<p><code>wallet</code> commands are used when you want to do things related to the “Wallet” tab, for instance:
+<p>Wallet commands are used when you want to do things related to the wallet tab, e.g.
 <code>wallet expense n/&lt;item&gt; $/&lt;price&gt;  [d/&lt;date:dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
 </li>
 <li>
@@ -223,10 +226,10 @@ for more details on how you can manage your contacts with <strong>Sharkie</stron
 <div class="sect3">
 <h4 id="recording-the-money-you-owe-code-owe-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code">Recording the money you owe: <code>owe</code></a></h4>
 <div class="paragraph">
-<p>If you owe a person money and you want to record the debt, the command you would enter is the 'people owe' command.<br></p>
+<p>Suppose you owe a person money and you want to record the debt, the command you would enter is the <code>people owe</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>people owe &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
+<p><strong>Format</strong>: <code>people owe &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -242,8 +245,7 @@ for more details on how you can manage your contacts with <strong>Sharkie</stron
 <p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>The <code>&lt;amount&gt;</code> you entered should be non-negative, have up to two decimal places, and not be too large
-(not exceeding ninety quadrillion dollars).</p>
+<p>The <code>&lt;amount&gt;</code> should be a <a href="#valid-amount">valid amount</a></p>
 </li>
 </ul>
 </div>
@@ -258,11 +260,10 @@ for more details on how you can manage your contacts with <strong>Sharkie</stron
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
 specific person in the address book whom you owe money to.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
-The amount of money recorded will be added under your friend&#8217;s <code>Debts</code> section.<br>
-<code>Debts</code> represent the amount of money you owe your friends.<br>
+The amount of money recorded will be added under your friend&#8217;s "debts" section. Debts represent the amount of money you owe your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
-<br>
 </td>
 </tr>
 </table>
@@ -274,7 +275,7 @@ The amount of money recorded will be added under your friend&#8217;s <code>Debts
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yyyy&gt;</code> is not specified, the date that you record the debt will be used.
+The <code>&lt;date: dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date: dd/mm/yyyy&gt;</code> is not specified, the date that you record the debt will be used.
 </td>
 </tr>
 </table>
@@ -285,14 +286,14 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you owe Grace, who is the fourth person in the address book, $5 for food on 10 October 2020.</p>
+<p>Suppose you owe "Grace", who is the fourth person in the address book, "$5" for "food" on "10 October 2020".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people owe 4 n/food $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p>This records that you owe Grace, the fourth person in the address book, $5.00 for food on 10/10/2020.<br></p>
+<p>This records that you owe "Grace", the fourth person in the address book, "$5.00" for "food" on "10/10/2020".<br></p>
 </li>
 </ul>
 </div>
@@ -305,7 +306,7 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Your debt to Grace will increase by $5.</p>
+<p>Your debt to "Grace" will increase by "$5".</p>
 <div class="literalblock">
 <div class="content">
 <pre>Increased debt to Grace by $5.00. You now owe Grace $10.00.</pre>
@@ -318,7 +319,7 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="sect3">
 <h4 id="recording-the-money-you-return-code-returned-code"><a class="link" href="#recording-the-money-you-return-code-returned-code">Recording the money you return: <code>returned</code></a></h4>
 <div class="paragraph">
-<p>When you have returned a person a debt, and you want to remove the debt record, the command that you would enter is
+<p>Suppose you have returned a person a debt, and you want to remove the debt recorded, the command that you would enter is
 the <code>people returned</code> command.<br></p>
 </div>
 <div class="paragraph">
@@ -350,13 +351,13 @@ the <code>people returned</code> command.<br></p>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates
 a specific person in the address book whom you returned the money to.<br>
-<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a <code class="blue">person&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The <code>&lt;debt&#8217;s index&gt;</code> above refers to the index number shown in the displayed debt list in <strong>Sharkie</strong>. It indicates a specific
 debt under the person whom you returned the money to.<br>
-<em>Still confused? Find out more about <a href="#loanDebtIndexFAQ">what is a <code class="blue">debt&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#loanDebtIndexFAQ">what is a debt&#8217;s index</a>.</em><br>
 <br>
-<code>Debt</code> represents the amount of money you owe your friends.<br>
+Debts represent the amount of money you owe your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
 </td>
 </tr>
@@ -370,7 +371,7 @@ debt under the person whom you returned the money to.<br>
 </td>
 <td class="content">
 The <code>&lt;debt&#8217;s index&gt;</code> is optional.
-Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt;</code> is not specified.
+Sharkie will remove all debts for the person if the <code>&lt;debt&#8217;s index&gt;</code> is not specified.
 </td>
 </tr>
 </table>
@@ -381,14 +382,14 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose that you have just returned Grace, the fourth person in the address book, the first debt in her debt list.</p>
+<p>Suppose that you have just returned "Grace", the fourth person in the address book, the first debt in her debt list.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command that you would enter is <code>people returned 4 i/1</code>.</p>
 </li>
 <li>
-<p>This records that you have returned the money for the first debt of Grace, the fourth person in the address book.<br></p>
+<p>This records that you have returned the money for the first debt of "Grace", the fourth person in the address book.<br></p>
 </li>
 </ul>
 </div>
@@ -401,7 +402,7 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <div class="ulist">
 <ul>
 <li>
-<p>The first debt of Grace will be removed from her debt list and the unsettled debts to Grace will be shown.</p>
+<p>The first debt of "Grace" will be removed from her debt list and the unsettled debts to "Grace" will be shown.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Reduced debt to Grace by $5.00. You now owe Grace $5.00.</pre>
@@ -414,10 +415,10 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <div class="sect3">
 <h4 id="recording-the-money-you-lend-code-lend-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code">Recording the money you lend: <code>lend</code></a></h4>
 <div class="paragraph">
-<p>If you lend a person money and you want to record the loan, the command you would enter is the 'people lend' command.<br></p>
+<p>Suppose you lend a person money and you want to record the loan, the command you would enter is the <code>people lend</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>people lend &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
+<p><strong>Format</strong>: <code>people lend &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -433,8 +434,7 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>The <code>&lt;amount&gt;</code> you entered should be non-negative, have up to two decimal places, and not be too large
-(not exceeding ninety quadrillion dollars).</p>
+<p>The <code>&lt;amount&gt;</code> should be a <a href="#valid-amount">valid amount</a>.</p>
 </li>
 </ul>
 </div>
@@ -449,9 +449,9 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
 specific person in the address book whom you lend money to.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
-The amount of money recorded will be added under your friend&#8217;s <code>Loans</code> section.<br>
-<code>Loans</code> represent the amount of money you lend your friends.<br>
+The amount of money recorded will be added under your friend&#8217;s "loans" section. Loans represent the amount of money you lend your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
 </td>
 </tr>
@@ -464,7 +464,7 @@ The amount of money recorded will be added under your friend&#8217;s <code>Loans
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yyyy&gt;</code> is not specified, the date that you record the loan will be used.
+The <code>&lt;date: dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date: dd/mm/yyyy&gt;</code> is not specified, the date that you record the loan will be used.
 </td>
 </tr>
 </table>
@@ -475,14 +475,14 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you lend Syin Yi, who is the fifth person in the address book, $5 for dinner on 10 October 2020.</p>
+<p>Suppose you lend "Syin Yi", who is the fifth person in the address book, "$5" for "dinner" on "10 October 2020".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people lend 5 n/dinner $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p>This records that you owe Syin Yi, the fifth person in the address book, $5.00 for dinner on 10/10/2020.<br></p>
+<p>This records that you owe "Syin Yi", the fifth person in the address book, "$5.00" for "dinner" on "10/10/2020".<br></p>
 </li>
 </ul>
 </div>
@@ -495,7 +495,7 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Your loan to Syin Yi will increase by $5.</p>
+<p>Your loan to "Syin Yi" will increase by "$5".</p>
 <div class="literalblock">
 <div class="content">
 <pre>Increased loan to Syin Yi by $5.00. Syin Yi now owes you $8.00.</pre>
@@ -508,8 +508,8 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="sect3">
 <h4 id="list-people"><a class="link" href="#list-people">Listing all contacts: <code>list</code></a></h4>
 <div class="paragraph">
-<p>Suppose that you have just executed the <a href="#find-person"><code>people find</code></a> command. And now, you would like to see the
-entire list of people in your address book. Then, the command that you would enter is the <code>people list</code> command.<br></p>
+<p>Suppose that you have just executed the <a href="#find-person"><code class="blue">people find</code></a> command. And now, you would like to see the
+entire list of people in your address book. The command you would enter is our <code>people list</code> command.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>people list</code></p>
@@ -553,7 +553,7 @@ entire list of people in your address book. Then, the command that you would ent
 <div class="sect3">
 <h4 id="edit-person"><a class="link" href="#edit-person">Editing a person : <code>edit</code></a></h4>
 <div class="paragraph">
-<p>In instances when a person has changed his contact details, and you want to update them, the command that you would enter
+<p>Suppose a person has changed his contact details, and you want to update them, the command that you would enter
 is the <code>people edit</code> command.<br></p>
 </div>
 <div class="paragraph">
@@ -579,19 +579,6 @@ is the <code>people edit</code> command.<br></p>
 </div>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book whom you lend money to.<br>
-</td>
-</tr>
-</table>
-</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -604,20 +591,34 @@ Existing values will be updated to the new values that you have inputted.
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the address book.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to update the John&#8217;s email, and John is the first person in your address book.</p>
+<p>Suppose you want to update John&#8217;s email, and John is the first person in your address book.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people edit 1 e/johndoe@example.com</code>.</p>
 </li>
 <li>
-<p>This edits the email address of the first person, John, to be <code>johndoe@example.com</code>.<br></p>
+<p>This edits the email address of the first person, John, to be "johndoe@example.com".<br></p>
 </li>
 </ul>
 </div>
@@ -630,7 +631,7 @@ Existing values will be updated to the new values that you have inputted.
 <div class="ulist">
 <ul>
 <li>
-<p>In the list of people shown, John&#8217;s email will be <a href="mailto:johndoe@example.com">johndoe@example.com</a>.</p>
+<p>In the list of people shown, John&#8217;s email will be "johndoe@example.com".</p>
 <div class="literalblock">
 <div class="content">
 <pre>Edited Person: John Doe Phone: 91234568 Email: johndoe@example.com You owe: $0.00 You lent: $0.00 Tags:</pre>
@@ -643,7 +644,7 @@ Existing values will be updated to the new values that you have inputted.
 <div class="sect3">
 <h4 id="delete-person"><a class="link" href="#delete-person">Deleting a person : <code>delete</code></a></h4>
 <div class="paragraph">
-<p>If you have no reason to keep a person in your address book anymore and would like to delete his contact details, the
+<p>Suppose you would like to delete a person&#8217;s contact details, the
 command that you would enter is the <code>people delete</code> command.</p>
 </div>
 <div class="paragraph">
@@ -655,7 +656,7 @@ command that you would enter is the <code>people delete</code> command.</p>
 <p><strong>Command Format</strong></p>
 </div>
 <div class="paragraph">
-<p>The following is the restrictions of <code>people delete</code> command, which you should take note of:</p>
+<p>The following are the restrictions of <code>people delete</code> command, which you should take note of:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -665,19 +666,6 @@ command that you would enter is the <code>people delete</code> command.</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book whom you would like to delete.<br>
-</td>
-</tr>
-</table>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -691,22 +679,34 @@ Remember to check and ensure that the <code>&lt;person&#8217;s index&gt;</code> 
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the address book.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to delete Betsy from your address book, and Betsy is somewhere deep in the list. Then, you can first
-use the <a href="#find-person"><code>people find</code></a> command to find Betsy, followed by the <code>people delete</code> command.</p>
+<p>Suppose you want to delete "Betsy" from your address book, and "Betsy" is the first person in the list.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The command that you would enter is <code>people find n/Betsy</code>, followed by <code>people delete 1</code>.</p>
+<p>The command that you would enter is <code>people delete 1</code>.</p>
 </li>
 <li>
-<p><strong>Sharkie</strong> will first find Betsy for you, and Betsy will be shown as the first result on the list. Then, the latter
-command will delete Betsy from the address book.</p>
+<p><strong>Sharkie</strong> will delete "Betsy" from the address book.</p>
 </li>
 </ul>
 </div>
@@ -719,7 +719,7 @@ command will delete Betsy from the address book.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Betsy will no longer be shown on the list of people.</p>
+<p>"Betsy" will no longer be shown on the list of people.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Deleted Person: Betsy Phone: 91234567 Email: something@email.com You owe: $0.00 You lent: $0.00 Tags:</pre>
@@ -1414,4 +1414,4 @@ simply delete <strong>data/addressbook.json</strong>.
 </table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:25:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:08:59 UTC</div></div></div></body></html>

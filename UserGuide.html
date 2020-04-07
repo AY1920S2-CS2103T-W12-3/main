@@ -14,16 +14,15 @@
 <li><a href="#quick-start">3. Quick Start</a></li>
 <li><a href="#Features">4. Features</a>
 <ul class="sectlevel2">
-<li><a href="#expenditure-and-income">4.1. Expenditure and income</a></li>
+<li><a href="#expenditure-and-income">4.1. Expenditure and Income</a></li>
 <li><a href="#contact-management">4.2. Contact Management</a></li>
-<li><a href="#saving-the-data">4.3. Saving the data</a></li>
-<li><a href="#debts-and-loans-feature">4.4. Debts and loans</a></li>
-<li><a href="#expenditure-summary">4.5. Expenditure Summary</a></li>
+<li><a href="#debts-and-loans-feature">4.3. Debts and Loans</a></li>
+<li><a href="#expenditure-summary">4.4. Expenditure Summary</a></li>
 </ul>
 </li>
 <li><a href="#Commands">5. Commands</a>
 <ul class="sectlevel2">
-<li><a href="#global-commands">5.1. Global Commands</a>
+<li><a href="#general-commands">5.1. General Commands</a>
 <ul class="sectlevel3">
 <li><a href="#viewing-help-code-help-code">5.1.1. Viewing help : <code>help</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">5.1.2. Exiting the program : <code>exit</code></a></li>
@@ -31,38 +30,52 @@
 </li>
 <li><a href="#wallet-commands">5.2. Wallet Commands</a>
 <ul class="sectlevel3">
-<li><a href="#add-expense-command">5.2.1. Adding an expense: <code>expense</code></a></li>
-<li><a href="#add-income-command">5.2.2. Adding an income: <code>income</code></a></li>
-<li><a href="#listing-all-transactions-code-list-code">5.2.3. Listing all transactions: <code>list</code></a></li>
+<li><a href="#budget-command">5.2.1. Setting a budget: <code>budget</code></a></li>
+<li><a href="#add-expense-command">5.2.2. Adding an expense: <code>expense</code></a></li>
+<li><a href="#add-income-command">5.2.3. Adding an income: <code>income</code></a></li>
 <li><a href="#editing-a-transaction-code-edit-code">5.2.4. Editing a transaction: <code>edit</code></a></li>
-<li><a href="#walletFind">5.2.5. Finding an income or expense: <code>find</code></a></li>
-<li><a href="#deleting-an-income-or-expense-code-delete-code">5.2.6. Deleting an income or expense: <code>delete</code></a></li>
-<li><a href="#walletClear">5.2.7. Clearing all transactions : <code>clear</code></a></li>
-<li><a href="#budget-command">5.2.8. Setting a budget: <code>budget</code></a></li>
+<li><a href="#deleting-an-income-or-expense-code-delete-code">5.2.5. Deleting an income or expense: <code>delete</code></a></li>
+<li><a href="#walletFind">5.2.6. Finding an income or expense: <code>find</code></a></li>
+<li><a href="#listing-all-transactions-code-list-code">5.2.7. Listing all transactions: <code>list</code></a></li>
+<li><a href="#walletClear">5.2.8. Clearing all transactions : <code>clear</code></a></li>
 </ul>
 </li>
 <li><a href="#people-commands">5.3. People Commands</a>
 <ul class="sectlevel3">
 <li><a href="#add-person">5.3.1. Adding a person: <code>add</code></a></li>
-<li><a href="#recording-the-money-you-owe-code-owe-code">5.3.2. Recording the money you owe: <code>owe</code></a></li>
-<li><a href="#recording-the-money-you-return-code-returned-code">5.3.3. Recording the money you return: <code>returned</code></a></li>
-<li><a href="#recording-the-money-you-lend-code-lend-code">5.3.4. Recording the money you lend: <code>lend</code></a></li>
-<li><a href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></li>
-<li><a href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></li>
-<li><a href="#sending-reminder-to-all-friends-code-remindall-code">5.3.7. Sending reminder to all friends: <code>remindall</code></a></li>
-<li><a href="#find-person">5.3.8. Finding a person: <code>find</code></a></li>
-<li><a href="#list-people">5.3.9. Listing all contacts: <code>list</code></a></li>
-<li><a href="#edit-person">5.3.10. Editing a person : <code>edit</code></a></li>
-<li><a href="#delete-person">5.3.11. Deleting a person : <code>delete</code></a></li>
+<li><a href="#edit-person">5.3.2. Editing a person : <code>edit</code></a></li>
+<li><a href="#delete-person">5.3.3. Deleting a person : <code>delete</code></a></li>
+<li><a href="#recording-the-money-you-owe-code-owe-code">5.3.4. Recording the money you owe: <code>owe</code></a></li>
+<li><a href="#recording-the-money-you-return-code-returned-code">5.3.5. Recording the money you return: <code>returned</code></a></li>
+<li><a href="#recording-the-money-you-lend-code-lend-code">5.3.6. Recording the money you lend: <code>lend</code></a></li>
+<li><a href="#recording-the-money-you-received-code-received-code">5.3.7. Recording the money you received: <code>received</code></a></li>
+<li><a href="#sending-reminder-to-a-friend-code-remind-code">5.3.8. Sending reminder to a friend: <code>remind</code></a></li>
+<li><a href="#sending-reminder-to-all-friends-code-remindall-code">5.3.9. Sending reminder to all friends: <code>remindall</code></a></li>
+<li><a href="#find-person">5.3.10. Finding a person: <code>find</code></a></li>
+<li><a href="#list-people">5.3.11. Listing all contacts: <code>list</code></a></li>
 <li><a href="#peopleclear">5.3.12. Clearing all contacts : <code>clear</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#faq">6. FAQ</a>
+<ul class="sectlevel2">
+<li><a href="#how-do-i-save-my-data-in-strong-sharkie-strong-br">6.1. How do I save my data in <strong>Sharkie</strong>?<br></a></li>
+<li><a href="#how-do-i-transfer-my-data-to-another-computer-br">6.2. How do I transfer my data to another Computer?<br></a></li>
+<li><a href="#editing-user-data">6.3. How do I edit my user data?<br></a></li>
+<li><a href="#why-did-i-not-receive-a-confirmation-e-mail-from-strong-sharkie-strong-br">6.4. Why did I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br></a></li>
+<li><a href="#valid-amount">6.5. What is a valid amount of money?<br></a></li>
+<li><a href="#transactionIndexFAQ">6.6. What is a transaction&#8217;s index?<br></a></li>
+<li><a href="#personIndexFAQ">6.7. What is a person&#8217;s index?<br></a></li>
+<li><a href="#loanDebtIndexFAQ">6.8. What is a debt&#8217;s index or a loan&#8217;s index?<br></a></li>
+<li><a href="#debt-and-loan">6.9. What are the differences between debts and loans?<br></a></li>
+<li><a href="#why-does-my-code-people-remind-code-and-code-people-remindall-code-commands-take-time-to-run-br">6.10. Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br></a></li>
+<li><a href="#remind-connection-error">6.11. How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br></a></li>
+</ul>
+</li>
 <li><a href="#command-summary">7. Command Summary</a>
 <ul class="sectlevel2">
-<li><a href="#global-commands-2">7.1. Global Commands</a></li>
+<li><a href="#general-commands-2">7.1. General Commands</a></li>
 <li><a href="#wallet-commands-2">7.2. Wallet Commands</a></li>
 <li><a href="#people-commands-2">7.3. People Commands</a></li>
 </ul>
@@ -80,22 +93,17 @@
 <div class="content">
 <img src="images/Ui.png" alt="Ui" width="820">
 </div>
+<div class="title">Figure 1. GUI of Sharkie</div>
 </div>
 <div class="paragraph">
 <p><strong>Sharkie</strong> is an all-in-one desktop application for <strong>personal finance tracking</strong> designed for university students who would like to monitor their spending.
 It manages your <strong>incomes and expenses</strong>, organises your <strong>contacts</strong> and keeps track of <strong>debts</strong> your friends owe you, so that your loans always come with a money-back guarantee!</p>
 </div>
 <div class="paragraph">
-<p><strong>Sharkie</strong> boasts a sleek, trendy Graphical User Interface (GUI) while being at its core a <strong>Command Line Application</strong> - this means that the faster you type, the faster you can get those pesky finances out of your head and into Sharkie&#8217;s management system.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/Ui.png" alt="Ui" width="820">
-</div>
-<div class="title">Figure 1. GUI of Sharkie</div>
+<p><strong>Sharkie</strong> boasts a sleek, trendy Graphical User Interface (GUI) while being at its core a <strong>Command Line Application</strong> - this means that the faster you type, the faster you can get those pesky finances out of your head and into <strong>Sharkie</strong>'s management system.</p>
 </div>
 <div class="paragraph">
-<p>Have we reeled you in? Dive into <a href="#quick-start">Section 3, &#8220;Quick Start&#8221;</a> to get on board with Sharkie. Enjoy!</p>
+<p>Have we reeled you in? Dive into <a href="#quick-start">Section 3, &#8220;Quick Start&#8221;</a> to get on board with <strong>Sharkie</strong>. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -106,13 +114,13 @@ It manages your <strong>incomes and expenses</strong>, organises your <strong>co
 <p>This user guide will help to ensure that you have all the information you need to utilise <strong>Sharkie</strong> to its fullest extent. <strong>Sharkie</strong> is a feature-filled expense tracker and all the information you need regarding his usage is available below.<br></p>
 </div>
 <div class="paragraph">
-<p>If you need help starting up Sharkie, you can head on to the <a href="#quick-start">Quick Start guide</a> below to set it up.<br></p>
+<p>If you need help starting up <strong>Sharkie</strong>, you can head on to <a href="#quick-start">Section 3, &#8220;Quick Start&#8221;</a> below to set it up.<br></p>
 </div>
 <div class="paragraph">
-<p>If you want to find out more about the features provided by <strong>Sharkie</strong>, you can visit the <a href="#Features">Features section</a> below.</p>
+<p>If you want to find out more about the features provided by <strong>Sharkie</strong>, you can visit <a href="#Features">Section 4, &#8220;Features&#8221;</a> below.</p>
 </div>
 <div class="paragraph">
-<p>If you need help regarding what commands <strong>Sharkie</strong> has, our <a href="#Commands">Commands section</a> below will guide you through <strong>Sharkie’s</strong> commands.<br></p>
+<p>If you need help regarding what commands <strong>Sharkie</strong> has, <a href="#Commands">Section 5, &#8220;Commands&#8221;</a> below will guide you through <strong>Sharkie’s</strong> commands.<br></p>
 </div>
 <div class="paragraph">
 <p>Note the following symbols and formatting used in this document:<br></p>
@@ -155,7 +163,7 @@ Format</strong></p></td>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This symbol indicates information.
+This symbol indicates information that you need to know.
 </td>
 </tr>
 </table>
@@ -169,7 +177,7 @@ This symbol indicates information.
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-This symbol indicates warnings.
+This symbol indicates warnings to take note of.
 </td>
 </tr>
 </table>
@@ -183,7 +191,7 @@ This symbol indicates warnings.
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-This symbol indicates tips.
+This symbol indicates tips that can help you in your use of <strong>Sharkie</strong>.
 </td>
 </tr>
 </table>
@@ -197,18 +205,30 @@ This symbol indicates tips.
 <h2 id="quick-start"><a class="link" href="#quick-start">3. Quick Start</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following steps will help you get Sharkie up and running in no time on your desktop.</p>
+<p>The following steps will help you get <strong>Sharkie</strong> up and running in no time on your desktop.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ensure you have Java <code>11</code> or above installed in your Computer.</p>
+<p>Ensure you have Java 11 or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>Sharkie.jar</code> <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/releases">here</a>.</p>
+<p>Download the latest <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/releases">Sharkie.jar</a>.</p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder for <strong>Sharkie</strong>.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Make sure that your Sharkie.jar is in a folder that does not require administrator access. If not, it might not be able to function properly.
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -220,7 +240,7 @@ This symbol indicates tips.
 </div>
 </li>
 <li>
-<p>If you are logging in for the first time, key in your Name, Phone and your Email, and and press <kbd>enter</kbd> or click on the <code>Submit</code> button.</p>
+<p>If you are logging in for the first time, key in your Name, Phone and your Email, and and press <kbd>Enter</kbd> or click on the "Submit" button.</p>
 <div class="imageblock">
 <div class="content">
 <img src="images/EnterPinData.png" alt="EnterPinData" width="820">
@@ -229,39 +249,61 @@ This symbol indicates tips.
 </div>
 </li>
 <li>
-<p>A confirmation pin will be sent to your email. Please key in the confirmation PIN and click on the <code>Confirm</code> button. If you did not receive a confirmation PIN after 1 minute, please click on the <code>Resend PIN</code> button to get a new PIN.</p>
+<p>A confirmation PIN will be sent to your email. Please key in the confirmation PIN and click on the "Confirm" button. If you did not receive a confirmation PIN after 1 minute, please click on the "Resend PIN" button to get a new PIN.</p>
 </li>
 <li>
-<p>If you are logging in for the first time, Sharkie is already pre-loaded with sample data. You can use the <a href="#peopleclear"><code>people clear</code></a> command and <a href="#walletClear"><code>wallet clear</code></a> command respectively to remove the data.</p>
-</li>
-<li>
-<p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
-e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
-</li>
-<li>
-<p>Some example commands you can try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong><code>people add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
-</li>
-<li>
-<p><strong><code>people delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list.</p>
-</li>
-<li>
-<p><strong><code>wallet expense</code></strong><code>n/Gift for friend $/88 d/12/12/2020 t/Shopping</code> : adds an expense with these details into the wallet.</p>
-</li>
-<li>
-<p><strong><code>wallet find</code></strong><code>n/rice</code> : returns a list of expenses or income with keyword rice.</p>
-</li>
-<li>
-<p><strong><code>exit</code></strong> : exits the app.</p>
-</li>
-</ul>
+<p>If you are logging in for the first time, <strong>Sharkie</strong> is already pre-loaded with sample data.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you want, you can use the <a href="#peopleclear"><code class="blue">people clear</code></a> command and <a href="#walletClear"><code class="blue">wallet clear</code></a> command to remove the data in the wallet and people tabs respectively.
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>Refer to <a href="#Commands">Section 5, &#8220;Commands&#8221;</a> for details of each command.</p>
+<p>You can type a command in the command box and press <kbd>Enter</kbd> to execute it.<br>
+e.g. Typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can check out <a href="#Commands">Section 5, &#8220;Commands&#8221;</a> for detailed descriptions and usages of each command.<br>
+For a more succinct summary of the commands you can use in <strong>Sharkie</strong>, you can check out <a href="#command-summary">Section 7, &#8220;Command Summary&#8221;</a>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Some example commands you can try to get you started:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>people add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com</code> : Adds a contact named <code>John Doe</code> to the address book.</p>
+</li>
+<li>
+<p><strong><code>people delete</code></strong><code>3</code> : Deletes the 3rd contact shown in the current list.</p>
+</li>
+<li>
+<p><strong><code>wallet expense</code></strong><code>n/Gift for friend $/88 d/12/12/2020 t/Shopping</code> : Adds an expense with these details into the wallet.</p>
+</li>
+<li>
+<p><strong><code>wallet find</code></strong><code>n/rice</code> : Returns a list of expenses or income with keyword rice.</p>
+</li>
+<li>
+<p><strong><code>exit</code></strong> : Exits the app.</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
@@ -271,17 +313,15 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <h2 id="Features"><a class="link" href="#Features">4. Features</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section introduces the five main features of Sharkie.</p>
+<p><strong>Sharkie</strong> contains many helpful features that you can use to enhance your financial tracking habits. This section introduces the four main features of <strong>Sharkie</strong>.</p>
 </div>
 <div class="sect2">
-<h3 id="expenditure-and-income"><a class="link" href="#expenditure-and-income">4.1. Expenditure and income</a></h3>
+<h3 id="expenditure-and-income"><a class="link" href="#expenditure-and-income">4.1. Expenditure and Income</a></h3>
 <div class="paragraph">
-<p>If you are a university student, who starts to manage your own money, but struggles to track your expenses or meet
-your saving goals, <strong>Sharkie</strong> would be a good application for you to start with.</p>
+<p>If you are a university student who has started to manage your own money, but struggles to track your expenses or meet your saving goals, <strong>Sharkie</strong> would be a good application for you to start with.</p>
 </div>
 <div class="paragraph">
-<p><strong>Sharkie</strong> allows you to records what you have spent on for the month, and also notes down your income for the month
-to help you properly track your money flow!</p>
+<p><strong>Sharkie</strong> allows you to record what you have spent on for the month, and also helps you to note down your income for the month to help you properly track your money flow!</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -290,7 +330,7 @@ to help you properly track your money flow!</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You may visit <a href="#add-expense-command">5.2.1 Adding an expense</a> or <a href="#add-income-command">5.2.2 Adding an income</a>
+You may visit <a href="#add-expense-command">Section 5.2.2, “Adding an expense”</a> or <a href="#add-income-command">Section 5.2.3, “Adding an income”</a>
 to find out more on how to record expenses or incomes in <strong>Sharkie</strong>.
 </td>
 </tr>
@@ -300,12 +340,12 @@ to find out more on how to record expenses or incomes in <strong>Sharkie</strong
 <div class="sect2">
 <h3 id="contact-management"><a class="link" href="#contact-management">4.2. Contact Management</a></h3>
 <div class="paragraph">
-<p>If you would like to keep the contact details of a person so that you can use the <a href="#debts-and-loans-feature">debts and loans feature</a>,
+<p>If you would like to keep the contact details of a person so that you can use the <a href="#debts-and-loans-feature">debts and loans features</a>,
 <strong>Sharkie</strong> can help you do so!</p>
 </div>
 <div class="paragraph">
 <p><strong>Sharkie</strong> notes down and remembers contacts that you have entered in an address book, for easy reference later on!
-Should the contact details change, you can also edit them or delete them. If you need to find a particular person&#8217;s contact details,
+Should their contact details change, you can also edit them or delete them. If you need to find a particular person&#8217;s contact details,
 <strong>Sharkie</strong> will look through all your contacts and quickly help you find the contact that you are looking for!</p>
 </div>
 <div class="admonitionblock note">
@@ -315,8 +355,8 @@ Should the contact details change, you can also edit them or delete them. If you
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You may visit <a href="#add-person">5.3.1 Adding a person</a>, <a href="#list-people">5.3.8 Listing all contacts</a>,
-<a href="#find-person">5.3.9 Finding a person</a>, <a href="#edit-person">5.3.10 Editing a person</a>, <a href="#delete-person">5.3.11 Deleting a person</a>, <a href="#peopleclear">5.4.12 Clearing all contacts</a>
+You may visit <a href="#add-person">Section 5.3.1, “Adding a person”</a>, <a href="#list-people">Section 5.3.11, “Listing all contacts”</a>,
+<a href="#find-person">Section 5.3.10, “Finding a person”</a>, <a href="#edit-person">Section 5.3.2, “Editing a person”</a>, <a href="#delete-person">Section 5.3.3, “Deleting a person”</a>, <a href="#peopleclear">Section 5.3.12, “Clearing all contacts”</a>
 for more details on how you can manage your contacts with <strong>Sharkie</strong>.
 </td>
 </tr>
@@ -324,17 +364,15 @@ for more details on how you can manage your contacts with <strong>Sharkie</stron
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.3. Saving the data</a></h3>
+<h3 id="debts-and-loans-feature"><a class="link" href="#debts-and-loans-feature">4.3. Debts and Loans</a></h3>
 <div class="paragraph">
-<p>All data is saved in the hard disk automatically after any command that changes the data.<br>
-There is no need to save manually.</p>
+<p>If you are forgetful and need to keep track of money owed and money lent, fret not!<br></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="debts-and-loans-feature"><a class="link" href="#debts-and-loans-feature">4.4. Debts and loans</a></h3>
 <div class="paragraph">
-<p><strong>Sharkie</strong> allows you to take note of the debts you owe your friends and the loans you lent your friends.<br>
-<strong>Sharkie</strong> then allows you to remind your friends through email to return you the money they owe you!<br></p>
+<p><strong>Sharkie</strong> allows you to take note of the debts you owe your friends and the loans you lent your friends.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Sharkie</strong> also allows you to remind your friends through email to return you the money they owe you!<br></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -343,18 +381,22 @@ There is no need to save manually.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Still confused about <code>debts</code> and <code>loans</code>? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.
+Are you confused about debts and loans? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="expenditure-summary"><a class="link" href="#expenditure-summary">4.5. Expenditure Summary</a></h3>
+<h3 id="expenditure-summary"><a class="link" href="#expenditure-summary">4.4. Expenditure Summary</a></h3>
 <div class="paragraph">
-<p><strong>Sharkie</strong> displays a customisable overview of your monthly spending and income so that you know where all your money has gone to!<br>
-You can view statistics such as the proportion of your spending on different items and how close you are to reaching your self-imposed budget.<br>
-All statistics are automatically updated and located in the Wallet tab.</p>
+<p><strong>Sharkie</strong> displays an overview of your monthly spending and income so that you know where all your money has gone to!<br></p>
+</div>
+<div class="paragraph">
+<p>If you are more visually inclined, you can view statistics such as the different proportions of your spending on different items and how close you are to reaching your self-imposed budget.<br></p>
+</div>
+<div class="paragraph">
+<p>All statistics are automatically updated and located in the wallet tab.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -363,7 +405,7 @@ All statistics are automatically updated and located in the Wallet tab.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to budget your monthly spending with Sharkie.
+Check out <a href="#budget-command">Section 5.2.1, “Setting a budget”</a> to learn how to budget your monthly spending with Sharkie.
 </td>
 </tr>
 </table>
@@ -375,8 +417,11 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <h2 id="Commands"><a class="link" href="#Commands">5. Commands</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Sharkie</strong> uses a simple syntax to function that will be explained here. <strong>Sharkie</strong> is filled with many different commands that can get complicated, so we have segregated them into two parts:
-<code>people</code> commands and <code>wallet</code> commands.</p>
+<p><strong>Sharkie</strong> is filled with a variety of commands that can help you in your financial tracking journey.<br></p>
+</div>
+<div class="paragraph">
+<p>For ease of reference, we have segregated them into three parts:
+general commands, people commands and wallet commands.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -389,14 +434,14 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <p>Words in angle brackets are the parameters to be supplied by the user e.g. in <code>add n/&lt;name&gt;</code>, <code>&lt;name&gt;</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
 </li>
 <li>
-<p>Items in square brackets are optional e.g <code>$/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code> can be used as <code>$/5 d/21/02/2020</code> or as <code>$/5</code>.</p>
+<p>Items in square brackets are optional e.g. <code>$/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code> can be used as <code>$/5 d/21/02/2020</code> or as <code>$/5</code>.</p>
 </li>
 <li>
-<p><code>people</code> commands are used when you want to do things related to the “People” tab, for instance:
+<p>People commands are used when you want to do things related to the people tab, e.g.
 <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
 </li>
 <li>
-<p><code>wallet</code> commands are used when you want to do things related to the “Wallet” tab, for instance:
+<p>Wallet commands are used when you want to do things related to the wallet tab, e.g.
 <code>wallet expense n/&lt;item&gt; $/&lt;price&gt;  [d/&lt;date:dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
 </li>
 <li>
@@ -407,14 +452,14 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 </div>
 </div>
 <div class="sect2">
-<h3 id="global-commands"><a class="link" href="#global-commands">5.1. Global Commands</a></h3>
+<h3 id="general-commands"><a class="link" href="#general-commands">5.1. General Commands</a></h3>
 <div class="paragraph">
-<p>This section contains details on how to execute two general commands, <code>help</code> and <code>exit</code>.</p>
+<p>This section introduces the two general commands, <code>help</code> and <code>exit</code>. These commands are not specific to the people or wallet tabs of <strong>Sharkie</strong>.</p>
 </div>
 <div class="sect3">
 <h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">5.1.1. Viewing help : <code>help</code></a></h4>
 <div class="paragraph">
-<p>If you need help regarding the many features of Sharkie and how to operate it, you can use the global <code>help</code> command to get a link to this user guide.<br></p>
+<p>Suppose you need help regarding the many features of <strong>Sharkie</strong> and how to operate it, you can use the general <code>help</code> command to get a link to this user guide.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>help</code></p>
@@ -425,11 +470,11 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <div class="ulist">
 <ul>
 <li>
-<p>You start Sharkie and are unsure of what commands are available or how to use it.</p>
+<p>You start <strong>Sharkie</strong> and are unsure of what commands are available or how to use it.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Typing <code>help</code> will give you a link to our user guide.</p>
+<p>Typing <code>help</code> will open our user guide.</p>
 </li>
 </ul>
 </div>
@@ -442,7 +487,7 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <div class="ulist">
 <ul>
 <li>
-<p>A window will pop up, providing you with a clickable link that directs you to this user guide.</p>
+<p>A window will pop up, providing you with a reference to our user guide.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Opened help window.</pre>
@@ -455,7 +500,7 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <div class="sect3">
 <h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">5.1.2. Exiting the program : <code>exit</code></a></h4>
 <div class="paragraph">
-<p>If you&#8217;re done with using Sharkie and wish to exit the application safely, you can use the global <code>exit</code> command to help you save your data and exit the program.<br></p>
+<p>Suppose you&#8217;re done with using <strong>Sharkie</strong> and wish to exit the application safely, you can use the general <code>exit</code> command to help you save your data and exit the program.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>exit</code></p>
@@ -466,11 +511,11 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <div class="ulist">
 <ul>
 <li>
-<p>You&#8217;ve just finished using Sharkie, and wish to close the program and save your data.</p>
+<p>You&#8217;ve just finished using <strong>Sharkie</strong>, and wish to close the program and save your data.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Typing <code>exit</code> will save your data and quit Sharkie.</p>
+<p>Typing <code>exit</code> will save your data and quit <strong>Sharkie</strong>.</p>
 </li>
 </ul>
 </div>
@@ -483,7 +528,7 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <div class="ulist">
 <ul>
 <li>
-<p>Sharkie will save your data to a locally stored file (that can be edited using a text editor), and will help you quit the application safely.</p>
+<p><strong>Sharkie</strong> will save your data and quit the application safely.</p>
 </li>
 </ul>
 </div>
@@ -492,617 +537,15 @@ Check out <a href="#budget-command">5.2.8 Setting a budget</a> to learn how to b
 <div class="sect2">
 <h3 id="wallet-commands"><a class="link" href="#wallet-commands">5.2. Wallet Commands</a></h3>
 <div class="paragraph">
-<p>This section introduces seven commands that have effect on the <code>wallet</code> tab.</p>
+<p>This section introduces the eight commands that you can use to have an effect on the wallet tab.</p>
 </div>
 <div class="sect3">
-<h4 id="add-expense-command"><a class="link" href="#add-expense-command">5.2.1. Adding an expense: <code>expense</code></a></h4>
-<div class="paragraph">
-<p>If you have paid for an expense and wish to record it down in Sharkie, you may enter the <code>wallet expense</code> command to do so.</p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of the <code>wallet expense</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;description&gt;</code> should not be blank.</p>
-</li>
-<li>
-<p>The <code>&lt;amount&gt;</code> should be non-negative and have only up to two decimal places.</p>
-</li>
-<li>
-<p>If no <code>&lt;date&gt;</code> is specified, your expense will default to today&#8217;s date.</p>
-</li>
-<li>
-<p>If no <code>&lt;tag&gt;</code> is specified, your expense will be given a default tag <code>Misc</code>.</p>
-</li>
-<li>
-<p>The first letter of the <code>&lt;tag&gt;</code> will be converted to uppercase.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you purchased Chicken Rice for $3.50 on 10th October, 2010. You wish to record it as a food item.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code>.</p>
-</li>
-<li>
-<p>This records down an expense with the specified details.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A new expense will be added into your Wallet, automatically updating your Wallet&#8217;s statistics.</p>
-<div class="literalblock">
-<div class="content">
-<pre>New expense added: Chicken Rice Description: Chicken Rice Amount: $3.50 Date: 2010-10-10 Tag: [Food]
-Your expenditure for OCTOBER 2010 is: $3.50/$0.00</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="add-income-command"><a class="link" href="#add-income-command">5.2.2. Adding an income: <code>income</code></a></h4>
-<div class="paragraph">
-<p>If you have earned an income and wish to record it down in Sharkie, you may enter the <code>wallet income</code> command to do so.</p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of the <code>wallet income</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;description&gt;</code> should not be blank.</p>
-</li>
-<li>
-<p>The <code>&lt;amount&gt;</code> should be non-negative and have only up to two decimal places.</p>
-</li>
-<li>
-<p>If no <code>&lt;date&gt;</code> is specified, your expense will default to today&#8217;s date.</p>
-</li>
-<li>
-<p>If no <code>&lt;tag&gt;</code> is specified, your expense will be given a default tag <code>Misc</code>.</p>
-</li>
-<li>
-<p>The first letter of the <code>&lt;tag&gt;</code> will be converted to uppercase.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you teach P6 Tuition and have just received your paycheck for $3000 on 10th October, 2010. You wish to record it as a job item.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code>.</p>
-</li>
-<li>
-<p>This records down an income with the specified details.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A new income will be added into your Wallet, automatically updating your Wallet&#8217;s statistics.</p>
-<div class="literalblock">
-<div class="content">
-<pre>New income added: P6 Tuition Description: P6 Tuition Amount: $3000.00 Date: 2010-10-10 Tag: [Job]</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="listing-all-transactions-code-list-code"><a class="link" href="#listing-all-transactions-code-list-code">5.2.3. Listing all transactions: <code>list</code></a></h4>
-<div class="paragraph">
-<p>Suppose you want to see the full list of transactions, the command you would enter is our <code>wallet list</code> command.<br>
-Format: <code>wallet list</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you have just executed the <a href="#walletFind"><code>wallet find</code></a>  command. Now, you would like to see the full list of transactions in the wallet again.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet list</code>.</p>
-</li>
-<li>
-<p>This lists out all the transactions you have in your wallet.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Listed all transactions.</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="editing-a-transaction-code-edit-code"><a class="link" href="#editing-a-transaction-code-edit-code">5.2.4. Editing a transaction: <code>edit</code></a></h4>
-<div class="paragraph">
-<p>Suppose you want to edit the details of an income or expense in your wallet, the command you would enter is our <code>wallet edit</code> command.<br>
-Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>wallet edit</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;index&gt;</code> of the transaction to be edited must be stated, and it must exist in the list of transactions.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of [n/&lt;name&gt;], [d/&lt;date&gt;], [$/&lt;amount&gt;], [t/&lt;tag&gt;] should be stated. Multiples are allowed as well.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #1</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to edit the first transaction in the transaction list, <code>Dack rce -$4400.00</code>, because you misspelled the name and wrote the wrong price.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet edit 1 n/Duck rice $/4.00</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to edit the description and price of the first transaction shown in the wallet.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #1</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #2</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to edit the date and tag of the first transaction, Duck rice, because you forgot to input the date and tag.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet edit 1 d/10/04/2020 t/food</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to edit the date and tag of the first transaction shown in the wallet.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #2</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-10-04 Tag: [Food]</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="walletFind"><a class="link" href="#walletFind">5.2.5. Finding an income or expense: <code>find</code></a></h4>
-<div class="paragraph">
-<p>Suppose you want to find transactions with certain keywords or date within the transaction list in the wallet, the command you would enter is our <code>wallet find</code> command.<br></p>
-</div>
-<div class="paragraph">
-<p>Format:</p>
-</div>
-<div class="paragraph">
-<p><code>wallet find n/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
-or <code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
-or <code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
-or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>wallet find</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Finds the expenses and income with the stated &lt;keyword&gt;.</p>
-</li>
-<li>
-<p>The keyword can be either of type [n/&lt;description&gt;], [d/&lt;date&gt;], [$/&lt;amount&gt;], or [t/&lt;tag&gt;].</p>
-</li>
-<li>
-<p>You cannot search for multiple types of keywords in one command.</p>
-</li>
-<li>
-<p>Finding multiple keywords of the same type are allowed.</p>
-</li>
-<li>
-<p>At least 1 keyword must be inputted.</p>
-</li>
-<li>
-<p>The keyword is case-insensitive for finding of description (n/) and tag (t/).</p>
-</li>
-<li>
-<p>The keyword need not be in full for finding of description (n/) and tag (t/). For example <code>"wallet find n/ri"</code> will also display transactions with the keyword <code>rice</code>.</p>
-</li>
-<li>
-<p>For finding of amount ($/x), the amount entered, x, must be an integer.</p>
-</li>
-<li>
-<p>For finding of amount ($/x), x being an integer, the transactions displayed will range from from $x.00 to $x.99.</p>
-</li>
-<li>
-<p>For finding of date (d/), the date inputted should follow <code>dd/mm/yyyy</code>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #1</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to search for transactions with description containing keyword <code>rice</code> or <code>soup</code>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet find n/rice soup</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions with description <code>rice</code> or <code>soup</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #1</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>All transactions with description containing keyword <code>rice</code> and transactions with description containing keyword <code>soup</code> will be listed out.</p>
-<div class="literalblock">
-<div class="content">
-<pre>3 transactions listed!</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Example #2</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to search for transactions with amount ranging between <code>$7.00</code> to <code>$7.99</code> or <code>$30.00</code> to <code>$30.99</code>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet find $/7 30</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions with cost or income from <code>$7.00</code> to <code>$7.99</code> or <code>$30.00</code> to <code>$30.99</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #2</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>All transactions with  with amount from <code>$7.00</code> to <code>$7.99</code> and amount from <code>$30.00</code> to <code>$30.99</code> will be listed out.</p>
-<div class="literalblock">
-<div class="content">
-<pre>3 transactions listed!</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Example #3</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to search for transactions with date <code>10/10/2020</code> or <code>11/11/2020</code>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet find d/10/10/2020 11/11/2020</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions done on <code>10/10/2020</code> or <code>11/11/2020</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #3</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>2 transactions listed!</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #4</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to search for transactions with tag <code>food</code> or <code>shopping</code>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet find t/food shopping</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions with the tag <code>food</code> or <code>shopping</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #4</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>All transactions with tag <code>food</code> and transactions with tag <code>shopping</code> will be listed out.</p>
-<div class="literalblock">
-<div class="content">
-<pre>5 transactions listed!</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="deleting-an-income-or-expense-code-delete-code"><a class="link" href="#deleting-an-income-or-expense-code-delete-code">5.2.6. Deleting an income or expense: <code>delete</code></a></h4>
-<div class="paragraph">
-<p>Suppose you want to delete a transaction, either an expense on income, the command you would enter is our <code>wallet delete</code> command.<br></p>
-</div>
-<div class="paragraph">
-<p>Format: <code>wallet delete &lt;index&gt;</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>wallet delete</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;index&gt;</code> of the transaction to be deleted must be stated, and it must exist in the list of transactions.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>Only 1 transaction can be deleted each time. Multiple deletions in one command is not allowed.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #1</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to remove the first transaction, Duck rice, from your wallet.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet delete 1</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to delete the first transaction shown in the wallet.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #1</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Deleted Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #2</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you used the command <code>wallet find n/money</code> to filter out all transactions with keyword <code>money</code>, and you want to remove the second transaction you see, <code>Red packet money</code>, from your wallet&#8217;s filtered list of transactions.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet delete 2</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to delete the second transaction shown in the wallet, after being filtered.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #2</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Deleted Transaction: Red packet money Description: Red packet money Amount: $300.00 Date: 2020-03-30 Tag: [Income]</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="walletClear"><a class="link" href="#walletClear">5.2.7. Clearing all transactions : <code>clear</code></a></h4>
-<div class="paragraph">
-<p>Suppose you want to clear all the data in wallet, the command you would enter is our <code>wallet clear</code> command.<br></p>
-</div>
-<div class="paragraph">
-<p>Format: <code>wallet clear</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>wallet clear</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Data cleared, which includes the transactions and budget data, cannot be restored after using wallet clear command.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to clear all the preset transactions in the wallet.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet clear</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to clear all transactions in the wallet.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Wallet has been cleared!</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="budget-command"><a class="link" href="#budget-command">5.2.8. Setting a budget: <code>budget</code></a></h4>
+<h4 id="budget-command"><a class="link" href="#budget-command">5.2.1. Setting a budget: <code>budget</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to set a budget for a certain month, or a budget in general for all months. The command that you would enter in this case is our <code>wallet budget</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>wallet budget $/amount [m/&lt;month&gt;] [y/&lt;year&gt;]</code></p>
+<p><strong>Format</strong>: <code>wallet budget $/&lt;amount&gt; [m/&lt;month: mm&gt;] [y/&lt;year: yyyy&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -1115,26 +558,43 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>If no month or year is specified, the default budget is set as the amount provided.</p>
+<p>The <code>&lt;amount&gt;</code> you have set must be a <a href="#valid-amount">valid amount</a>.</p>
 </li>
 <li>
-<p>Your entry will overwrite any pre-existing budgets. This means that if you have previously set a budget for a specific month and year, and if you have indicated that month and year again, it will overwrite the budget that has been set.</p>
+<p>The value of the <code>&lt;month: mm&gt;</code> you have set must be a positive integer between 1 - 12.</p>
 </li>
 <li>
-<p>If the budget value is set to 0, <strong>Sharkie</strong> will consider it as if you have not set a budget for that month.</p>
-</li>
-<li>
-<p>The value of the budget you have set must be a non-negative integer.</p>
-</li>
-<li>
-<p>The value of the month you have set must be a positive integer between 1 - 12.</p>
-</li>
-<li>
-<p>The value of the year you have set must be a non-negative integer.</p>
+<p>The value of the <code>&lt;year: yyyy&gt;</code> you have set must be a non-negative integer.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your budget entry will overwrite any pre-existing budgets. This means that if you have previously set a budget for a specific month and year, and if you have indicated that month and year again, it will overwrite the budget that has been set.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If no month or year is specified, the default budget is set as the amount provided.<br>
+<br>
+If the budget value is set to 0, <strong>Sharkie</strong> will consider it as if you have not set a budget for that month.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><strong>Example #1</strong>:</p>
@@ -1193,11 +653,625 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="add-expense-command"><a class="link" href="#add-expense-command">5.2.2. Adding an expense: <code>expense</code></a></h4>
+<div class="paragraph">
+<p>Suppose you have paid for an expense and wish to record it down in <strong>Sharkie</strong>, you may enter the <code>wallet expense</code> command to do so.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of the <code>wallet expense</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;description&gt;</code> should not be blank.</p>
+</li>
+<li>
+<p>The <code>&lt;amount&gt;</code> should be non-negative and have only up to two decimal places.</p>
+</li>
+<li>
+<p>If no <code>&lt;date: dd/mm/yyyy&gt;</code> is specified, your expense will default to today&#8217;s date.</p>
+</li>
+<li>
+<p>If no <code>&lt;tag&gt;</code> is specified, your expense will be given a default tag "Misc".</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The first letter of the <code>&lt;tag&gt;</code> will be converted to uppercase.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you purchased Chicken Rice for $3.50 on 10th October, 2010. You wish to record it as a food item.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet expense n/Chicken Rice $/3.50 d/10/10/2010 t/food</code>.</p>
+</li>
+<li>
+<p>This records down an expense with the specified details.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new expense will be added into your wallet, automatically updating your wallet&#8217;s statistics.</p>
+<div class="literalblock">
+<div class="content">
+<pre>New expense added: Chicken Rice Description: Chicken Rice Amount: $3.50 Date: 2010-10-10 Tag: [Food]
+Your expenditure for OCTOBER 2010 is: $3.50/$0.00</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="add-income-command"><a class="link" href="#add-income-command">5.2.3. Adding an income: <code>income</code></a></h4>
+<div class="paragraph">
+<p>Suppose you have earned an income and wish to record it down in <strong>Sharkie</strong>, you may enter the <code>wallet income</code> command to do so.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of the <code>wallet income</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;description&gt;</code> should not be blank.</p>
+</li>
+<li>
+<p>The <code>&lt;amount&gt;</code> should be non-negative and have only up to two decimal places.</p>
+</li>
+<li>
+<p>If no <code>&lt;date: dd/mm/yyyy&gt;</code> is specified, your expense will default to today&#8217;s date.</p>
+</li>
+<li>
+<p>If no <code>&lt;tag&gt;</code> is specified, your expense will be given a default tag "Misc".</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The first letter of the <code>&lt;tag&gt;</code> will be converted to uppercase.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you teach P6 Tuition and have just received your paycheck for $3000 on 10th October, 2010. You wish to record it as a job item.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet income n/P6 Tuition $/3000 d/10/10/2010 t/job</code>.</p>
+</li>
+<li>
+<p>This records down an income with the specified details.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new income will be added into your wallet, automatically updating your w*allet&#8217;s statistics.</p>
+<div class="literalblock">
+<div class="content">
+<pre>New income added: P6 Tuition Description: P6 Tuition Amount: $3000.00 Date: 2010-10-10 Tag: [Job]</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-a-transaction-code-edit-code"><a class="link" href="#editing-a-transaction-code-edit-code">5.2.4. Editing a transaction: <code>edit</code></a></h4>
+<div class="paragraph">
+<p>Suppose you want to edit the details of an income or expense in your wallet, the command you would enter is our <code>wallet edit</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet edit &lt;transaction&#8217;s index&gt; [n/&lt;name&gt;] [d/&lt;date: dd/mm/yyyy&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>wallet edit</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;transaction&#8217;s index&gt;</code> must be stated, and it must exist in the list of transactions.</p>
+</li>
+<li>
+<p>The index must be a positive integer: 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of <code>[n/&lt;name&gt;]</code>, <code>[d/&lt;date: dd/mm/yyyy&gt;]</code>, <code>[$/&lt;amount&gt;]</code>, <code>[t/&lt;tag&gt;]</code> should be stated. Multiple fields are allowed as well.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;transaction&#8217;s index&gt;</code> above refers to the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a
+specific transaction in the wallet.<br>
+<em>Still confused? Find out more about <a href="#transactionIndexFAQ">what is a transaction&#8217;s index</a>.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example #1</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to edit the first transaction in the transaction list, "Dack rce -$4400.00", because you misspelled the name and wrote the wrong price.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet edit 1 n/Duck rice $/4.00</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to edit the description and price of the first transaction shown in the wallet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #1</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transaction you have selected will be modified to contain the new description and price you entered.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to edit the date and tag of the first transaction, "Duck rice", because you forgot to input the date and tag.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet edit 1 d/10/04/2020 t/food</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to edit the date and tag of the first transaction shown in the wallet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transaction you have selected will be modified to contain the new date and tag you entered.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-10-04 Tag: [Food]</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-an-income-or-expense-code-delete-code"><a class="link" href="#deleting-an-income-or-expense-code-delete-code">5.2.5. Deleting an income or expense: <code>delete</code></a></h4>
+<div class="paragraph">
+<p>Suppose you want to delete a transaction, either an expense or income, the command you would enter is our <code>wallet delete</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet delete &lt;transaction&#8217;s index&gt;</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>wallet delete</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;transaction&#8217;s index&gt;</code> must be stated, and it must exist in the list of transactions.</p>
+</li>
+<li>
+<p>The index must be a positive integer: 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Only 1 transaction can be deleted each time. Multiple deletions in one command is not allowed.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;transaction&#8217;s index&gt;</code> above refers to the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a
+specific transaction in the wallet.<br>
+<em>Still confused? Find out more about <a href="#transactionIndexFAQ">what is a transaction&#8217;s index</a>.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to remove the first transaction, "Duck rice", from your wallet.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet delete 1</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to delete the first transaction shown in the wallet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transaction you have selected will be removed from the transaction list.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Deleted Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="walletFind"><a class="link" href="#walletFind">5.2.6. Finding an income or expense: <code>find</code></a></h4>
+<div class="paragraph">
+<p>Suppose you want to find transactions with certain keywords or date within the transaction list in the wallet, the command you would enter is our <code>wallet find</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet find n/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
+or <code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
+or <code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
+or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>wallet find</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;keyword&gt;</code> can be either of type <code>[n/&lt;description&gt;]</code>, <code>[d/&lt;date: dd/mm/yyyy&gt;]</code>, <code>[$/&lt;amount&gt;]</code>, or <code>[t/&lt;tag&gt;]</code>.</p>
+</li>
+<li>
+<p>You cannot search for multiple prefixes in one command. However, finding multiple <code>&lt;keyword&gt;</code> of the same prefix is allowed.</p>
+</li>
+<li>
+<p>At least 1 <code>&lt;keyword&gt;</code> must be input.</p>
+</li>
+<li>
+<p>The <code>&lt;keyword&gt;</code> is case-insensitive for finding of description (<code>n/</code>) and tag (<code>t/</code>).</p>
+</li>
+<li>
+<p>The <code>&lt;keyword&gt;</code> need not be in full for finding of description (<code>n/</code>) and tag (<code>t/</code>). For example <code>wallet find n/ri</code> will also display transactions with the keyword "rice".</p>
+</li>
+<li>
+<p>For finding of amount (<code>$/x</code>), the amount entered, "x", must be an integer.</p>
+</li>
+<li>
+<p>For finding of amount (<code>$/x</code>), "x" being an integer, the transactions displayed will range from from "$x.00" to "$x.99".</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Example #1</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to search for transactions with description containing keyword "rice" or "soup":</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet find n/rice soup</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to look for transactions with description "rice" or "soup".</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #1</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All transactions with description containing keyword "rice" and transactions with description containing keyword "soup" will be listed out.</p>
+<div class="literalblock">
+<div class="content">
+<pre>3 transactions listed!</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to search for transactions with amount ranging between "$7.00" to "$7.99" or "$30.00" to "$30.99".</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet find $/7 30</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to look for transactions with cost or income from "$7.00" to "$7.99" or "$30.00" to "$30.99".</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #2</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All transactions with  with amount from "$7.00" to "$7.99" and amount from "$30.00" to "$30.99" will be listed out.</p>
+<div class="literalblock">
+<div class="content">
+<pre>3 transactions listed!</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example #3</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to search for transactions with tag "food" or "shopping".</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet find t/food shopping</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to look for transactions with the tag "food" or "shopping".</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome #3</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All transactions with tag "food" and transactions with tag "shopping" will be listed out.</p>
+<div class="literalblock">
+<div class="content">
+<pre>5 transactions listed!</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-transactions-code-list-code"><a class="link" href="#listing-all-transactions-code-list-code">5.2.7. Listing all transactions: <code>list</code></a></h4>
+<div class="paragraph">
+<p>Suppose you want to see the full list of transactions, the command you would enter is our <code>wallet list</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet list</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you have just executed the <a href="#walletFind"><code class="blue">wallet find</code></a>  command. Now, you would like to see the full list of transactions in the wallet again.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet list</code>.</p>
+</li>
+<li>
+<p>This lists out all the transactions you have in your wallet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sharkie</strong> will list all the transactions you have entered into the wallet.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Listed all transactions.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="walletClear"><a class="link" href="#walletClear">5.2.8. Clearing all transactions : <code>clear</code></a></h4>
+<div class="paragraph">
+<p>Suppose you want to clear all the data in wallet, the command you would enter is our <code>wallet clear</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet clear</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Data cleared, which includes the transactions and budget data, cannot be restored after using wallet clear command.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to clear all the preset transactions in the wallet.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>wallet clear</code>.</p>
+</li>
+<li>
+<p>This tells <strong>Sharkie</strong> that you want to clear all transactions in the wallet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All the transactions you have entered into the wallet will be removed.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Wallet has been cleared!</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="people-commands"><a class="link" href="#people-commands">5.3. People Commands</a></h3>
 <div class="paragraph">
-<p>This section introduces twelve commands that have effect on the <code>people</code> tab.</p>
+<p>This section introduces the twelve commands that you can use to have an effect on the people tab.</p>
 </div>
 <div class="sect3">
 <h4 id="add-person"><a class="link" href="#add-person">5.3.1. Adding a person: <code>add</code></a></h4>
@@ -1247,7 +1321,7 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to add your new friend, Joel, along with his phone number (91234567) and email (joel@example.com)
+<p>Suppose you want to add your new friend, "Joel", along with his phone number "91234567" and email "joel@example.com"
 into the address book.</p>
 <div class="ulist">
 <ul>
@@ -1255,7 +1329,7 @@ into the address book.</p>
 <p>The command you would enter is <code>people add n/Joel p/91234567 e/joel@example.com</code>.</p>
 </li>
 <li>
-<p>This adds a person named Joel into your contact, along with his phone number and e-mail address</p>
+<p>This adds a person named "Joel" into your contact, along with his phone number and e-mail address.</p>
 </li>
 </ul>
 </div>
@@ -1268,7 +1342,7 @@ into the address book.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Your new friend, Joel will be added into your address book:</p>
+<p>Your new friend, "Joel" will be added into your address book:</p>
 <div class="literalblock">
 <div class="content">
 <pre>New person added: Joel Phone: 91234567 Email: joel@example.com You owe: $0.00 You lent: $0.00</pre>
@@ -1279,12 +1353,191 @@ into the address book.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-you-owe-code-owe-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code">5.3.2. Recording the money you owe: <code>owe</code></a></h4>
+<h4 id="edit-person"><a class="link" href="#edit-person">5.3.2. Editing a person : <code>edit</code></a></h4>
 <div class="paragraph">
-<p>If you owe a person money and you want to record the debt, the command you would enter is the 'people owe' command.<br></p>
+<p>Suppose a person has changed his contact details, and you want to update them, the command that you would enter
+is the <code>people edit</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>people owe &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
+<p><strong>Format</strong>: <code>people edit &lt;person&#8217;s index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email&gt;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>people edit</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>You should provide at least one of the optional fields.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Existing values will be updated to the new values that you have inputted.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the address book.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to update John&#8217;s email, and John is the first person in your address book.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people edit 1 e/johndoe@example.com</code>.</p>
+</li>
+<li>
+<p>This edits the email address of the first person, John, to be "johndoe@example.com".<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the list of people shown, John&#8217;s email will be "johndoe@example.com".</p>
+<div class="literalblock">
+<div class="content">
+<pre>Edited Person: John Doe Phone: 91234568 Email: johndoe@example.com You owe: $0.00 You lent: $0.00 Tags:</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="delete-person"><a class="link" href="#delete-person">5.3.3. Deleting a person : <code>delete</code></a></h4>
+<div class="paragraph">
+<p>Suppose you would like to delete a person&#8217;s contact details, the
+command that you would enter is the <code>people delete</code> command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people delete &lt;person&#8217;s index&gt;</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>people delete</code> command, which you should take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Remember to check and ensure that the <code>&lt;person&#8217;s index&gt;</code> that you have inputted corresponds to the correct person.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the address book.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to delete "Betsy" from your address book, and "Betsy" is the first person in the list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command that you would enter is <code>people delete 1</code>.</p>
+</li>
+<li>
+<p><strong>Sharkie</strong> will delete "Betsy" from the address book.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Betsy" will no longer be shown on the list of people.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Deleted Person: Betsy Phone: 91234567 Email: something@email.com You owe: $0.00 You lent: $0.00 Tags:</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="recording-the-money-you-owe-code-owe-code"><a class="link" href="#recording-the-money-you-owe-code-owe-code">5.3.4. Recording the money you owe: <code>owe</code></a></h4>
+<div class="paragraph">
+<p>Suppose you owe a person money and you want to record the debt, the command you would enter is the <code>people owe</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people owe &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -1300,8 +1553,7 @@ into the address book.</p>
 <p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>The <code>&lt;amount&gt;</code> you entered should be non-negative, have up to two decimal places, and not be too large
-(not exceeding ninety quadrillion dollars).</p>
+<p>The <code>&lt;amount&gt;</code> should be a <a href="#valid-amount">valid amount</a></p>
 </li>
 </ul>
 </div>
@@ -1316,11 +1568,10 @@ into the address book.</p>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
 specific person in the address book whom you owe money to.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
-The amount of money recorded will be added under your friend&#8217;s <code>Debts</code> section.<br>
-<code>Debts</code> represent the amount of money you owe your friends.<br>
+The amount of money recorded will be added under your friend&#8217;s "debts" section. Debts represent the amount of money you owe your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
-<br>
 </td>
 </tr>
 </table>
@@ -1332,7 +1583,7 @@ The amount of money recorded will be added under your friend&#8217;s <code>Debts
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yyyy&gt;</code> is not specified, the date that you record the debt will be used.
+The <code>&lt;date: dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date: dd/mm/yyyy&gt;</code> is not specified, the date that you record the debt will be used.
 </td>
 </tr>
 </table>
@@ -1343,14 +1594,14 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you owe Grace, who is the fourth person in the address book, $5 for food on 10 October 2020.</p>
+<p>Suppose you owe "Grace", who is the fourth person in the address book, "$5" for "food" on "10 October 2020".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people owe 4 n/food $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p>This records that you owe Grace, the fourth person in the address book, $5.00 for food on 10/10/2020.<br></p>
+<p>This records that you owe "Grace", the fourth person in the address book, "$5.00" for "food" on "10/10/2020".<br></p>
 </li>
 </ul>
 </div>
@@ -1363,7 +1614,7 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Your debt to Grace will increase by $5.</p>
+<p>Your debt to "Grace" will increase by "$5".</p>
 <div class="literalblock">
 <div class="content">
 <pre>Increased debt to Grace by $5.00. You now owe Grace $10.00.</pre>
@@ -1374,9 +1625,9 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-you-return-code-returned-code"><a class="link" href="#recording-the-money-you-return-code-returned-code">5.3.3. Recording the money you return: <code>returned</code></a></h4>
+<h4 id="recording-the-money-you-return-code-returned-code"><a class="link" href="#recording-the-money-you-return-code-returned-code">5.3.5. Recording the money you return: <code>returned</code></a></h4>
 <div class="paragraph">
-<p>When you have returned a person a debt, and you want to remove the debt record, the command that you would enter is
+<p>Suppose you have returned a person a debt, and you want to remove the debt recorded, the command that you would enter is
 the <code>people returned</code> command.<br></p>
 </div>
 <div class="paragraph">
@@ -1408,13 +1659,13 @@ the <code>people returned</code> command.<br></p>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates
 a specific person in the address book whom you returned the money to.<br>
-<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a <code class="blue">person&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The <code>&lt;debt&#8217;s index&gt;</code> above refers to the index number shown in the displayed debt list in <strong>Sharkie</strong>. It indicates a specific
 debt under the person whom you returned the money to.<br>
-<em>Still confused? Find out more about <a href="#loanDebtIndexFAQ">what is a <code class="blue">debt&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#loanDebtIndexFAQ">what is a debt&#8217;s index</a>.</em><br>
 <br>
-<code>Debt</code> represents the amount of money you owe your friends.<br>
+Debts represent the amount of money you owe your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
 </td>
 </tr>
@@ -1428,7 +1679,7 @@ debt under the person whom you returned the money to.<br>
 </td>
 <td class="content">
 The <code>&lt;debt&#8217;s index&gt;</code> is optional.
-Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt;</code> is not specified.
+Sharkie will remove all debts for the person if the <code>&lt;debt&#8217;s index&gt;</code> is not specified.
 </td>
 </tr>
 </table>
@@ -1439,14 +1690,14 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose that you have just returned Grace, the fourth person in the address book, the first debt in her debt list.</p>
+<p>Suppose that you have just returned "Grace", the fourth person in the address book, the first debt in her debt list.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command that you would enter is <code>people returned 4 i/1</code>.</p>
 </li>
 <li>
-<p>This records that you have returned the money for the first debt of Grace, the fourth person in the address book.<br></p>
+<p>This records that you have returned the money for the first debt of "Grace", the fourth person in the address book.<br></p>
 </li>
 </ul>
 </div>
@@ -1459,7 +1710,7 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <div class="ulist">
 <ul>
 <li>
-<p>The first debt of Grace will be removed from her debt list and the unsettled debts to Grace will be shown.</p>
+<p>The first debt of "Grace" will be removed from her debt list and the unsettled debts to "Grace" will be shown.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Reduced debt to Grace by $5.00. You now owe Grace $5.00.</pre>
@@ -1470,12 +1721,12 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-you-lend-code-lend-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code">5.3.4. Recording the money you lend: <code>lend</code></a></h4>
+<h4 id="recording-the-money-you-lend-code-lend-code"><a class="link" href="#recording-the-money-you-lend-code-lend-code">5.3.6. Recording the money you lend: <code>lend</code></a></h4>
 <div class="paragraph">
-<p>If you lend a person money and you want to record the loan, the command you would enter is the 'people lend' command.<br></p>
+<p>Suppose you lend a person money and you want to record the loan, the command you would enter is the <code>people lend</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>people lend &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></p>
+<p><strong>Format</strong>: <code>people lend &lt;person&#8217;s index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -1491,8 +1742,7 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>The <code>&lt;amount&gt;</code> you entered should be non-negative, have up to two decimal places, and not be too large
-(not exceeding ninety quadrillion dollars).</p>
+<p>The <code>&lt;amount&gt;</code> should be a <a href="#valid-amount">valid amount</a>.</p>
 </li>
 </ul>
 </div>
@@ -1507,9 +1757,9 @@ Sharkie will record all debts as returned if the <code>&lt;debt&#8217;s index&gt
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
 specific person in the address book whom you lend money to.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
-The amount of money recorded will be added under your friend&#8217;s <code>Loans</code> section.<br>
-<code>Loans</code> represent the amount of money you lend your friends.<br>
+The amount of money recorded will be added under your friend&#8217;s "loans" section. Loans represent the amount of money you lend your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
 </td>
 </tr>
@@ -1522,7 +1772,7 @@ The amount of money recorded will be added under your friend&#8217;s <code>Loans
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yyyy&gt;</code> is not specified, the date that you record the loan will be used.
+The <code>&lt;date: dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date: dd/mm/yyyy&gt;</code> is not specified, the date that you record the loan will be used.
 </td>
 </tr>
 </table>
@@ -1533,14 +1783,14 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you lend Syin Yi, who is the fifth person in the address book, $5 for dinner on 10 October 2020.</p>
+<p>Suppose you lend "Syin Yi", who is the fifth person in the address book, "$5" for "dinner" on "10 October 2020".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people lend 5 n/dinner $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p>This records that you owe Syin Yi, the fifth person in the address book, $5.00 for dinner on 10/10/2020.<br></p>
+<p>This records that you owe "Syin Yi", the fifth person in the address book, "$5.00" for "dinner" on "10/10/2020".<br></p>
 </li>
 </ul>
 </div>
@@ -1553,7 +1803,7 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 <div class="ulist">
 <ul>
 <li>
-<p>Your loan to Syin Yi will increase by $5.</p>
+<p>Your loan to "Syin Yi" will increase by "$5".</p>
 <div class="literalblock">
 <div class="content">
 <pre>Increased loan to Syin Yi by $5.00. Syin Yi now owes you $8.00.</pre>
@@ -1564,7 +1814,7 @@ The <code>&lt;date:dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date:dd/mm/yy
 </div>
 </div>
 <div class="sect3">
-<h4 id="recording-the-money-you-received-code-received-code"><a class="link" href="#recording-the-money-you-received-code-received-code">5.3.5. Recording the money you received: <code>received</code></a></h4>
+<h4 id="recording-the-money-you-received-code-received-code"><a class="link" href="#recording-the-money-you-received-code-received-code">5.3.7. Recording the money you received: <code>received</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to record that you have received the money for a certain loan (or for all loans) from your friend,
 the command you would enter is our <code>people received</code> command.</p>
@@ -1598,13 +1848,13 @@ the command you would enter is our <code>people received</code> command.</p>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
 specific person in the address book, who you received from.<br>
-<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a <code class="blue">person&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The <code>&lt;loan&#8217;s index&gt;</code> above refers to the index number shown in the displayed loans list in <strong>Sharkie</strong>. It indicates a
 specific loan under the person, which you received from.<br>
-<em>Still confused? Find out more about <a href="#loanDebtIndexFAQ">what is a <code class="blue">loan&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#loanDebtIndexFAQ">what is a loan&#8217;s index</a>.</em><br>
 <br>
-<code>Loan</code> represents the amount of money you lend your friends.<br>
+Loans represent the amount of money you lend your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em><br>
 </td>
 </tr>
@@ -1618,7 +1868,7 @@ specific loan under the person, which you received from.<br>
 </td>
 <td class="content">
 The <code>&lt;loan&#8217;s index&gt;</code> is optional.
-All loans will be marked as <code>received</code> for the indicated person if the <code>&lt;loan&#8217;s index&gt;</code> is not specified.
+All loans will be removed for the indicated person if the <code>&lt;loan&#8217;s index&gt;</code> is not specified.
 </td>
 </tr>
 </table>
@@ -1629,7 +1879,7 @@ All loans will be marked as <code>received</code> for the indicated person if th
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to record that you have received the money from Joel, who is the second person in the address book,
+<p>Suppose you want to record that you have received the money from "Joel", who is the second person in the address book,
 for the first loan in his loans list.</p>
 <div class="ulist">
 <ul>
@@ -1637,7 +1887,7 @@ for the first loan in his loans list.</p>
 <p>The command you would enter is <code>people received 2 i/1</code>.</p>
 </li>
 <li>
-<p>This records that you have received the money for the first loan of Joel, the second person in the address book.</p>
+<p>This records that you have received the money for the first loan of "Joel", the second person in the address book.</p>
 </li>
 </ul>
 </div>
@@ -1650,7 +1900,7 @@ for the first loan in his loans list.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The first loan of Joel will be removed from his loans list and the unsettled loans of Joel will be shown.</p>
+<p>The first loan of "Joel" will be removed from his loans list and the unsettled loans of "Joel" will be shown.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Removed loan to Joel by $10.00. Joel now owes you $2.00.</pre>
@@ -1661,9 +1911,9 @@ for the first loan in his loans list.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sending-reminder-to-a-friend-code-remind-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code">5.3.6. Sending reminder to a friend: <code>remind</code></a></h4>
+<h4 id="sending-reminder-to-a-friend-code-remind-code"><a class="link" href="#sending-reminder-to-a-friend-code-remind-code">5.3.8. Sending reminder to a friend: <code>remind</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to remind a friend to return the unsettled loans to you through an email,
+<p>Suppose you want to remind a friend to return unsettled loans to you through an email,
 the command you would enter is our <code>people remind</code> command.</p>
 </div>
 <div class="paragraph">
@@ -1694,7 +1944,7 @@ the command you would enter is our <code>people remind</code> command.</p>
 </td>
 <td class="content">
 You would need to connect to the Internet and include your details in <strong>Sharkie</strong> before using this command.
-You can enter or edit your details at <a href="#editing-user-data"><code class="blue">Edit</code> &gt; <code class="blue">Edit user&#8217;s data</code></a>.<br>
+You can enter or edit your details at <a href="#editing-user-data">"Edit" &gt; "Edit user&#8217;s data"</a>.<br>
 <br>
 Before you enter the <code>people remind</code> command, please make sure that your friend&#8217;s email address is correct.
 </td>
@@ -1710,9 +1960,9 @@ Before you enter the <code>people remind</code> command, please make sure that y
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
 specific person in the address book, who you want to remind.<br>
-<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a <code class="blue">person&#8217;s index</code></a>.</em><br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
-<code>Loan</code> represents the amount of money you lend your friends.<br>
+Loans represent the amount of money you lend your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
 </td>
 </tr>
@@ -1725,7 +1975,7 @@ specific person in the address book, who you want to remind.<br>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-If you receive connection error messages during the execution of <code>people remind</code> command,
+If you receive connection error messages during the execution of the <code>people remind</code> command,
 please visit <a href="#remind-connection-error">how to resolve connection issues</a>.
 </td>
 </tr>
@@ -1737,14 +1987,14 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remind Daniel, who is the first person in your address book to return you your money.</p>
+<p>Suppose you want to remind "Daniel", who is the first person in your address book to return you your money.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people remind 1</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to send an email to Daniel, the first person in your address book.</p>
+<p>This requests <strong>Sharkie</strong> to send an email to "Daniel", the first person in your address book.</p>
 </li>
 </ul>
 </div>
@@ -1757,10 +2007,10 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Daniel will receive a reminder from <strong>Sharkie</strong> via the email. You will also receive a carbon copy (CC) of the email sent to Daniel:</p>
+<p>"Daniel" will receive a reminder from <strong>Sharkie</strong> via his email. You will also receive a carbon copy (CC) of the email sent to "Daniel":</p>
 <div class="literalblock">
 <div class="content">
-<pre>Reminded Alex Yeoh to return $3.00!
+<pre>Reminded Daniel to return $3.00!
 Sharkie has sent a carbon copy (CC) of the reminder to your email!</pre>
 </div>
 </div>
@@ -1769,9 +2019,9 @@ Sharkie has sent a carbon copy (CC) of the reminder to your email!</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sending-reminder-to-all-friends-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friends-code-remindall-code">5.3.7. Sending reminder to all friends: <code>remindall</code></a></h4>
+<h4 id="sending-reminder-to-all-friends-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friends-code-remindall-code">5.3.9. Sending reminder to all friends: <code>remindall</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to remind all your friends in your address book, who has yet paid up, to return you your money,
+<p>Suppose you want to remind all your friends in your address book to return you your money,
 the command you would enter is our <code>people remindall</code> command.</p>
 </div>
 <div class="paragraph">
@@ -1785,7 +2035,7 @@ the command you would enter is our <code>people remindall</code> command.</p>
 </td>
 <td class="content">
 You would need to connect to the Internet and include your details in <strong>Sharkie</strong> before using this command.
-You can enter or edit your details at <a href="#editing-user-data"><code class="blue">Edit</code> &gt; <code class="blue">Edit user&#8217;s data</code></a>.<br>
+You can enter or edit your details at <a href="#editing-user-data">"Edit" &gt; "Edit user&#8217;s data"</a>.<br>
 <br>
 Before you enter the <code>people remindall</code> command, please make sure that your friends' email addresses are correct.
 </td>
@@ -1799,10 +2049,10 @@ Before you enter the <code>people remindall</code> command, please make sure tha
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Only your friends, who have unsettled loan(s) will be reminded. Your friends, who has zero loan will
+Only your friends, who have unsettled loan(s) will be reminded. Your friends who have zero loans will
 not receive a reminder.<br>
 <br>
-<code>Loans</code> represent the amount of money you lend your friends.<br>
+Loans represent the amount of money you lend your friends.<br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
 </td>
 </tr>
@@ -1827,14 +2077,14 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remind all your friends in your address book, who has yet paid up.</p>
+<p>Suppose you want to remind all your friends in your address book who have yet to repay you.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people remindall</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to send an email to everyone in your address book, who has yet paid up.</p>
+<p>This requests <strong>Sharkie</strong> to send an email to everyone in your address book who have yet to repay you.</p>
 </li>
 </ul>
 </div>
@@ -1847,7 +2097,7 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>All your friends who has yet paid up will receive a reminder from <strong>Sharkie</strong> via the email.
+<p>All your friends who have yet to repay you will receive a reminder from <strong>Sharkie</strong> via their emails.
 You will also receive a carbon copy (CC) of each of the emails sent to your friends:</p>
 <div class="literalblock">
 <div class="content">
@@ -1862,15 +2112,15 @@ Sharkie has sent carbon copies (CC) of the reminders to your email!</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="find-person"><a class="link" href="#find-person">5.3.8. Finding a person: <code>find</code></a></h4>
+<h4 id="find-person"><a class="link" href="#find-person">5.3.10. Finding a person: <code>find</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to find a person in your contact list by a specific keyword,
 the command you would enter is our <code>people find</code> command.</p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
-or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code>
+<p><strong>Format</strong>: <code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code><br>
+or <code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code><br>
+or <code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code><br>
 or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></p>
 </div>
 <div class="exampleblock">
@@ -1887,11 +2137,11 @@ or <code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></p
 <p>You would not have to consider the case of the <code>&lt;keyword&gt;</code>, as it is case-insensitive.</p>
 </li>
 <li>
-<p>The <code>&lt;keyword&gt;</code> you want to enter need not to be in full. For example, <code>people find n/jo</code> will display the
-persons whose name contains with the keyword <code>jo</code>, such as <code>Joel</code>.</p>
+<p>The <code>&lt;keyword&gt;</code> you want to enter can be incomplete. For example, <code>people find n/jo</code> will display the
+persons whose name contains the keyword "jo", such as "Joel".</p>
 </li>
 <li>
-<p>The <code>&lt;keyword&gt;</code> you entered should be either of the type name (<code>n/</code>), phone (<code>p/</code>), email (<code>p/</code>) or tag (<code>t/</code>).</p>
+<p>The <code>&lt;keyword&gt;</code> you entered should be one of the prefixes: name (<code>n/</code>), phone (<code>p/</code>), email (<code>p/</code>) or tag (<code>t/</code>).</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1912,8 +2162,8 @@ Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only t
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>Debts</code> represent the amount of money you owe your friends and
-<code>loans</code> represent the amount of money you lend your friends. <br>
+Debts represent the amount of money you owe your friends and
+loans represent the amount of money you lend your friends. <br>
 <em>Still confused? Find out more about <a href="#debt-and-loan">the differences between debts and loans</a>.</em>
 </td>
 </tr>
@@ -1925,14 +2175,14 @@ Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only t
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to find your friends, who are called Grace.</p>
+<p>Suppose you want to find your friends, who are called "Grace".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people find n/Grace</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to list out the people with the name, Grace.</p>
+<p>This requests <strong>Sharkie</strong> to list out the people with the name, "Grace".</p>
 </li>
 </ul>
 </div>
@@ -1945,7 +2195,7 @@ Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only t
 <div class="ulist">
 <ul>
 <li>
-<p>All your friends with the name, Grace will be listed out:</p>
+<p>All your friends with the name, "Grace" will be listed out:</p>
 <div class="literalblock">
 <div class="content">
 <pre>2 persons listed!</pre>
@@ -1991,10 +2241,10 @@ Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only t
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-people"><a class="link" href="#list-people">5.3.9. Listing all contacts: <code>list</code></a></h4>
+<h4 id="list-people"><a class="link" href="#list-people">5.3.11. Listing all contacts: <code>list</code></a></h4>
 <div class="paragraph">
-<p>Suppose that you have just executed the <a href="#find-person"><code>people find</code></a> command. And now, you would like to see the
-entire list of people in your address book. Then, the command that you would enter is the <code>people list</code> command.<br></p>
+<p>Suppose that you have just executed the <a href="#find-person"><code class="blue">people find</code></a> command. And now, you would like to see the
+entire list of people in your address book. The command you would enter is our <code>people list</code> command.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>people list</code></p>
@@ -2029,185 +2279,6 @@ entire list of people in your address book. Then, the command that you would ent
 <div class="literalblock">
 <div class="content">
 <pre>Listed all persons.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="edit-person"><a class="link" href="#edit-person">5.3.10. Editing a person : <code>edit</code></a></h4>
-<div class="paragraph">
-<p>In instances when a person has changed his contact details, and you want to update them, the command that you would enter
-is the <code>people edit</code> command.<br></p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>people edit &lt;person&#8217;s index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email&gt;]</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>people edit</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>You should provide at least one of the optional fields.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book whom you lend money to.<br>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Existing values will be updated to the new values that you have inputted.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to update the John&#8217;s email, and John is the first person in your address book.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>people edit 1 e/johndoe@example.com</code>.</p>
-</li>
-<li>
-<p>This edits the email address of the first person, John, to be <code>johndoe@example.com</code>.<br></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>In the list of people shown, John&#8217;s email will be <a href="mailto:johndoe@example.com">johndoe@example.com</a>.</p>
-<div class="literalblock">
-<div class="content">
-<pre>Edited Person: John Doe Phone: 91234568 Email: johndoe@example.com You owe: $0.00 You lent: $0.00 Tags:</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="delete-person"><a class="link" href="#delete-person">5.3.11. Deleting a person : <code>delete</code></a></h4>
-<div class="paragraph">
-<p>If you have no reason to keep a person in your address book anymore and would like to delete his contact details, the
-command that you would enter is the <code>people delete</code> command.</p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>people delete &lt;person&#8217;s index&gt;</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following is the restrictions of <code>people delete</code> command, which you should take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book whom you would like to delete.<br>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Remember to check and ensure that the <code>&lt;person&#8217;s index&gt;</code> that you have inputted corresponds to the correct person.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to delete Betsy from your address book, and Betsy is somewhere deep in the list. Then, you can first
-use the <a href="#find-person"><code>people find</code></a> command to find Betsy, followed by the <code>people delete</code> command.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command that you would enter is <code>people find n/Betsy</code>, followed by <code>people delete 1</code>.</p>
-</li>
-<li>
-<p><strong>Sharkie</strong> will first find Betsy for you, and Betsy will be shown as the first result on the list. Then, the latter
-command will delete Betsy from the address book.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Betsy will no longer be shown on the list of people.</p>
-<div class="literalblock">
-<div class="content">
-<pre>Deleted Person: Betsy Phone: 91234567 Email: something@email.com You owe: $0.00 You lent: $0.00 Tags:</pre>
 </div>
 </div>
 </li>
@@ -2265,68 +2336,181 @@ the command you would enter is our <code>people clear</code> command.</p>
 <div class="sect1">
 <h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous Address Book folder.</p>
-</div>
-<div id="personIndexFAQ" class="paragraph">
-<p><strong>Q</strong>: What is a <code>person&#8217;s index</code>?<br>
-<strong>A</strong>: A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
-</div>
+<div class="sect2">
+<h3 id="how-do-i-save-my-data-in-strong-sharkie-strong-br"><a class="link" href="#how-do-i-save-my-data-in-strong-sharkie-strong-br">6.1. How do I save my data in <strong>Sharkie</strong>?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>For example,
-* <code>1</code> is the <code>person&#8217;s index</code> of Alex Yeoh, whereas
-* <code>2</code> is the <code>person&#8217;s index</code> of Bernice Yu.
-.What is a <code>person&#8217;s index</code>?
-image::personIndexFAQ.png[width=900]</p>
+<p><strong>Sharkie</strong> automatically saves your data in the same folder Sharkie.jar is located in.</p>
 </div>
 </div>
 </div>
-<div id="loanDebtIndexFAQ" class="paragraph">
-<p><strong>Q</strong>: What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?<br>
-<strong>A</strong>: A <code>debt&#8217;s index</code> is the index number shown in a person&#8217;s displayed debts list, whereas a <code>loan&#8217;s index</code> is the
-index number shown in a person&#8217;s displayed loans list. A <code>debt&#8217;s index</code> indicates a specific debt of a person and a
-<code>loan&#8217;s index</code> indicated a specific loan of a person.</p>
 </div>
+<div class="sect2">
+<h3 id="how-do-i-transfer-my-data-to-another-computer-br"><a class="link" href="#how-do-i-transfer-my-data-to-another-computer-br">6.2. How do I transfer my data to another Computer?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>For example,
-* The <code>debt&#8217;s index</code> of the debt, <code>Dinner | $12.00 | 1 APR 2020</code>, under Bernice Yu is <code>1</code>.
-* The <code>loan&#8217;s index</code> of the loan, <code>Movie | $10.00 | 2 FEB 2020</code>, under Bernice Yu is <code>1</code>.
-.What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?
-image::loanDebtIndexFAQ.png[width=900]</p>
+<p>Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous address book folder.</p>
 </div>
 </div>
 </div>
-<div id="editing-user-data" class="paragraph">
-<p><strong>Q</strong>: How to edit user&#8217;s data?<br>
-<strong>A</strong>: Click on <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
+</div>
+<div class="sect2">
+<h3 id="editing-user-data"><a class="link" href="#editing-user-data">6.3. How do I edit my user data?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Click on "Edit", then "Edit user&#8217;s data" on your menu bar.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
 </div>
-<div class="title">Figure 4. Editing user data in Sharkie</div>
+<div class="title">Figure 4. Editing user data in <strong>Sharkie</strong></div>
 </div>
-<div id="debt-and-loan" class="paragraph">
-<p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
-<strong>A</strong>: <code>Debts</code> is the amount of money you owe your friends and <code>loans</code> is the amount of money you lend your friends.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-did-i-not-receive-a-confirmation-e-mail-from-strong-sharkie-strong-br"><a class="link" href="#why-did-i-not-receive-a-confirmation-e-mail-from-strong-sharkie-strong-br">6.4. Why did I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
+<div class="paragraph">
+<p>You may need to check your junk mail folder, as your e-mail account may categorize <strong>Sharkie</strong>'s e-mails as spam.
+If you wish to receive frequent notifications from <strong>Sharkie</strong>, please remove <strong>Sharkie</strong> from your junk mail list.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="valid-amount"><a class="link" href="#valid-amount">6.5. What is a valid amount of money?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A valid amount is a non-negative value up to two decimal places.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="transactionIndexFAQ"><a class="link" href="#transactionIndexFAQ">6.6. What is a transaction&#8217;s index?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A <code>transaction&#8217;s index</code> is the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a specific transaction in the address book.</p>
+</div>
 <div class="paragraph">
 <p>For example,</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>1 | Supper | $5.00 | 3 FEB 2020</code> under the <code>Debts</code> section, shown in the figure below represents what you owe Syin Yi.</p>
+<p><code>1</code> is the <code>transaction&#8217;s index</code> of "Laksa", whereas</p>
 </li>
 <li>
-<p><code>1 | Breakfast | $3.00 | 8 AUG 2018</code> under the <code>Loans</code> section, shown in the figure below represents what you lent to Syin Yi.</p>
+<p><code>2</code> is the <code>transaction&#8217;s index</code> of "Grab".</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/transactionIndexFAQ.jpg" alt="transactionIndexFAQ" width="900">
+</div>
+<div class="title">Figure 5. What is a <code>transaction&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="personIndexFAQ"><a class="link" href="#personIndexFAQ">6.7. What is a person&#8217;s index?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1</code> is the <code>person&#8217;s index</code> of Alex Yeoh, whereas</p>
+</li>
+<li>
+<p><code>2</code> is the <code>person&#8217;s index</code> of Bernice Yu.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/personIndexFAQ.png" alt="personIndexFAQ" width="900">
+</div>
+<div class="title">Figure 6. What is a <code>person&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loanDebtIndexFAQ"><a class="link" href="#loanDebtIndexFAQ">6.8. What is a debt&#8217;s index or a loan&#8217;s index?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A <code>debt&#8217;s index</code> is the index number shown in a person&#8217;s displayed debts list, whereas a <code>loan&#8217;s index</code> is the
+index number shown in a person&#8217;s displayed loans list. A <code>debt&#8217;s index</code> indicates a specific debt of a person and a
+<code>loan&#8217;s index</code> indicated a specific loan of a person.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>debt&#8217;s index</code> of the debt, <code>Dinner | $12.00 | 1 APR 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+<li>
+<p>The <code>loan&#8217;s index</code> of the loan, <code>Movie | $10.00 | 2 FEB 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/loanDebtIndexFAQ.png" alt="loanDebtIndexFAQ" width="900">
+</div>
+<div class="title">Figure 7. What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debt-and-loan"><a class="link" href="#debt-and-loan">6.9. What are the differences between debts and loans?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Debts are the amount of money you owe your friends and loans are the amount of money you lend your friends.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1 | Supper | $5.00 | 3 FEB 2020</code> under the "Debts" section, shown in the figure below represents what you owe "Syin Yi".</p>
+</li>
+<li>
+<p><code>1 | Breakfast | $3.00 | 8 AUG 2018</code> under the "Loans" section, shown in the figure below represents what you lent to "Syin Yi".</p>
 </li>
 </ul>
 </div>
@@ -2334,30 +2518,29 @@ image::loanDebtIndexFAQ.png[width=900]</p>
 <div class="content">
 <img src="images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
 </div>
-<div class="title">Figure 5. Differences between <code>debts</code> and <code>loans</code></div>
+<div class="title">Figure 8. Differences between debts and loans</div>
 </div>
 </div>
 </div>
-<div id="valid-amount" class="paragraph">
-<p><strong>Q</strong>: Is there a maximum amount of money that Sharkie can handle?<br>
-<strong>A</strong>: Yes. Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).</p>
 </div>
-<div class="paragraph">
-<p><strong>Q</strong>: Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br>
-<strong>A</strong>: As the <code>people remind</code> and <code>people remindall</code> commands rely on the connection to the internet and e-mail server,
-time is needed for the application to send a reminder.</p>
-</div>
-<div class="paragraph">
-<p><strong>Q</strong>: Why do I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br>
-<strong>A</strong>: You may need to check your junk mail folder, as your e-mail account may categorize <strong>Sharkie</strong>'s e-mails as spam.
-If you wish to receive frequent notifications from <strong>Sharkie</strong>, please remove <strong>Sharkie</strong> from your junk mail list.</p>
-</div>
-<div id="remind-connection-error" class="paragraph">
-<p><strong>Q</strong>: How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br>
-<strong>A</strong>: You may try the suggestions below to resolve your connection issues:</p>
-</div>
+<div class="sect2">
+<h3 id="why-does-my-code-people-remind-code-and-code-people-remindall-code-commands-take-time-to-run-br"><a class="link" href="#why-does-my-code-people-remind-code-and-code-people-remindall-code-commands-take-time-to-run-br">6.10. Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
+<div class="paragraph">
+<p>As the <code>people remind</code> and <code>people remindall</code> commands rely on the connection to the internet and e-mail server,
+time is needed for the application to send a reminder.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-connection-error"><a class="link" href="#remind-connection-error">6.11. How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>You may try the suggestions below to resolve your connection issues:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -2401,6 +2584,7 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="command-summary"><a class="link" href="#command-summary">7. Command Summary</a></h2>
 <div class="sectionbody">
@@ -2408,12 +2592,12 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 <p>If you wish to have a quick reference to the commands available in <strong>Sharkie</strong>, you can refer to the list below.</p>
 </div>
 <div class="sect2">
-<h3 id="global-commands-2"><a class="link" href="#global-commands-2">7.1. Global Commands</a></h3>
+<h3 id="general-commands-2"><a class="link" href="#general-commands-2">7.1. General Commands</a></h3>
 <div class="paragraph">
-<p>The following are the global commands that are available in <strong>Sharkie</strong> for you to use! You do not need to use any prefixes to use these commands.</p>
+<p>The following are the general commands that are available in <strong>Sharkie</strong> for you to use! You do not need to use any prefixes to use these commands.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Global commands available in <strong>Sharkie</strong>.</caption>
+<caption class="title">Table 2. General commands available in <strong>Sharkie</strong>.</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 45%;">
@@ -2427,12 +2611,12 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>help</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>help</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Opens up a window with a link to the User Guide.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>exit</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>exit</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Saves your data and safely exits</p></td>
 </tr>
 </tbody>
@@ -2458,40 +2642,40 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>budget</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet budget $/&lt;amount&gt; [m/&lt;month&gt;] [y/&lt;year&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet budget $/&lt;amount&gt; [m/&lt;month&gt;] [y/&lt;year&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sets a budget for you for the month selected.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet delete &lt;index&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet delete &lt;index&gt;</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Helps you remove the transaction selected at that index from the wallet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Edits your transaction in the wallet at the index selected with your given arguments.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>expense</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet expense n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Creates an expense and adds it to your wallet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet find n/&lt;keyword&gt;</code></mark><br>
-or <mark><code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></mark><br>
-or <mark><code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></mark><br>
-or <mark><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></mark><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet find n/&lt;keyword&gt;</code></span><br>
+or <span class="gray"><code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></span><br>
+or <span class="gray"><code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></span><br>
+or <span class="gray"><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></span><br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Finds your transaction(s) within your wallet using the arguments you have provided.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>income</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet income n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date: dd/mm/yyyy&gt;] [t/&lt;tag&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Creates an income and adds it to your wallet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>wallet list</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>wallet list</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Lists all your transactions that have been recorded by <strong>Sharkie</strong> in the wallet.</p></td>
 </tr>
 </tbody>
@@ -2517,69 +2701,69 @@ or <mark><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</c
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Helps you add a contact to your address book, with the particulars that you have entered.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people clear</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people clear</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Clears all your contacts in your address book.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people delete &lt;index&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people delete &lt;index&gt;</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Deletes your contact at the index you have selected.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Edits your contact in the address book at the index selected with the given arguments.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark><br>
-or <mark><code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark><br>
-or <mark><code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark><br>
-or <mark><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people find n/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span><br>
+or <span class="gray"><code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span><br>
+or <span class="gray"><code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span><br>
+or <span class="gray"><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Finds your contact(s) within your address book using the arguments you have provided.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>lend</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Records a loan to your contact at the index selected in your address book.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people list</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people list</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Lists all your contacts that have been recorded by <strong>Sharkie</strong> in the address book.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>owe</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Records a debt to your contact at the index selected in your address book.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>received</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people received &lt;person&#8217;s index&gt; [i/&lt;loan&#8217;s index&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Removes the loan at the index selected for your contact selected.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>remind</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people remind &lt;index&gt;</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people remind &lt;index&gt;</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sends an email to the contact at the index you have selected, reminding them of any withstanding debts that have to be paid back to you.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>remindall</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people remindall</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people remindall</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sends an email to all your contacts with any withstanding debts, reminding them to pay you back.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>returned</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><mark><code>people returned &lt;person&#8217;s index&gt; [i/&lt;debt&#8217;s index&gt;]</code></mark></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people returned &lt;person&#8217;s index&gt; [i/&lt;debt&#8217;s index&gt;]</code></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Removes the debt at the index selected for your contact selected.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:25:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:08:59 UTC</div></div></div></body></html>

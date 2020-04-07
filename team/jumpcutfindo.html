@@ -115,95 +115,13 @@
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="global-commands"><a class="link" href="#global-commands">Global Commands</a></h3>
-<div class="paragraph">
-<p>This section contains details on how to execute two general commands, <code>help</code> and <code>exit</code>.</p>
-</div>
-<div class="sect3">
-<h4 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">Viewing help : <code>help</code></a></h4>
-<div class="paragraph">
-<p>If you need help regarding the many features of Sharkie and how to operate it, you can use the global <code>help</code> command to get a link to this user guide.<br></p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>help</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You start Sharkie and are unsure of what commands are available or how to use it.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Typing <code>help</code> will give you a link to our user guide.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:<br></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A window will pop up, providing you with a clickable link that directs you to this user guide.</p>
-<div class="literalblock">
-<div class="content">
-<pre>Opened help window.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">Exiting the program : <code>exit</code></a></h4>
-<div class="paragraph">
-<p>If you&#8217;re done with using Sharkie and wish to exit the application safely, you can use the global <code>exit</code> command to help you save your data and exit the program.<br></p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>exit</code></p>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You&#8217;ve just finished using Sharkie, and wish to close the program and save your data.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Typing <code>exit</code> will save your data and quit Sharkie.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:<br></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Sharkie will save your data to a locally stored file (that can be edited using a text editor), and will help you quit the application safely.</p>
-</li>
-</ul>
-</div>
-</div>
 <div class="sect3">
 <h4 id="setting-a-budget-code-budget-code"><a class="link" href="#setting-a-budget-code-budget-code">Setting a budget: <code>budget</code></a></h4>
 <div class="paragraph">
 <p>Suppose you want to set a budget for a certain month, or a budget in general for all months. The command that you would enter in this case is our <code>wallet budget</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p><strong>Format</strong>: <code>wallet budget $/amount [m/&lt;month&gt;] [y/&lt;year&gt;]</code></p>
+<p><strong>Format</strong>: <code>wallet budget $/&lt;amount&gt; [m/&lt;month: mm&gt;] [y/&lt;year: yyyy&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -216,26 +134,43 @@
 <div class="ulist">
 <ul>
 <li>
-<p>If no month or year is specified, the default budget is set as the amount provided.</p>
+<p>The <code>&lt;amount&gt;</code> you have set must be a <a href="#valid-amount">valid amount</a>.</p>
 </li>
 <li>
-<p>Your entry will overwrite any pre-existing budgets. This means that if you have previously set a budget for a specific month and year, and if you have indicated that month and year again, it will overwrite the budget that has been set.</p>
+<p>The value of the <code>&lt;month: mm&gt;</code> you have set must be a positive integer between 1 - 12.</p>
 </li>
 <li>
-<p>If the budget value is set to 0, <strong>Sharkie</strong> will consider it as if you have not set a budget for that month.</p>
-</li>
-<li>
-<p>The value of the budget you have set must be a non-negative integer.</p>
-</li>
-<li>
-<p>The value of the month you have set must be a positive integer between 1 - 12.</p>
-</li>
-<li>
-<p>The value of the year you have set must be a non-negative integer.</p>
+<p>The value of the <code>&lt;year: yyyy&gt;</code> you have set must be a non-negative integer.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your budget entry will overwrite any pre-existing budgets. This means that if you have previously set a budget for a specific month and year, and if you have indicated that month and year again, it will overwrite the budget that has been set.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If no month or year is specified, the default budget is set as the amount provided.<br>
+<br>
+If the budget value is set to 0, <strong>Sharkie</strong> will consider it as if you have not set a budget for that month.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><strong>Example #1</strong>:</p>
@@ -296,72 +231,184 @@
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="faq"><a class="link" href="#faq">FAQ</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
-<strong>A</strong>: Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous Address Book folder.</p>
-</div>
-<div id="personIndexFAQ" class="paragraph">
-<p><strong>Q</strong>: What is a <code>person&#8217;s index</code>?<br>
-<strong>A</strong>: A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
-</div>
+<div class="sect2">
+<h3 id="how-do-i-save-my-data-in-strong-sharkie-strong-br"><a class="link" href="#how-do-i-save-my-data-in-strong-sharkie-strong-br">How do I save my data in <strong>Sharkie</strong>?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>For example,
-* <code>1</code> is the <code>person&#8217;s index</code> of Alex Yeoh, whereas
-* <code>2</code> is the <code>person&#8217;s index</code> of Bernice Yu.
-.What is a <code>person&#8217;s index</code>?
-image::personIndexFAQ.png[width=900]</p>
+<p><strong>Sharkie</strong> automatically saves your data in the same folder Sharkie.jar is located in.</p>
 </div>
 </div>
 </div>
-<div id="loanDebtIndexFAQ" class="paragraph">
-<p><strong>Q</strong>: What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?<br>
-<strong>A</strong>: A <code>debt&#8217;s index</code> is the index number shown in a person&#8217;s displayed debts list, whereas a <code>loan&#8217;s index</code> is the
-index number shown in a person&#8217;s displayed loans list. A <code>debt&#8217;s index</code> indicates a specific debt of a person and a
-<code>loan&#8217;s index</code> indicated a specific loan of a person.</p>
 </div>
+<div class="sect2">
+<h3 id="how-do-i-transfer-my-data-to-another-computer-br"><a class="link" href="#how-do-i-transfer-my-data-to-another-computer-br">How do I transfer my data to another Computer?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>For example,
-* The <code>debt&#8217;s index</code> of the debt, <code>Dinner | $12.00 | 1 APR 2020</code>, under Bernice Yu is <code>1</code>.
-* The <code>loan&#8217;s index</code> of the loan, <code>Movie | $10.00 | 2 FEB 2020</code>, under Bernice Yu is <code>1</code>.
-.What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?
-image::loanDebtIndexFAQ.png[width=900]</p>
+<p>Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous address book folder.</p>
 </div>
 </div>
 </div>
-<div id="editing-user-data" class="paragraph">
-<p><strong>Q</strong>: How to edit user&#8217;s data?<br>
-<strong>A</strong>: Click on <code>Edit</code>, then <code>Edit user&#8217;s data</code> on your menu bar.</p>
+</div>
+<div class="sect2">
+<h3 id="editing-user-data"><a class="link" href="#editing-user-data">How do I edit my user data?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Click on "Edit", then "Edit user&#8217;s data" on your menu bar.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/EditUserDataInstruction.png" alt="EditUserDataInstruction" width="400">
 </div>
-<div class="title">Figure 1. Editing user data in Sharkie</div>
+<div class="title">Figure 1. Editing user data in <strong>Sharkie</strong></div>
 </div>
-<div id="debt-and-loan" class="paragraph">
-<p><strong>Q</strong>: What are the differences between <code>Debts</code> and <code>Loans</code>?<br>
-<strong>A</strong>: <code>Debts</code> is the amount of money you owe your friends and <code>loans</code> is the amount of money you lend your friends.</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="why-did-i-not-receive-a-confirmation-e-mail-from-strong-sharkie-strong-br"><a class="link" href="#why-did-i-not-receive-a-confirmation-e-mail-from-strong-sharkie-strong-br">Why did I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
+<div class="paragraph">
+<p>You may need to check your junk mail folder, as your e-mail account may categorize <strong>Sharkie</strong>'s e-mails as spam.
+If you wish to receive frequent notifications from <strong>Sharkie</strong>, please remove <strong>Sharkie</strong> from your junk mail list.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="valid-amount"><a class="link" href="#valid-amount">What is a valid amount of money?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A valid amount is a non-negative value up to two decimal places.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="transactionIndexFAQ"><a class="link" href="#transactionIndexFAQ">What is a transaction&#8217;s index?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A <code>transaction&#8217;s index</code> is the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a specific transaction in the address book.</p>
+</div>
 <div class="paragraph">
 <p>For example,</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>1 | Supper | $5.00 | 3 FEB 2020</code> under the <code>Debts</code> section, shown in the figure below represents what you owe Syin Yi.</p>
+<p><code>1</code> is the <code>transaction&#8217;s index</code> of "Laksa", whereas</p>
 </li>
 <li>
-<p><code>1 | Breakfast | $3.00 | 8 AUG 2018</code> under the <code>Loans</code> section, shown in the figure below represents what you lent to Syin Yi.</p>
+<p><code>2</code> is the <code>transaction&#8217;s index</code> of "Grab".</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/transactionIndexFAQ.jpg" alt="transactionIndexFAQ" width="900">
+</div>
+<div class="title">Figure 2. What is a <code>transaction&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="personIndexFAQ"><a class="link" href="#personIndexFAQ">What is a person&#8217;s index?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1</code> is the <code>person&#8217;s index</code> of Alex Yeoh, whereas</p>
+</li>
+<li>
+<p><code>2</code> is the <code>person&#8217;s index</code> of Bernice Yu.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/personIndexFAQ.png" alt="personIndexFAQ" width="900">
+</div>
+<div class="title">Figure 3. What is a <code>person&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loanDebtIndexFAQ"><a class="link" href="#loanDebtIndexFAQ">What is a debt&#8217;s index or a loan&#8217;s index?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>A <code>debt&#8217;s index</code> is the index number shown in a person&#8217;s displayed debts list, whereas a <code>loan&#8217;s index</code> is the
+index number shown in a person&#8217;s displayed loans list. A <code>debt&#8217;s index</code> indicates a specific debt of a person and a
+<code>loan&#8217;s index</code> indicated a specific loan of a person.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>debt&#8217;s index</code> of the debt, <code>Dinner | $12.00 | 1 APR 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+<li>
+<p>The <code>loan&#8217;s index</code> of the loan, <code>Movie | $10.00 | 2 FEB 2020</code>, under Bernice Yu is <code>1</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/loanDebtIndexFAQ.png" alt="loanDebtIndexFAQ" width="900">
+</div>
+<div class="title">Figure 4. What is a <code>debt&#8217;s index</code> or a <code>loan&#8217;s index</code>?</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debt-and-loan"><a class="link" href="#debt-and-loan">What are the differences between debts and loans?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Debts are the amount of money you owe your friends and loans are the amount of money you lend your friends.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1 | Supper | $5.00 | 3 FEB 2020</code> under the "Debts" section, shown in the figure below represents what you owe "Syin Yi".</p>
+</li>
+<li>
+<p><code>1 | Breakfast | $3.00 | 8 AUG 2018</code> under the "Loans" section, shown in the figure below represents what you lent to "Syin Yi".</p>
 </li>
 </ul>
 </div>
@@ -369,30 +416,29 @@ image::loanDebtIndexFAQ.png[width=900]</p>
 <div class="content">
 <img src="../images/DebtAndLoanDifferences.png" alt="DebtAndLoanDifferences" width="800">
 </div>
-<div class="title">Figure 2. Differences between <code>debts</code> and <code>loans</code></div>
+<div class="title">Figure 5. Differences between debts and loans</div>
 </div>
 </div>
 </div>
-<div id="valid-amount" class="paragraph">
-<p><strong>Q</strong>: Is there a maximum amount of money that Sharkie can handle?<br>
-<strong>A</strong>: Yes. Due to program limitations, Sharkie can only safely handle amounts of up to $92233720368547758.07 (about ninety <strong>quadrillion</strong> dollars!). We believe it is safe to say that the average user will not end up spending or earning that amount of money anytime soon (at time of writing, Jeff Bezos' net worth is roughly $100 billion).</p>
 </div>
-<div class="paragraph">
-<p><strong>Q</strong>: Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br>
-<strong>A</strong>: As the <code>people remind</code> and <code>people remindall</code> commands rely on the connection to the internet and e-mail server,
-time is needed for the application to send a reminder.</p>
-</div>
-<div class="paragraph">
-<p><strong>Q</strong>: Why do I not receive a confirmation e-mail from <strong>Sharkie</strong>?<br>
-<strong>A</strong>: You may need to check your junk mail folder, as your e-mail account may categorize <strong>Sharkie</strong>'s e-mails as spam.
-If you wish to receive frequent notifications from <strong>Sharkie</strong>, please remove <strong>Sharkie</strong> from your junk mail list.</p>
-</div>
-<div id="remind-connection-error" class="paragraph">
-<p><strong>Q</strong>: How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br>
-<strong>A</strong>: You may try the suggestions below to resolve your connection issues:</p>
-</div>
+<div class="sect2">
+<h3 id="why-does-my-code-people-remind-code-and-code-people-remindall-code-commands-take-time-to-run-br"><a class="link" href="#why-does-my-code-people-remind-code-and-code-people-remindall-code-commands-take-time-to-run-br">Why does my <code>people remind</code> and <code>people remindall</code> commands take time to run?<br></a></h3>
 <div class="sidebarblock">
 <div class="content">
+<div class="paragraph">
+<p>As the <code>people remind</code> and <code>people remindall</code> commands rely on the connection to the internet and e-mail server,
+time is needed for the application to send a reminder.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remind-connection-error"><a class="link" href="#remind-connection-error">How can I resolve the connection issues during the execution of <code>people remind</code> or <code>people remindall</code>?<br></a></h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>You may try the suggestions below to resolve your connection issues:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -436,6 +482,7 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
 <div class="sectionbody">
@@ -455,13 +502,13 @@ Please add an exclusion to SMTP port 587 in your firewall or antivirus programme
 <div class="content">
 <img src="../images/ModelClassDiagram.png" alt="ModelClassDiagram" width="750">
 </div>
-<div class="title">Figure 3. Structure of the Model Component</div>
+<div class="title">Figure 6. Structure of the Model Component</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/ModelManagerClassDiagram.png" alt="ModelManagerClassDiagram" width="800">
 </div>
-<div class="title">Figure 4. In-depth structure of the Model Manager</div>
+<div class="title">Figure 7. In-depth structure of the Model Manager</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -549,7 +596,7 @@ respective lists change.</p>
 <div class="content">
 <img src="../images/ModelPersonDiagram.png" alt="ModelPersonDiagram" width="900">
 </div>
-<div class="title">Figure 5. In-depth structure of Person package in the Model Component</div>
+<div class="title">Figure 8. In-depth structure of Person package in the Model Component</div>
 </div>
 <div class="paragraph">
 <p>The diagram above shows how the <em>Person</em> package is implemented:</p>
@@ -573,13 +620,13 @@ a <code>TransactionList</code> of <code>Loan</code>(s) and a set of <code>Tag</c
 <div class="content">
 <img src="../images/ModelTransactionDiagram.png" alt="ModelTransactionDiagram" width="1200">
 </div>
-<div class="title">Figure 6. In-depth structure of Transaction package in the Model Component</div>
+<div class="title">Figure 9. In-depth structure of Transaction package in the Model Component</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../images/ModelTransactionClassDiagram.png" alt="ModelTransactionClassDiagram" width="400">
 </div>
-<div class="title">Figure 7. Transaction class diagram</div>
+<div class="title">Figure 10. Transaction class diagram</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -616,7 +663,7 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 <div class="content">
 <img src="../images/ModelReminderClassDiagram.png" alt="ModelReminderClassDiagram" width="250">
 </div>
-<div class="title">Figure 8. Reminder class diagram</div>
+<div class="title">Figure 11. Reminder class diagram</div>
 </div>
 <div class="paragraph">
 <p>The <em>Reminder</em> package is implemented for <strong>Sharkie</strong>'s reminder feature. The diagram above shows how the <em>Reminder</em> package is implemented:</p>
@@ -666,7 +713,7 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 <div class="content">
 <img src="../images/WalletBudgetActivityDiagram.png" alt="WalletBudgetActivityDiagram" width="600">
 </div>
-<div class="title">Figure 9. Activity diagram of the execution of <code>wallet budget</code> command</div>
+<div class="title">Figure 12. Activity diagram of the execution of <code>wallet budget</code> command</div>
 </div>
 <div class="sect3">
 <h4 id="implementation-of-code-wallet-budget-code-command"><a class="link" href="#implementation-of-code-wallet-budget-code-command">Implementation of <code>wallet budget</code> command</a></h4>
@@ -703,7 +750,7 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 <div class="content">
 <img src="../images/WalletBudgetSequenceDiagram.png" alt="WalletBudgetSequenceDiagram">
 </div>
-<div class="title">Figure 10. Sequence diagram of the <code>wallet budget</code> command</div>
+<div class="title">Figure 13. Sequence diagram of the <code>wallet budget</code> command</div>
 </div>
 </div>
 <div class="sect3">
@@ -745,4 +792,4 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:25:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:08:59 UTC</div></div></div></body></html>

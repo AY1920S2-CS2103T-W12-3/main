@@ -195,18 +195,30 @@ It required an in-depth analysis of design alternatives.</p>
 <h2 id="quick-start"><a class="link" href="#quick-start">Quick Start</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following steps will help you get Sharkie up and running in no time on your desktop.</p>
+<p>The following steps will help you get <strong>Sharkie</strong> up and running in no time on your desktop.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ensure you have Java <code>11</code> or above installed in your Computer.</p>
+<p>Ensure you have Java 11 or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>Sharkie.jar</code> <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/releases">here</a>.</p>
+<p>Download the latest <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/releases">Sharkie.jar</a>.</p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder for <strong>Sharkie</strong>.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Make sure that your Sharkie.jar is in a folder that does not require administrator access. If not, it might not be able to function properly.
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -218,7 +230,7 @@ It required an in-depth analysis of design alternatives.</p>
 </div>
 </li>
 <li>
-<p>If you are logging in for the first time, key in your Name, Phone and your Email, and and press <kbd>enter</kbd> or click on the <code>Submit</code> button.</p>
+<p>If you are logging in for the first time, key in your Name, Phone and your Email, and and press <kbd>Enter</kbd> or click on the "Submit" button.</p>
 <div class="imageblock">
 <div class="content">
 <img src="../images/EnterPinData.png" alt="EnterPinData" width="820">
@@ -227,47 +239,71 @@ It required an in-depth analysis of design alternatives.</p>
 </div>
 </li>
 <li>
-<p>A confirmation pin will be sent to your email. Please key in the confirmation PIN and click on the <code>Confirm</code> button. If you did not receive a confirmation PIN after 1 minute, please click on the <code>Resend PIN</code> button to get a new PIN.</p>
+<p>A confirmation PIN will be sent to your email. Please key in the confirmation PIN and click on the "Confirm" button. If you did not receive a confirmation PIN after 1 minute, please click on the "Resend PIN" button to get a new PIN.</p>
 </li>
 <li>
-<p>If you are logging in for the first time, Sharkie is already pre-loaded with sample data. You can use the <a href="#peopleclear"><code>people clear</code></a> command and <a href="#walletClear"><code>wallet clear</code></a> command respectively to remove the data.</p>
-</li>
-<li>
-<p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
-e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
-</li>
-<li>
-<p>Some example commands you can try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong><code>people add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
-</li>
-<li>
-<p><strong><code>people delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list.</p>
-</li>
-<li>
-<p><strong><code>wallet expense</code></strong><code>n/Gift for friend $/88 d/12/12/2020 t/Shopping</code> : adds an expense with these details into the wallet.</p>
-</li>
-<li>
-<p><strong><code>wallet find</code></strong><code>n/rice</code> : returns a list of expenses or income with keyword rice.</p>
-</li>
-<li>
-<p><strong><code>exit</code></strong> : exits the app.</p>
-</li>
-</ul>
+<p>If you are logging in for the first time, <strong>Sharkie</strong> is already pre-loaded with sample data.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you want, you can use the <a href="#peopleclear"><code class="blue">people clear</code></a> command and <a href="#walletClear"><code class="blue">wallet clear</code></a> command to remove the data in the wallet and people tabs respectively.
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>Refer to <a href="#Commands">[Commands]</a> for details of each command.</p>
+<p>You can type a command in the command box and press <kbd>Enter</kbd> to execute it.<br>
+e.g. Typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can check out <a href="#Commands">[Commands]</a> for detailed descriptions and usages of each command.<br>
+For a more succinct summary of the commands you can use in <strong>Sharkie</strong>, you can check out <a href="#command-summary">[command-summary]</a>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Some example commands you can try to get you started:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>people add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com</code> : Adds a contact named <code>John Doe</code> to the address book.</p>
+</li>
+<li>
+<p><strong><code>people delete</code></strong><code>3</code> : Deletes the 3rd contact shown in the current list.</p>
+</li>
+<li>
+<p><strong><code>wallet expense</code></strong><code>n/Gift for friend $/88 d/12/12/2020 t/Shopping</code> : Adds an expense with these details into the wallet.</p>
+</li>
+<li>
+<p><strong><code>wallet find</code></strong><code>n/rice</code> : Returns a list of expenses or income with keyword rice.</p>
+</li>
+<li>
+<p><strong><code>exit</code></strong> : Exits the app.</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
 <div class="sect3">
 <h4 id="listing-all-transactions-code-list-code"><a class="link" href="#listing-all-transactions-code-list-code">Listing all transactions: <code>list</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to see the full list of transactions, the command you would enter is our <code>wallet list</code> command.<br>
-Format: <code>wallet list</code></p>
+<p>Suppose you want to see the full list of transactions, the command you would enter is our <code>wallet list</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet list</code></p>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong>:</p>
@@ -275,7 +311,7 @@ Format: <code>wallet list</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you have just executed the <a href="#walletFind"><code>wallet find</code></a>  command. Now, you would like to see the full list of transactions in the wallet again.</p>
+<p>Suppose you have just executed the <a href="#walletFind"><code class="blue">wallet find</code></a>  command. Now, you would like to see the full list of transactions in the wallet again.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -292,17 +328,26 @@ Format: <code>wallet list</code></p>
 <div class="paragraph">
 <p><strong>Expected Outcome</strong>:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sharkie</strong> will list all the transactions you have entered into the wallet.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Listed all transactions.</pre>
 </div>
 </div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
 <h4 id="editing-a-transaction-code-edit-code"><a class="link" href="#editing-a-transaction-code-edit-code">Editing a transaction: <code>edit</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to edit the details of an income or expense in your wallet, the command you would enter is our <code>wallet edit</code> command.<br>
-Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></p>
+<p>Suppose you want to edit the details of an income or expense in your wallet, the command you would enter is our <code>wallet edit</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>wallet edit &lt;transaction&#8217;s index&gt; [n/&lt;name&gt;] [d/&lt;date: dd/mm/yyyy&gt;] [$/&lt;amount&gt;] [t/&lt;tag&gt;]</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -315,17 +360,31 @@ Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>&lt;index&gt;</code> of the transaction to be edited must be stated, and it must exist in the list of transactions.</p>
+<p>The <code>&lt;transaction&#8217;s index&gt;</code> must be stated, and it must exist in the list of transactions.</p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>The index must be a positive integer: 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>At least one of [n/&lt;name&gt;], [d/&lt;date&gt;], [$/&lt;amount&gt;], [t/&lt;tag&gt;] should be stated. Multiples are allowed as well.</p>
+<p>At least one of <code>[n/&lt;name&gt;]</code>, <code>[d/&lt;date: dd/mm/yyyy&gt;]</code>, <code>[$/&lt;amount&gt;]</code>, <code>[t/&lt;tag&gt;]</code> should be stated. Multiple fields are allowed as well.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;transaction&#8217;s index&gt;</code> above refers to the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a
+specific transaction in the wallet.<br>
+<em>Still confused? Find out more about <a href="#transactionIndexFAQ">what is a transaction&#8217;s index</a>.</em>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><strong>Example #1</strong>:</p>
@@ -333,7 +392,7 @@ Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to edit the first transaction in the transaction list, <code>Dack rce -$4400.00</code>, because you misspelled the name and wrote the wrong price.</p>
+<p>Suppose you want to edit the first transaction in the transaction list, "Dack rce -$4400.00", because you misspelled the name and wrote the wrong price.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -350,10 +409,17 @@ Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt
 <div class="paragraph">
 <p><strong>Expected Outcome #1</strong>:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transaction you have selected will be modified to contain the new description and price you entered.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><strong>Example #2</strong>:</p>
@@ -361,7 +427,7 @@ Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to edit the date and tag of the first transaction, Duck rice, because you forgot to input the date and tag.</p>
+<p>Suppose you want to edit the date and tag of the first transaction, "Duck rice", because you forgot to input the date and tag.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -378,10 +444,17 @@ Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt
 <div class="paragraph">
 <p><strong>Expected Outcome #2</strong>:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transaction you have selected will be modified to contain the new date and tag you entered.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Edited Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-10-04 Tag: [Food]</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -390,10 +463,7 @@ Format: <code>wallet edit &lt;index&gt; [n/&lt;name&gt;] [d/&lt;date&gt;] [$/&lt
 <p>Suppose you want to find transactions with certain keywords or date within the transaction list in the wallet, the command you would enter is our <code>wallet find</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p>Format:</p>
-</div>
-<div class="paragraph">
-<p><code>wallet find n/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
+<p><strong>Format</strong>: <code>wallet find n/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
 or <code>wallet find $/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
 or <code>wallet find d/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code><br>
 or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></p>
@@ -409,34 +479,25 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>Finds the expenses and income with the stated &lt;keyword&gt;.</p>
+<p>The <code>&lt;keyword&gt;</code> can be either of type <code>[n/&lt;description&gt;]</code>, <code>[d/&lt;date: dd/mm/yyyy&gt;]</code>, <code>[$/&lt;amount&gt;]</code>, or <code>[t/&lt;tag&gt;]</code>.</p>
 </li>
 <li>
-<p>The keyword can be either of type [n/&lt;description&gt;], [d/&lt;date&gt;], [$/&lt;amount&gt;], or [t/&lt;tag&gt;].</p>
+<p>You cannot search for multiple prefixes in one command. However, finding multiple <code>&lt;keyword&gt;</code> of the same prefix is allowed.</p>
 </li>
 <li>
-<p>You cannot search for multiple types of keywords in one command.</p>
+<p>At least 1 <code>&lt;keyword&gt;</code> must be input.</p>
 </li>
 <li>
-<p>Finding multiple keywords of the same type are allowed.</p>
+<p>The <code>&lt;keyword&gt;</code> is case-insensitive for finding of description (<code>n/</code>) and tag (<code>t/</code>).</p>
 </li>
 <li>
-<p>At least 1 keyword must be inputted.</p>
+<p>The <code>&lt;keyword&gt;</code> need not be in full for finding of description (<code>n/</code>) and tag (<code>t/</code>). For example <code>wallet find n/ri</code> will also display transactions with the keyword "rice".</p>
 </li>
 <li>
-<p>The keyword is case-insensitive for finding of description (n/) and tag (t/).</p>
+<p>For finding of amount (<code>$/x</code>), the amount entered, "x", must be an integer.</p>
 </li>
 <li>
-<p>The keyword need not be in full for finding of description (n/) and tag (t/). For example <code>"wallet find n/ri"</code> will also display transactions with the keyword <code>rice</code>.</p>
-</li>
-<li>
-<p>For finding of amount ($/x), the amount entered, x, must be an integer.</p>
-</li>
-<li>
-<p>For finding of amount ($/x), x being an integer, the transactions displayed will range from from $x.00 to $x.99.</p>
-</li>
-<li>
-<p>For finding of date (d/), the date inputted should follow <code>dd/mm/yyyy</code>.</p>
+<p>For finding of amount (<code>$/x</code>), "x" being an integer, the transactions displayed will range from from "$x.00" to "$x.99".</p>
 </li>
 </ul>
 </div>
@@ -448,14 +509,14 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to search for transactions with description containing keyword <code>rice</code> or <code>soup</code>.</p>
+<p>Suppose you want to search for transactions with description containing keyword "rice" or "soup":</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>wallet find n/rice soup</code>.</p>
 </li>
 <li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions with description <code>rice</code> or <code>soup</code>.</p>
+<p>This tells <strong>Sharkie</strong> that you want to look for transactions with description "rice" or "soup".</p>
 </li>
 </ul>
 </div>
@@ -468,7 +529,7 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>All transactions with description containing keyword <code>rice</code> and transactions with description containing keyword <code>soup</code> will be listed out.</p>
+<p>All transactions with description containing keyword "rice" and transactions with description containing keyword "soup" will be listed out.</p>
 <div class="literalblock">
 <div class="content">
 <pre>3 transactions listed!</pre>
@@ -483,14 +544,14 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to search for transactions with amount ranging between <code>$7.00</code> to <code>$7.99</code> or <code>$30.00</code> to <code>$30.99</code>.</p>
+<p>Suppose you want to search for transactions with amount ranging between "$7.00" to "$7.99" or "$30.00" to "$30.99".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>wallet find $/7 30</code>.</p>
 </li>
 <li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions with cost or income from <code>$7.00</code> to <code>$7.99</code> or <code>$30.00</code> to <code>$30.99</code>.</p>
+<p>This tells <strong>Sharkie</strong> that you want to look for transactions with cost or income from "$7.00" to "$7.99" or "$30.00" to "$30.99".</p>
 </li>
 </ul>
 </div>
@@ -503,7 +564,7 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>All transactions with  with amount from <code>$7.00</code> to <code>$7.99</code> and amount from <code>$30.00</code> to <code>$30.99</code> will be listed out.</p>
+<p>All transactions with  with amount from "$7.00" to "$7.99" and amount from "$30.00" to "$30.99" will be listed out.</p>
 <div class="literalblock">
 <div class="content">
 <pre>3 transactions listed!</pre>
@@ -518,14 +579,14 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to search for transactions with date <code>10/10/2020</code> or <code>11/11/2020</code>.</p>
+<p>Suppose you want to search for transactions with tag "food" or "shopping".</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The command you would enter is <code>wallet find d/10/10/2020 11/11/2020</code>.</p>
+<p>The command you would enter is <code>wallet find t/food shopping</code>.</p>
 </li>
 <li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions done on <code>10/10/2020</code> or <code>11/11/2020</code>.</p>
+<p>This tells <strong>Sharkie</strong> that you want to look for transactions with the tag "food" or "shopping".</p>
 </li>
 </ul>
 </div>
@@ -535,38 +596,10 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="paragraph">
 <p><strong>Expected Outcome #3</strong>:</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>2 transactions listed!</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Example #4</strong>:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to search for transactions with tag <code>food</code> or <code>shopping</code>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet find t/food shopping</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to look for transactions with the tag <code>food</code> or <code>shopping</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #4</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>All transactions with tag <code>food</code> and transactions with tag <code>shopping</code> will be listed out.</p>
+<p>All transactions with tag "food" and transactions with tag "shopping" will be listed out.</p>
 <div class="literalblock">
 <div class="content">
 <pre>5 transactions listed!</pre>
@@ -579,10 +612,10 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="sect3">
 <h4 id="deleting-an-income-or-expense-code-delete-code"><a class="link" href="#deleting-an-income-or-expense-code-delete-code">Deleting an income or expense: <code>delete</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to delete a transaction, either an expense on income, the command you would enter is our <code>wallet delete</code> command.<br></p>
+<p>Suppose you want to delete a transaction, either an expense or income, the command you would enter is our <code>wallet delete</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p>Format: <code>wallet delete &lt;index&gt;</code></p>
+<p><strong>Format</strong>: <code>wallet delete &lt;transaction&#8217;s index&gt;</code></p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -595,10 +628,10 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>&lt;index&gt;</code> of the transaction to be deleted must be stated, and it must exist in the list of transactions.</p>
+<p>The <code>&lt;transaction&#8217;s index&gt;</code> must be stated, and it must exist in the list of transactions.</p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>The index must be a positive integer: 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>Only 1 transaction can be deleted each time. Multiple deletions in one command is not allowed.</p>
@@ -607,13 +640,27 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 </div>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;transaction&#8217;s index&gt;</code> above refers to the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a
+specific transaction in the wallet.<br>
+<em>Still confused? Find out more about <a href="#transactionIndexFAQ">what is a transaction&#8217;s index</a>.</em>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p><strong>Example #1</strong>:</p>
+<p><strong>Example</strong>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remove the first transaction, Duck rice, from your wallet.</p>
+<p>Suppose you want to remove the first transaction, "Duck rice", from your wallet.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -628,40 +675,19 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Expected Outcome #1</strong>:</p>
+<p><strong>Expected Outcome</strong>:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transaction you have selected will be removed from the transaction list.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Deleted Transaction: Duck rice Description: Duck rice Amount: $4.00 Date: 2020-03-30 Tag: [Food]</pre>
 </div>
 </div>
-<div class="paragraph">
-<p><strong>Example #2</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you used the command <code>wallet find n/money</code> to filter out all transactions with keyword <code>money</code>, and you want to remove the second transaction you see, <code>Red packet money</code>, from your wallet&#8217;s filtered list of transactions.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>wallet delete 2</code>.</p>
-</li>
-<li>
-<p>This tells <strong>Sharkie</strong> that you want to delete the second transaction shown in the wallet, after being filtered.</p>
 </li>
 </ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome #2</strong>:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Deleted Transaction: Red packet money Description: Red packet money Amount: $300.00 Date: 2020-03-30 Tag: [Income]</pre>
-</div>
 </div>
 </div>
 <div class="sect3">
@@ -670,24 +696,19 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <p>Suppose you want to clear all the data in wallet, the command you would enter is our <code>wallet clear</code> command.<br></p>
 </div>
 <div class="paragraph">
-<p>Format: <code>wallet clear</code></p>
+<p><strong>Format</strong>: <code>wallet clear</code></p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>wallet clear</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Data cleared, which includes the transactions and budget data, cannot be restored after using wallet clear command.</p>
-</li>
-</ul>
-</div>
-</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Data cleared, which includes the transactions and budget data, cannot be restored after using wallet clear command.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><strong>Example</strong>:</p>
@@ -712,10 +733,17 @@ or <code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#8230;&#8203;]</code></
 <div class="paragraph">
 <p><strong>Expected Outcome</strong>:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>All the transactions you have entered into the wallet will be removed.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Wallet has been cleared!</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1377,4 +1405,4 @@ Expected: All transactions and budget data in wallet is deleted.</p>
 <p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:25:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:08:59 UTC</div></div></div></body></html>
