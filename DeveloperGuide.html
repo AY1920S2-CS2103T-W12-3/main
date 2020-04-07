@@ -272,13 +272,13 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/ui/Ui.java"><code>Ui.java</code></a>
-The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code>, <code>WalletTransactionPanel</code>, <code>WalletStatisticsPanel</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>Ui</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/java/seedu/address/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component,</p>
+<p>The <code>Ui</code> component,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -307,18 +307,52 @@ The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>
 <ol class="arabic">
 <li>
 <p><code>Logic</code> uses the <code>SharkieParser</code> class to parse the user command.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SharkieParser</code> will check the command entered against a pattern defined in <code>SharkieParser</code>.</p>
+</li>
+<li>
+<p>It refers to <code>CliPrefix</code> to determine whether the command entered is a <code>people</code> related command, or a <code>wallet</code> related command.</p>
+</li>
+<li>
+<p>If the command entered passes these checks, it then parses the command using the respective <code>XYZCommandParser</code> to retrieve the command to be executed.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>This results in a <code>Command</code> object which is executed by the <code>LogicManager</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Each command has its own <code>XYZCommand</code> that inherits from <code>Command</code>, implementing different actions to be executed.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>The command execution can affect the <code>Model</code> (e.g. adding a person).</p>
+<p>The command execution can affect the <code>Model</code> (e.g. adding a person, adding a transaction, filtering a list of transactions, reminders etc.).</p>
 </li>
 <li>
 <p>The result of the command execution is encapsulated as a <code>CommandResult</code> object which is passed back to the <code>Ui</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>Ui</code> processes the <code>CommandResult</code> and outputs the information to the <code>ResultDisplay</code> class.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>In addition, the <code>CommandResult</code> object can also instruct the <code>Ui</code> to perform certain actions, such as displaying help to the user.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Other <code>Ui</code> components are also updated on the successful obtaining of a <code>CommandResult</code> by <code>Ui</code>.</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
@@ -1085,6 +1119,9 @@ the lifeline reaches the end of diagram.
 <li>
 <p>If a <code>Budget</code> with the same arguments given already exists, it will be overwritten by the one given.</p>
 </li>
+<li>
+<p>A <code>CommandResult</code> is returned at the end of the execution.</p>
+</li>
 </ol>
 </div>
 <div class="paragraph">
@@ -1255,11 +1292,11 @@ the lifeline reaches the end of diagram.
 <div class="paragraph">
 <p>Priorities: High (must have) - <code>* * *</code>, Medium (nice to have) - <code>* *</code>, Low (unlikely to have) - <code>*</code></p>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 59%;">
+<table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 22%;">
-<col style="width: 23%;">
-<col style="width: 25%;">
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 30%;">
 <col style="width: 30%;">
 </colgroup>
 <thead>
@@ -2159,9 +2196,17 @@ until the details keyed in by the user is valid.</p>
 <dd>
 <p>A measure of how strongly-related and focused the responsibilities of a component are</p>
 </dd>
+<dt class="hdlist1"><a id="debt"></a> Debt</dt>
+<dd>
+<p>The amount of money which the user owes a person in the address book.</p>
+</dd>
 <dt class="hdlist1"><a id="extensions"></a> Extensions</dt>
 <dd>
 <p>"Add-on"s to MSS that describe exceptional/alternative flow of events.</p>
+</dd>
+<dt class="hdlist1"><a id="loan"></a> Loan</dt>
+<dd>
+<p>The amount of money which the user lends to a person in the address book.</p>
 </dd>
 <dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
 <dd>
@@ -2182,14 +2227,6 @@ until the details keyed in by the user is valid.</p>
 <dt class="hdlist1"><a id="wallet"></a> Wallet</dt>
 <dd>
 <p>Sharkie&#8217;s wallet, that holds information pertaining to the user&#8217;s expenditure and income</p>
-</dd>
-<dt class="hdlist1"><a id="debt"></a> Debt</dt>
-<dd>
-<p>The amount of money which the user owes a person in the address book.</p>
-</dd>
-<dt class="hdlist1"><a id="loan"></a> Loan</dt>
-<dd>
-<p>The amount of money which the user lends to a person in the address book.</p>
 </dd>
 </dl>
 </div>
@@ -2542,6 +2579,151 @@ Expected: Same as previous.</p>
 </div>
 <div class="sect2">
 <h3 id="manual-testing-on-wallet-tab"><a class="link" href="#manual-testing-on-wallet-tab">G.2. Manual Testing on Wallet Tab</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording an expense</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: None.</p>
+</li>
+<li>
+<p>Test case: <code>wallet expense n/Meal $/3.50</code><br>
+Expected: An expense named <em>Meal</em> with <em>$3.50</em> with default tag <em>Misc</em> recorded under the current date is added to the transaction list. The statistics panel will also update with the expense entered.</p>
+</li>
+<li>
+<p>Test case: <code>wallet expense n/Meal $/3.50 d/02/02/2020</code><br>
+Expected: An expense named <em>Meal</em> with <em>$3.50</em> with default tag <em>Misc</em> recorded under the date <em>02 FEB 2020</em> is added to the transaction list. The statistics panel will not update with this expense.</p>
+</li>
+<li>
+<p>Test case: <code>wallet expense n/Meal $/3.50 t/Food</code><br>
+Expected: An expense named <em>Meal</em> with <em>$3.50</em> with tag <em>Food</em> recorded under the current date is added to the transaction list. The statistic panel will also update with the expense entered, under the custom tag given.</p>
+</li>
+<li>
+<p>Test case: <code>wallet expense n/Meal $/asdf</code>
+Expected: The expense is not recorded. Error details shown in result display.</p>
+</li>
+<li>
+<p>Other incorrect expense commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet expense</code>,</p>
+</li>
+<li>
+<p><code>wallet expense 1</code>,</p>
+</li>
+<li>
+<p><code>wallet expense $/3.50</code>,</p>
+</li>
+<li>
+<p><code>wallet expense n/Meal</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Recording an income</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: None.</p>
+</li>
+<li>
+<p>Test case: <code>wallet income n/Teaching Assistant Job $/100</code><br>
+Expected: An expense named <em>Teaching Assistant Job</em> with <em>$100.00</em> with default tag <em>Misc</em> recorded under the current date is added to the transaction list.</p>
+</li>
+<li>
+<p>Test case: <code>wallet income n/Teaching Assistant Job $/100 d/02/02/2020</code><br>
+Expected: An expense named <em>Teaching Assistant Job</em> with <em>$100.00</em> with default tag <em>Misc</em> recorded under the date <em>02 FEB 2020</em> is added to the transaction list.</p>
+</li>
+<li>
+<p>Test case: <code>wallet income n/Teaching Assistant Job $/100 t/Job</code><br>
+Expected: An expense named <em>Teaching Assistant Job</em> with <em>$100.00</em> with tag <em>Job</em> recorded under the current date is added to the transaction list.</p>
+</li>
+<li>
+<p>Test case: <code>wallet income n/Teaching Assistant Job $/asdf</code>
+Expected: The income is not recorded. Error details shown in result display.</p>
+</li>
+<li>
+<p>Other incorrect expense commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet income</code>,</p>
+</li>
+<li>
+<p><code>wallet income 1</code>,</p>
+</li>
+<li>
+<p><code>wallet income $/100</code>,</p>
+</li>
+<li>
+<p><code>wallet income n/Teaching Assistant Job</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Setting a budget</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: None.</p>
+</li>
+<li>
+<p>Test case: <code>wallet budget $/800</code><br>
+Expected: A budget of <em>$800</em> is set as the default budget for Sharkie. The UI should update to display your total expenditure over the set budget, assuming you have no budget set for the current month.</p>
+</li>
+<li>
+<p>Test case: <code>wallet budget $/800 m/02 y/2020</code><br>
+Expected: A budget of <em>$800</em> is set as the budget for FEB 2020. The UI should update to display the total expenditure over the set budget if the current date is within the month you have selected. It will override the default budget set.</p>
+</li>
+<li>
+<p>Test case: <code>wallet budget $/0</code><br>
+Expected: A budget of <em>$0</em> is set as the default budget. Sharkie will assume that there is no budget set as default, and the UI will reflect this.</p>
+</li>
+<li>
+<p>Test case: <code>wallet budget $/asdf</code><br>
+Expected: The budget will not be set. Error details will show in the result display.</p>
+</li>
+<li>
+<p>Other incorrect budget commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wallet budget</code>,</p>
+</li>
+<li>
+<p><code>wallet budget 1</code>,</p>
+</li>
+<li>
+<p><code>wallet budget $/800 m/02</code>,</p>
+</li>
+<li>
+<p><code>wallet budget $/800 y/2020</code>,</p>
+</li>
+<li>
+<p><code>wallet budget $/800 m/a y/b</code>,</p>
+</li>
+<li>
+<p><code>wallet budget $/-800</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 <div class="sect3">
 <h4 id="listing-all-transactions"><a class="link" href="#listing-all-transactions">G.2.1. Listing all transactions</a></h4>
 <div class="olist arabic">
@@ -3433,4 +3615,4 @@ simply delete <strong>data/addressbook.json</strong>.
 <p><em>{ to be added }</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 04:53:04 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 05:03:32 UTC</div></div></div></body></html>
