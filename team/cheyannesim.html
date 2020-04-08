@@ -757,7 +757,8 @@ specific person in the contact list.<br>
 <div class="title">Figure 1. Architecture Diagram</div>
 </div>
 <div class="paragraph">
-<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of Sharkie. Given below is a quick overview of each component.</p>
+<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of Sharkie. Given below is a quick overview of each component.
+<strong>Sharkie</strong> uses the same architecture design as Address Book 3 (AB3).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -926,7 +927,7 @@ The following class plays an important role at the architecture level:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The lifeline for <code>PeopleOweCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+The lifeline for <code>PeopleOweCommand</code> and <code>PeopleOweCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
 the lifeline reaches the end of diagram.
 </td>
 </tr>
@@ -986,7 +987,7 @@ money.</p>
 <p>Sharkie should work on any <a href="#mainstream-os">mainstream OS</a> as long as it has Java <code>11</code> or above installed.</p>
 </li>
 <li>
-<p>Sharkie should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.</p>
+<p>Sharkie should be able to hold up to 100 persons and 100 transactions without a noticeable sluggishness in performance for typical usage.</p>
 </li>
 <li>
 <p>University students with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
@@ -1002,9 +1003,6 @@ money.</p>
 </li>
 <li>
 <p>The Sharkie JAR file size should be less than 100Mb.</p>
-</li>
-<li>
-<p>Users should be able to choose to encrypt their data for confidentiality.</p>
 </li>
 </ol>
 </div>
@@ -1413,4 +1411,4 @@ simply delete <strong>data/addressbook.json</strong>.
 </table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 04:21:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 10:02:05 UTC</div></div></div></body></html>

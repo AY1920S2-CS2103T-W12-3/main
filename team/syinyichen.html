@@ -1349,7 +1349,7 @@ in the <code>Model</code> is updated.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The lifeline for <code>PeopleReceivedCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+The lifeline for <code>PeopleReceivedCommand</code> and <code>PeopleReceivedCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
 the lifeline reaches the end of diagram.
 </td>
 </tr>
@@ -2168,7 +2168,7 @@ Expected: Similar to previous</p>
 <li>
 <p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
 The person who you want to remind exists in the person list. The person has at least one loan in the loan list.
-The email of the person to be reminded is a valid email.</p>
+The email of the person to be reminded is a valid email (You can generate an email from <a href="https://temp-mail.org/en/">temp-mail.org</a>).</p>
 </li>
 <li>
 <p>Test case: <code>people remind 1</code><br>
@@ -2207,7 +2207,7 @@ Expected: Similar to previous</p>
 <ol class="loweralpha" type="a">
 <li>
 <p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
-At least one person in the list has at least one loan. The email(s) of the people to be reminded are valid email(s).</p>
+At least one person in the list has at least one loan. The email(s) of the people to be reminded are valid email(s) (You can generate an email from <a href="https://temp-mail.org/en/">temp-mail.org</a>).</p>
 </li>
 <li>
 <p>Test case: <code>people remindall</code><br>
@@ -2220,4 +2220,4 @@ Expected: A reminder is sent everyone, who has unsettled loan. A carbon copy (CC
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 04:21:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 10:02:05 UTC</div></div></div></body></html>

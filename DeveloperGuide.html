@@ -168,7 +168,8 @@ This symbol indicates tips.
 <div class="title">Figure 1. Architecture Diagram</div>
 </div>
 <div class="paragraph">
-<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of Sharkie. Given below is a quick overview of each component.</p>
+<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of Sharkie. Given below is a quick overview of each component.
+<strong>Sharkie</strong> uses the same architecture design as Address Book 3 (AB3).</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -698,7 +699,7 @@ a <code>Description</code>, an <code>Amount</code>, a <code>Date</code> and a <c
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The lifeline for <code>PeopleOweCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+The lifeline for <code>PeopleOweCommand</code> and <code>PeopleOweCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
 the lifeline reaches the end of diagram.
 </td>
 </tr>
@@ -806,7 +807,7 @@ in the <code>Model</code> is updated.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The lifeline for <code>PeopleReceivedCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+The lifeline for <code>PeopleReceivedCommand</code> and <code>PeopleReceivedCommandParser</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
 the lifeline reaches the end of diagram.
 </td>
 </tr>
@@ -1034,7 +1035,7 @@ the <code>filteredTransactions</code> in the <code>Model</code> is updated.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The lifeline for <code>WalletEditCommand</code>, <code>WalletEditCommandParser</code> and <code>EditTransactorDescriptor</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+The lifeline for <code>WalletEditCommand</code>, <code>WalletEditCommandParser</code> and <code>EditTransactionDescriptor</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
 the lifeline reaches the end of diagram.
 </td>
 </tr>
@@ -1132,6 +1133,19 @@ the lifeline reaches the end of diagram.
 <img src="images/WalletBudgetSequenceDiagram.png" alt="WalletBudgetSequenceDiagram">
 </div>
 <div class="title">Figure 24. Sequence diagram of the <code>wallet budget</code> command</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The lifeline for <code>WalletBudgetCommandParser</code> and <code>WalletBudgetCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML,
+the lifeline reaches the end of diagram.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -1508,9 +1522,6 @@ the lifeline reaches the end of diagram.
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -2155,7 +2166,7 @@ until the details keyed in by the user is valid.</p>
 <p>Sharkie should work on any <a href="#mainstream-os">mainstream OS</a> as long as it has Java <code>11</code> or above installed.</p>
 </li>
 <li>
-<p>Sharkie should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.</p>
+<p>Sharkie should be able to hold up to 100 persons and 100 transactions without a noticeable sluggishness in performance for typical usage.</p>
 </li>
 <li>
 <p>University students with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
@@ -2171,9 +2182,6 @@ until the details keyed in by the user is valid.</p>
 </li>
 <li>
 <p>The Sharkie JAR file size should be less than 100Mb.</p>
-</li>
-<li>
-<p>Users should be able to choose to encrypt their data for confidentiality.</p>
 </li>
 </ol>
 </div>
@@ -2203,6 +2211,10 @@ until the details keyed in by the user is valid.</p>
 <dt class="hdlist1"><a id="extensions"></a> Extensions</dt>
 <dd>
 <p>"Add-on"s to MSS that describe exceptional/alternative flow of events.</p>
+</dd>
+<dt class="hdlist1"><a id="GUI"></a> GUI</dt>
+<dd>
+<p>Graphical User Interface</p>
 </dd>
 <dt class="hdlist1"><a id="loan"></a> Loan</dt>
 <dd>
@@ -2354,7 +2366,7 @@ until the details keyed in by the user is valid.</p>
 <p>Requires network</p>
 </li>
 <li>
-<p>GUI-reliant (slow input)</p>
+<p><a href="#GUI">GUI</a>-reliant (slow input)</p>
 </li>
 <li>
 <p>Certain features locked behind paywall, advertisements</p>
@@ -2365,8 +2377,7 @@ until the details keyed in by the user is valid.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Author: Joel<br>
-Link to Product: <a href="https://web.moneylover.me" class="bare">https://web.moneylover.me</a></p>
+<p>Link to Product: <a href="https://web.moneylover.me" class="bare">https://web.moneylover.me</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -2473,8 +2484,7 @@ Link to Product: <a href="https://web.moneylover.me" class="bare">https://web.mo
 </ul>
 </div>
 <div class="paragraph">
-<p>Author: Joel<br>
-Link to Product: <a href="https://app.spendee.com" class="bare">https://app.spendee.com</a></p>
+<p>Link to Product: <a href="https://app.spendee.com" class="bare">https://app.spendee.com</a></p>
 </div>
 </div>
 </div>
@@ -2518,8 +2528,22 @@ returned even though both errors pertains to the wrong index provided.
 </li>
 <li>
 <p>Double-click the jar file<br>
-   Expected: Shows the GUI with a set of sample transactions (in the Wallet tab) and sample contacts (in the People tab).
-The window size may not be optimum.</p>
+Expected: Shows an "Enter User Data" window. The window size may not be optimum.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Entering user data</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Enter a dummy name, phone and a <strong>valid</strong> email. If you do not wish to use
+your own email, you can get a temporary email from <a href="https://temp-mail.org/en/">temp-mail.org</a>.</p>
+</li>
+<li>
+<p>Retrieve and enter the PIN number sent to the email. If it is not in the inbox, please check the junk mail.<br>
+Expected: Your user data is saved.</p>
 </li>
 </ol>
 </div>
@@ -2554,26 +2578,6 @@ Expected: Same as previous.</p>
 </div>
 </li>
 </ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="saving-data"><a class="link" href="#saving-data">G.1.2. Saving data</a></h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Dealing with missing/corrupted data files</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
 </div>
@@ -2615,7 +2619,7 @@ Expected: The expense is not recorded. Error details shown in result display.</p
 <p><code>wallet expense 1</code>,</p>
 </li>
 <li>
-<p><code>wallet expense $/3.50</code>,</p>
+<p><code>wallet expense $/x</code>,</p>
 </li>
 <li>
 <p><code>wallet expense n/Meal</code></p>
@@ -2660,10 +2664,11 @@ Expected: The income is not recorded. Error details shown in result display.</p>
 <p><code>wallet income 1</code>,</p>
 </li>
 <li>
-<p><code>wallet income $/100</code>,</p>
+<p><code>wallet income $/x</code>,</p>
 </li>
 <li>
-<p><code>wallet income n/Teaching Assistant Job</code></p>
+<p><code>wallet income n/Teaching Assistant Job</code><br>
+Expected: Similar to previous.</p>
 </li>
 </ul>
 </div>
@@ -2714,7 +2719,8 @@ Expected: The budget will not be set. Error details will show in the result disp
 <p><code>wallet budget $/800 m/a y/b</code>,</p>
 </li>
 <li>
-<p><code>wallet budget $/-800</code></p>
+<p><code>wallet budget $/-800</code><br>
+Expected: Similar to previous.</p>
 </li>
 </ul>
 </div>
@@ -2982,330 +2988,7 @@ Expected: All transactions and budget data in wallet is deleted.</p>
 <div class="sect2">
 <h3 id="manual-testing-on-people-tab"><a class="link" href="#manual-testing-on-people-tab">G.3. Manual Testing on People Tab</a></h3>
 <div class="sect3">
-<h4 id="recording-the-flow-of-money"><a class="link" href="#recording-the-flow-of-money">G.3.1. Recording the flow of money</a></h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Recording the money you owe a person</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: The person whom you owe exists in the person list.</p>
-</li>
-<li>
-<p>Test case: <code>people owe 1 n/Breakfast $/5.00</code><br>
-Expected: A debt named <em>Breakfast</em> with <em>$5.00</em> is added into the debt list of the first person.</p>
-</li>
-<li>
-<p>Test case: <code>people owe 1 n/Breakfast $/5.00 d/02/02/2020</code><br>
-Expected: A loan named <em>Breakfast</em> with <em>$5.00</em>, recorded under the date <em>02/02/2020</em> is added into the debt
-list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people owe 0 n/Breakfast $/5.00</code><br>
-Expected: The loan is not recorded. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people owe</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people owe</code>,</p>
-</li>
-<li>
-<p><code>people owe 1</code>,</p>
-</li>
-<li>
-<p><code>people owe 1 n/Laksa</code>,</p>
-</li>
-<li>
-<p><code>people owe 1 $/5.00</code>,</p>
-</li>
-<li>
-<p><code>people owe n/Laksa $/5.00</code>,</p>
-</li>
-<li>
-<p><code>people owe x n/Breakfast $/12.00</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people owe x n/Breakfast $/12.00</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people owe x n/Breakfast $/12.00</code> (where x is a non-integer),</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x is greater 92233720368547758.07),</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x has more than 2 decimal places) or</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x is not a number).<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Recording the money you returned to a person</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: The person whom you returned to exists in the person list.</p>
-</li>
-<li>
-<p>Test case: <code>people returned 1 i/1</code><br>
-Expected: The first debt of the first person is deleted from the debt list.
-Remaining amount of debt, which have yet settled by the first person is shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people returned 0 i/1</code><br>
-Expected: No debt is deleted. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people returned</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people returned</code>,</p>
-</li>
-<li>
-<p><code>people returned 1</code>,</p>
-</li>
-<li>
-<p><code>people returned i/1</code>,</p>
-</li>
-<li>
-<p><code>people returned x i/1</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people returned x i/1</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people returned x i/1</code> (where x is a non-integer value),</p>
-</li>
-<li>
-<p><code>people returned 1 i/x</code> (where x is larger than the debt list size),</p>
-</li>
-<li>
-<p><code>people returned 1 i/x</code> (where x is a negative number or zero) or</p>
-</li>
-<li>
-<p><code>people returned 1 i/x</code> (where x is a non-integer value)<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Recording the money you lend to a person</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: The person whom you lend to exists in the person list.</p>
-</li>
-<li>
-<p>Test case: <code>people lend 1 n/Dinner $/12.00</code><br>
-Expected: A loan named <em>Dinner</em> with <em>$12.00</em> is added into the loan list of the first person.</p>
-</li>
-<li>
-<p>Test case: <code>people lend 1 n/Dinner $/12.00 d/02/02/2020</code><br>
-   Expected: A loan named <em>Dinner</em> with <em>$12.00</em>, recorded under the date <em>02/02/2020</em> is added into the loan
-list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people lend 0 n/Dinner $/12.00</code><br>
-Expected: The loan is not recorded. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people lend</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people lend</code>,</p>
-</li>
-<li>
-<p><code>people lend 1</code>,</p>
-</li>
-<li>
-<p><code>people lend 1 n/Chicken Rice</code>,</p>
-</li>
-<li>
-<p><code>people lend 1 $/12.00</code>,</p>
-</li>
-<li>
-<p><code>people lend n/Chicken Rice $/12.00</code>,</p>
-</li>
-<li>
-<p><code>people lend x n/Dinner $/12.00</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people lend x n/Dinner $/12.00</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people lend x n/Dinner $/12.00</code> (where x is a non-integer),</p>
-</li>
-<li>
-<p><code>people lend 1 n/Dinner $/x</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people lend 1 n/Dinner $/x</code> (where x is greater 92233720368547758.07),</p>
-</li>
-<li>
-<p><code>people lend 1 n/Dinner $/x</code> (where x has more than 2 decimal places) or</p>
-</li>
-<li>
-<p><code>people lend 1 n/Dinner $/x</code> (where x is not a number).<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Recording the money you received from a person</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: The person whom you received from exists in the person list.</p>
-</li>
-<li>
-<p>Test case: <code>people received 1 i/1</code><br>
-   Expected: The first loan of the first person is deleted from the loan list.
-Remaining amount of loan, which have yet settled by the first person is shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people received 0 i/1</code><br>
-Expected: No loan is deleted. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people received</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people received</code>,</p>
-</li>
-<li>
-<p><code>people received 1</code>,</p>
-</li>
-<li>
-<p><code>people received i/1</code>,</p>
-</li>
-<li>
-<p><code>people received x i/1</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people received x i/1</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people received x i/1</code> (where x is a non-integer value),</p>
-</li>
-<li>
-<p><code>people received 1 i/x</code> (where x is larger than the loan list size),</p>
-</li>
-<li>
-<p><code>people received 1 i/x</code> (where x is a negative number or zero) or</p>
-</li>
-<li>
-<p><code>people received 1 i/x</code> (where x is a non-integer value)<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sending-reminders"><a class="link" href="#sending-reminders">G.3.2. Sending reminders</a></h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Reminding a specific person about the unsettled loan(s).</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
-The person who you want to remind exists in the person list. The person has at least one loan in the loan list.
-The email of the person to be reminded is a valid email.</p>
-</li>
-<li>
-<p>Test case: <code>people remind 1</code><br>
-Expected: A reminder is sent to the first person&#8217;s email. A carbon copy (CC) of the reminder is sent to you. A success message shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people remind 0</code><br>
-Expected: No reminder is sent. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people remind</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people remind</code>,</p>
-</li>
-<li>
-<p><code>people remind x</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people remind x</code> (where x is a negative number) or</p>
-</li>
-<li>
-<p><code>people remind x</code> (where x is a non-integer value)<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Reminding all people about the unsettled loan(s).</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
-At least one person in the list has at least one loan. The email(s) of the people to be reminded are valid email(s).</p>
-</li>
-<li>
-<p>Test case: <code>people remindall</code><br>
-Expected: A reminder is sent everyone, who has unsettled loan. A carbon copy (CC) of each of the reminder is sent to you. A list of people reminded is shown in the result display, along with the success message.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="managing-contacts"><a class="link" href="#managing-contacts">G.3.3. Managing contacts</a></h4>
+<h4 id="managing-contacts"><a class="link" href="#managing-contacts">G.3.1. Managing contacts</a></h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -3605,6 +3288,329 @@ simply delete <strong>data/addressbook.json</strong>.
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="recording-the-flow-of-money"><a class="link" href="#recording-the-flow-of-money">G.3.2. Recording the flow of money</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording the money you owe a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you owe exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 1 n/Breakfast $/5.00</code><br>
+Expected: A debt named <em>Breakfast</em> with <em>$5.00</em> is added into the debt list of the first person.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 1 n/Breakfast $/5.00 d/02/02/2020</code><br>
+Expected: A loan named <em>Breakfast</em> with <em>$5.00</em>, recorded under the date <em>02/02/2020</em> is added into the debt
+list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 0 n/Breakfast $/5.00</code><br>
+Expected: The loan is not recorded. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people owe</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people owe</code>,</p>
+</li>
+<li>
+<p><code>people owe 1</code>,</p>
+</li>
+<li>
+<p><code>people owe 1 n/Laksa</code>,</p>
+</li>
+<li>
+<p><code>people owe 1 $/5.00</code>,</p>
+</li>
+<li>
+<p><code>people owe n/Laksa $/5.00</code>,</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is a non-integer),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is greater 92233720368547758.07),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x has more than 2 decimal places) or</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is not a number).<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording the money you returned to a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you returned to exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people returned 1 i/1</code><br>
+Expected: The first debt of the first person is deleted from the debt list.
+Remaining amount of debt, which have yet settled by the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people returned 0 i/1</code><br>
+Expected: No debt is deleted. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people returned</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people returned</code>,</p>
+</li>
+<li>
+<p><code>people returned 1</code>,</p>
+</li>
+<li>
+<p><code>people returned i/1</code>,</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is a non-integer value),</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is larger than the debt list size),</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is a negative number or zero) or</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is a non-integer value)<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording the money you lend to a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you lend to exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people lend 1 n/Dinner $/12.00</code><br>
+Expected: A loan named <em>Dinner</em> with <em>$12.00</em> is added into the loan list of the first person.</p>
+</li>
+<li>
+<p>Test case: <code>people lend 1 n/Dinner $/12.00 d/02/02/2020</code><br>
+   Expected: A loan named <em>Dinner</em> with <em>$12.00</em>, recorded under the date <em>02/02/2020</em> is added into the loan
+list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people lend 0 n/Dinner $/12.00</code><br>
+Expected: The loan is not recorded. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people lend</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people lend</code>,</p>
+</li>
+<li>
+<p><code>people lend 1</code>,</p>
+</li>
+<li>
+<p><code>people lend 1 n/Chicken Rice</code>,</p>
+</li>
+<li>
+<p><code>people lend 1 $/12.00</code>,</p>
+</li>
+<li>
+<p><code>people lend n/Chicken Rice $/12.00</code>,</p>
+</li>
+<li>
+<p><code>people lend x n/Dinner $/12.00</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people lend x n/Dinner $/12.00</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people lend x n/Dinner $/12.00</code> (where x is a non-integer),</p>
+</li>
+<li>
+<p><code>people lend 1 n/Dinner $/x</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people lend 1 n/Dinner $/x</code> (where x is greater 92233720368547758.07),</p>
+</li>
+<li>
+<p><code>people lend 1 n/Dinner $/x</code> (where x has more than 2 decimal places) or</p>
+</li>
+<li>
+<p><code>people lend 1 n/Dinner $/x</code> (where x is not a number).<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording the money you received from a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you received from exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people received 1 i/1</code><br>
+   Expected: The first loan of the first person is deleted from the loan list.
+Remaining amount of loan, which have yet settled by the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people received 0 i/1</code><br>
+Expected: No loan is deleted. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people received</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people received</code>,</p>
+</li>
+<li>
+<p><code>people received 1</code>,</p>
+</li>
+<li>
+<p><code>people received i/1</code>,</p>
+</li>
+<li>
+<p><code>people received x i/1</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people received x i/1</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people received x i/1</code> (where x is a non-integer value),</p>
+</li>
+<li>
+<p><code>people received 1 i/x</code> (where x is larger than the loan list size),</p>
+</li>
+<li>
+<p><code>people received 1 i/x</code> (where x is a negative number or zero) or</p>
+</li>
+<li>
+<p><code>people received 1 i/x</code> (where x is a non-integer value)<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="sending-reminders"><a class="link" href="#sending-reminders">G.3.3. Sending reminders</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Reminding a specific person about the unsettled loan(s).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
+The person who you want to remind exists in the person list. The person has at least one loan in the loan list.
+The email of the person to be reminded is a valid email (You can generate an email from <a href="https://temp-mail.org/en/">temp-mail.org</a>).</p>
+</li>
+<li>
+<p>Test case: <code>people remind 1</code><br>
+Expected: A reminder is sent to the first person&#8217;s email. A carbon copy (CC) of the reminder is sent to you. A success message shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people remind 0</code><br>
+Expected: No reminder is sent. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people remind</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people remind</code>,</p>
+</li>
+<li>
+<p><code>people remind x</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people remind x</code> (where x is a negative number) or</p>
+</li>
+<li>
+<p><code>people remind x</code> (where x is a non-integer value)<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Reminding all people about the unsettled loan(s).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: Connected to the Internet. Your firewall or antivirus programme (if any) allows the connection to STMP port 587.
+At least one person in the list has at least one loan. The email(s) of the people to be reminded are valid email(s) (You can generate an email from <a href="https://temp-mail.org/en/">temp-mail.org</a>).</p>
+</li>
+<li>
+<p>Test case: <code>people remindall</code><br>
+Expected: A reminder is sent everyone, who has unsettled loan. A carbon copy (CC) of each of the reminder is sent to you. A list of people reminded is shown in the result display, along with the success message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -3615,4 +3621,4 @@ simply delete <strong>data/addressbook.json</strong>.
 <p><em>{ to be added }</em></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 04:21:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 10:02:04 UTC</div></div></div></body></html>
