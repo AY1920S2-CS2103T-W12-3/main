@@ -288,7 +288,7 @@ For a more succinct summary of the commands you can use in <strong>Sharkie</stro
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>people add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com</code> : Adds a contact named <code>John Doe</code> to the address book.</p>
+<p><strong><code>people add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com</code> : Adds a contact named <code>John Doe</code> to the contact list.</p>
 </li>
 <li>
 <p><strong><code>people delete</code></strong><code>3</code> : Deletes the 3rd contact shown in the current list.</p>
@@ -344,7 +344,7 @@ to find out more on how to record expenses or incomes in <strong>Sharkie</strong
 <strong>Sharkie</strong> can help you do so!</p>
 </div>
 <div class="paragraph">
-<p><strong>Sharkie</strong> notes down and remembers contacts that you have entered in an address book, for easy reference later on!
+<p><strong>Sharkie</strong> notes down and remembers contacts that you have entered in a contact list, for easy reference later on!
 Should their contact details change, you can also edit them or delete them. If you need to find a particular person&#8217;s contact details,
 <strong>Sharkie</strong> will look through all your contacts and quickly help you find the contact that you are looking for!</p>
 </div>
@@ -1290,7 +1290,7 @@ Data cleared, which includes the transactions and budget data, cannot be restore
 <div class="sect3">
 <h4 id="add-person"><a class="link" href="#add-person">5.3.1. Adding a person: <code>add</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to add a new person to the address book, the command you would enter is our <code>people add</code> command.<br></p>
+<p>Suppose you want to add a new person to the contact list, the command you would enter is our <code>people add</code> command.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
@@ -1336,7 +1336,7 @@ Data cleared, which includes the transactions and budget data, cannot be restore
 <ul>
 <li>
 <p>Suppose you want to add your new friend, "Joel", along with his phone number "91234567" and email "joel@example.com"
-into the address book.</p>
+into the contact list.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1356,7 +1356,7 @@ into the address book.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Your new friend, "Joel" will be added into your address book:</p>
+<p>Your new friend, "Joel" will be added into your contact list:</p>
 <div class="literalblock">
 <div class="content">
 <pre>New person added: Joel Phone: 91234567 Email: joel@example.com You owe: $0.00 You lent: $0.00</pre>
@@ -1415,7 +1415,7 @@ Existing values will be updated to the new values that you have inputted.
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book.<br>
+specific person in the contact list.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 </td>
 </tr>
@@ -1427,7 +1427,7 @@ specific person in the address book.<br>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to update John&#8217;s email, and John is the first person in your address book.</p>
+<p>Suppose you want to update John&#8217;s email, and John is the first person in your contact list.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1503,7 +1503,7 @@ Remember to check and ensure that the <code>&lt;person&#8217;s index&gt;</code> 
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book.<br>
+specific person in the contact list.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 </td>
 </tr>
@@ -1515,14 +1515,14 @@ specific person in the address book.<br>
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to delete "Betsy" from your address book, and "Betsy" is the first person in the list.</p>
+<p>Suppose you want to delete "Betsy" from your contact list, and "Betsy" is the first person in the list.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command that you would enter is <code>people delete 1</code>.</p>
 </li>
 <li>
-<p><strong>Sharkie</strong> will delete "Betsy" from the address book.</p>
+<p><strong>Sharkie</strong> will delete "Betsy" from the contact list.</p>
 </li>
 </ul>
 </div>
@@ -1581,7 +1581,7 @@ specific person in the address book.<br>
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book whom you owe money to.<br>
+specific person in the contact list whom you owe money to.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The amount of money recorded will be added under your friend&#8217;s "debts" section. Debts represent the amount of money you owe your friends.<br>
@@ -1608,14 +1608,14 @@ The <code>&lt;date: dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date: dd/mm/
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you owe "Grace", who is the fourth person in the address book, "$5" for "food" on "10 October 2020".</p>
+<p>Suppose you owe "Grace", who is the fourth person in the contact list, "$5" for "food" on "10 October 2020".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people owe 4 n/food $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p>This records that you owe "Grace", the fourth person in the address book, "$5.00" for "food" on "10/10/2020".<br></p>
+<p>This records that you owe "Grace", the fourth person in the contact list, "$5.00" for "food" on "10/10/2020".<br></p>
 </li>
 </ul>
 </div>
@@ -1672,7 +1672,7 @@ the <code>people returned</code> command.<br></p>
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates
-a specific person in the address book whom you returned the money to.<br>
+a specific person in the contact list whom you returned the money to.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The <code>&lt;debt&#8217;s index&gt;</code> above refers to the index number shown in the displayed debt list in <strong>Sharkie</strong>. It indicates a specific
@@ -1704,14 +1704,14 @@ Sharkie will remove all debts for the person if the <code>&lt;debt&#8217;s index
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose that you have just returned "Grace", the fourth person in the address book, the first debt in her debt list.</p>
+<p>Suppose that you have just returned "Grace", the fourth person in the contact list, the first debt in her debt list.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command that you would enter is <code>people returned 4 i/1</code>.</p>
 </li>
 <li>
-<p>This records that you have returned the money for the first debt of "Grace", the fourth person in the address book.<br></p>
+<p>This records that you have returned the money for the first debt of "Grace", the fourth person in the contact list.<br></p>
 </li>
 </ul>
 </div>
@@ -1770,7 +1770,7 @@ Sharkie will remove all debts for the person if the <code>&lt;debt&#8217;s index
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book whom you lend money to.<br>
+specific person in the contact list whom you lend money to.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The amount of money recorded will be added under your friend&#8217;s "loans" section. Loans represent the amount of money you lend your friends.<br>
@@ -1797,14 +1797,14 @@ The <code>&lt;date: dd/mm/yyyy&gt;</code> is optional. If <code>&lt;date: dd/mm/
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you lend "Syin Yi", who is the fifth person in the address book, "$5" for "dinner" on "10 October 2020".</p>
+<p>Suppose you lend "Syin Yi", who is the fifth person in the contact list, "$5" for "dinner" on "10 October 2020".</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people lend 5 n/dinner $/5.00 d/10/10/2020</code></p>
 </li>
 <li>
-<p>This records that you owe "Syin Yi", the fifth person in the address book, "$5.00" for "dinner" on "10/10/2020".<br></p>
+<p>This records that you owe "Syin Yi", the fifth person in the contact list, "$5.00" for "dinner" on "10/10/2020".<br></p>
 </li>
 </ul>
 </div>
@@ -1861,7 +1861,7 @@ the command you would enter is our <code>people received</code> command.</p>
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book, who you received from.<br>
+specific person in the contact list, who you received from.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The <code>&lt;loan&#8217;s index&gt;</code> above refers to the index number shown in the displayed loans list in <strong>Sharkie</strong>. It indicates a
@@ -1893,7 +1893,7 @@ All loans will be removed for the indicated person if the <code>&lt;loan&#8217;s
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to record that you have received the money from "Joel", who is the second person in the address book,
+<p>Suppose you want to record that you have received the money from "Joel", who is the second person in the contact list,
 for the first loan in his loans list.</p>
 <div class="ulist">
 <ul>
@@ -1901,7 +1901,7 @@ for the first loan in his loans list.</p>
 <p>The command you would enter is <code>people received 2 i/1</code>.</p>
 </li>
 <li>
-<p>This records that you have received the money for the first loan of "Joel", the second person in the address book.</p>
+<p>This records that you have received the money for the first loan of "Joel", the second person in the contact list.</p>
 </li>
 </ul>
 </div>
@@ -1973,7 +1973,7 @@ Before you enter the <code>people remind</code> command, please make sure that y
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book, who you want to remind.<br>
+specific person in the contact list, who you want to remind.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 Loans represent the amount of money you lend your friends.<br>
@@ -2001,14 +2001,14 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remind "Daniel", who is the first person in your address book to return you your money.</p>
+<p>Suppose you want to remind "Daniel", who is the first person in your contact list to return you your money.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people remind 1</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to send an email to "Daniel", the first person in your address book.</p>
+<p>This requests <strong>Sharkie</strong> to send an email to "Daniel", the first person in your contact list.</p>
 </li>
 </ul>
 </div>
@@ -2035,7 +2035,7 @@ Sharkie has sent a carbon copy (CC) of the reminder to your email!</pre>
 <div class="sect3">
 <h4 id="sending-reminder-to-all-friends-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friends-code-remindall-code">5.3.9. Sending reminder to all friends: <code>remindall</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to remind all your friends in your address book to return you your money,
+<p>Suppose you want to remind all your friends in your contact list to return you your money,
 the command you would enter is our <code>people remindall</code> command.</p>
 </div>
 <div class="paragraph">
@@ -2091,14 +2091,14 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remind all your friends in your address book who have yet to repay you.</p>
+<p>Suppose you want to remind all your friends in your contact list who have yet to repay you.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people remindall</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to send an email to everyone in your address book who have yet to repay you.</p>
+<p>This requests <strong>Sharkie</strong> to send an email to everyone in your contact list who have yet to repay you.</p>
 </li>
 </ul>
 </div>
@@ -2159,7 +2159,7 @@ persons whose name contains the keyword "jo", such as "Joel".</p>
 <div class="ulist">
 <ul>
 <li>
-<p>You may use the tag prefix <code>t/</code> to find people with debts or loans in your address book.
+<p>You may use the tag prefix <code>t/</code> to find people with debts or loans in your contact list.
 Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only tags, which you are allowed to use in <code>people find</code> command.</p>
 </li>
 </ul>
@@ -2258,7 +2258,7 @@ loans represent the amount of money you lend your friends. <br>
 <h4 id="list-people"><a class="link" href="#list-people">5.3.11. Listing all contacts: <code>list</code></a></h4>
 <div class="paragraph">
 <p>Suppose that you have just executed the <a href="#find-person"><code class="blue">people find</code></a> command. And now, you would like to see the
-entire list of people in your address book. The command you would enter is our <code>people list</code> command.<br></p>
+entire list of people in your contact list. The command you would enter is our <code>people list</code> command.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>people list</code></p>
@@ -2269,14 +2269,14 @@ entire list of people in your address book. The command you would enter is our <
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to view the entire list of people in your address book.</p>
+<p>Suppose you want to view the entire list of people in your contact list.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command that you would enter is <code>people list</code>.</p>
 </li>
 <li>
-<p>This will list out your entire address book.</p>
+<p>This will list out your entire contact list.</p>
 </li>
 </ul>
 </div>
@@ -2289,7 +2289,7 @@ entire list of people in your address book. The command you would enter is our <
 <div class="ulist">
 <ul>
 <li>
-<p>The details of everyone in the address book, including their name, phone, email address, debts and loans, will be listed.</p>
+<p>The details of everyone in the contact list, including their name, phone, email address, debts and loans, will be listed.</p>
 <div class="literalblock">
 <div class="content">
 <pre>Listed all persons.</pre>
@@ -2302,7 +2302,7 @@ entire list of people in your address book. The command you would enter is our <
 <div class="sect3">
 <h4 id="peopleclear"><a class="link" href="#peopleclear">5.3.12. Clearing all contacts : <code>clear</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to clear all the contacts in your address book,
+<p>Suppose you want to clear all the contacts in your contact list,
 the command you would enter is our <code>people clear</code> command.</p>
 </div>
 <div class="paragraph">
@@ -2321,7 +2321,7 @@ the command you would enter is our <code>people clear</code> command.</p>
 <p>The command you would enter is <code>people clear</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to deletes all the contacts in your address book.</p>
+<p>This requests <strong>Sharkie</strong> to deletes all the contacts in your contact list.</p>
 </li>
 </ul>
 </div>
@@ -2334,10 +2334,10 @@ the command you would enter is our <code>people clear</code> command.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Sharkie</strong> will delete all the contacts and return an empty address book.</p>
+<p><strong>Sharkie</strong> will delete all the contacts and return an empty contact list.</p>
 <div class="literalblock">
 <div class="content">
-<pre>Address book has been cleared!</pre>
+<pre>Contact list has been cleared!</pre>
 </div>
 </div>
 </li>
@@ -2365,7 +2365,7 @@ the command you would enter is our <code>people clear</code> command.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous address book folder.</p>
+<p>Install the app in the other computer and overwrite the empty data file <strong>Sharkie</strong> creates with the file that contains the data of your previous contact list folder.</p>
 </div>
 </div>
 </div>
@@ -2424,7 +2424,7 @@ Due to program limitations, Sharkie can only safely handle amounts of up to $922
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>A <code>transaction&#8217;s index</code> is the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a specific transaction in the address book.</p>
+<p>A <code>transaction&#8217;s index</code> is the index number shown in the displayed transaction list in <strong>Sharkie</strong>. It indicates a specific transaction in the contact list.</p>
 </div>
 <div class="paragraph">
 <p>For example,</p>
@@ -2453,7 +2453,7 @@ Due to program limitations, Sharkie can only safely handle amounts of up to $922
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
+<p>A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the contact list.</p>
 </div>
 <div class="paragraph">
 <p>For example,</p>
@@ -2721,12 +2721,12 @@ or <span class="gray"><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#823
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>add</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Helps you add a contact to your address book, with the particulars that you have entered.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Helps you add a contact to your contact list, with the particulars that you have entered.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>clear</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people clear</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all your contacts in your address book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clears all your contacts in your contact list.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
@@ -2736,7 +2736,7 @@ or <span class="gray"><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#823
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people edit &lt;index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email address&gt;]</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Edits your contact in the address book at the index selected with the given arguments.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits your contact in the contact list at the index selected with the given arguments.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>find</code></p></td>
@@ -2744,22 +2744,22 @@ or <span class="gray"><code>wallet find t/&lt;keyword&gt; [&lt;keyword&gt; &#823
 or <span class="gray"><code>people find p/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span><br>
 or <span class="gray"><code>people find e/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span><br>
 or <span class="gray"><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230;&#8203;]</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finds your contact(s) within your address book using the arguments you have provided.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds your contact(s) within your contact list using the arguments you have provided.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>lend</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people lend &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Records a loan to your contact at the index selected in your address book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Records a loan to your contact at the index selected in your contact list.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people list</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all your contacts that have been recorded by <strong>Sharkie</strong> in the address book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all your contacts that have been recorded by <strong>Sharkie</strong> in the contact list.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>owe</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="gray"><code>people owe &lt;index&gt; n/&lt;description&gt; $/&lt;amount&gt; [d/&lt;date:dd/mm/yyyy&gt;]</code></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Records a debt to your contact at the index selected in your address book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Records a debt to your contact at the index selected in your contact list.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>received</code></p></td>
@@ -2785,4 +2785,4 @@ or <span class="gray"><code>people find t/&lt;keyword&gt; [&lt;keyword&gt;&#8230
 </table>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 03:00:15 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 03:45:31 UTC</div></div></div></body></html>

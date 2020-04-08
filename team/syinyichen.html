@@ -345,7 +345,7 @@ to find out more on how to record expenses or incomes in <strong>Sharkie</strong
 <div class="sect3">
 <h4 id="add-person"><a class="link" href="#add-person">Adding a person: <code>add</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to add a new person to the address book, the command you would enter is our <code>people add</code> command.<br></p>
+<p>Suppose you want to add a new person to the contact list, the command you would enter is our <code>people add</code> command.<br></p>
 </div>
 <div class="paragraph">
 <p><strong>Format</strong>: <code>people add n/&lt;name&gt; p/&lt;phone number&gt; e/&lt;email address&gt;</code></p>
@@ -391,7 +391,7 @@ to find out more on how to record expenses or incomes in <strong>Sharkie</strong
 <ul>
 <li>
 <p>Suppose you want to add your new friend, "Joel", along with his phone number "91234567" and email "joel@example.com"
-into the address book.</p>
+into the contact list.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -411,7 +411,7 @@ into the address book.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Your new friend, "Joel" will be added into your address book:</p>
+<p>Your new friend, "Joel" will be added into your contact list:</p>
 <div class="literalblock">
 <div class="content">
 <pre>New person added: Joel Phone: 91234567 Email: joel@example.com You owe: $0.00 You lent: $0.00</pre>
@@ -455,7 +455,7 @@ the command you would enter is our <code>people received</code> command.</p>
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book, who you received from.<br>
+specific person in the contact list, who you received from.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 The <code>&lt;loan&#8217;s index&gt;</code> above refers to the index number shown in the displayed loans list in <strong>Sharkie</strong>. It indicates a
@@ -487,7 +487,7 @@ All loans will be removed for the indicated person if the <code>&lt;loan&#8217;s
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to record that you have received the money from "Joel", who is the second person in the address book,
+<p>Suppose you want to record that you have received the money from "Joel", who is the second person in the contact list,
 for the first loan in his loans list.</p>
 <div class="ulist">
 <ul>
@@ -495,7 +495,7 @@ for the first loan in his loans list.</p>
 <p>The command you would enter is <code>people received 2 i/1</code>.</p>
 </li>
 <li>
-<p>This records that you have received the money for the first loan of "Joel", the second person in the address book.</p>
+<p>This records that you have received the money for the first loan of "Joel", the second person in the contact list.</p>
 </li>
 </ul>
 </div>
@@ -567,7 +567,7 @@ Before you enter the <code>people remind</code> command, please make sure that y
 </td>
 <td class="content">
 The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the address book, who you want to remind.<br>
+specific person in the contact list, who you want to remind.<br>
 <em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
 <br>
 Loans represent the amount of money you lend your friends.<br>
@@ -595,14 +595,14 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remind "Daniel", who is the first person in your address book to return you your money.</p>
+<p>Suppose you want to remind "Daniel", who is the first person in your contact list to return you your money.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people remind 1</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to send an email to "Daniel", the first person in your address book.</p>
+<p>This requests <strong>Sharkie</strong> to send an email to "Daniel", the first person in your contact list.</p>
 </li>
 </ul>
 </div>
@@ -629,7 +629,7 @@ Sharkie has sent a carbon copy (CC) of the reminder to your email!</pre>
 <div class="sect3">
 <h4 id="sending-reminder-to-all-friends-code-remindall-code"><a class="link" href="#sending-reminder-to-all-friends-code-remindall-code">Sending reminder to all friends: <code>remindall</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to remind all your friends in your address book to return you your money,
+<p>Suppose you want to remind all your friends in your contact list to return you your money,
 the command you would enter is our <code>people remindall</code> command.</p>
 </div>
 <div class="paragraph">
@@ -685,14 +685,14 @@ please visit <a href="#remind-connection-error">how to resolve connection issues
 <div class="ulist">
 <ul>
 <li>
-<p>Suppose you want to remind all your friends in your address book who have yet to repay you.</p>
+<p>Suppose you want to remind all your friends in your contact list who have yet to repay you.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>The command you would enter is <code>people remindall</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to send an email to everyone in your address book who have yet to repay you.</p>
+<p>This requests <strong>Sharkie</strong> to send an email to everyone in your contact list who have yet to repay you.</p>
 </li>
 </ul>
 </div>
@@ -753,7 +753,7 @@ persons whose name contains the keyword "jo", such as "Joel".</p>
 <div class="ulist">
 <ul>
 <li>
-<p>You may use the tag prefix <code>t/</code> to find people with debts or loans in your address book.
+<p>You may use the tag prefix <code>t/</code> to find people with debts or loans in your contact list.
 Hence, <code>Debt</code> and <code>Loan</code> (case-insensitive) are the only tags, which you are allowed to use in <code>people find</code> command.</p>
 </li>
 </ul>
@@ -851,7 +851,7 @@ loans represent the amount of money you lend your friends. <br>
 <div class="sect3">
 <h4 id="peopleclear"><a class="link" href="#peopleclear">Clearing all contacts : <code>clear</code></a></h4>
 <div class="paragraph">
-<p>Suppose you want to clear all the contacts in your address book,
+<p>Suppose you want to clear all the contacts in your contact list,
 the command you would enter is our <code>people clear</code> command.</p>
 </div>
 <div class="paragraph">
@@ -870,7 +870,7 @@ the command you would enter is our <code>people clear</code> command.</p>
 <p>The command you would enter is <code>people clear</code>.</p>
 </li>
 <li>
-<p>This requests <strong>Sharkie</strong> to deletes all the contacts in your address book.</p>
+<p>This requests <strong>Sharkie</strong> to deletes all the contacts in your contact list.</p>
 </li>
 </ul>
 </div>
@@ -883,10 +883,10 @@ the command you would enter is our <code>people clear</code> command.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Sharkie</strong> will delete all the contacts and return an empty address book.</p>
+<p><strong>Sharkie</strong> will delete all the contacts and return an empty contact list.</p>
 <div class="literalblock">
 <div class="content">
-<pre>Address book has been cleared!</pre>
+<pre>Contact list has been cleared!</pre>
 </div>
 </div>
 </li>
@@ -919,7 +919,7 @@ the command you would enter is our <code>people clear</code> command.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the address book.</p>
+<p>A <code>person&#8217;s index</code> is the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a specific person in the contact list.</p>
 </div>
 <div class="paragraph">
 <p>For example,</p>
@@ -2220,4 +2220,4 @@ Expected: A reminder is sent everyone, who has unsettled loan. A carbon copy (CC
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 03:00:15 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 03:45:31 UTC</div></div></div></body></html>
