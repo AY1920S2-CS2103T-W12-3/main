@@ -84,6 +84,9 @@ can filter the people whom they lend or owe using the commands <code>people find
 </div>
 </li>
 <li>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#=undefined&amp;search=cheyannesim">Functional codes &amp; Test codes</a>]</p>
+</li>
+<li>
 <p><strong>Other contributions</strong>:</p>
 <div class="ulist">
 <ul>
@@ -93,6 +96,9 @@ can filter the people whom they lend or owe using the commands <code>people find
 <ul>
 <li>
 <p>Wrote additional tests for exsiting features to increase coverage from 73% to 76% (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/182">#182</a>)</p>
+</li>
+<li>
+<p>Bug fixing. (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/247">#247</a>)</p>
 </li>
 </ul>
 </div>
@@ -105,13 +111,46 @@ can filter the people whom they lend or owe using the commands <code>people find
 <p>Update AboutUs page: (Pull request <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/53">#53</a>)</p>
 </li>
 <li>
-<p>Updated User Guide: (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/43">#43</a>,
-<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/196">#196</a>)</p>
+<p>Updated User Guide: Summary of my contributions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Features: Contact Management</p>
 </li>
 <li>
-<p>Updated Developer Guide: (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/60">#60</a>,
+<p>People Commands: edit, delete, owe, returned, lend, list.</p>
+</li>
+<li>
+<p>(Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/43">#43</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/196">#196</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Updated Developer Guide:  Summary of my contributions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Architecture section</p>
+</li>
+<li>
+<p>Implementation: People Owe Command</p>
+</li>
+<li>
+<p>Appendix D – Non-Functional Requirements</p>
+</li>
+<li>
+<p>Appendix G – Instructions for Manual Testing for People Commands: add, edit, find, list, delete, clear, owe, returned.</p>
+</li>
+<li>
+<p>(Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/60">#60</a>,
 <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/120">#120</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/124">#124</a>,
-<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/138">#138</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/196">#196</a>)</p>
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/138">#138</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/196">#196</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/256">#256</a>)</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -127,7 +166,14 @@ can filter the people whom they lend or owe using the commands <code>people find
 <a href="https://github.com/AY1920S2-CS2103T-W12-3/main/pull/128">#128</a>)</p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (<a href="https://github.com/CheyanneSim/ped/issues">W17-2</a>)</p>
+<p>Reported bugs and suggestions for other teams in the class: Reported bugs for W17-2
+(Issues <a href="https://github.com/CheyanneSim/ped/issues/1">#1</a>, <a href="https://github.com/CheyanneSim/ped/issues/2">#2</a>,
+<a href="https://github.com/CheyanneSim/ped/issues/3">#3</a>, <a href="https://github.com/CheyanneSim/ped/issues/4">#4</a>,
+<a href="https://github.com/CheyanneSim/ped/issues/5">#5</a>, <a href="https://github.com/CheyanneSim/ped/issues/6">#6</a>,
+<a href="https://github.com/CheyanneSim/ped/issues/7">#7</a>, <a href="https://github.com/CheyanneSim/ped/issues/8">#9</a>,
+<a href="https://github.com/CheyanneSim/ped/issues/9">#9</a>, <a href="https://github.com/CheyanneSim/ped/issues/1">#10</a>,
+<a href="https://github.com/CheyanneSim/ped/issues/11">#11</a>, <a href="https://github.com/CheyanneSim/ped/issues/12">#12</a>,
+<a href="https://github.com/CheyanneSim/ped/issues/13">#13</a>)</p>
 </li>
 </ul>
 </div>
@@ -220,6 +266,185 @@ general commands, people commands and wallet commands.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="edit-person"><a class="link" href="#edit-person">Editing a person : <code>edit</code></a></h4>
+<div class="paragraph">
+<p>Suppose a person has changed his contact details, and you want to update them, the command that you would enter
+is the <code>people edit</code> command.<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people edit &lt;person&#8217;s index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email&gt;]</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>people edit</code> command, which you would need to take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>You should provide at least one of the optional fields.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Existing values will be updated to the new values that you have inputted.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the contact list.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to update John&#8217;s email, and John is the first person in your contact list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command you would enter is <code>people edit 1 e/johndoe@example.com</code>.</p>
+</li>
+<li>
+<p>This edits the email address of the first person, John, to be "johndoe@example.com".<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the list of people shown, John&#8217;s email will be "johndoe@example.com".</p>
+<div class="literalblock">
+<div class="content">
+<pre>Edited Person: John Doe Phone: 91234568 Email: johndoe@example.com You owe: $0.00 You lent: $0.00 Tags:</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="delete-person"><a class="link" href="#delete-person">Deleting a person : <code>delete</code></a></h4>
+<div class="paragraph">
+<p>Suppose you would like to delete a person&#8217;s contact details, the
+command that you would enter is the <code>people delete</code> command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: <code>people delete &lt;person&#8217;s index&gt;</code></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Command Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The following are the restrictions of <code>people delete</code> command, which you should take note of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Remember to check and ensure that the <code>&lt;person&#8217;s index&gt;</code> that you have inputted corresponds to the correct person.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
+specific person in the contact list.<br>
+<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suppose you want to delete "Betsy" from your contact list, and "Betsy" is the first person in the list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The command that you would enter is <code>people delete 1</code>.</p>
+</li>
+<li>
+<p><strong>Sharkie</strong> will delete "Betsy" from the contact list.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Expected Outcome</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Betsy" will no longer be shown on the list of people.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Deleted Person: Betsy Phone: 91234567 Email: something@email.com You owe: $0.00 You lent: $0.00 Tags:</pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -549,185 +774,6 @@ entire list of people in your contact list. The command you would enter is our <
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="edit-person"><a class="link" href="#edit-person">Editing a person : <code>edit</code></a></h4>
-<div class="paragraph">
-<p>Suppose a person has changed his contact details, and you want to update them, the command that you would enter
-is the <code>people edit</code> command.<br></p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>people edit &lt;person&#8217;s index&gt; [n/&lt;name&gt;] [p/&lt;phone number&gt;] [e/&lt;email&gt;]</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>people edit</code> command, which you would need to take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>You should provide at least one of the optional fields.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Existing values will be updated to the new values that you have inputted.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the contact list.<br>
-<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to update John&#8217;s email, and John is the first person in your contact list.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command you would enter is <code>people edit 1 e/johndoe@example.com</code>.</p>
-</li>
-<li>
-<p>This edits the email address of the first person, John, to be "johndoe@example.com".<br></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>In the list of people shown, John&#8217;s email will be "johndoe@example.com".</p>
-<div class="literalblock">
-<div class="content">
-<pre>Edited Person: John Doe Phone: 91234568 Email: johndoe@example.com You owe: $0.00 You lent: $0.00 Tags:</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="delete-person"><a class="link" href="#delete-person">Deleting a person : <code>delete</code></a></h4>
-<div class="paragraph">
-<p>Suppose you would like to delete a person&#8217;s contact details, the
-command that you would enter is the <code>people delete</code> command.</p>
-</div>
-<div class="paragraph">
-<p><strong>Format</strong>: <code>people delete &lt;person&#8217;s index&gt;</code></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Command Format</strong></p>
-</div>
-<div class="paragraph">
-<p>The following are the restrictions of <code>people delete</code> command, which you should take note of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <code>&lt;person&#8217;s index&gt;</code> you entered should be a positive integer, e.g. 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Remember to check and ensure that the <code>&lt;person&#8217;s index&gt;</code> that you have inputted corresponds to the correct person.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>&lt;person&#8217;s index&gt;</code> above refers to the index number shown in the displayed person list in <strong>Sharkie</strong>. It indicates a
-specific person in the contact list.<br>
-<em>Still confused? Find out more about <a href="#personIndexFAQ">what is a person&#8217;s index</a>.</em><br>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>Example</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suppose you want to delete "Betsy" from your contact list, and "Betsy" is the first person in the list.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The command that you would enter is <code>people delete 1</code>.</p>
-</li>
-<li>
-<p><strong>Sharkie</strong> will delete "Betsy" from the contact list.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Expected Outcome</strong>:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Betsy" will no longer be shown on the list of people.</p>
-<div class="literalblock">
-<div class="content">
-<pre>Deleted Person: Betsy Phone: 91234567 Email: something@email.com You owe: $0.00 You lent: $0.00 Tags:</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -1014,127 +1060,6 @@ money.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Recording the money you owe a person</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: The person whom you owe exists in the person list.</p>
-</li>
-<li>
-<p>Test case: <code>people owe 1 n/Breakfast $/5.00</code><br>
-Expected: A debt named <em>Breakfast</em> with <em>$5.00</em> is added into the debt list of the first person.</p>
-</li>
-<li>
-<p>Test case: <code>people owe 1 n/Breakfast $/5.00 d/02/02/2020</code><br>
-Expected: A loan named <em>Breakfast</em> with <em>$5.00</em>, recorded under the date <em>02/02/2020</em> is added into the debt
-list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people owe 0 n/Breakfast $/5.00</code><br>
-Expected: The loan is not recorded. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people owe</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people owe</code>,</p>
-</li>
-<li>
-<p><code>people owe 1</code>,</p>
-</li>
-<li>
-<p><code>people owe 1 n/Laksa</code>,</p>
-</li>
-<li>
-<p><code>people owe 1 $/5.00</code>,</p>
-</li>
-<li>
-<p><code>people owe n/Laksa $/5.00</code>,</p>
-</li>
-<li>
-<p><code>people owe x n/Breakfast $/12.00</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people owe x n/Breakfast $/12.00</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people owe x n/Breakfast $/12.00</code> (where x is a non-integer),</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x is greater 92233720368547758.07),</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x has more than 2 decimal places) or</p>
-</li>
-<li>
-<p><code>people owe 1 n/Breakfast $/x</code> (where x is not a number).<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Recording the money you returned to a person</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: The person whom you returned to exists in the person list.</p>
-</li>
-<li>
-<p>Test case: <code>people returned 1 i/1</code><br>
-Expected: The first debt of the first person is deleted from the debt list.
-Remaining amount of debt, which have yet settled by the first person is shown in the result display.</p>
-</li>
-<li>
-<p>Test case: <code>people returned 0 i/1</code><br>
-Expected: No debt is deleted. Error details shown in the result display.</p>
-</li>
-<li>
-<p>Other invalid <code>people returned</code> commands to try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>people returned</code>,</p>
-</li>
-<li>
-<p><code>people returned 1</code>,</p>
-</li>
-<li>
-<p><code>people returned i/1</code>,</p>
-</li>
-<li>
-<p><code>people returned x i/1</code> (where x is larger than the person list size),</p>
-</li>
-<li>
-<p><code>people returned x i/1</code> (where x is a negative number),</p>
-</li>
-<li>
-<p><code>people returned x i/1</code> (where x is a non-integer value),</p>
-</li>
-<li>
-<p><code>people returned 1 i/x</code> (where x is larger than the debt list size),</p>
-</li>
-<li>
-<p><code>people returned 1 i/x</code> (where x is a negative number or zero) or</p>
-</li>
-<li>
-<p><code>people returned 1 i/x</code> (where x is a non-integer value)<br>
-Expected: Similar to previous</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
 <p>Adding a person</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
@@ -1410,5 +1335,130 @@ simply delete <strong>data/addressbook.json</strong>.
 </tr>
 </table>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recording the money you owe a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you owe exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 1 n/Breakfast $/5.00</code><br>
+Expected: A debt named <em>Breakfast</em> with <em>$5.00</em> is added into the debt list of the first person.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 1 n/Breakfast $/5.00 d/02/02/2020</code><br>
+Expected: A loan named <em>Breakfast</em> with <em>$5.00</em>, recorded under the date <em>02/02/2020</em> is added into the debt
+list of the first person. Total amount of money, which you lent to the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people owe 0 n/Breakfast $/5.00</code><br>
+Expected: The loan is not recorded. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people owe</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people owe</code>,</p>
+</li>
+<li>
+<p><code>people owe 1</code>,</p>
+</li>
+<li>
+<p><code>people owe 1 n/Laksa</code>,</p>
+</li>
+<li>
+<p><code>people owe 1 $/5.00</code>,</p>
+</li>
+<li>
+<p><code>people owe n/Laksa $/5.00</code>,</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people owe x n/Breakfast $/12.00</code> (where x is a non-integer),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is greater 92233720368547758.07),</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x has more than 2 decimal places) or</p>
+</li>
+<li>
+<p><code>people owe 1 n/Breakfast $/x</code> (where x is not a number).<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-09 09:05:55 UTC</div></div></div></body></html>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Recording the money you returned to a person</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The person whom you returned to exists in the person list.</p>
+</li>
+<li>
+<p>Test case: <code>people returned 1 i/1</code><br>
+Expected: The first debt of the first person is deleted from the debt list.
+Remaining amount of debt, which have yet settled by the first person is shown in the result display.</p>
+</li>
+<li>
+<p>Test case: <code>people returned 0 i/1</code><br>
+Expected: No debt is deleted. Error details shown in the result display.</p>
+</li>
+<li>
+<p>Other invalid <code>people returned</code> commands to try:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>people returned</code>,</p>
+</li>
+<li>
+<p><code>people returned 1</code>,</p>
+</li>
+<li>
+<p><code>people returned i/1</code>,</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is larger than the person list size),</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is a negative number),</p>
+</li>
+<li>
+<p><code>people returned x i/1</code> (where x is a non-integer value),</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is larger than the debt list size),</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is a negative number or zero) or</p>
+</li>
+<li>
+<p><code>people returned 1 i/x</code> (where x is a non-integer value)<br>
+Expected: Similar to previous</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-09 11:18:43 UTC</div></div></div></body></html>
