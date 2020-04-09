@@ -298,7 +298,7 @@ The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>
 <p><code>SharkieParser</code> will check the command entered against a pattern defined in <code>SharkieParser</code>.</p>
 </li>
 <li>
-<p>It refers to <code>CliPrefix</code> to determine whether the command entered is a <code>people</code> related command, or a <code>wallet</code> related command.</p>
+<p>It refers to <code>CliPrefix</code> to determine whether the command entered is a <code>people</code> related command, a <code>wallet</code> related command or a <code>global</code> command.</p>
 </li>
 <li>
 <p>If the command entered passes these checks, it then parses the command using the respective <code>XYZCommandParser</code> to retrieve the command to be executed.</p>
@@ -962,8 +962,7 @@ the lifeline reaches the end of diagram.
 <p>The <code>edit</code> command is implemented in the class, <code>WalletEditCommand</code>.</p>
 </div>
 <div class="paragraph">
-<p>This command can be accessed from <code>Logic#execute()</code>. It edits the <code>transactions</code>(s), which include both <code>income</code>(s) and
-<code>expense</code>(s) of the indicated <code>transaction</code> (the <code>transaction</code> with the specified index in the Wallet).</p>
+<p>This command can be accessed from <code>Logic#execute()</code>. It edits the <code>transaction</code>, indicated by the index specified, with the new details supplied by the command.</p>
 </div>
 <div class="paragraph">
 <p>The following activity diagram illustrates what happens when the user executes a <code>wallet edit</code> command:</p>
@@ -979,23 +978,25 @@ the lifeline reaches the end of diagram.
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>WalletEditCommandParser</code> is executed first to create an <code>EditTransactorDescriptor</code> to hold the values to be edited.</p>
+<p>When entering the wallet edit command, the user have to specify at least one of <code>Description</code>, <code>Amount</code>, <code>Date</code> or <code>Tag</code>. Multiples can be inputted as well.</p>
+</li>
+<li>
+<p><code>WalletEditCommandParser</code> is executed to create an <code>EditTransactorDescriptor</code> to hold the values to edit the transaction with.</p>
 </li>
 <li>
 <p><code>WalletEditCommandParser</code> then passes the <code>editTransactorDescriptor</code> to create a <code>WalletEditCommand</code>.</p>
 </li>
 <li>
 <p>In <code>WalletEditCommand</code> class, the list of <code>transactions</code> is obtained from the <code>Model</code> via
-<code>Model#getFilteredTransactionsList()</code> and the indicated transaction is extracted from the list, as either a form of
-income or expense.</p>
+<code>Model#getFilteredTransactionsList()</code> and the indicated transaction is extracted from the list.</p>
 </li>
 <li>
-<p>The <code>transaction</code> selected is extracted and modified based on the command entered by the user, which are stored in
+<p>The <code>transaction</code> selected is modified based on the field to edit and the new details entered by the user, which are stored in
 <code>editTransactorDescriptor</code></p>
 </li>
 <li>
 <p>A new <code>transaction</code> modified from the <code>transaction</code> selected is created with <code>createEditedTransaction</code> method in
-<code>WalletEditCOmmand</code></p>
+<code>WalletEditCommand</code></p>
 </li>
 <li>
 <p>This new <code>transaction</code> replace the initial <code>transaction</code> at the indicated index via <code>Model#setTransaction()</code> and
@@ -1033,7 +1034,7 @@ the lifeline reaches the end of diagram.
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Get the index from the list displayed, and not original index displayed by
+<p><strong>Alternative 1 (current choice):</strong> Get the index from the list of transactions currently displayed, and not original index in the full transactions list, which can be displayed by
 <code>wallet list command</code>.</p>
 <div class="ulist">
 <ul>
@@ -1041,13 +1042,13 @@ the lifeline reaches the end of diagram.
 <p>Pros: Easy to see which <code>transaction</code> is to be edited.</p>
 </li>
 <li>
-<p>Cons: Have to keep updating the filtered list.</p>
+<p>Cons: Filtered list needs to be constantly updated.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Always edit based on original list, shown by <code>wallet list command</code>.</p>
+<p><strong>Alternative 2:</strong> Always edit based on the index from original list, which can be displayed by <code>wallet list command</code>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1254,7 +1255,7 @@ the lifeline reaches the end of diagram.
 <p>has a need to keep to a certain budget every month</p>
 </li>
 <li>
-<p>has a need to record debts</p>
+<p>has a need to record debts and loans</p>
 </li>
 <li>
 <p>want to be reminded of his/her own debts</p>
@@ -1263,7 +1264,7 @@ the lifeline reaches the end of diagram.
 <p>wants to remind his/her friends to pay back their debts</p>
 </li>
 <li>
-<p>has a lot of friends to keep track in address/debt book</p>
+<p>has a lot of friends to keep track of in contact book</p>
 </li>
 <li>
 <p>prefer desktop apps over other types</p>
@@ -3610,4 +3611,4 @@ We decided early on that we wanted to redo the user interface from AB3, as it wo
 The team believes that we have put in a lot of equal effort on all parts of the project, from the documentation to the coding of the project itself. We believe that our product is significantly different from AB3 and we are happy with what we have achieved across the semester with CS2103T.</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-09 11:18:43 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-09 12:04:20 UTC</div></div></div></body></html>
