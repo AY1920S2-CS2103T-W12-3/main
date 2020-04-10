@@ -1257,6 +1257,9 @@ the lifeline reaches the end of diagram.
 <p>has a need to keep to a certain budget every month</p>
 </li>
 <li>
+<p>wants to view statistic of spending</p>
+</li>
+<li>
 <p>has a need to record debts and loans</p>
 </li>
 <li>
@@ -1283,7 +1286,17 @@ the lifeline reaches the end of diagram.
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>: records expenses/debts faster than a typical mouse/GUI driven app</p>
+<p><strong>Value proposition</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>records expenses/debts faster than a typical mouse/GUI driven app</p>
+</li>
+<li>
+<p>visual display of data with diagrams instead of just text</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2511,10 +2524,13 @@ returned even though both errors pertains to the wrong index provided.
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Download the jar file and copy into an empty folder</p>
+<p>Download the jar file and put the jar file in an empty folder.</p>
 </li>
 <li>
-<p>Double-click the jar file<br>
+<p>Open a command window. Run the java -version command to ensure you are using Java 11.</p>
+</li>
+<li>
+<p>Launch the jar file using the java -jar command (do not use double-clicking).<br>
 Expected: Shows an "Enter User Data" window. The window size may not be optimum.</p>
 </li>
 </ol>
@@ -2543,7 +2559,7 @@ Expected: Your user data is saved.</p>
 <p>Resize the window to an optimum size. Move the window to a different location. Close the window.</p>
 </li>
 <li>
-<p>Re-launch the app by double-clicking the jar file.<br>
+<p>Re-launch the app using the java -jar command (do not use double-clicking).<br>
 Expected: The most recent window size and location is retained.</p>
 </li>
 </ol>
@@ -2592,7 +2608,7 @@ Expected: An expense named <em>Meal</em> with <em>$3.50</em> with default tag <e
 Expected: An expense named <em>Meal</em> with <em>$3.50</em> with tag <em>Food</em> recorded under the current date is added to the transaction list. The statistic panel will also update with the expense entered, under the custom tag given.</p>
 </li>
 <li>
-<p>Test case: <code>wallet expense n/Meal $/asdf</code>
+<p>Test case: <code>wallet expense n/Meal $/asdf</code><br>
 Expected: The expense is not recorded. Error details shown in result display.</p>
 </li>
 <li>
@@ -2919,7 +2935,7 @@ Expected: Similar to previous</p>
 Expected: First transaction is deleted from the list. Details of the deleted contact shown in the result display.</p>
 </li>
 <li>
-<p>Test case: <code>people delete 0</code><br>
+<p>Test case: <code>wallet delete 0</code><br>
 Expected: No transaction is deleted. Error details shown in the result display.</p>
 </li>
 <li>
@@ -3037,9 +3053,9 @@ Expected: Similar to previous.</p>
 <p>Prerequisites: The person whom you want to edit exists in the person list.</p>
 </li>
 <li>
-<p>Test case: <code>people edit 1 n/John Doe p/91234567 e/John@example.com</code><br>
-Expected: The first person name, phone number and email will be changed to <em>John Doe</em>, <em>91234567</em> and
-<em>John@example.com</em> respectively.</p>
+<p>Test case: <code>people edit 1 n/April Tan p/91234567 e/April@example.com</code><br>
+Expected: The first person name, phone number and email will be changed to <em>April Tan</em>, <em>91234567</em> and
+<em>April@example.com</em> respectively.</p>
 </li>
 <li>
 <p>Test case: <code>people edit 0 n/John Doe p/91234567 e/John@example.com</code><br>
@@ -3115,12 +3131,14 @@ Expected: Similar to (c).</p>
 </li>
 <li>
 <p>Test case: <code>people find n/Alex Bernice</code><br>
-Expected: People who are have <em>Alex</em> or <em>Bernice</em> in their name (case insensitve) will be listed.</p>
+Expected: People who `are have <em>Alex</em> or <em>Bernice</em> in their name (case insensitve) will be listed.</p>
 </li>
 <li>
-<p>Test case: <code>people find t/debt</code>
-Expected: People whom you owe money to will be listed.
-..Test case: <code>people find t/loan</code>
+<p>Test case: <code>people find t/debt</code><br>
+Expected: People whom you owe money to will be listed.<br></p>
+</li>
+<li>
+<p>Test case: <code>people find t/loan</code><br>
 Expected: People whom you lend money to will be listed.</p>
 </li>
 <li>
@@ -3613,4 +3631,4 @@ We decided early on that we wanted to redo the user interface from AB3, as it wo
 The team believes that we have put in a lot of equal effort on all parts of the project, from the documentation to the coding of the project itself. We believe that our product is significantly different from AB3 and we are happy with what we have achieved across the semester with CS2103T.</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-10 05:36:08 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-10 06:27:49 UTC</div></div></div></body></html>
